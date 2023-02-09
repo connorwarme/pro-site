@@ -1,0 +1,13 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const allPosts = await Astro.glob('../posts/*.md');
+const uniqueTags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
+---
+
+<BaseLayout pageTitle="Tags Index">
+  <h4>Find the tag you'd like to explore!</h4>
+  <div class="tag-index-container">
+    {uniqueTags.map((tag) => <p><a href={`/tags/${tag}`}>{tag}</a></p> )}
+  </div>
+</BaseLayout>
