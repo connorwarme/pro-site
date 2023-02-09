@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/MdPostLayout.astro
-title: Pumpkin Buckwheat Gingerbread Recipe
+title: 'Recipe: Pumpkin Buckwheat Gingerbread'
 pubDate: 2022-08-08
-description: "Delicious! A great gluten-free, dairy-free, low-sugar snack"
+description: "A delicious gluten-free, dairy-free, low-sugar snack"
 author: Amity Warme
 image: 
   url: "https://docs.astro.build/default-og-image.png"
