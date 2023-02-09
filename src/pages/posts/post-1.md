@@ -1,25 +1,44 @@
 ---
 layout: ../../layouts/MdPostLayout.astro
-title: 'My First Blog Post'
+title: Worth It?
 pubDate: 2022-07-01
-description: 'This is the first post of my new Astro blog.'
-author: 'Astro Learner'
+description: A glimpse into climbing The Honeymoon is Over in RMNP
+author: Amity Warme
 image:
     url: 'https://astro.build/assets/blog/astro-1-release-update/cover.jpeg' 
     alt: 'The Astro logo with the word One.'
-tags: ["astro", "blogging", "learning in public"]
+origin: 
+    sponsor: 'HIMALI'
+    url: 'https://himalilife.com/was-it-worth-it'
+tags: ["alpine", "climbing", "RMNP", "reflections"]
 ---
-
-Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
-
-## What I've accomplished
-
-1. **Installing Astro**: First, I created a new Astro project and set up my online accounts.
-
-2. **Making Pages**: I then learned how to make pages by creating new `.astro` files and placing them in the `src/pages/` folder.
-
-3. **Making Blog Posts**: This is my first blog post! I now have Astro pages and Markdown posts!
-
-## What's next
-
-I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.
+  
+Lightning sears the sky directly above us and a crash of thunder immediately follows. Dark clouds unleash a torrent of hail that stings our faces and blurs our vision of the wall looming over us. I ascend wet ropes through the storm - cold, drenched, scared for my life, and questioning why I chose to pursue another committing alpine objective.  
+  
+I grew up in Loveland, Colorado with Rocky Mountain National Park nearly in my backyard. But I didn’t discover rock climbing until I moved away for college. As I honed my climbing skills over the years, I knew one day I would return to RMNP to embrace the challenge of several classic test-piece routes. This year, the timing aligned and I spent the summer balancing time between projecting hard alpine rock routes and working for a non-profit organization in Fort Collins. The ultimate objective: The Honeymoon is Over, an 8-pitch 5.13c on the imposing east face of Longs Peak known as The Diamond.  
+  
+As I waited for The Honeymoon is Over to come into condition, I spent weeks building altitude fitness by climbing on other formations in the area. I was stoked to send Sarchasm, my first 5.14a, and Barnacle Scars, the direct finish of a steep, spicy 3-pitch 5.13 trad route. Finally, I was feeling fit and turned my attention to The Diamond.  
+  
+Projecting a route on The Diamond demands dedication. The arduous approach involves 4000ft of elevation gain and the climbing routes top out at over 14,000 feet of elevation. Near daily thunderstorms leave the face dripping wet and force you off the mountain by early afternoon. Just existing up there can feel like a challenge, much less trying to perform at a high level. I wasn’t sure I was up for the challenge, but I knew I had to try.  
+  
+One of my first days up there this season, my husband Connor and I got caught in the hail storm described above. Alpine storms roll in quickly! What started as a 40% chance of rain at 6pm became a 100% chance of lightning, thunder, and hail at 3pm. Cold, wet, and scared, we retreated. I barely began the project, but I already wanted to call it quits on this preposterous goal. After all the time I had already spent climbing in the alpine this summer, I was tired of dealing with pre-dawn starts, long hikes, and volatile weather.  
+  
+Fast-forward two days. I found out two ladies were planning to go check out the same route and project it over the rest of the summer. So I rallied to brave the weather again and join them. I made good progress on the four crux pitches that day and my fire was reignited. I knew this climb was a dream line - one I wanted to do at some point in my climbing career. I resolved to embrace the process even though it seemed far-fetched that I could put it together before the season ended. As I said, projecting a route up there is a significant undertaking.  
+  
+A typical session on The Honeymoon is Over would involve packing and prepping the night before, waking up at 2am, and driving an hour to the trailhead to be hiking by 3:30am. After hiking the 6.5 miles to the top of Longs Peak, I’d set up a static rope to rappel down the upper part of the route and start climbing around 7:30am. I would practice the crux pitches on microtraxion, trying to get in a couple laps in order to memorize the intricate movement and build the required fitness to climb multiple difficult pitches at altitude. I would be back on top no later than 2pm in order to pack up the rope and my gear and scramble down before the typical onslaught of lightning, thunder, and hail that blew in most afternoons.  
+  
+Additional challenges arose throughout the process of projecting The Honeymoon is Over. The route frequently seeps from storms, leaving some degree of wetness to contend with. Of the nine days I spent on the route, I never climbed on it dry. Even in good conditions, it felt like the crux pitches presented many places where I could fall. Sending the whole route would require aligning a day of peak performance with a day of good enough weather. The thought of that felt unlikely and overwhelming. Yet, on a deeper level, I crave the kind of challenge that pushes me to the brink. I need to explore my mental and physical limits in order to feel truly alive. The greater the struggle, the more it draws me in. I had committed to the goal and knew all along that I would do my best to see it through, despite the discomfort and inadequacy I often felt in the midst of the process.  
+  
+As the end of the season drew near, I knew it was time for my first redpoint attempt - leading all the pitches from the ground up. I was nervous, but eager to see what I was capable of. It was a perfect forecast, absolutely splitter. Connor trekked up to support me and we bivied the night before. Gale force winds howled through our exposed rock shelter all night but I stayed optimistic, hoping it would calm down the next morning. After a sleepless night, we rose before dawn and packed up camp. The wind was still whipping fiercely as we groggily forced down breakfast and watched as a soft glow illuminated the landscape. The first four pitches of THIO clock in at 5.easy, 5.10, engaging 5.11, and stout 5.11+ stemming. As I arrived at the fourth pitch, I could see that I was in for an adventure. The entire corner system was drenched, meaning most of the crux pitches above would also be wet. I started stemming my way up the slick, blank walls, expecting my feet to skid off the wet rock any second. Shockingly, they didn’t. But the difficult pitches loomed above.  
+  
+The 5.13c crux pitch - a 35 meter, ultra technical offset seam that protects mostly with small cams and wires - lay ahead. Really insecure climbing, with a hard move right at the end. Of course, this pitch was also wet. Not only was the rock wet, but as I climbed, I was being dripped on from above. My hands, feet, and chalk bag were getting showered by the runoff. Every move felt desperate. But I wouldn’t let go. I wouldn’t give up. I fought my way to the anchor marking the end of the pitch. I made it without falling, but I had been holding on so tightly - overgripping - the entire time that I felt spent but still had three hard pitches to go.  
+  
+As Connor ascended the pitch below me, I attempted to calm my body and mind. I had just sent the crux in horrendous conditions, but I was far from finishing the route. I needed to find a headspace that would enable me to continue performing at a high level despite the adversity, fatigue, and cold.  
+  
+The next pitch, a long 5.13b, involves two powerful boulder problems separated by pumpy liebacking. I needed to execute my beta perfectly to have a shot at sending. I did. I channeled my focus on executing each move with precision and confidence, without letting my numb hands or heavy arms distract me. I felt encouraged by sending this pitch but daunted by what still lay between me and the summit.  
+  
+Determined, I started up pitch 7, a sustained 5.13a. Suddenly, dark clouds filled the sky overhead, despite the perfect forecast earlier that morning. Within seconds, hail was pounding down on us. I reached a rest stance mid-pitch where I could hold on and wait it out. It felt like ages, but 10 minutes later, the hail lightened as the stormcloud moved on. I began climbing again, only to find the rest of the pitch soaked. I threw for a jug and my hand splashed in a puddle that pooled in the hold. Holding on with all my might, I over-gripped my way to the end of the pitch, desperate not to fall off after making it this far. I pulled up and clipped the anchor. I was relieved, but immediately filled with a sense of dread about the last pitch.  
+  
+After battling wetness, hail, and hard climbing all day, I felt utterly exhausted - convinced I had done all I could, certain that there was nothing left in my tank. But one pitch stood between me and accomplishing a major goal. A fire deep inside me refused to give up. I had to find another reserve of strength and energy. I had to find a way. The pitch involves strenuous crack climbing that leads to a massive, dynamic move right at the top of this imposing alpine wall. Milking every rest stance possible, I inched my way up the crack. As I set up for the move, I dug as deep into my will power as I ever have, knowing it would take everything in me to hit the hold. I lunged for it and latched on, but my body sagged precariously away from the wall. I felt my shoulder start to dislocate, heard it tearing. But every fiber in me was screaming to hold on. I wouldn’t let go. I wouldn’t give up. I reeled it in, engaged my arm, and mantled up onto the ledge. Immediately, I knew something was wrong with my shoulder but there were only a few feet of easy climbing to the top and I knew I could do it.  
+  
+Sitting on the summit, I reflected on what this acheivement meant to me and what it cost me. Was the struggle worth it, only to get hurt in the end? Yes. The injury setback hit me hard, but I didn’t know I was going to get hurt and I wouldn’t have been happy with myself if I gave less than 100% effort. And I learned plenty along the way - about myself and about the process of tackling a big objective. I realized how deeply I crave a challenge that tests my mental and physical limits. I need to risk failure in order to discover what I am capable of. The uncertainty of whether or not a lofty goal is within reach or just beyond can feel daunting. The work leading up to the accomplishment is usually not easy or comfortable in the moment. Throughout the process, as I was cold, wet, scared, and intimidated, I had to hold the end goal in sight and celebrate each small stepping stone along the way. All along, the goal felt ambitious. Far-fetched. But I wouldn’t let go. I wouldn’t give up.  
