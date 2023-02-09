@@ -4,25 +4,25 @@ import BlogPost from "../../components/BlogPost.astro";
 
 export async function getStaticPaths() {
   const allPosts = await Astro.glob('../posts/*.md');
-
-  return [
-    { params: { tag: "astro" }, props: { posts: allPosts }},
-    { params: { tag: "successes" }, props: { posts: allPosts } },
-    { params: { tag: "community" }, props: { posts: allPosts } },
-    { params: { tag: "blogging" }, props: { posts: allPosts } },
-    { params: { tag: "setbacks" }, props: { posts: allPosts } },
-    { params: { tag: "learning in public" }, props: { posts: allPosts } },
-  ];
+  // gather all unique tags in an array
+  const uniqueTags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
+  // dynamically generate pages for each tag (ie returning only blogs w/ given tag)
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts.filter((post) => post.frontmatter.tags.includes(tag));
+    return {
+      params: { tag },
+      props: { posts: filteredPosts },
+    };
+  })
 }
 
 const { tag } = Astro.params;
 const { posts } = Astro.props;
-const filteredPosts = posts.filter((post) => post.frontmatter.tags.includes(tag));
 ---
 <BaseLayout pageTitle={tag}>
   <p>Posts tagged with {tag}</p>
-  {filteredPosts.map((item) => {
-    const { title, description } = item.frontmatter;
-    return <BlogPost url={item.url} title={title} description={description} />
+  {posts.map((post) => {
+    const { title, description } = post.frontmatter;
+    return <BlogPost url={post.url} title={title} description={description} />
   })}
 </BaseLayout>
