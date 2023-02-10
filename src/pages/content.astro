@@ -2,12 +2,11 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
 const allPosts = await Astro.glob('./posts/*.md');
-const pageTitle = "Amity | Media";
+const pageTitle = "Content";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-	<h3>Stories, Podcasts, Recipies, and More!</h3>
-  <p>Here's a bunch of my content...</p>
+	<h3>Reflections, Recipies, Podcasts and More!</h3>
   <ul>
     {allPosts.map((post) => {
       const { title, description } = post.frontmatter;
