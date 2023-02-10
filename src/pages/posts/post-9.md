@@ -1,0 +1,66 @@
+---
+layout: ../../layouts/MdPostLayout.astro
+title: 'Attempting to Onsight Moonlight Buttress'
+pubDate: 2021-03-23
+description: "A recap of my time on the renown sandstone splitter"
+author: Amity Warme
+image: 
+  url: "https://docs.astro.build/default-og-image.png"
+  alt: "The word “astro” against an illustration of planets and stars."
+origin: 
+  sponsor: 'Sterling'
+  url: "https://sterlingrope.com/sterling-solid/onsighting-moonlight-buttress"
+  date: 2021-02-23
+tags: ["climbing", "Zion", "reflections"]
+---
+figure out how to include the images...
+
+I have dreamt about trying to onsight Moonlight Buttress for years. This iconic route ascends a prominent prow of immaculate sandstone for over 1000 feet of finger crack delight. Featuring flawless rock, thrilling exposure, and jaw-dropping scenery, this sustained journey breaks down into 10 pitches. The first four provide a friendly warm-up: moderates, with one slightly spicy 5.11 traverse to keep you on your toes. The next six pitches are the business. Each offers a unique test of one’s crack climbing proficiency, so depending on height, finger size, and level of endurance, the “crux” of this line varies widely by climber. The magnitude of this goal, with its physical and mental challenges, has long inspired and motivated me.
+
+### The Preparation
+
+Over the past couple years, I have dedicated time to honing my skills on various sizes of sandstone splitters. At any opportunity, I intentionally sought out climbs that would force me to practice the techniques necessary for a successful ascent of Moonlight Buttress. I would routinely push myself to dig deep and eke out extra pitches long after my arms were tired in order to build stamina for the endurance aspect of Moonlight Buttress. This way, when the true test came, I would have the mental and physical capacity to execute difficult moves pitch after pitch.
+
+Several times, plans for a trip to Zion National Park were spoiled by inclement weather and other unforeseen circumstances, but early this March, my luck changed. I had an opportunity for a quick trip with my husband, Connor. Suddenly, the pressure was on! This dream was no longer abstract. Simultaneously, a multitude of emotions rushed through me. Nerves, fear, excitement, excuses. Finally, I settled on the mindset that I would simply give my best effort and not focus on the outcome.
+
+### The Trip
+
+We only had a three-day window of clear weather, but I wasn’t ready to attempt Moonlight Buttress right out of the gate. We chose a neighboring climb, Sheer Lunacy (5.12b, 8 pitches), as a tune up. This would allow me to get acquainted with the style of rock, scope out the approach, and better gauge the timing of sun and shade on my real objective. The climb went well. I was feeling strong and psyched! The following day, we rested, packed up gear, and prepped for the big mission.
+
+### The Day
+
+Driving into Zion from our campsite gave me time to sip coffee, admire the sunrise, and contemplate the day ahead. I was stoked to finally test myself on this classic climb, but I was also nervous. I would only ever get one shot at the onsight attempt and I didn’t want to blow it. I knew this was a lofty goal, but that made my desire to achieve it all the more attractive. Was I ready for this? We were about to find out.
+
+A cold river crossing and a short approach brought us to the base of the climb. Connor flaked out the rope while I racked up gear on my harness. I slipped on my shoes, thanked Connor for his support, and took off right as the sunlight crept down to meet us.  
+
+I settled into my groove as we blasted up the first four pitches and established ourselves on the Rocker Blocker – a massive, detached block that is bolted to the wall behind it, but still rocks gently beneath your feet. We paused for a quick snack and drink, the steep headwall looming above us.
+
+### The Business:
+
+#### Pitch 5: 5.12
+
+The first move of this pitch requires a full-on jump off the Rocker Blocker to catch a good edge with your hands. As I prepare to launch into the first section of difficult climbing, I am overcome by a surge of all the nerves and emotions I had tried to sequester leading up to this moment. My heart is pounding, my hands are shaking, I feel like I am going to explode! Both excitement and fear course through me. I take a few deep breaths to refocus, then leap. I caught it! Ok, relax. Stay focused. I power through the next sequence, then race up perfect finger locks in a dihedral. I’m finally climbing Moonlight Buttress! This is SO MUCH FUN.
+
+#### Pitch 6: 5.12+
+
+Starting up the long, thin, technical corner, I climb confidently, fending off the building pump in my forearms. Near the top, I grab a good hand hold and pause to rest. Suddenly, my foot slips! I barely catch myself. I am still on, but my nerves are racing again. I almost blew it! I climb tensely through the last few feet then try to relax at the anchor while Connor jugs up to meet me. Ok, two pitches down.
+
+#### Pitch 7: 5.12-
+
+This looks wild! But I’m on a roll, let’s do it! I leave the belay and begin scooching my way up the awkward flare chimney. I scum my body higher, the chimney becoming progressively more insecure until I am forced to wriggle around into a layback. I make a few moves, up into the steepest part of the bulge, trying to convince myself that I’m not actually sliding out of each rattly finger lock, despite how it feels. Stay relaxed, keep moving, I can do this. I quickly place a piece of gear and reach to clip the rope. Suddenly, I am hanging in my harness. NO! No, no, no. How did that just happen? I blew it, I failed, it’s over. Deflated, I lower down to the anchor. It’s ok, I’ll rest and try again. I can still send the route. I start back up, fiercely determined, but I spent too much energy on the first attempt. I fall again. Now what? Do I try this pitch one more time or continue upward? I decide to keep moving, count this as a learning experience, check out the rest of the climb, and come back for the send another time. I am beyond disappointed but make a deliberate choice not to let myself succumb to this negative self-talk.
+
+#### Pitch 8: 5.12-
+
+I gear up for what I had anticipated would be one of the hardest pitches for me. Here we go. I fell short of my goal, but I can still give an effort I’m proud of. A few words of encouragement from Connor, then I take off. And hike it! I feel like I am warming up. Did I make the right decision? Should I have tried that last pitch one more time? I don’t know.
+
+#### Pitch 9: 5.12
+
+As a slightly harder version of the previous pitch, I expect that I will have to fight hard to climb this one cleanly, but I cruise it. This is exactly what I trained for. I practiced this technique on repeat and the effort clearly paid off. Why did I fall back there? I’m supposed to be better than that.
+
+#### Pitch 10: 5.12-
+
+Staring upward at the final stretch of climbing, the accumulated fatigue sweeps over me. My arms are heavy, the buoyancy of the potential onsight is no longer beneath me. Cognitively, I know the moves are not that difficult but mentally, I am discouraged. Physically, I am close to depleted. I lurch desperately for a jug and vigorously shake my arms, one after the other, attempting to loosen the throbbing pump. It doesn’t matter anymore, I don’t have to try this hard, I already failed. No! I’m still giving my best effort, that’s what is important to me. I am going to dig deep, all the way through. Finally, I commit to the next sequence, punch through it, and dance my way to the very top of this journey.
+
+### Defining Success
+
+Standing on top, I am blown away by the stunning landscape around me as I reflect back on the whole experience. I hadn’t achieved the outcome I desired, but I gave an effort that I am proud of. I set a big, audacious goal and with that, I accepted the intimidating possibility of failure. Instead of allowing myself to be paralyzed by that risk, I welcomed the opportunity to push outside of my comfort zone in order to grow, both as a climber and as a person. Leading up to my attempt on Moonlight Buttress, I consciously chose to shift my definition of success from performance-based to effort-based. I couldn’t control every variable associated with the outcome, but I could control my effort level and I gave my all. I share my story to encourage you to learn from my experience and inspire you to dream big. I invite you to identify an audacious goal, prepare yourself physically and mentally, and go give it your ultimate effort.
