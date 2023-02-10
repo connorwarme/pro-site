@@ -11,7 +11,7 @@ origin:
     sponsor: 'SCARPA'
     url: 'https://us.scarpa.com/community/blog/article/fuel-your-body-to-climb-your-best'
     date: 2022-04-26
-tags: ["nutrition", "RED-S", "underfueling", "reflections"]
+tags: ["nutrition", "RED-S", "underfueling", "reflections", "blog"]
 ---
 
 Underfueling prohibits you from meeting your potential. It limits your physical and mental capacity to work, to train, and to perform. As athletes, we strive for peak performance and flawless physique. In many sports, carrying extra weight is a disadvantage. The problem arises, however, when athletes mistakenly prioritize low body weight and leanness while neglecting the role of food as fuel for optimal performance, growth and development, and long-term health.

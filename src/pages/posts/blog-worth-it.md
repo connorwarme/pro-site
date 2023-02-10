@@ -10,7 +10,7 @@ image:
 origin: 
     sponsor: 'HIMALI'
     url: 'https://himalilife.com/was-it-worth-it'
-tags: ["alpine", "climbing", "RMNP", "reflections"]
+tags: ["alpine", "climbing", "RMNP", "reflections", "blog"]
 ---
   
 Lightning sears the sky directly above us and a crash of thunder immediately follows. Dark clouds unleash a torrent of hail that stings our faces and blurs our vision of the wall looming over us. I ascend wet ropes through the storm - cold, drenched, scared for my life, and questioning why I chose to pursue another committing alpine objective.  

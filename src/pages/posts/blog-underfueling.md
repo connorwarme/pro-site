@@ -11,7 +11,7 @@ origin:
   sponsor: 'Sterling'
   url: "https://sterlingrope.com/sterling-solid/under-fueling-the-ultimate-sandbag"
   date: 2020-11-17
-tags: ["climbing", "nutrition", "reflections", "underfueling", "LEA"]
+tags: ["climbing", "nutrition", "reflections", "underfueling", "Low Energy Availability", "blog"]
 ---
 figure out how to include the images...
 

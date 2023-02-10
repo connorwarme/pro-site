@@ -11,7 +11,7 @@ origin:
   sponsor: 'Enduro Bites'
   url: "https://endurobites.com/blogs/recipes/lemon-zucchini-muffin-recipe-pre-dawn-adventure-fuel"
   date: 2021-07-13
-tags: ["nutrition", "recipies", "muffins"]
+tags: ["nutrition", "recipe", "muffins"]
 ---
 figure out how to include the images...
 

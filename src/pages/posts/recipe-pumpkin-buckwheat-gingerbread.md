@@ -10,6 +10,6 @@ image:
 origin: 
   sponsor: 'Enduro Bites'
   url: "https://endurobites.com/blogs/recipes/pumpkin-buckwheat-gingerbread-recipe"
-tags: ["nutrition", "recipies", "bread"]
+tags: ["nutrition", "recipe", "bread"]
 ---
 I need to add the text here, or figure out how to include the images...

@@ -11,7 +11,7 @@ origin:
   sponsor: 'Enduro Bites'
   url: "https://endurobites.com/blogs/recipes/chocolate-chia-protein-pudding-recipe"
   date: 2022-03-07
-tags: ["nutrition", "recipies", "chocolate"]
+tags: ["nutrition", "recipe", "chocolate"]
 ---
 figure out how to include the images...
 

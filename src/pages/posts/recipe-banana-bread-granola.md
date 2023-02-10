@@ -11,7 +11,7 @@ origin:
   sponsor: 'Enduro Bites'
   url: "https://endurobites.com/blogs/recipes/banana-bread-granola-recipe"
   date: 2022-07-21
-tags: ["nutrition", "recipies", "granola"]
+tags: ["nutrition", "recipe", "granola"]
 ---
 I need to add the text here, or figure out how to include the images...
 Need to know how much of the text is Amity's..

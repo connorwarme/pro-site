@@ -11,7 +11,7 @@ origin:
   sponsor: 'Sterling'
   url: "https://sterlingrope.com/sterling-solid/onsighting-moonlight-buttress"
   date: 2021-02-23
-tags: ["climbing", "Zion", "reflections"]
+tags: ["climbing", "Zion", "reflections", "blog"]
 ---
 figure out how to include the images...
 

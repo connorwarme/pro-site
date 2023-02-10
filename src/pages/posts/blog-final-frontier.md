@@ -11,7 +11,7 @@ origin:
     sponsor: 'HIMALI'
     url: 'https://himalilife.com/thefinalfrontier'
     date: 2021-08-26
-tags: ["climbing", "Yosemite", "reflections"]
+tags: ["climbing", "Yosemite", "reflections", "blog"]
 ---
 
 The alarm goes off. It’s still dark outside, but as I awaken, my brain latches on the objective of the day and I quickly perk up. Coffee, breakfast, drive to the trailhead, grab the pack of gear I prepped last night, then my partner and I start the uphill approach to the base of the imposing wall above. Soft dawn light illuminates the forest around us and my psych builds as I hop from boulder to boulder toward Fifi Buttress, just one of the many impressive granite walls that make up Yosemite Valley. Eventually, we emerge from the trees and the route we plan to climb today looms steeply ahead. I organize the gear on my harness, fist bump my partner, and launch upward.
