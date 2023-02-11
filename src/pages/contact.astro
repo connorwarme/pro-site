@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout pageTitle="Contact Me">
+<form novalidate>
+  <label for="first-name">
+    <span>First Name:</span>
+    <input type="text" id="first-name" required />
+    <span class="error" aria-live="polite"></span>
+  </label>
+  <label for="family-name">
+    <span>Family Name:</span>
+    <input type="text" id="family-name" required />
+    <span class="error" aria-live="polite"></span>
+  </label>
+  <label for="email">
+    <span>Your Email:</span>
+    <input type="email" id="email" required />
+    <span class="error" aria-live="polite"></span>
+  </label>
+  <label for="message">
+    <span>Your Message:</span>
+    <textarea id="message" required />
+    <span class="error" aria-live="polite"></span>
+  </label>
+  <button type="submit" id="submit-btn">Send</button>
+</form>
+</BaseLayout>
+
+<style>
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+</style>
