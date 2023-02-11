@@ -1,0 +1,33 @@
+---
+const bigwall = [
+  {
+    climb: 'FRIAD: Freerider In A Day',
+    grade: '5.13a',
+    pitches: 32,
+    style: 'free, self-supported, no rehearsal or stashing',
+  },
+  {
+    climb: 'Golden Gate',
+    grade: '5.13a',
+    pitches: 36,
+    style: 'free, ground-up',
+  },
+  {
+    climb: 'Freerider',
+    grade: '5.13a',
+    pitches: 32,
+    style: 'free, ground-up',
+  }
+]
+const multi = [
+  {
+    
+  }
+]
+---
+<div class="bigwall-container">
+  <h3>Big Wall</h3>
+  {bigwall.map((wall) => {
+    return <p><em>{wall.climb}</em>, {wall.grade} || {wall.pitches} pitches, {wall.style}</p>
+  })}
+</div>
