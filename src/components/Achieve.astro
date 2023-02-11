@@ -1,33 +1,114 @@
 ---
+import Wall from "./Wall.astro";
+import Pitch from "./Pitch.astro";
 const bigwall = [
   {
     climb: 'FRIAD: Freerider In A Day',
     grade: '5.13a',
     pitches: 32,
     style: 'free, self-supported, no rehearsal or stashing',
+    location: 'Yosemite',
   },
   {
     climb: 'Golden Gate',
     grade: '5.13a',
-    pitches: 36,
+    pitches: 33,
     style: 'free, ground-up',
+    location: 'Yosemite',
   },
   {
     climb: 'Freerider',
     grade: '5.13a',
-    pitches: 32,
+    pitches: 31,
     style: 'free, ground-up',
+    location: 'Yosemite',
   }
-]
+];
 const multi = [
   {
-    
+    climb: 'The Honeymoon is Over',
+    grade: '5.13c',
+    pitches: 8,
+    style: 'free, redpoint',
+    location: 'RMNP',
+  },
+  {
+    climb: 'Mark of the Beast',
+    grade: '5.13b',
+    pitches: 5,
+    style: 'free, redpoint',
+    location: 'Yosemite'
+  },
+  {
+    climb: 'Barnacle Scars',
+    grade: '5.13',
+    style: 'first ascent, free, redpoint',
+    location: 'RMNP'
+  },
+  {
+    climb: 'Liberty Crack',
+    grade: '5.13b',
+    pitches: 12,
+    style: 'free, redpoint',
+    location: 'North Cascades'
   }
-]
+];
+const singleTrad = [
+  {
+    climb: 'Stingray',
+    grade: '5.13d',
+    style: 'free, redpoint',
+    location: 'Joshua Tree',
+  },
+    {
+    climb: 'Enter the Dragon',
+    grade: '5.13+ R',
+    style: 'free, redpoint, FFA',
+    location: 'The Fins',
+  },
+  {
+    climb: 'Buffaloes in Space',
+    grade: '5.13',
+    style: 'free, redpoint',
+    location: 'South Platte',
+  },
+];
+const singleSport = [
+  {
+    climb: 'Sarchasm',
+    grade: '5.14a',
+    style: 'free, redpoint',
+    location: 'RMNP'
+  },
+    {
+    climb: 'Vesper',
+    grade: '5.13c/14a',
+    style: 'free, redpoint',
+    location: 'The Fins'
+  },
+  {
+    climb: 'Third Millenium',
+    grade: '5.13d',
+    style: 'free, redpoint',
+    location: 'The Monastery'
+  },
+];
+
 ---
+<h2>Free Climbing Achievements</h2>
 <div class="bigwall-container">
   <h3>Big Wall</h3>
-  {bigwall.map((wall) => {
-    return <p><em>{wall.climb}</em>, {wall.grade} || {wall.pitches} pitches, {wall.style}</p>
-  })}
+  {bigwall.map((item) => <Wall climb={item} />)}
+</div>
+<div class="multi-container">
+  <h3>Multipitch</h3>
+  {multi.map((item) => <Wall climb={item} />)}
+</div>
+<div class="singleTrad-container"> 
+  <h3>Single Pitch Trad</h3>
+  {singleTrad.map((item) => <Pitch climb={item} />)}
+</div>
+<div class="singleSport-container">
+  <h3>Single Pitch Sport</h3>
+  {singleSport.map((item) => <Pitch climb={item} />)}
 </div>
