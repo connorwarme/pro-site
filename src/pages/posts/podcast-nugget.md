@@ -8,7 +8,7 @@ image:
   url: "https://docs.astro.build/default-og-image.png"
   alt: "The word “astro” against an illustration of planets and stars."
 origin: 
-  name: 'The Nugget Climbing'
+  name: 'The Nugget Climbing Podcast'
   url: "https://thenuggetclimbing.com/episodes/amity-warme"
   date: 2022-01-31
 tags: ["climbing", "big wall", "Yosemite", "reflections", "nutrition", "podcast"]
