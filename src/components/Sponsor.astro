@@ -1,0 +1,108 @@
+---
+import camp from '../images/logo/camp-logo.png'
+import scarpa from '../images/logo/scarpa-logo.png'
+import sterling from '../images/logo/sterling-logo.svg'
+import enduro from '../images/logo/enduro.png'
+import totem from '../images/logo/totem.png'
+import g7 from '../images/logo/g7-logo.png'
+import himali from '../images/logo/himali.webp'
+import physi from '../images/logo/physi.png'
+const sponsors = [
+    {
+    name: 'CAMP',
+    url: 'https://www.camp.it/d/us/us/outdoor',
+    img: {
+      url: camp,
+      alt: 'CAMP Logo',
+      size: '30px',
+    },
+  },
+  {
+    name: 'Scarpa',
+    url: 'https://us.scarpa.com/',
+    img: {
+      url: scarpa,
+      alt: 'Scarpa Logo',
+      size: '30px',
+    },
+  },
+  {
+    name: 'Sterling',
+    url: 'https://sterlingrope.com/',
+    img: {
+      url: sterling,
+      alt: 'Sterling Logo',
+      size: '40px',
+    },
+  },
+  {
+    name: 'Enduro Bites',
+    url: 'https://endurobites.com/',
+    img: {
+      url: enduro,
+      alt: 'Enduro Bites Logo',
+      size: '45px',
+    },
+  },
+  {
+    name: 'Totem MT',
+    url: 'https://www.totemmt.com/',
+    img: {
+      url: totem,
+      alt: 'Totem Logo',
+      size: '40px',
+    },
+  },
+  {
+    name: 'Grade VII',
+    url: 'https://www.grade7.com/',
+    img: {
+      url: g7,
+      alt: 'G7 Logo',
+      size: '55px',
+    },
+  },
+  {
+    name: 'HIMALI',
+    url: 'https://himalilife.com/',
+    img: {
+      url: himali,
+      alt: 'HIMALI Logo',
+      size: '40px',
+    },
+  },
+  {
+    name: 'Physivantage',
+    url: 'https://physivantage.com/',
+    img: {
+      url: physi,
+      alt: 'Physivantage Logo',
+      size: '45px',
+    },
+  },
+]
+---
+<h2>Sponsors</h2>
+<div class="sponsors-wrapper">
+  {sponsors.map((sponsor) => (
+    <div class="sponsor-container">
+      <a href={sponsor.url} target="_blank">
+        <img src={sponsor.img.url} alt={sponsor.img.alt} height={sponsor.img.size}>
+      </a>
+    </div>
+  ))}
+</div>
+
+<style>
+  .sponsors-wrapper {
+    padding: 20px;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .sponsor-container {
+    padding: 20px;
+  }
+</style>
