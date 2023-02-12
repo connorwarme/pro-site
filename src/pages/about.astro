@@ -9,16 +9,23 @@ const textCase = "uppercase"
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <p>I'm a pro climber, soon-to-be registered dietician, and stoked on life!</p>
-  <p>My skills are:</p>
-  <ul>
-    {skills.map((skill) => <li class="skill">{skill}</li>)}
-  </ul>
-  <style define:vars={{skillColor, fontWeight, textCase}}>
-    .skill {
-      color: var(--skillColor);
-      font-weight: var(--fontWeight);
-      text-transform: var(--textCase);
-    }
-  </style>
+  <p>You'll often find me exceedingly stoked and always in motion, often rock climbing. I'm constantly pursuing the next big adventure. I find climbing compelling because it provides the opportunity for me to push my limits, physically and mentally, while exploring incredible landscapes and connecting with others in the mountain adventure tribe. I live in a van with my husband, Connor. We spend much of the year traveling to climbing destinations, seeking out adventures big and small. A couple of my favorite zones are Yosemite, CA, Indian Creek, UT, and Rocky Mountain National Park, CO. My secret climbing superpower is trying REALLY hard - I don’t give up! Feel free to say hi if you ever see me around!!</p>
+  <h2>Why Climbing?</h2>
+    <p>I thrive on the opportunity to push myself both physically and mentally. Climbing provides a space for me to continually test my limits while also connecting with the world around me on a deeper level. I love digging deep to accomplish a goal.</p>
+    <p>I also appreciate connecting with climbing partners through a shared experience. I am always amazed at the accomplishments that teamwork and mutual stoke can lead to and I value learning from those around me. I find great joy in empowering others to believe in themselves and their ability to achieve something great.</p>
+  <h2>Why Nutrition?</h2>
 </BaseLayout>
+
+
+<!-- <p>I'm a pro climber, soon-to-be registered dietician, and stoked on life!</p>
+<p>My skills are:</p>
+<ul>
+  {skills.map((skill) => <li class="skill">{skill}</li>)}
+</ul>
+<style define:vars={{skillColor, fontWeight, textCase}}>
+  .skill {
+    color: var(--skillColor);
+    font-weight: var(--fontWeight);
+    text-transform: var(--textCase);
+  }
+</style> -->
