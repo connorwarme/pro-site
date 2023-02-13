@@ -1,0 +1,13 @@
+---
+const photoArray = Astro.props.array;
+const array = ['temp', 'twig', 'taser']
+---
+
+<div class="gallery-container">
+  <div class="gallery">
+    {array.map((image) => {
+      return <div>{image}</div>
+    })}
+  </div>
+</div>
+

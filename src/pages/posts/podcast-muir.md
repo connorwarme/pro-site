@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MdPostLayout.astro
-title: 'Podcast: Big Wall Climber Amity Warme'
+title: 'Podcast: The John Freakin Muir'
 pubDate: 2021-07-10
 description: "A conversation with Doc about climbing big walls and more"
 author: false

@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MdPostLayout.astro
-title: 'Enormocast: Putting the Hammer Down'
+title: 'Podcast: Enormocast - Putting the Hammer Down'
 pubDate: 2022-12-16
 description: "A conversation with Chris about life, climbing, and more"
 author: false

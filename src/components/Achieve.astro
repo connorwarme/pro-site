@@ -1,7 +1,6 @@
 ---
 import Wall from "./Wall.astro";
 import Pitch from "./Pitch.astro";
-import Sponsor from "./Sponsor.astro";
 const bigwall = [
 {
     climb: 'El Corazon',
@@ -132,5 +131,3 @@ const singleSport = [
   <h3>Single Pitch Sport</h3>
   {singleSport.map((item) => <Pitch climb={item} />)}
 </div>
-
-<Sponsor />
