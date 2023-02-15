@@ -3,10 +3,15 @@ import Achieve from "../components/Achieve.astro";
 import Gallery from "../components/Gallery.astro";
 import Sponsor from "../components/Sponsor.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import golden from "../images/gallery/Amity_Goldengate.Lite.jpg";
+import barnacle from "../images/gallery/Shaffer_Taylor-17.Lite.jpg";
+import wolverine from "../images/gallery/Wolverine.Lite.jpg";
+
+const images = [golden, barnacle, wolverine]
 ---
 
 <BaseLayout pageTitle="Amity the Athlete">
   <Achieve />
   <Sponsor />
-  <Gallery />
+  <Gallery array={images}/>
 </BaseLayout>

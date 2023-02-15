@@ -5,9 +5,29 @@ const array = ['temp', 'twig', 'taser']
 
 <div class="gallery-container">
   <div class="gallery">
-    {array.map((image) => {
-      return <div>{image}</div>
+    <ul>
+    {photoArray.map((image) => {
+      return (
+        <li class="image-card">
+          <img src={image} alt=''>
+        </li>
+      )
     })}
+    </ul>
   </div>
 </div>
-
+<style>
+  ul {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 4px;
+  }
+  @media screen and (min-width: 640px) {
+    ul {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  }
+  .image-card > img {
+    width: 300px;
+  }
+</style>
