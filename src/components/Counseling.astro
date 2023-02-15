@@ -1,8 +1,41 @@
 ---
-
+const services = [
+  {
+    name: 'Initial Call',
+    description: 'to decide if we are a good fit',
+    time: '10min',
+    cost: 'FREE',
+  },
+  {
+    name: 'Intake Consultation',
+    description: 'to go over current dietary habits, attitude towards food, upcoming objectives, and more',
+    time: '90min',
+    cost: 275,
+  },
+  {
+    name: 'Regular Session',
+    description: 'to get an update on progress, assess, fine-tune our trajectory/goals, etc.',
+    time: '60min',
+    cost: 200,
+  },
+  {
+    name: 'Athlete Package',
+    description: 'An intake, 3 regular sessions, and email checkups throughout...',
+    cost: 750,
+  }
+]
 ---
 
 <div class="counseling-container">
   <h1>Counseling Services</h1>
-  
+  {services.map((service) => {
+    return (
+      <div class="service-card">
+        <h3>{service.name}</h3>
+        <p>{service.description}</p>
+        <p>{service.time ? `Time: ${service.time}` : ''}</p>
+        <p>{typeof(service.cost) === 'number' ? `Cost: $${service.cost}` : `${service.cost}`}</p>
+      </div>
+    )
+  })}
 </div>
