@@ -1,33 +1,64 @@
 ---
 const photoArray = Astro.props.array;
-const array = ['temp', 'twig', 'taser']
+const one = {
+  text: '',
+  src: photoArray[0],
+  alt: 'first photo in array',
+  next: null,
+  back: null,
+}
+const two = {
+  text: '',
+  src: photoArray[1],
+  alt: 'second photo in array',
+  next: null,
+  back: null,
+}
+const three = {
+  text: '',
+  src: photoArray[2],
+  alt: 'third photo in array',
+  next: null,
+  back: null,
+}
+one.next = two
+one.back = three
+two.next = three
+two.back = one
+three.next = one
+three.back = two
+
+const nextClick = (current) => {
+  // set current img display to none
+  // set next img display to block
+  // update current image (on gallery..?)
+}
+const backClick = () => {
+  console.log('previous photo!')
+}
 ---
 
 <div class="gallery-container">
   <div class="gallery">
-    <ul>
-    {photoArray.map((image) => {
-      return (
-        <li class="image-card">
-          <img src={image} alt=''>
-        </li>
-      )
-    })}
-    </ul>
+    <button onclick={backClick}>Back</button>
+    {[one, two, three].map((image) => (
+      <div class="image-card">
+        <img src={image.src} alt={image.alt}>
+      </div>
+    ))}
+    <button onclick={nextClick}>Next</button>
   </div>
 </div>
 <style>
-  ul {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 4px;
-  }
-  @media screen and (min-width: 640px) {
-    ul {
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
+  .gallery {
+    display: flex;
+    justify-content: center;
   }
   .image-card > img {
-    width: 300px;
+    display: none;
+    width: 700px;
+  }
+  .image-card:nth-child(2) > img {
+    display: block;
   }
 </style>
