@@ -1,0 +1,13 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import golden from "../images/gallery/Amity_Goldengate.Lite.jpg";
+import barnacle from "../images/gallery/Shaffer_Taylor-17.Lite.jpg";
+import wolverine from "../images/gallery/Wolverine.Lite.jpg";
+
+const images = [golden, barnacle, wolverine]
+---
+<BaseLayout pageTitle="Gallery">
+<div class="gallery-container">
+  <img src={golden}>
+</div>
+</BaseLayout>

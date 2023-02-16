@@ -6,9 +6,12 @@ html {
 body {
   margin: 0 auto;
   width: 100%;
-  max-width: 80ch;
   padding: 1rem;
   line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 * {
