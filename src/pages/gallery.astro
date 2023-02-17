@@ -18,18 +18,20 @@ const images = [golden, barnacle, wolverine]
   </header>
 </div>
 <div class="gallery-container">
+  <button class="gallery-back">Back</button>
   {images.map((image, index) => (
-    <div class="gallery-slide hidden" data-value={index}>
+    <div class="gallery-slide" data-value={index}>
       <img class="gallery-image" src={image} />
     </div>
   ))}
+  <button class="gallery-next">Next</button>
 </div>
 <script>
   const displayImage = (input) => {
   const imageContainer = document.querySelector(`div[data-value='${input}']`)
   imageContainer.setAttribute('name', 'visible')
 }
-  displayImage(0)
+  displayImage(2)
 </script>
 <style>
   .gallery-header-wrapper > header {
@@ -43,6 +45,7 @@ const images = [golden, barnacle, wolverine]
     padding: 2%;
   }
   .gallery-slide {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -52,10 +55,24 @@ const images = [golden, barnacle, wolverine]
   .gallery-image {
     width: 100%;
   }
-  .hidden {
-    display: none;
-  }
   div[name=visible] {
     display: block;
+  }
+  .gallery-back,
+  .gallery-next {
+    position: absolute;
+    top: 50%;
+    z-index: 800;
+    padding: 5px 10px;
+  }
+  .gallery-back {
+    left: 2%;
+  }
+  .gallery-next {
+    right: 2%;
+  }
+  .gallery-back:hover,
+  .gallery-next:hover {
+    cursor: pointer;
   }
 </style>
