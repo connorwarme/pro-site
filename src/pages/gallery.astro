@@ -30,24 +30,30 @@ const images = [golden, barnacle, wolverine]
   const slideNodes = document.querySelectorAll('div.gallery-slide');
   let currentIndex = 0;
   const displayImage = (input) => {
-  const imageContainer = document.querySelector(`div[data-value='${input}']`)
-  imageContainer.setAttribute('name', 'visible')
-}
+    console.log(input);
+    const imageContainer = document.querySelector(`div[data-value='${input}']`)
+    imageContainer.setAttribute('name', 'visible')
+  }
   displayImage(currentIndex)
-
+  const hideImage = (input) => {
+    const imageContainer = document.querySelector(`div[data-value='${input}']`)
+    imageContainer.removeAttribute('name')
+  }
   const nextClick = (index) => {
     let newIndex = index + 1;
-    if (newIndex > slideNodes.length) {
+    if (newIndex >= slideNodes.length) {
       newIndex = 0;
     }
+    hideImage(index);
     displayImage(newIndex);
     currentIndex = newIndex;
   }
   const backClick = (index) => {
     let newIndex = index - 1;
     if (newIndex === -1) {
-      newIndex = slideNodes.length;
+      newIndex = slideNodes.length - 1;
     }
+    hideImage(index);
     displayImage(newIndex);
     currentIndex = newIndex;
   }
