@@ -27,11 +27,33 @@ const images = [golden, barnacle, wolverine]
   <button class="gallery-next">Next</button>
 </div>
 <script>
+  const slideNodes = document.querySelectorAll('div.gallery-slide');
+  let currentIndex = 0;
   const displayImage = (input) => {
   const imageContainer = document.querySelector(`div[data-value='${input}']`)
   imageContainer.setAttribute('name', 'visible')
 }
-  displayImage(2)
+  displayImage(currentIndex)
+
+  const nextClick = (index) => {
+    let newIndex = index + 1;
+    if (newIndex > slideNodes.length) {
+      newIndex = 0;
+    }
+    displayImage(newIndex);
+    currentIndex = newIndex;
+  }
+  const backClick = (index) => {
+    let newIndex = index - 1;
+    if (newIndex === -1) {
+      newIndex = slideNodes.length;
+    }
+    displayImage(newIndex);
+    currentIndex = newIndex;
+  }
+
+  document.querySelector('button.gallery-next').addEventListener('click', () => nextClick(currentIndex));
+  document.querySelector('button.gallery-back').addEventListener('click', () => backClick(currentIndex));
 </script>
 <style>
   .gallery-header-wrapper > header {
