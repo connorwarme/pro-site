@@ -44,8 +44,8 @@ const images = [golden, barnacle, wolverine]
     if (newIndex >= slideNodes.length) {
       newIndex = 0;
     }
-    hideImage(index);
     displayImage(newIndex);
+    hideImage(index);
     currentIndex = newIndex;
   }
   const backClick = (index) => {
@@ -53,8 +53,8 @@ const images = [golden, barnacle, wolverine]
     if (newIndex === -1) {
       newIndex = slideNodes.length - 1;
     }
-    hideImage(index);
     displayImage(newIndex);
+    hideImage(index);
     currentIndex = newIndex;
   }
 
@@ -72,19 +72,26 @@ const images = [golden, barnacle, wolverine]
     background-color: rgba(0, 0, 0, 0.3);
     padding: 2%;
   }
+  .gallery-container {
+    transition: opacity 0.2s ease-out;
+    min-height: 866px;
+  }
   .gallery-slide {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 80;
+    transition: opacity 0.4s ease-out;
   }
   .gallery-image {
     width: 100%;
   }
   div[name=visible] {
-    display: block;
+    visibility: visible;
+    opacity: 1;
   }
   .gallery-back,
   .gallery-next {
