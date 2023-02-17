@@ -40,13 +40,13 @@ const backClick = () => {
 
 <div class="gallery-container">
   <div class="gallery">
-    <button onclick={backClick}>Back</button>
+    <button>Back</button>
     {[one, two, three].map((image) => (
       <div class="image-card">
         <img src={image.src} alt={image.alt}>
       </div>
     ))}
-    <button onclick={nextClick}>Next</button>
+    <button>Next</button>
   </div>
 </div>
 <style>
