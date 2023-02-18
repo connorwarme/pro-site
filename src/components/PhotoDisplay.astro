@@ -1,4 +1,9 @@
 ---
+import golden from "../images/gallery/Amity_Goldengate.Lite.jpg";
+import barnacle from "../images/gallery/Shaffer_Taylor-17.Lite.jpg";
+import wolverine from "../images/gallery/Wolverine.Lite.jpg";
+
+const images = [golden, barnacle, wolverine]
 const photoArray = Astro.props.array;
 
 const testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -11,52 +16,19 @@ const backClick = () => {
   console.log('previous photo!')
 }
 ---
-
-<div class="gallery-container">
+<section aria-label="Photo Gallery">
   <div class="gallery">
-    <button>Back</button>
-    <div class="slides">
-      {testArray.map((item) => (
-        <div class="slide">
-          {item}
-        </div>
-        ))}
-    </div>
-    <button>Next</button>
+    <button class="gallery-button prev">&#8656;</button>
+    <button class="gallery-button next">&#8658;</button>
+    <ul>
+      {images.map((image) => (
+        <li class="slide">
+          <img src={image} alt='' />
+        </li>
+      ))}
+    </ul>
   </div>
-</div>
+</section>
 <style>
-  .gallery {
-    display: flex;
-    justify-content: center;
-  }
-  .slides > .slide {
-    position: absolute;
-    background-color: slategray;
-    height: 100%;
-    width: 100%;
-    display: grid;
-    align-content: center;
-    justify-content: center;
-    color: white;
-    font-size: 100px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    border: 5px solid orangered;
-    transition: all 0.25s;
-    transform: translateX(200%);
-  }
-  .slide.prev {
-    z-index: 10;
-    transform: translateX(-100%);
-  }
 
-  .slide.current {
-    z-index: 10;
-    transform: translateX(0);
-  }
-
-  .slide.next {
-    z-index: 10;
-    transform: translateX(100%);
-  }
 </style>
