@@ -114,20 +114,29 @@ const singleSport = [
 ];
 
 ---
-<h2>Free Climbing Achievements</h2>
-<div class="bigwall-container">
-  <h3>Big Wall</h3>
-  {bigwall.map((item) => <Wall climb={item} />)}
-</div>
-<div class="multi-container">
-  <h3>Multipitch</h3>
-  {multi.map((item) => <Wall climb={item} />)}
-</div>
-<div class="singleTrad-container"> 
-  <h3>Single Pitch Trad</h3>
-  {singleTrad.map((item) => <Pitch climb={item} />)}
-</div>
-<div class="singleSport-container">
-  <h3>Single Pitch Sport</h3>
-  {singleSport.map((item) => <Pitch climb={item} />)}
-</div>
+<section aria-label="Climbing Achievements">
+  <h2>Free Climbing Achievements</h2>
+  <div class="bigwall-container">
+    <h3>Big Wall</h3>
+    {bigwall.map((item) => <Wall climb={item} />)}
+  </div>
+  <div class="multi-container">
+    <h3>Multipitch</h3>
+    {multi.map((item) => <Wall climb={item} />)}
+  </div>
+  <div class="singleTrad-container"> 
+    <h3>Single Pitch Trad</h3>
+    {singleTrad.map((item) => <Pitch climb={item} />)}
+  </div>
+  <div class="singleSport-container">
+    <h3>Single Pitch Sport</h3>
+    {singleSport.map((item) => <Pitch climb={item} />)}
+  </div>
+</section>
+<style>
+  section > div {
+    margin: 0;
+    padding: 0;
+    
+  }
+</style>
