@@ -12,8 +12,8 @@ const array = [
     caption: 'The A5 Traverse',
     location: 'El Capitan, Yosemite',
     credit: {
-      name: 'Felipe',
-      site: 'url',
+      name: 'Felipe Nordenflycht',
+      site: 'https://www.felipesh.com/',
     }
   },
   {
@@ -23,7 +23,7 @@ const array = [
     location: `Ship's Prow, RMNP`,
     credit: {
       name: 'Taylor Schaffer',
-      site: 'url',
+      site: 'https://www.taylorshaffer.com/',
     }
   },
   {
@@ -32,8 +32,8 @@ const array = [
     caption: 'Onsighting Wolverine (13-)',
     location: 'The Waterfall, Sedona',
     credit: {
-      name: 'JP',
-      site: 'url',
+      name: 'JP Melville',
+      site: 'https://www.youtube.com/@v3rtmedia',
     }
   }
 ]
@@ -49,7 +49,7 @@ const array = [
           <div class="credit-container">
             <p>{image.caption}</p>
             <p>{image.location}</p>
-            <p>{image.credit.name}</p>
+            <p><a href={image.credit.site} target="_blank" rel="noreferrer">{image.credit.name}</a></p>
           </div>
         </li>
       ))}
@@ -133,6 +133,13 @@ body {
   color: whitesmoke;
   background-color: rgba(0, 0, 0, 0.5);
   cursor: zoom-in;
+}
+.credit-container > p > a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+.credit-container > p:last-child {
+  cursor: pointer;
 }
 .slide[data-active] .credit-container {
   animation: reveal 7s 1;
