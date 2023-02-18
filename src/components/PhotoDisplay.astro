@@ -17,10 +17,10 @@ const backClick = () => {
 }
 ---
 <section aria-label="Photo Gallery">
-  <div class="gallery">
-    <button class="gallery-button prev">&#8656;</button>
-    <button class="gallery-button next">&#8658;</button>
-    <ul>
+  <div class="gallery" data-gallery>
+    <button class="gallery-button prev" data-gallery-button="prev">&#8656;</button>
+    <button class="gallery-button next" data-gallery-button="next">&#8658;</button>
+    <ul data-slides>
       {images.map((image) => (
         <li class="slide">
           <img src={image} alt='' />
@@ -51,7 +51,7 @@ body {
   transform: translateY(-50%);
   color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
-  padding: 0 .5rem;
+  padding: 0 .5rem .5rem .5rem;
   border-radius: 0.25rem;
   background-color: rgba(0, 0, 0, 0.15);
 }
@@ -90,3 +90,25 @@ body {
   object-position: center;
 }
 </style>
+<script defer>
+  const initialActive = document.querySelector('li.slide');
+  initialActive.setAttribute('data-active', '');
+  const buttons = document.querySelectorAll('button.gallery-button');
+
+  buttons.forEach((button) => {
+    addEventListener('click', () => {
+      console.log('click');
+      const offset = button.dataset.galleryButton === 'next' ? 1 : -1;
+      const slides = button
+        .closest('[data-gallery]')
+        .querySelector('[data-slides]')
+      const activeSlide = slides.querySelector('[data-active]')
+      let newIndex = [...slides.children].indexOf(activeSlide) + offset
+      if (newIndex < 0) newIndex = slides.children.length - 1
+      if (newIndex >= slides.children.length) newIndex = 0
+      console.log([newIndex, activeSlide])
+      slides.children[newIndex].dataset.active = true;
+      delete activeSlide.dataset.active
+    })
+  })
+</script>
