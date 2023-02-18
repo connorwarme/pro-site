@@ -93,22 +93,22 @@ body {
 <script defer>
   const initialActive = document.querySelector('li.slide');
   initialActive.setAttribute('data-active', '');
-  const buttons = document.querySelectorAll('button.gallery-button');
+  const nextBtn = document.querySelector('button.next');
+  const prevBtn = document.querySelector('button.prev')
 
-  buttons.forEach((button) => {
-    addEventListener('click', () => {
-      console.log('click');
-      const offset = button.dataset.galleryButton === 'next' ? 1 : -1;
-      const slides = button
-        .closest('[data-gallery]')
-        .querySelector('[data-slides]')
-      const activeSlide = slides.querySelector('[data-active]')
-      let newIndex = [...slides.children].indexOf(activeSlide) + offset
-      if (newIndex < 0) newIndex = slides.children.length - 1
-      if (newIndex >= slides.children.length) newIndex = 0
-      console.log([newIndex, activeSlide])
-      slides.children[newIndex].dataset.active = true;
-      delete activeSlide.dataset.active
-    })
-  })
+  const changeSlide = (button) => {
+    const offset = button.dataset.galleryButton === 'next' ? 1 : -1;
+    const slides = button
+      .closest('[data-gallery]')
+      .querySelector('[data-slides]')
+    const activeSlide = slides.querySelector('[data-active]')
+    let newIndex = [...slides.children].indexOf(activeSlide) + offset
+    if (newIndex < 0) newIndex = slides.children.length - 1
+    if (newIndex >= slides.children.length) newIndex = 0
+    console.log([newIndex, activeSlide, slides])
+    slides.children[newIndex].dataset.active = true;
+    delete activeSlide.dataset.active
+  }
+  nextBtn.addEventListener('click', () => changeSlide(nextBtn))
+  prevBtn.addEventListener('click', () => changeSlide(prevBtn))
 </script>
