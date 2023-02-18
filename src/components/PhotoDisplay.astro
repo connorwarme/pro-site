@@ -1,33 +1,7 @@
 ---
 const photoArray = Astro.props.array;
-const one = {
-  text: '',
-  src: photoArray[0],
-  alt: 'first photo in array',
-  next: null,
-  back: null,
-}
-const two = {
-  text: '',
-  src: photoArray[1],
-  alt: 'second photo in array',
-  next: null,
-  back: null,
-}
-const three = {
-  text: '',
-  src: photoArray[2],
-  alt: 'third photo in array',
-  next: null,
-  back: null,
-}
-one.next = two
-one.back = three
-two.next = three
-two.back = one
-three.next = one
-three.back = two
 
+const testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 const nextClick = (current) => {
   // set current img display to none
   // set next img display to block
@@ -41,11 +15,13 @@ const backClick = () => {
 <div class="gallery-container">
   <div class="gallery">
     <button>Back</button>
-    {[one, two, three].map((image) => (
-      <div class="image-card">
-        <img src={image.src} alt={image.alt}>
-      </div>
-    ))}
+    <div class="slides">
+      {testArray.map((item) => (
+        <div class="slide">
+          {item}
+        </div>
+        ))}
+    </div>
     <button>Next</button>
   </div>
 </div>
@@ -54,11 +30,33 @@ const backClick = () => {
     display: flex;
     justify-content: center;
   }
-  .image-card > img {
-    display: none;
-    width: 700px;
+  .slides > .slide {
+    position: absolute;
+    background-color: slategray;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    color: white;
+    font-size: 100px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: 5px solid orangered;
+    transition: all 0.25s;
+    transform: translateX(200%);
   }
-  .image-card:nth-child(2) > img {
-    display: block;
+  .slide.prev {
+    z-index: 10;
+    transform: translateX(-100%);
+  }
+
+  .slide.current {
+    z-index: 10;
+    transform: translateX(0);
+  }
+
+  .slide.next {
+    z-index: 10;
+    transform: translateX(100%);
   }
 </style>
