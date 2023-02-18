@@ -120,16 +120,38 @@ body {
   object-position: center;
 }
 .credit-container {
+  opacity: 0;
   position: absolute;
   bottom: 0;
   padding: 2rem;
+  transition: 1000ms opacity ease-in;
 }
 .credit-container > p {
   margin: 0;
   padding: 1px 5px;
-  font-weight: 600;
+  font-weight: 400;
   color: whitesmoke;
   background-color: rgba(0, 0, 0, 0.5);
+  cursor: zoom-in;
+}
+.slide[data-active] .credit-container {
+  animation: reveal 7s 1;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+}
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 </style>
 <script defer>
