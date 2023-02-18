@@ -5,16 +5,52 @@ import wolverine from "../images/gallery/Wolverine.Lite.jpg";
 
 const images = [golden, barnacle, wolverine]
 const photoArray = Astro.props.array;
-
+const array = [
+  {
+    src: golden,
+    alt: 'Amity on Golden Gate',
+    caption: 'The A5 Traverse',
+    location: 'El Capitan, Yosemite',
+    credit: {
+      name: 'Felipe',
+      site: 'url',
+    }
+  },
+  {
+    src: barnacle,
+    alt: 'Amity on Barnacle Scars',
+    caption: 'Barnacle Scars',
+    location: `Ship's Prow, RMNP`,
+    credit: {
+      name: 'Taylor Schaffer',
+      site: 'url',
+    }
+  },
+  {
+    src: wolverine,
+    alt: 'Amity onsighting Wolverine',
+    caption: 'Onsighting Wolverine (13-)',
+    location: 'The Waterfall, Sedona',
+    credit: {
+      name: 'JP',
+      site: 'url',
+    }
+  }
+]
 ---
 <section aria-label="Photo Gallery">
   <div class="gallery" data-gallery>
     <button class="gallery-button prev" data-gallery-button="prev">&#8656;</button>
     <button class="gallery-button next" data-gallery-button="next">&#8658;</button>
     <ul data-slides>
-      {images.map((image) => (
+      {array.map((image) => (
         <li class="slide">
-          <img src={image} alt='' />
+          <img src={image.src} alt='' />
+          <div class="credit-container">
+            <p>{image.caption}</p>
+            <p>{image.location}</p>
+            <p>{image.credit.name}</p>
+          </div>
         </li>
       ))}
     </ul>
@@ -82,6 +118,18 @@ body {
   width: 100%;
   object-fit: cover;
   object-position: center;
+}
+.credit-container {
+  position: absolute;
+  bottom: 0;
+  padding: 2rem;
+}
+.credit-container > p {
+  margin: 0;
+  padding: 1px 5px;
+  font-weight: 600;
+  color: whitesmoke;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 </style>
 <script defer>
