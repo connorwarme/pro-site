@@ -30,5 +30,63 @@ const backClick = () => {
   </div>
 </section>
 <style>
-
+*::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+.gallery {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+.gallery-button {
+  position: absolute;
+  z-index: 8;
+  background: none;
+  border: none;
+  font-size: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  padding: 0 .5rem;
+  border-radius: 0.25rem;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.gallery-button:hover,
+.gallery-button:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.gallery-button:focus {
+  outline: 1px solid black;
+}
+.gallery-button.prev {
+  left: 1rem;
+}
+.gallery-button.next {
+  right: 1rem;
+}
+.gallery > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+.slide[data-active] {
+  opacity: 1;
+}
+.slide > img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
 </style>
