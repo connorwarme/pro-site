@@ -1,12 +1,15 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import TagDisplay from "../components/TagDisplay.astro";
 import BlogPost from "../components/BlogPost.astro";
 const allPosts = await Astro.glob('./posts/*.md');
+const uniqueTags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
 const pageTitle = "Content";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
 	<h3>Reflections, Recipies, Podcasts and More!</h3>
+  <TagDisplay array={uniqueTags} />
   <ul>
     {allPosts.map((post) => {
       const { title, description } = post.frontmatter;
