@@ -1,15 +1,6 @@
 ---
 import Nav from "../components/Nav.astro";
-import golden from "../images/gallery/Amity_Goldengate.Lite.jpg";
-import barnacle from "../images/gallery/Shaffer_Taylor-17.Lite.jpg";
-import wolverine from "../images/gallery/Wolverine.Lite.jpg";
-
-const images = [golden, barnacle, wolverine]
-
-// const displayImage = (input) => {
-//   const image = document.querySelector(`img{data-value=${input}`)
-//   image.setAttribute('class', 'gallery-image')
-// }
+import PhotoDisplay from "../components/PhotoDisplay.astro";
 ---
 <div class="gallery-header-wrapper visible">
   <header>
@@ -18,96 +9,17 @@ const images = [golden, barnacle, wolverine]
   </header>
 </div>
 <div class="gallery-container">
-  <button class="gallery-back">Back</button>
-  {images.map((image, index) => (
-    <div class="gallery-slide" data-value={index}>
-      <img class="gallery-image" src={image} />
-    </div>
-  ))}
-  <button class="gallery-next">Next</button>
+  <PhotoDisplay />
 </div>
-<script>
-  const slideNodes = document.querySelectorAll('div.gallery-slide');
-  let currentIndex = 0;
-  const displayImage = (input) => {
-    console.log(input);
-    const imageContainer = document.querySelector(`div[data-value='${input}']`)
-    imageContainer.setAttribute('name', 'visible')
-  }
-  displayImage(currentIndex)
-  const hideImage = (input) => {
-    const imageContainer = document.querySelector(`div[data-value='${input}']`)
-    imageContainer.removeAttribute('name')
-  }
-  const nextClick = (index) => {
-    let newIndex = index + 1;
-    if (newIndex >= slideNodes.length) {
-      newIndex = 0;
-    }
-    displayImage(newIndex);
-    hideImage(index);
-    currentIndex = newIndex;
-  }
-  const backClick = (index) => {
-    let newIndex = index - 1;
-    if (newIndex === -1) {
-      newIndex = slideNodes.length - 1;
-    }
-    displayImage(newIndex);
-    hideImage(index);
-    currentIndex = newIndex;
-  }
-
-  document.querySelector('button.gallery-next').addEventListener('click', () => nextClick(currentIndex));
-  document.querySelector('button.gallery-back').addEventListener('click', () => backClick(currentIndex));
-</script>
 <style>
   .gallery-header-wrapper > header {
     position: absolute;
     top: 0;
-    width: 100%;
+    width: 100vw;
     z-index: 800;
     display: flex;
     justify-content: space-around;
     background-color: rgba(0, 0, 0, 0.3);
-    padding: 2%;
-  }
-  .gallery-container {
-    transition: opacity 0.2s ease-out;
-    min-height: 866px;
-  }
-  .gallery-slide {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 80;
-    transition: opacity 0.4s ease-out;
-  }
-  .gallery-image {
-    width: 100%;
-  }
-  div[name=visible] {
-    visibility: visible;
-    opacity: 1;
-  }
-  .gallery-back,
-  .gallery-next {
-    position: absolute;
-    top: 50%;
-    z-index: 800;
-    padding: 5px 10px;
-  }
-  .gallery-back {
-    left: 2%;
-  }
-  .gallery-next {
-    right: 2%;
-  }
-  .gallery-back:hover,
-  .gallery-next:hover {
-    cursor: pointer;
+    padding: 2% 0;
   }
 </style>
