@@ -3,6 +3,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import TagDisplay from "../components/TagDisplay.astro";
 import BlogPost from "../components/BlogPost.astro";
 const allPosts = await Astro.glob('./posts/*.md');
+const sortedPosts = [...allPosts].sort((a, b) => {
+  return new Date(b.frontmatter.pubDate) - new Date(a.frontmatter.pubDate)
+});
 const uniqueTags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
 const pageTitle = "Content";
 ---
@@ -11,9 +14,9 @@ const pageTitle = "Content";
 	<h3>Reflections, Recipies, Podcasts and More!</h3>
   <TagDisplay array={uniqueTags} />
   <ul>
-    {allPosts.map((post) => {
-      const { title, description } = post.frontmatter;
-      return <BlogPost url={post.url} title={title} description={description} />
+    {sortedPosts.map((post) => {
+      const { title, description, pubDate } = post.frontmatter;
+      return <BlogPost url={post.url} title={title} description={description} date={pubDate} />
     })}
   </ul>
 </BaseLayout>
