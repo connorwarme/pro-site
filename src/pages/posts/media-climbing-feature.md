@@ -3,7 +3,7 @@ layout: ../../layouts/MdPostLayout.astro
 title: 'Who Crushed Yosemite This Year? Amity Warme Did.'
 pubDate: 2022-08-30
 description: “Amity doesn’t seem to take rest days. ... That's probably the biggest influence on her impressive ticklist."
-author: Climbing
+author: Chloe Anderson
 image: 
   url: "https://docs.astro.build/default-og-image.png"
   alt: "The word “astro” against an illustration of planets and stars."
