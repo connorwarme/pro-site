@@ -8,7 +8,7 @@ image:
   url: "https://docs.astro.build/default-og-image.png"
   alt: "The word “astro” against an illustration of planets and stars."
 origin: 
-  sponsor: 'Gripped'
+  name: 'Gripped'
   url: "https://gripped.com/news/amity-warme-becomes-fifth-woman-to-free-el-capitan-in-a-day/"
   date: 2022-04-23
 tags: ["climbing", "Yosemite", "FRIAD", "El Capitan", "news", "media"]

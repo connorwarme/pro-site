@@ -8,7 +8,7 @@ image:
   url: "https://docs.astro.build/default-og-image.png"
   alt: "The word “astro” against an illustration of planets and stars."
 origin: 
-  sponsor: 'Gripped'
+  name: 'Gripped'
   url: "https://gripped.com/news/amity-warme-sends-golden-gate-5-13b-on-el-capitan/"
   date: 2021-06-02
 tags: ["climbing", "Yosemite", "El Capitan", "news", "media"]

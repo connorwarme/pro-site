@@ -8,7 +8,7 @@ image:
   url: "https://docs.astro.build/default-og-image.png"
   alt: "The word “astro” against an illustration of planets and stars."
 origin: 
-  sponsor: 'Climbing'
+  name: 'Climbing'
   url: "https://www.climbing.com/people/amity-warme-profile/"
   date: 2022-08-30
 tags: ["climbing", "Yosemite", "FRIAD", "El Capitan", "news", "media"]
