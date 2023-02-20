@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MdPostLayout.astro
 title: The Final Frontier
-pubDate: 2023-01-01
+pubDate: 2021-08-26
 description: Seeking progression while climbing in Yosemite National Park
 author: Amity Warme
 image: 

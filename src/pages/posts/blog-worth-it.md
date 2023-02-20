@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MdPostLayout.astro
-title: Worth It?
-pubDate: 2022-07-01
+title: Was It Worth It?
+pubDate: 2023-02-03
 description: A glimpse into climbing The Honeymoon is Over in RMNP
 author: Amity Warme
 image:
