@@ -9,6 +9,9 @@ export async function getStaticPaths() {
   // dynamically generate pages for each tag (ie returning only blogs w/ given tag)
   return uniqueTags.map((tag) => {
     const filteredPosts = allPosts.filter((post) => post.frontmatter.tags.includes(tag));
+    filteredPosts.sort((a, b) => {
+      return +new Date(b.frontmatter.pubDate) - +new Date(a.frontmatter.pubDate)
+    });
     return {
       params: { tag },
       props: { posts: filteredPosts },
