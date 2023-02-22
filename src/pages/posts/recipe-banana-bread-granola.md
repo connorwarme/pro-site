@@ -5,13 +5,35 @@ pubDate: 2022-07-21
 description: "A nutritious snack to fuel your next adventure"
 author: Amity Warme
 image: 
-  url: "https://docs.astro.build/default-og-image.png"
-  alt: "The word “astro” against an illustration of planets and stars."
+  url: "../../src/images/posts/bananabread.png"
+  alt: "Bananabread Granola"
 origin: 
   sponsor: 'Enduro Bites'
   url: "https://endurobites.com/blogs/recipes/banana-bread-granola-recipe"
   date: 2022-07-21
 tags: ["nutrition", "recipe", "granola"]
 ---
+
+### Ingredients
+
+  * 3 very ripe bananas
+  * 1/4 cup almond butter or tahini
+  * 1 teaspoon vanilla extract
+  * 1/4 cups honey or pure maple syrup
+  * 5 cups old fashioned oats
+  * 2 teaspoons cinnamon
+  * 1/2 teaspoon sea salt
+  * 2 scoops Recovery Protein Vanilla
+
+### Instructions
+
+  * Preheat oven to 325 degrees and line two baking sheets with parchment paper
+  * Mash bananas in a large mixing bowl
+  * Add almond butter or tahini, vanilla, and honey or maple syrup and mix well
+  * Stir in oats, cinnamon, sea salt, and Recovery Protein until well combined
+  * Arrange mixture on baking sheets, using fingers to make small clumps
+  * Bake for 30-35 minutes or until starting to brown, stirring halfway through
+
+Once cooled, we like to store this in small re-sealable containers or ziplock bags so it’s easy to grab a serving or two as we’re heading out he door. 
 I need to add the text here, or figure out how to include the images...
 Need to know how much of the text is Amity's..

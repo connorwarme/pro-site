@@ -5,15 +5,14 @@ pubDate: 2021-09-19
 description: "Enjoy delicious and protein-packed blackberry muffins"
 author: Amity Warme
 image: 
-  url: "https://docs.astro.build/default-og-image.png"
-  alt: "The word “astro” against an illustration of planets and stars."
+  url: "../../src/images/posts/blackberry.png"
+  alt: "Blackberry Muffins"
 origin: 
   sponsor: 'Enduro Bites'
   url: "https://endurobites.com/blogs/recipes/northwest-blackberry-muffins"
   date: 2021-09-19
 tags: ["nutrition", "recipe", "muffins"]
 ---
-figure out how to include the images...
 
 ### Yield: 
 10 Muffins
