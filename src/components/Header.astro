@@ -4,6 +4,16 @@ import Nav from "./Nav.astro";
 ---
 
 <header>
+  <h1 class="header-name">Amity Warme</h1>
   <Hamburger />
   <Nav />
 </header>
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .header-name {
+    text-transform: uppercase;
+  }
+</style>
