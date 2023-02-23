@@ -6,13 +6,14 @@ description: "Enjoy delicious and protein-packed blackberry muffins"
 author: Amity Warme
 image: 
   url: "../../src/images/posts/blackberry.png"
-  alt: "Blackberry Muffins"
+  alt: "Northwest Blackberry Muffins"
 origin: 
   sponsor: 'Enduro Bites'
   url: "https://endurobites.com/blogs/recipes/northwest-blackberry-muffins"
   date: 2021-09-19
 tags: ["nutrition", "recipe", "muffins"]
 ---
+Originally posted by [Enduro Bites](https://endurobites.com/blogs/recipes/northwest-blackberry-muffins)
 
 ### Yield: 
 10 Muffins
@@ -29,7 +30,7 @@ tags: ["nutrition", "recipe", "muffins"]
   * 1 tsp sea salt
   * 2 tsp baking powder
   * ½ tsp baking soda
-  * 2 scoops Enduro Bites Recovery Protein, vanilla
+  * 2 scoops Enduro Bites Vanilla [Recovery Protein](https://enduro-bites.myshopify.com/products/recovery-protein-by-enduro-bites)
   * 1 ½ - 2 cups blackberries (fresh or frozen)
 
 ### Instructions:
@@ -39,10 +40,10 @@ tags: ["nutrition", "recipe", "muffins"]
   * Next, add the flour, cinnamon, salt, baking powder, baking soda, and Vanilla Recovery Protein Powder to the bowl. Stir until just combined. 
   * Fold in the blackberries.
   * Cover bowl and place in the fridge for at least 1 hour and up to overnight. 
-  * When you are ready to bake your muffins, preheat the oven to 425o F and prepare a muffin tin by greasing each muffin cup with cooking spray.
+  * When you are ready to bake your muffins, preheat the oven to 425°F and prepare a muffin tin by greasing each muffin cup with cooking spray.
   * Remove batter from the fridge. Batter will be thick but try not to stir it as you scoop batter into each muffin cup. Fill to the top! This recipe should divide into 10 muffins.
   * Sprinkle a dash of cinnamon on the top of each muffin.
-  * Bake at 425o F for 8 minutes. Then, reduce heat to 350o F and bake for another 12 minutes, or until a toothpick inserted in the center comes out clean.
+  * Bake at 425°F for 8 minutes. Then, reduce heat to 350°F and bake for another 12 minutes, or until a toothpick inserted in the center comes out clean.
   * Remove the muffins from the oven and cool in the pan on a cooling rack. Then remove from the pan with a plastic knife or fork and enjoy!
 
 ### Notes:

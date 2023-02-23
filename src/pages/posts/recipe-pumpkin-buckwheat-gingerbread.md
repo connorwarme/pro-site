@@ -16,17 +16,17 @@ Originally posted by [Enduro Bites](https://endurobites.com/blogs/recipes/pumpki
 
 ### Ingredients
 * 1 cup pumpkin puree (I used canned pumpkin)
-* 1/3 cup coconut oil
+* ½ cup coconut oil
 * 1 teaspoon vanilla
-* 1/3 cup molasses
+* ⅓ cup molasses
 * 2 eggs 
-* 1/4 cup plant-based milk (I used soy)
-* 1 1/2 cups buckwheat flour
+* ¼ cup plant-based milk (I used soy)
+* 1 ½ cups buckwheat flour
 * 1 teaspoon cinnamon
-* 1/2 teaspoon ground ginger 
-* 1/2 teaspoon sea salt
-* 1 1/2 teaspoon baking soda
-* 1 1/2 teaspoon baking powder
+* ½ teaspoon ground ginger 
+* ½ teaspoon sea salt
+* 1 ½ teaspoon baking soda
+* 1 ½ teaspoon baking powder
 * 2 scoops Enduro Bites Vanilla [Recovery Protein](https://enduro-bites.myshopify.com/products/recovery-protein-by-enduro-bites)
 
 ### Instructions 

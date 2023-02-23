@@ -5,15 +5,15 @@ pubDate: 2022-03-07
 description: "Enjoy a nutritious, date-sweetened chocolate pudding"
 author: Amity Warme
 image: 
-  url: "https://docs.astro.build/default-og-image.png"
-  alt: "The word “astro” against an illustration of planets and stars."
+  url: "../src/images/posts/pudding.png"
+  alt: "Chocolate Chia Protein Pudding"
 origin: 
   sponsor: 'Enduro Bites'
   url: "https://endurobites.com/blogs/recipes/chocolate-chia-protein-pudding-recipe"
   date: 2022-03-07
 tags: ["nutrition", "recipe", "chocolate"]
 ---
-figure out how to include the images...
+Originally posted by [Enduro Bites](https://endurobites.com/blogs/recipes/chocolate-chia-protein-pudding-recipe)
 
 This creamy, date-sweetened chocolate pudding will satisfy your sweet tooth while providing healthy fats, protein, fiber, and minerals. Chia seeds have long been touted as a nutritional powerhouse and were a staple in ancient Aztec and Mesoamerican cultures. Research indicates that chia seeds support bone health, improve blood sugar control, promote gut health, and reduce inflammation. Enjoy this simple and nutritious chia seed pudding for breakfast, dessert, or a post-training recovery snack!
 
@@ -22,7 +22,7 @@ This creamy, date-sweetened chocolate pudding will satisfy your sweet tooth whil
   * 1 ½ cups milk of choice (soy, almond, coconut, cashew)
   * ¼ cup chia seeds
   * 6-10 pitted dates (depending on desired sweetness)
-  * 2 scoop Enduro Bites Recovery Protein Vanilla 
+  * 2 scoop Enduro Bites Vanilla [Recovery Protein](https://enduro-bites.myshopify.com/products/recovery-protein-by-enduro-bites)  
   * 3 Tbsp unsweetened cocoa or cacao powder
   * 1 tsp vanilla
 

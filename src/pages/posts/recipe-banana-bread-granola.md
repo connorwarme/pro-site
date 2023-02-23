@@ -13,21 +13,22 @@ origin:
   date: 2022-07-21
 tags: ["nutrition", "recipe", "granola"]
 ---
+Originally posted by [Enduro Bites](https://endurobites.com/blogs/recipes/banana-bread-granola-recipe)
 
 ### Ingredients
 
   * 3 very ripe bananas
-  * 1/4 cup almond butter or tahini
+  * ¼ cup almond butter or tahini
   * 1 teaspoon vanilla extract
-  * 1/4 cups honey or pure maple syrup
+  * ¼ cups honey or pure maple syrup
   * 5 cups old fashioned oats
   * 2 teaspoons cinnamon
-  * 1/2 teaspoon sea salt
-  * 2 scoops Recovery Protein Vanilla
+  * ½ teaspoon sea salt
+  * 2 scoops Enduro Bites Vanilla [Recovery Protein](https://enduro-bites.myshopify.com/products/recovery-protein-by-enduro-bites) 
 
 ### Instructions
 
-  * Preheat oven to 325 degrees and line two baking sheets with parchment paper
+  * Preheat oven to 325°F and line two baking sheets with parchment paper
   * Mash bananas in a large mixing bowl
   * Add almond butter or tahini, vanilla, and honey or maple syrup and mix well
   * Stir in oats, cinnamon, sea salt, and Recovery Protein until well combined
@@ -35,5 +36,3 @@ tags: ["nutrition", "recipe", "granola"]
   * Bake for 30-35 minutes or until starting to brown, stirring halfway through
 
 Once cooled, we like to store this in small re-sealable containers or ziplock bags so it’s easy to grab a serving or two as we’re heading out he door. 
-I need to add the text here, or figure out how to include the images...
-Need to know how much of the text is Amity's..

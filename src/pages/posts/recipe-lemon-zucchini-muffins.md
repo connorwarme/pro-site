@@ -5,15 +5,15 @@ pubDate: 2021-07-13
 description: "An on-the-go fuel to energize on pre-dawn adventures"
 author: Amity Warme
 image: 
-  url: "https://docs.astro.build/default-og-image.png"
-  alt: "The word “astro” against an illustration of planets and stars."
+  url: "../../src/images/posts/zucchini.png"
+  alt: "Lemon Zucchini Muffins"
 origin: 
   sponsor: 'Enduro Bites'
   url: "https://endurobites.com/blogs/recipes/lemon-zucchini-muffin-recipe-pre-dawn-adventure-fuel"
   date: 2021-07-13
 tags: ["nutrition", "recipe", "muffins"]
 ---
-figure out how to include the images...
+Originally posted by [Enduro Bites](https://endurobites.com/blogs/recipes/lemon-zucchini-muffin-recipe-pre-dawn-adventure-fuel)
 
 Many of my summer adventures in the mountains start well before dawn and end well after dark. I am usually not ready for a full breakfast at 3am, but I know I need to fuel my body before launching into an all-day objective. These muffins fit the bill perfectly! They have some zip without being too sweet. They provide a balance of carbohydrates, protein, and fat for both quick energy and sustained fueling. Plus, they are easy to take on the go and share with your adventure partners!
 
@@ -32,7 +32,7 @@ Many of my summer adventures in the mountains start well before dawn and end wel
     - When you reduce the heat, do not open the oven door as this will cause them to deflate again.
 
 
-High Top Lemon Zucchini Muffins
+# High Top Lemon Zucchini Muffins
 
 ### Yield: 
 12 Muffins
@@ -51,7 +51,7 @@ High Top Lemon Zucchini Muffins
   * 1 tsp sea salt
   * 2 tsp baking powder
   * ½ tsp baking soda
-  * 2 scoops Enduro Bites Vanilla Recovery Protein Powder
+  * 2 scoops Enduro Bites Vanilla [Recovery Protein](https://enduro-bites.myshopify.com/products/recovery-protein-by-enduro-bites)
 
 ### Instructions:
 
@@ -62,10 +62,10 @@ High Top Lemon Zucchini Muffins
   * Next, add the flour, cinnamon, nutmeg, salt, baking powder, baking soda, and Vanilla Recovery Protein Powder to the bowl. Stir until just combined.
   * Fold in the shredded zucchini and lemon zest.
   * Cover bowl and place in the fridge for at least 1 hour.
-  * When you are ready to bake your muffins, preheat the oven to 425o F and prepare a muffin tin by greasing each muffin cup with cooking spray.
+  * When you are ready to bake your muffins, preheat the oven to 425°F and prepare a muffin tin by greasing each muffin cup with cooking spray.
   * Remove batter from the fridge. Batter will be thick but try not to stir it as you scoop batter into each muffin cup. Fill to the top! This recipe should divide perfectly into 12 muffins.
   * Sprinkle a dash of cinnamon on the top of each muffin.
-  * Bake at 425o F for 8 minutes. Then, reduce heat to 350o F and bake for another 12 minutes, or until a toothpick inserted in the center comes out clean.
+  * Bake at 425°F for 8 minutes. Then, reduce heat to 350°F and bake for another 12 minutes, or until a toothpick inserted in the center comes out clean.
   * Remove the muffins from the oven and cool in the pan on a cooling rack. Then remove from the pan with a plastic knife or fork and enjoy!
 
 ### Notes:
