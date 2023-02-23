@@ -2,6 +2,15 @@
 import golden from "../images/gallery/Amity_Goldengate.Lite.jpg";
 import barnacle from "../images/gallery/Shaffer_Taylor-17.Lite.jpg";
 import wolverine from "../images/gallery/Wolverine.Lite.jpg";
+import stingray from "../images/gallery/stingray.jpg";
+import corazon from "../images/gallery/corazon.jpg";
+import six from "../images/gallery/sixstar.jpeg";
+import lifeline from "../images/gallery/lifeline.jpg";
+import gear from "../images/gallery/Shaffer_Taylor-2.jpg";
+import johnny from "../images/gallery/JohnnyLat.jpg";
+import mark from "../images/gallery/mark.jpg";
+import psycho from "../images/gallery/psycho.jpg";
+import rude from "../images/gallery/rudeboys.jpg";
 
 const images = [golden, barnacle, wolverine]
 const photoArray = Astro.props.array;
@@ -17,6 +26,16 @@ const array = [
     }
   },
   {
+    src: johnny,
+    alt: 'Amity on Johnny Lat',
+    caption: 'Johnny Lat',
+    location: `Turkey Rocks`,
+    credit: {
+      name: 'Adam Pawlikiewicz',
+      site: 'https://www.adampawlikiewicz.com/',
+    }
+  },
+  {
     src: barnacle,
     alt: 'Amity on Barnacle Scars',
     caption: 'Barnacle Scars',
@@ -24,6 +43,56 @@ const array = [
     credit: {
       name: 'Taylor Schaffer',
       site: 'https://www.taylorshaffer.com/',
+    }
+  },
+  {
+    src: stingray,
+    alt: 'Amity on Stingray',
+    caption: 'Stingray',
+    location: `Joshua Tree`,
+    credit: {
+      name: 'Jeremy Schoenborn',
+      site: 'https://www.instagram.com/jerrrrrrrrbs',
+    }
+  },
+  {
+    src: psycho,
+    alt: 'Amity on Mark of the Beast',
+    caption: 'Mark of the Beast',
+    location: `Yosemite`,
+    credit: {
+      name: 'Samuel Crossley',
+      site: 'https://samuelcrossley.media',
+    }
+  },
+  {
+    src: corazon,
+    alt: 'Amity on El Corazon',
+    caption: 'El Corazon',
+    location: `El Capitan, Yosemite`,
+    credit: {
+      name: 'Scott Eubank',
+      site: 'https://www.scotteubank.com/',
+    }
+  },
+  {
+    src: lifeline,
+    alt: 'Amity on Lifeline',
+    caption: 'Lifeline',
+    location: `Sedona`,
+    credit: {
+      name: 'Blake McCord',
+      site: '',
+    }
+  },
+  {
+    src: six,
+    alt: 'Amity on Six Star Crack',
+    caption: 'Six Star Crack',
+    location: `Indian Creek`,
+    credit: {
+      name: 'Tempei Takeuchi',
+      site: 'https://www.tempeiphotography.com/',
     }
   },
   {
@@ -35,7 +104,37 @@ const array = [
       name: 'JP Melville',
       site: 'https://www.youtube.com/@v3rtmedia',
     }
-  }
+  },
+  {
+    src: mark,
+    alt: 'Amity on Mark of the Beast',
+    caption: 'Mark of the Beast',
+    location: `Yosemite`,
+    credit: {
+      name: 'Samuel Crossley',
+      site: 'https://samuelcrossley.media',
+    }
+  },
+  {
+    src: rude,
+    alt: 'Amity on Rude Boys',
+    caption: 'Rude Boys',
+    location: `Smith Rock`,
+    credit: {
+      name: 'Simon Carter',
+      site: 'https://www.onsight.com/au',
+    }
+  },
+  {
+    src: gear,
+    alt: 'Amity gearing up in RMNP',
+    caption: 'Racking up',
+    location: `Chasm Lake, RMNP`,
+    credit: {
+      name: 'Taylor Shaffer',
+      site: 'https://www.taylorshaffer.com/',
+    }
+  },
 ]
 ---
 <section aria-label="Photo Gallery">
