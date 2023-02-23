@@ -1,24 +1,31 @@
 ---
-import Nav from "../components/Nav.astro";
+import Header from "../components/Header.astro";
 import PhotoDisplay from "../components/PhotoDisplay.astro";
+import '../styles/global.css';
 ---
-<div class="gallery-header-wrapper visible">
-  <header>
-    <div class="gallery-title">Gallery</div> 
-    <Nav />
-  </header>
-</div>
-<div class="gallery-container">
-  <PhotoDisplay />
-</div>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Gallery</title>
+	</head>
+	<body>
+    <div class="gallery-header-wrapper visible">
+      <Header />
+    </div>  
+    <div class="gallery-container">
+      <PhotoDisplay />
+    </div>
+  </body>
+</html>
 <style>
-  .gallery-header-wrapper > header {
+  .gallery-header-wrapper:first-child {
     position: absolute;
     top: 0;
     width: 100vw;
     z-index: 800;
-    display: flex;
-    justify-content: space-around;
     background-color: rgba(0, 0, 0, 0.3);
     padding: 2% 0;
   }
