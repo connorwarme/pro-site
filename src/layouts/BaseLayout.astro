@@ -3,7 +3,10 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
-const { pageTitle } = Astro.props;
+const { pageTitle, img } = Astro.props;
+const baseImage = "../src/images/gallery/lifeline.jpg"
+const background = img ? `url(${img})` : `url(${baseImage})`;
+
 ---
 
 <html lang="en">
@@ -21,10 +24,11 @@ const { pageTitle } = Astro.props;
     <Footer />
     <script>
       import "../scripts/menu.js";
+
     </script>
-    <style>
+    <style define:vars={{background}}>
       body {
-        background-image: url("../src/images/gallery/lifeline.jpg");
+        background-image: var(--background);
         background-position: center;
         background-repeat: no-repeat;
         background-attachment: fixed;
