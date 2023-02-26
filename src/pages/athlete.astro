@@ -7,6 +7,59 @@ const imageURL = "../src/images/gallery/Wolverine.Lite.jpg"
 ---
 
 <BaseLayout pageTitle="Amity the Athlete" img={imageURL}>
+  <div class="athlete-spacer">
+    <p class="athlete-title-one">PRO</p>
+    <p class="athlete-title-two">CLIMBER</p>
+    <div class="scroll-container">
+      <span>Scroll Down</span>
+    </div>
+  </div>
   <Achieve />
   <Sponsor />
 </BaseLayout>
+<style>
+  .athlete-spacer {
+    height: 80vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+  }
+  p {
+    font-size: 70px;
+    font-weight: 500;
+    padding: 0 0 0 5vw;
+    margin: 0;
+  }
+  .athlete-title-one {
+    grid-row: 2/3;
+    align-self: end;
+  }
+  .athlete-title-two {
+    grid-row: 3/4;
+  }
+  .scroll-container {
+    grid-row: 4/5;
+    justify-self: center;
+    align-self: end;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    width: 150px;
+    text-align: center;
+  }
+  .scroll-container::before {
+    content: "\21D3";
+    height: 32px;
+    width: 32px;
+    font-size: 48px;
+  }
+  .scroll-container > span {
+    display: none;
+  }
+  .scroll-container:hover::before {
+    display: none;
+  }
+  .scroll-container:hover span {
+    display: block;
+  }
+</style>
