@@ -1,4 +1,16 @@
 ---
 const { climb, grade, pitches, style, location } = Astro.props.climb;
+const styleText = style ? `, ${style}` : '';
 ---
-<p><em>{climb}</em>, {grade} || {pitches} pitches, {style}</p>
+<div>
+  <p><em>{climb}</em></p>
+  <p>{grade}, {pitches} pitches{styleText}</p>
+</div>
+<style>
+  p {
+    margin-top: 0;
+  }
+  p:first-child {
+    margin-bottom: 0;
+  }
+</style>
