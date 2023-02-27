@@ -65,25 +65,25 @@ const singleTrad = [
   {
     climb: 'Stingray',
     grade: '5.13d',
-    style: 'free, redpoint',
+    // style: 'free, redpoint',
     location: 'Joshua Tree',
   },
     {
     climb: 'Enter the Dragon',
     grade: '5.13+ R',
-    style: 'free, redpoint, FFA',
+    // style: 'free, redpoint, FFA',
     location: 'The Fins',
   },
   {
     climb: 'All Systems Go',
     grade: '5.13c',
-    style: 'free, redpoint',
+    // style: 'free, redpoint',
     location: 'Sedona',
   },
   {
     climb: 'Buffaloes in Space',
     grade: '5.13',
-    style: 'free, redpoint',
+    // style: 'free, redpoint',
     location: 'South Platte',
   },
 ];
@@ -91,25 +91,25 @@ const singleSport = [
   {
     climb: 'Sarchasm',
     grade: '5.14a',
-    style: 'free, redpoint',
+    // style: 'free, redpoint',
     location: 'RMNP'
   },
     {
     climb: 'Vesper',
     grade: '5.13d/14a',
-    style: 'free, redpoint',
+    // style: 'free, redpoint',
     location: 'The Fins'
   },
   {
     climb: 'Third Millenium',
     grade: '5.13d',
-    style: 'free, redpoint',
+    // style: 'free, redpoint',
     location: 'The Monastery'
   },
   {
     climb: 'Tombraider',
     grade: '5.13d',
-    style: 'free, redpoint',
+    // style: 'free, redpoint',
     location: 'Rifle'
   },
 ];
@@ -132,7 +132,7 @@ const singleSport = [
   <div class="singleTrad card-container"> 
     <h3>Trad</h3>
     <div class="list-container">
-      {singleTrad.map((item) => <Pitch climb={item} />)}
+      {singleTrad.map((item) => <Wall climb={item} />)}
     </div>
   </div>
   <div class="singleSport card-container">
