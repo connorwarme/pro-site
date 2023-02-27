@@ -49,6 +49,7 @@ const multi = [
   {
     climb: 'Barnacle Scars',
     grade: '5.13',
+    pitches: 3,
     style: 'first ascent, free, redpoint',
     location: 'RMNP'
   },
@@ -115,28 +116,49 @@ const singleSport = [
 
 ---
 <section aria-label="Climbing Achievements">
-  <h2>Free Climbing Achievements</h2>
-  <div class="bigwall-container">
+  <h1>Free Climbing Achievements</h1>
+  <div class="bigwall card-container">
     <h3>Big Wall</h3>
-    {bigwall.map((item) => <Wall climb={item} />)}
+    <div class="list-container">
+      {bigwall.map((item) => <Wall climb={item} />)}
+    </div>
   </div>
-  <div class="multi-container">
+  <div class="multi card-container">
     <h3>Multipitch</h3>
-    {multi.map((item) => <Wall climb={item} />)}
+    <div class="list-container">
+      {multi.map((item) => <Wall climb={item} />)}
+    </div>
   </div>
-  <div class="singleTrad-container"> 
-    <h3>Single Pitch Trad</h3>
-    {singleTrad.map((item) => <Pitch climb={item} />)}
+  <div class="singleTrad card-container"> 
+    <h3>Trad</h3>
+    <div class="list-container">
+      {singleTrad.map((item) => <Pitch climb={item} />)}
+    </div>
   </div>
-  <div class="singleSport-container">
-    <h3>Single Pitch Sport</h3>
-    {singleSport.map((item) => <Pitch climb={item} />)}
+  <div class="singleSport card-container">
+    <h3>Sport</h3>
+    <div class="list-container">
+      {singleSport.map((item) => <Pitch climb={item} />)}
+    </div>
   </div>
 </section>
 <style>
+  section {
+    margin: 100px 0;
+    width: 100vw;
+    background-color: whitesmoke;
+    text-align: center;
+  }
   section > div {
     margin: 0;
     padding: 0;
-    
+  }
+  h1 {
+    text-align: center;
+  }
+  .card-container {
+    margin: 1vh 2vw;
+  }
+  .list-container {
   }
 </style>
