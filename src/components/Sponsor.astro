@@ -82,18 +82,30 @@ const sponsors = [
   },
 ]
 ---
-<h2>Sponsors</h2>
-<div class="sponsors-wrapper">
-  {sponsors.map((sponsor) => (
-    <div class="sponsor-container">
-      <a href={sponsor.url} target="_blank">
-        <img src={sponsor.img.url} alt={sponsor.img.alt} height={sponsor.img.size}>
-      </a>
-    </div>
-  ))}
-</div>
+<section class="sponsors-section">
+  <h2>Sponsors</h2>
+  <div class="sponsors-wrapper">
+    {sponsors.map((sponsor) => (
+      <div class="sponsor-container">
+        <a href={sponsor.url} target="_blank">
+          <img src={sponsor.img.url} alt={sponsor.img.alt} height={sponsor.img.size}>
+        </a>
+      </div>
+    ))}
+  </div>
+</section>
 
 <style>
+  .sponsors-section {
+    background-color: black;
+    color: white;
+    width: 100vw;
+    text-align: center;
+    padding: 5vh 0;
+  }
+  h2 {
+    text-transform: uppercase;
+  }
   .sponsors-wrapper {
     padding: 20px;
     background-color: black;
