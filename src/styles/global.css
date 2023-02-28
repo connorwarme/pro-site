@@ -31,7 +31,7 @@ h1 {
   font-size: 2.5rem;
 }
 .header-name {
-  color: rgb(241, 245, 249);
+  color: rgb(245, 245, 245);
   text-shadow: 1px 1px 3px black;
 }
 /* nav styles */
@@ -43,8 +43,8 @@ h1 {
   display: block;
   width: 40px;
   height: 5px;
-  margin-bottom: 10px;
-  background-color: #ff9776;
+  margin: 5px 0 5px 0;
+  background-color: rgb(245, 245, 245);
 }
 .nav-links {
   width: 100%;

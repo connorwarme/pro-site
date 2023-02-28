@@ -10,12 +10,17 @@ import Nav from "./Nav.astro";
 </header>
 <style>
   header {
+    width: 100vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     font-family: "Unbound", Georgia, 'Times New Roman', Times, serif;
   }
   .header-name {
     text-transform: uppercase;
-    padding-right: 2vw;
+    font-size: 18px;
+  }
+  header:last-child {
+    display: none;
   }
 </style>
