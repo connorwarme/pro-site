@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Unbound";
+  src: url(./Unbounded-VariableFont_wght.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Playfair";
+  src: url(./PlayfairDisplay-VariableFont_wght.ttf) format("truetype");
+}
 html {
   background-color: #f1f5f9;
   font-family: sans-serif;
@@ -11,6 +19,7 @@ body {
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
+  font-family: "Playfair", Georgia, 'Times New Roman', Times, serif;
 }
 
 * {
