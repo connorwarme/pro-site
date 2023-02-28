@@ -36,28 +36,28 @@ const multi = [
     climb: 'The Honeymoon is Over',
     grade: '5.13c',
     pitches: 8,
-    style: 'redpoint',
+    style: '',
     location: 'RMNP',
   },
   {
     climb: 'Mark of the Beast',
     grade: '5.13b',
     pitches: 5,
-    style: 'redpoint',
+    style: '',
     location: 'Yosemite'
   },
   {
     climb: 'Barnacle Scars',
     grade: '5.13',
     pitches: 3,
-    style: 'first ascent, redpoint',
+    style: 'First Ascent',
     location: 'RMNP'
   },
   {
     climb: 'Liberty Crack',
     grade: '5.13b',
     pitches: 12,
-    style: 'redpoint',
+    style: '',
     location: 'North Cascades'
   }
 ];
@@ -71,7 +71,7 @@ const singleTrad = [
     {
     climb: 'Enter the Dragon',
     grade: '5.13+ R',
-    // style: 'free, redpoint, FFA',
+    style: 'First Female Ascent',
     location: 'The Fins',
   },
   {
@@ -132,7 +132,7 @@ const singleSport = [
   <div class="singleTrad card-container"> 
     <h3>Trad</h3>
     <div class="list-container">
-      {singleTrad.map((item) => <Wall climb={item} />)}
+      {singleTrad.map((item) => <Pitch climb={item} />)}
     </div>
   </div>
   <div class="singleSport card-container">
@@ -155,6 +155,9 @@ const singleSport = [
   }
   h1 {
     text-align: center;
+  }
+  h3 {
+    font-family: "Unbound", "Playfair", Georgia, 'Times New Roman', Times, serif;
   }
   .card-container {
     margin: 1vh 2vw;
