@@ -4,17 +4,27 @@ import Nav from "./Nav.astro";
 ---
 
 <header>
-  <h1 class="header-name">Amity Warme</h1>
-  <Hamburger />
+  <div class="mobile-box">
+    <h1 class="header-name">Amity Warme</h1>
+    <Hamburger />
+  </div>
   <Nav />
 </header>
 <style>
   header {
     width: 100vw;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     font-family: "Unbound", Georgia, 'Times New Roman', Times, serif;
+  }
+  /* header needs to be regular flex direction^^ on desktop mode */
+  .mobile-box {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
   .header-name {
     text-transform: uppercase;
