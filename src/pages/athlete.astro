@@ -14,13 +14,25 @@ const imageURL = "../src/images/gallery/Wolverine.Lite.jpg"
       <p class="athlete-title-two">CLIMBER</p>
     </div>
     <div class="scroll-container">
-      <img src={arrow} alt="" aria-label="Scroll down">
+      <a href="#achievements" aria-label="Link to Achievements">
+        <img src={arrow} alt="" aria-label="Scroll down">
+      </a>
       <!-- <span>Scroll Down</span> -->
     </div>
   </div>
-  <Achieve />
+  <a id="achievements">
+    <Achieve />
+  </a>
   <Sponsor />
 </BaseLayout>
+<script defer>
+  document.querySelector('div.mobile-hamburger').addEventListener('click', () => {
+    document.querySelector('div.scroll-container').style.visibility = "hidden";
+  })
+  document.querySelector('div.nav-overlay').addEventListener('click', () => {
+    document.querySelector('div.scroll-container').style.visibility = "visible";
+  })
+</script>
 <style>
   .athlete-spacer {
     height: 88vh;
@@ -48,8 +60,7 @@ const imageURL = "../src/images/gallery/Wolverine.Lite.jpg"
   .scroll-container {
     transition: visibility 200ms;
   }
-  .scroll-container > img {
-    margin-top: -10px;
+  .scroll-container > a > img {
     height: 60px;
     filter: invert(100%) sepia(52%) saturate(137%) hue-rotate(212deg) brightness(111%) contrast(92%);
   }
