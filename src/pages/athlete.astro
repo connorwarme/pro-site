@@ -8,10 +8,12 @@ const imageURL = "../src/images/gallery/Wolverine.Lite.jpg"
 
 <BaseLayout pageTitle="Amity the Athlete" img={imageURL}>
   <div class="athlete-spacer">
-    <p class="athlete-title-one">PRO</p>
-    <p class="athlete-title-two">CLIMBER</p>
+    <div class="athlete-title">
+      <p class="athlete-title-one">PRO</p>
+      <p class="athlete-title-two">CLIMBER</p>
+    </div>
     <div class="scroll-container">
-      <span>Scroll Down</span>
+      <!-- <span>Scroll Down</span> -->
     </div>
   </div>
   <Achieve />
@@ -21,35 +23,55 @@ const imageURL = "../src/images/gallery/Wolverine.Lite.jpg"
   .athlete-spacer {
     height: 80vh;
     width: 100vw;
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
   }
   p {
     font-family: "Unbound", Georgia, 'Times New Roman', Times, serif;
-    font-size: 70px;
+    font-size: 24px;
     font-weight: 500;
-    color: white;
-    padding: 0 0 0 5vw;
+    color: whitesmoke;
+    padding: 0 1vw 0 1vw;
     margin: 0;
   }
+  .athlete-title {
+    display: flex;
+    height: fit-content;
+  }
   .athlete-title-one {
-    grid-row: 2/3;
-    align-self: end;
   }
   .athlete-title-two {
-    grid-row: 3/4;
   }
   .scroll-container {
+    height: 0;
+    width: 0;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-top: 20px solid whitesmoke;
+  }
+  /* .scroll-container::before {
+    display: block;
+    content: "\21D3";
+    color: whitesmoke;
+    font-size: 3rem;
+    /* transform: rotate(45deg); */
+  } */
+  /* .scroll-container::after {
+    display: block;
+    height: 40px;
+    width: 5px;
+    content: "";
+    background-color: whitesmoke;
+    transform: rotate(-45deg);
+  } */
+  /* .scroll-container {
     grid-row: 4/5;
     justify-self: center;
     align-self: end;
     cursor: pointer;
-    /* position: absolute; */
-    bottom: 24px;
-    left: 50%;
     height: 50px;
     width: 150px;
-    margin-left: -75px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,11 +92,11 @@ const imageURL = "../src/images/gallery/Wolverine.Lite.jpg"
     text-transform: uppercase;
     text-align: center;
     color: rgb(255, 255, 255);
-  }
-  .scroll-container:hover::before {
+  } */
+  /* .scroll-container:hover::before {
     display: none;
   }
   .scroll-container:hover span {
     display: block;
-  }
+  } */
 </style>
