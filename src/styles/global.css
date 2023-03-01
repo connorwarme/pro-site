@@ -32,18 +32,20 @@ h1 {
 }
 .header-name {
   color: rgb(245, 245, 245);
-  text-shadow: 1px 1px 3px black;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 /* nav styles */
 .mobile-hamburger {
   cursor: pointer;
+  margin-right: 2rem;
 }
 .mobile-hamburger .line {
   display: block;
-  width: 40px;
-  height: 5px;
+  width: 32px;
+  height: 4px;
   margin: 5px 0 5px 0;
   background-color: rgb(245, 245, 245);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
   border-radius: 1.5px;
 }
 .nav-links {
@@ -102,7 +104,7 @@ h1 {
   visibility: visible;
   opacity: 1;
 }
-@media screen and (min-width: 636px) {
+@media screen and (min-width: 770px) {
   .nav-links {
     display: block;
     position: static;
