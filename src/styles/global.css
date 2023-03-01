@@ -71,7 +71,7 @@ h1 {
   padding: 0.5rem 0;
   text-decoration: none;
   text-shadow: 1px 1px 3px rgb(0, 0, 0);
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
   color: rgb(241, 245, 249);
@@ -106,14 +106,21 @@ h1 {
 }
 @media screen and (min-width: 770px) {
   .nav-links {
-    display: block;
-    position: static;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    height: fit-content;
+    position: unset;
+    transform: translateX(0);
     width: auto;
     background: none;
+    margin-right: 2rem;
   }
   .nav-links a {
     display: inline-block;
-    padding: 15px 20px;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
   }
   .mobile-hamburger {
     display: none;

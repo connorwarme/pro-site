@@ -15,7 +15,7 @@ import Nav from "./Nav.astro";
     width: 100vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     font-family: "Unbound", Georgia, 'Times New Roman', Times, serif;
   }
@@ -33,5 +33,16 @@ import Nav from "./Nav.astro";
   }
   header:last-child {
     display: none;
+  }
+  @media screen and (min-width: 770px) {
+    header {
+      flex-direction: row;
+    }
+    .mobile-box {
+      width: fit-content;
+    }
+    .header-name {
+      font-size: 1.7rem;
+    }
   }
 </style>
