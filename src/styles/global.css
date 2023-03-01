@@ -36,7 +36,6 @@ h1 {
 }
 /* nav styles */
 .mobile-hamburger {
-  /* padding-right: 20px; */
   cursor: pointer;
 }
 .mobile-hamburger .line {
@@ -45,6 +44,7 @@ h1 {
   height: 5px;
   margin: 5px 0 5px 0;
   background-color: rgb(245, 245, 245);
+  border-radius: 1.5px;
 }
 .nav-links {
   position: fixed;
@@ -54,32 +54,31 @@ h1 {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  background-color: rgba(241, 245, 249, 0.5);
+  background-color: rgba(0, 0, 0, 0.9);
   z-index: 2;
   margin: 0;
   transform: translateX(200px);
-  transition-duration: 250ms;
-  transition-timing-function: ease-in-out;
+  transition: transform 300ms ease-in-out;
 }
 .nav-links a {
   display: block;
+  width: inherit;
   text-align: center;
-  /* padding: 10px 0; */
-  padding: 10px 0;
+  padding: 0.5rem 0;
   text-decoration: none;
-  text-shadow: 1px 1px 3px black;
+  text-shadow: 1px 1px 3px rgb(0, 0, 0);
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
   color: rgb(241, 245, 249);
-  transition: 250ms ease-in-out;
+  transition: 300ms ease-in-out;
 }
 .nav-links a:hover, a:focus {
   background-color: rgba(241, 245, 249, 0.5);
   text-shadow: none;
-  color: black;
+  color: rgb(255, 255, 255);
   transform: translateY(-3px);
 }
 .nav-overlay {
@@ -92,9 +91,10 @@ h1 {
   backdrop-filter: blur(5px);
   visibility: hidden;
   opacity: 0;
+  transition: opacity 300ms ease-in-out;
 }
 .expanded > .nav-links {
-  display: unset;
+  display: flex;
   transform: translateX(0);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
