@@ -3,6 +3,7 @@ import Achieve from "../components/Achieve.astro";
 import Sponsor from "../components/Sponsor.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
+const arrow = "../src/images/icons/arrow-simple.svg";
 const imageURL = "../src/images/gallery/Wolverine.Lite.jpg"
 ---
 
@@ -13,6 +14,7 @@ const imageURL = "../src/images/gallery/Wolverine.Lite.jpg"
       <p class="athlete-title-two">CLIMBER</p>
     </div>
     <div class="scroll-container">
+      <img src={arrow} alt="" aria-label="Scroll down">
       <!-- <span>Scroll Down</span> -->
     </div>
   </div>
@@ -21,11 +23,12 @@ const imageURL = "../src/images/gallery/Wolverine.Lite.jpg"
 </BaseLayout>
 <style>
   .athlete-spacer {
-    height: 80vh;
+    height: 88vh;
     width: 100vw;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
   }
   p {
     font-family: "Unbound", Georgia, 'Times New Roman', Times, serif;
@@ -44,11 +47,12 @@ const imageURL = "../src/images/gallery/Wolverine.Lite.jpg"
   .athlete-title-two {
   }
   .scroll-container {
-    height: 0;
-    width: 0;
-    border-right: 5px solid transparent;
-    border-left: 5px solid transparent;
-    border-top: 20px solid whitesmoke;
+
+  }
+  .scroll-container > img {
+    margin-top: -10px;
+    height: 40px;
+    filter: invert(100%) sepia(52%) saturate(137%) hue-rotate(212deg) brightness(111%) contrast(92%);
   }
   /* .scroll-container::before {
     display: block;
