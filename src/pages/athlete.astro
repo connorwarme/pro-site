@@ -4,10 +4,13 @@ import Sponsor from "../components/Sponsor.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const arrow = "../src/images/icons/arrow-simple.svg";
-const imageURL = "../src/images/gallery/Wolverine.Lite.jpg"
+const image = {
+  url: "../src/images/gallery/Wolverine.Lite.jpg",
+  position: 'center',
+}
 ---
 
-<BaseLayout pageTitle="Amity the Athlete" img={imageURL}>
+<BaseLayout pageTitle="Amity the Athlete" img={image}>
   <div class="athlete-spacer">
     <div class="athlete-title">
       <p class="athlete-title-one">PRO</p>

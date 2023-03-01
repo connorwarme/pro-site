@@ -5,7 +5,8 @@ import '../styles/global.css';
 
 const { pageTitle, img } = Astro.props;
 const baseImage = "../src/images/gallery/lifeline.jpg"
-const background = img ? `url(${img})` : `url(${baseImage})`;
+const background = img ? `url(${img.url})` : `url(${baseImage})`;
+const position = img ? `${img.position}` : 'center';
 
 ---
 
@@ -25,10 +26,10 @@ const background = img ? `url(${img})` : `url(${baseImage})`;
       import "../scripts/menu.js";
 
     </script>
-    <style define:vars={{background}}>
+    <style define:vars={{background, position}}>
       body {
         background-image: var(--background);
-        background-position: center;
+        background-position: var(--position);
         background-repeat: no-repeat;
         background-attachment: fixed;
         min-height: 100vh;
