@@ -70,7 +70,7 @@ h1 {
   text-align: center;
   padding: 0.5rem 0;
   text-decoration: none;
-  text-shadow: 1px 1px 3px rgb(0, 0, 0);
+  text-shadow: 1px 1px 3px rgb(0, 0, 0, 0.7);
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -121,6 +121,9 @@ h1 {
     display: inline-block;
     font-size: 1rem;
     padding: 0.5rem 1rem;
+  }
+  .nav-links a:hover, a:focus {
+    color: black;
   }
   .mobile-hamburger {
     display: none;

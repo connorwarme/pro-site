@@ -129,16 +129,18 @@ const singleSport = [
       {multi.map((item) => <Wall climb={item} />)}
     </div>
   </div>
-  <div class="singleTrad card-container"> 
-    <h3>Trad</h3>
-    <div class="list-container">
-      {singleTrad.map((item) => <Pitch climb={item} />)}
+  <div class="singles-wrapper">
+    <div class="singleTrad card-container"> 
+      <h3>Trad</h3>
+      <div class="list-container">
+        {singleTrad.map((item) => <Pitch climb={item} />)}
+      </div>
     </div>
-  </div>
-  <div class="singleSport card-container">
-    <h3>Sport</h3>
-    <div class="list-container">
-      {singleSport.map((item) => <Pitch climb={item} />)}
+    <div class="singleSport card-container">
+      <h3>Sport</h3>
+      <div class="list-container">
+        {singleSport.map((item) => <Pitch climb={item} />)}
+      </div>
     </div>
   </div>
 </section>
@@ -161,6 +163,16 @@ const singleSport = [
   }
   .card-container {
     margin: 1vh 2vw;
+  }
+  .singles-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .singleTrad, 
+  .singleSport {
+    margin: 0 75px 0 75px;
   }
   .list-container {
   }
