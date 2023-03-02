@@ -11,13 +11,13 @@ const image = {
 <BaseLayout pageTitle={pageTitle} img={image}>
   <div class="about-wrapper">
     <div class="about-initial">
-      <h1>{pageTitle}</h1>
+      <h1 class="about-animate">{pageTitle}</h1>
       <p>You'll often find me exceedingly stoked and always in motion, often rock climbing. I'm constantly pursuing the next big adventure.</p>
       <p>My secret climbing superpower is trying REALLY hard - I don’t give up!</p>
       <p>Feel free to say hi if you ever see me around!!</p>
     </div>
     <div class="about-climbing">
-      <h2>Why Climbing?</h2>
+      <h2 class="about-animate">Why Climbing?</h2>
       <p>
         I find climbing compelling because it provides the opportunity to challenge myself while exploring incredible landscapes and connecting with others in the mountain adventure tribe.
         I thrive when an objective pushes me to the limit, physically and mentally. I love digging deep to accomplish a goal.
@@ -31,7 +31,7 @@ const image = {
       </p>
     </div>
     <div class="about-nutrition">
-      <h2>Why Nutrition?</h2>
+      <h2 class="about-animate">Why Nutrition?</h2>
       <p>
         I've been immersed in 'weight sensitive' sports my entire life. 
         I'm acutely aware of the harmful mental and physical effects of underfueling, in one's athletic performance and long-term health.
@@ -70,21 +70,34 @@ const image = {
   }
   .about-initial {
     box-shadow: 1px 1px 4px rgb(64, 64, 64);
+    border-radius: 3px 3px 0 0;
   }
-  .about-initial > h1::after,
-  .about-wrapper h2::after {
+  .about-nutrition {
+    border-radius: 0 0 3px 3px;
+  }
+  .about-animate::after {
     display: block;
     content: "";
     height: 4px;
     width: 100%;
     border-radius: 2px;
     background-color: #FE073E;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 1s ease-out;
   }
   h1, h2 {
     width: fit-content;
   }
   p {
 
+  }
+  .about-animate {
+    transition-duration: 3s;
+  }
+  .active::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
   @media screen and (min-width: 770px) {
     .about-wrapper {
@@ -99,7 +112,26 @@ const image = {
     }
   }
 </style>
-
+<script defer>
+  const addObserver = (element) => {
+    let observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('active')
+          }, 1000);
+          observer.unobserve(entry.target)
+        }
+      })
+    })
+    observer.observe(element);
+  }
+  const scrollTrigger = (selector) => {
+    let targets = Array.from(document.querySelectorAll(selector));
+    targets.forEach(target => addObserver(target));
+  }
+  scrollTrigger('.about-animate')
+</script>
 <!-- <p>I'm a pro climber, soon-to-be registered dietician, and stoked on life!</p>
 <p>My skills are:</p>
 <ul>
