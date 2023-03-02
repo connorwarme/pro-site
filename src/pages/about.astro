@@ -54,26 +54,48 @@ const image = {
   </div>
 </BaseLayout>
 <style>
+  .about-wrapper {
+    display: flex;
+    flex-direction: column;  
+    margin-top: 50vh;
+  }
   .about-initial,
   .about-climbing,
   .about-nutrition {
-    background-color: rgba(245, 245, 245, 0.9);
-    margin: 0 1rem;
-    padding: 0 1rem;
+    color: rgb(64, 64, 64);
+    background-color: #f8f8f8;
+    width: 100vw;
+    max-width: 550px;
+    padding: 0 2rem;
   }
   .about-initial {
-    margin-top: 50vh;
+    box-shadow: 1px 1px 4px rgb(64, 64, 64);
+  }
+  .about-initial > h1::after,
+  .about-wrapper h2::after {
+    display: block;
+    content: "";
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    background-color: #FE073E;
   }
   h1, h2 {
+    width: fit-content;
   }
   p {
 
   }
   @media screen and (min-width: 770px) {
     .about-wrapper {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
+      display: grid;
+      grid-template-columns: auto 1fr 1fr auto;
+    }
+    .about-initial,
+    .about-climbing,
+    .about-nutrition {
+      grid-column: 3/4;
+      margin-right: 2rem;
     }
   }
 </style>
