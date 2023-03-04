@@ -65,7 +65,7 @@ const image = {
     color: rgb(64, 64, 64);
     background-color: #f8f8f8;
     width: 100vw;
-    max-width: 550px;
+    max-width: 575px;
     padding: 0 2rem;
   }
   .about-initial {
@@ -93,7 +93,7 @@ const image = {
 
   }
   .about-animate {
-    transition-duration: 3s;
+    transition-duration: 2s;
   }
   .active::after {
     transform: scaleX(1);
@@ -132,15 +132,3 @@ const image = {
   }
   scrollTrigger('.about-animate')
 </script>
-<!-- <p>I'm a pro climber, soon-to-be registered dietician, and stoked on life!</p>
-<p>My skills are:</p>
-<ul>
-  {skills.map((skill) => <li class="skill">{skill}</li>)}
-</ul>
-<style define:vars={{skillColor, fontWeight, textCase}}>
-  .skill {
-    color: var(--skillColor);
-    font-weight: var(--fontWeight);
-    text-transform: var(--textCase);
-  }
-</style> -->
