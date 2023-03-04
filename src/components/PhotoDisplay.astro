@@ -17,6 +17,7 @@ import fly from "../images/gallery/fly.jpg";
 import monastery from "../images/gallery/monastery.jpg";
 import space from "../images/gallery/space.jpeg";
 import gate from "../images/gallery/gate.jpg";
+import arrow from "../images/icons/arrow-custom.png";
 
 const images = [golden, barnacle, wolverine]
 const photoArray = Astro.props.array;
@@ -205,8 +206,12 @@ const array = [
 ---
 <section aria-label="Photo Gallery">
   <div class="gallery" data-gallery>
-    <button class="gallery-button prev" data-gallery-button="prev">&#8656;</button>
-    <button class="gallery-button next" data-gallery-button="next">&#8658;</button>
+    <button class="gallery-button prev" data-gallery-button="prev">
+      <img src={arrow} alt="&#8656;">
+    </button>
+    <button class="gallery-button next" data-gallery-button="next">
+      <img src={arrow} alt="&#8658;">
+    </button>
     <ul data-slides>
       {array.map((image) => (
         <li class="slide">
@@ -234,32 +239,41 @@ body {
   position: relative;
 }
 .gallery-button {
+  margin: 0;
+  padding: 0;
   position: absolute;
   z-index: 8;
   background: none;
   border: none;
-  font-size: 4rem;
   top: 50%;
-  transform: translateY(-50%);
-  color: rgba(255, 255, 255, 0.5);
+  color: rgb(245, 245, 245);
   cursor: pointer;
-  padding: 0 .5rem .5rem .5rem;
-  border-radius: 0.25rem;
-  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  /* background-color: rgba(0, 0, 0, 0.15); */
 }
-.gallery-button:hover,
-.gallery-button:focus {
-  color: rgb(255, 255, 255);
-  background-color: rgba(0, 0, 0, 0.25);
+.gallery-button.prev > img,
+.gallery-button.next > img {
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(64, 64, 64, 0);
+  transition: 250ms ease-in-out;
+  /* filter: invert(100%) sepia(52%) saturate(137%) hue-rotate(212deg) brightness(111%) contrast(92%); */
+}
+.gallery-button img:hover,
+.gallery-button img:focus {
+  background-color: rgba(64, 64, 64, 0.6);
+  transform: scale(1.15);
 }
 .gallery-button:focus {
   outline: 1px solid black;
 }
 .gallery-button.prev {
   left: 2%;
+  transform: rotate(90deg);
 }
 .gallery-button.next {
   right: 2%;
+  transform: rotate(-90deg);
 }
 .gallery > ul {
   margin: 0;
@@ -289,7 +303,7 @@ body {
   position: absolute;
   bottom: 0;
   padding: 2rem;
-  transition: 1000ms opacity ease-in;
+  transition: 1s opacity ease-in;
 }
 .credit-container > p {
   margin: 0;
