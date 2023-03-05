@@ -36,62 +36,82 @@ const fuel = [
 ---
 
 <BaseLayout pageTitle="Amity | Nutrition" img={image}>
-  <h1 class="dietician-title">Dietician</h1>
-  <div class="nutrition-intro-container">
-    <p>I'm passionate about helping fellow athletes understand their fueling needs and using nutrition to maximize performance and promote long-term health.</p>
-  </div>
-  <div class="links-container hidden">
-    <div>Jump to:
-      <img class="jump-arrow" src={arrow} aria-label="Click to reveal links" />
+  <div class="nutrition-wrapper">
+    <h1 class="dietician-title">Dietician</h1>
+    <div class="nutrition-intro-container">
+      <p>I'm passionate about helping fellow athletes understand their fueling needs and using nutrition to maximize performance and promote long-term health.</p>
     </div>
-    <ul class="links-list">
-      <li><a href="#symptoms">Can You Relate?</a></li>
-      <li><a href="#fuel">Fuel Well to Perform Well</a></li>
-      <li><a href="#philosophy">My Philosophy</a></li>
-      <li><a href="#counseling">Counseling Services</a></li>
-      <li><a href="#creds">My Credentials</a></li>
-    </ul>
-  </div>
-  <div id="symptoms" class="symptoms-container">
-    <h2>Can You Relate?</h2>
-    <p><em>Do you:</em></p>
-    <ul class="symptoms">
-      {symptoms.map((item) => {
-        return <li>{item}</li>
-      })}
-    </ul>
-  </div>
-  <div id="fuel" class="fuel-container">
-    <h2>Fuel Well to Perform</h2>
-    <p><em>Proper nutrition can help:</em></p>
-    <ul class="fuel">
-      {fuel.map((item) => <li>{item}</li>)}
-    </ul>
-  </div>
-  <div id="philosophy" class="philosophy-container">
-    <h2>Philosophy</h2>
-    <p>Here's where my philosophy goes...</p>
-  </div>
-  <Counseling id="counseling"/>
-  <div id="creds" class="creds-container">
-    <h2>Credentials</h2>
-    <p>I have a Master's in Sports Nutrition from the University of Colorado in Colorado Springs (December 2021).</p>
-    <p>In 2022, I completed 1000 supervised practice hours, split between the following organizations:</p>
-    <ul>
-      <li>Phoenix Suns, an NBA team, assisting the team dietician in providing performance nutrition support for the athletes</li>
-      <li>Kendall Reagan Nutrition Center, an outpatient clinic in Fort Collins with a focus on eating disorder care</li>
-      <li>The Vegetable Connection, a nonprofit that helps families access nutritious, locally grown food, and provides nutrition education and hosts cooking classes</li>
-    </ul>
-    <p>I'm preparing to take the Registered Dietician exam (spring 2023).</p>
+    <div class="links-container hidden">
+      <div>Jump to:
+        <img class="jump-arrow" src={arrow} aria-label="Click to reveal links" />
+      </div>
+      <ul class="links-list">
+        <li><a href="#symptoms">Can You Relate?</a></li>
+        <li><a href="#fuel">Fuel Well to Perform Well</a></li>
+        <li><a href="#philosophy">My Philosophy</a></li>
+        <li><a href="#counseling">Counseling Services</a></li>
+        <li><a href="#creds">My Credentials</a></li>
+      </ul>
+    </div>
+    <div id="symptoms" class="symptoms-container">
+      <h2>Can You Relate?</h2>
+      <p><em>Do you:</em></p>
+      <ul class="symptoms">
+        {symptoms.map((item) => {
+          return <li>{item}</li>
+        })}
+      </ul>
+    </div>
+    <div id="fuel" class="fuel-container">
+      <h2>Fuel Well to Perform</h2>
+      <p><em>Proper nutrition can help:</em></p>
+      <ul class="fuel">
+        {fuel.map((item) => <li>{item}</li>)}
+      </ul>
+    </div>
+    <div id="philosophy" class="philosophy-container">
+      <h2>Philosophy</h2>
+      <p>Here's where my philosophy goes...</p>
+    </div>
+    <Counseling id="counseling"/>
+    <div id="creds" class="creds-container">
+      <h2>Credentials</h2>
+      <p>I have a Master's in Sports Nutrition from the University of Colorado in Colorado Springs (December 2021).</p>
+      <p>In 2022, I completed 1000 supervised practice hours, split between the following organizations:</p>
+      <ul>
+        <li>Phoenix Suns, an NBA team, assisting the team dietician in providing performance nutrition support for the athletes</li>
+        <li>Kendall Reagan Nutrition Center, an outpatient clinic in Fort Collins with a focus on eating disorder care</li>
+        <li>The Vegetable Connection, a nonprofit that helps families access nutritious, locally grown food, and provides nutrition education and hosts cooking classes</li>
+      </ul>
+      <p>I'm preparing to take the Registered Dietician exam (spring 2023).</p>
+    </div>
   </div>
 </BaseLayout>
 <style>
+  .nutrition-wrapper {
+    display: flex;
+    flex-direction: column;
+    color: rgb(64,64,64);
+    background-color: rgb(245, 245, 245);
+    margin-top: 55vh;
+    width: 100vw;
+    max-width: 575px;
+    padding: 0 1.5rem;
+  }
   .dietician-title {
-    font-family: "Unbound", "Playfair", Georgia, 'Times New Roman', Times, serif;
-    color: whitesmoke;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-    font-size: 48px;
-    margin-top: 225px;
+    font-size: 2.5rem;
+    width: fit-content;
+    margin: 0;
+  }
+  .dietician-title::after {
+    display: block;
+    content: "";
+    height: 4px;
+    width: 100%;
+    background-color: rgb(254, 7, 62);
+  }
+  .nutrition-intro-container > p {
+    margin: 12px 0 4px 0;
   }
   em {
     font-style: normal;
@@ -102,12 +122,16 @@ const fuel = [
     background-color: whitesmoke;
   }
   .links-container {
-    max-height: 45px;
+    max-height: 40px;
     overflow: hidden;
     transition: all .3s ease;
   }
   .links-container.reveal {
     max-height: 200px;
+  }
+  .links-container > div {
+    display: flex;
+    align-items: center;
   }
   .jump-arrow {
     height: 40px;
@@ -121,6 +145,7 @@ const fuel = [
   } */
   .links-container > ul {
     visibility: hidden;
+    margin: 0;
   }
   .reveal > ul {
     visibility: visible;
