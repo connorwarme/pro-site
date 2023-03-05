@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Counseling from "../components/Counseling.astro";
+import arrow from "../images/icons/arrow-simple.svg";
 
 const symptoms = [
   'Feel confused about what to eat to feel your best?', 
@@ -33,6 +34,18 @@ const fuel = [
   <h1 class="dietician-title">Dietician</h1>
   <div class="nutrition-intro-container">
     <p>I'm passionate about helping fellow athletes understand their fueling needs and using nutrition to maximize performance and promote long-term health.</p>
+  </div>
+  <div class="links-container hidden">
+    <div>Jump to:
+      <img class="jump-arrow" src={arrow} aria-label="Click to reveal links" />
+    </div>
+    <ul class="links-list">
+      <li><a href="#symptoms">Can You Relate?</a></li>
+      <li><a href="#fuel">Fuel Well to Perform Well</a></li>
+      <li><a href="#philosophy">My Philosophy</a></li>
+      <li><a href="#counseling">Counseling Services</a></li>
+      <li><a href="#creds">My Credentials</a></li>
+    </ul>
   </div>
   <div id="symptoms" class="symptoms-container">
     <h2>Can You Relate?</h2>
@@ -83,4 +96,35 @@ const fuel = [
   div {
     background-color: whitesmoke;
   }
+  .links-container {
+    max-height: 45px;
+    overflow: hidden;
+    transition: all .3s ease;
+  }
+  .links-container.reveal {
+    max-height: 200px;
+  }
+  .jump-arrow {
+    height: 40px;
+    cursor: pointer;
+  }
+  .visible {
+    transform: rotate(180deg);
+  }
+  /* .links-list {
+    transition: 250ms;
+  } */
+  .links-container > ul {
+    visibility: hidden;
+  }
+  .reveal > ul {
+    visibility: visible;
+  }
 </style>
+<script defer>
+  const jump = document.querySelector('img.jump-arrow');
+  jump.addEventListener('click', () => {
+    jump.classList.toggle('visible');
+    document.querySelector('div.links-container').classList.toggle('reveal');
+  })
+</script>
