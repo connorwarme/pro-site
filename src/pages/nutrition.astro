@@ -3,6 +3,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Counseling from "../components/Counseling.astro";
 import arrow from "../images/icons/arrow-simple.svg";
 
+const image = {
+  url: "../src/images/gallery/sixstar.jpeg",
+  position: '70%',
+}
+
 const symptoms = [
   'Feel confused about what to eat to feel your best?', 
   'Feel unsure how to properly fuel for your sport?',
@@ -30,7 +35,7 @@ const fuel = [
 ]
 ---
 
-<BaseLayout pageTitle="Amity | Nutrition">
+<BaseLayout pageTitle="Amity | Nutrition" img={image}>
   <h1 class="dietician-title">Dietician</h1>
   <div class="nutrition-intro-container">
     <p>I'm passionate about helping fellow athletes understand their fueling needs and using nutrition to maximize performance and promote long-term health.</p>
