@@ -2,32 +2,34 @@
 const services = [
   {
     name: 'Initial Call',
-    description: 'to decide if we are a good fit',
+    description: 'Not ready to book a full appointment? Contact me to schedule a brief conversation to ask any questions you have and make sure I am the right dietitian for you.',
     time: '10min',
     cost: 'FREE',
   },
   {
-    name: 'Intake Consultation',
-    description: 'to go over current dietary habits, attitude towards food, upcoming objectives, and more',
-    time: '90min',
-    cost: 275,
+    name: 'Intake Session',
+    description: 'I will provide individualized counseling tailored specifically to you by taking a deep dive into your current dietary habits, food preferences, activity level, and upcoming goals',
+    time: '60min',
+    cost: 175,
+    incl: 'handouts, fueling guides, and email support between sessions'
   },
   {
-    name: 'Regular Session',
-    description: 'to get an update on progress, assess, fine-tune our trajectory/goals, etc.',
-    time: '60min',
-    cost: 200,
+    name: 'Follow-up Session',
+    description: 'Fine tune our approach, troubleshoot any issues that have come up since the initial session, assess progress and adjust as needed',
+    time: '45min',
+    cost: 125,
   },
   {
     name: 'Athlete Package',
-    description: 'An intake, 3 regular sessions, and email checkups throughout...',
-    cost: 750,
+    description: 'Nutrition is an important part of the performance puzzle! I will help you cater your fueling toward your specific goals over the course of the intake session and three follow-up sessions',
+    cost: 450,
+    incl: 'handouts, fueling guides, and email support between sessions'
   }
 ]
 ---
 
 <div class="counseling-container">
-  <h1>Counseling Services</h1>
+  <h2>Counseling Services</h2>
   {services.map((service) => {
     return (
       <div class="service-card">
@@ -39,3 +41,8 @@ const services = [
     )
   })}
 </div>
+<style>
+  div {
+    background-color: whitesmoke;
+  }
+</style>
