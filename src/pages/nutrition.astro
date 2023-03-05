@@ -1,26 +1,68 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Counseling from "../components/Counseling.astro";
+
+const symptoms = [
+  'Feel confused about what to eat to feel your best?', 
+  'Feel unsure how to properly fuel for your sport?',
+  'Have difficulty planning meals or snacks?',
+  'Want help navigating the nutrition information available on the internet?',
+  'Experience chronic fatigue?',
+  'Get sick or injured often?',
+  'Struggle with stomach or gut issues/discomfort?',
+  'Have difficulty building strength or gaining muscle?',
+  'Train hard but fail to see improved performance?',
+  'Feel too tired to complete intended workouts?',
+  'Have a negative or complicated relationship with food?',
+  'Miss menstrual cycles or have decreased sex drive?',
+]
+const fuel = [
+  'Increase energy levels',
+  'Speed up recovery after training or physical activity',
+  'Build strength',
+  'Improve power and endurance for your sport',
+  'Normalize sleep patterns',
+  'Reduce frequency of injury and illness',
+  'Improve mental health',
+  'Increase coordination and concentration',
+  'Untangle disordered eating patterns and anxiety around food',
+]
 ---
 
 <BaseLayout pageTitle="Amity | Nutrition">
   <h1 class="dietician-title">Dietician</h1>
   <div class="nutrition-intro-container">
-    <p>I want to help <em>you</em> understand your fueling needs and use nutrition to maximize performance and promote long-term health.</p>
+    <p>I'm passionate about helping fellow athletes understand their fueling needs and using nutrition to maximize performance and promote long-term health.</p>
   </div>
-  <div class="philosophy-container">
+  <div id="symptoms" class="symptoms-container">
+    <h2>Can You Relate?</h2>
+    <p><em>Do you:</em></p>
+    <ul class="symptoms">
+      {symptoms.map((item) => {
+        return <li>{item}</li>
+      })}
+    </ul>
+  </div>
+  <div id="fuel" class="fuel-container">
+    <h2>Fuel Well to Perform</h2>
+    <p><em>Proper nutrition can help:</em></p>
+    <ul class="fuel">
+      {fuel.map((item) => <li>{item}</li>)}
+    </ul>
+  </div>
+  <div id="philosophy" class="philosophy-container">
     <h2>Philosophy</h2>
     <p>Here's where my philosophy goes...</p>
   </div>
-  <Counseling />
-  <div class="creds-container">
+  <Counseling id="counseling"/>
+  <div id="creds" class="creds-container">
     <h2>Credentials</h2>
     <p>I have a Master's in Sports Nutrition from the University of Colorado in Colorado Springs (December 2021).</p>
     <p>In 2022, I completed 1000 supervised practice hours, split between the following organizations:</p>
     <ul>
       <li>Phoenix Suns, an NBA team, assisting the team dietician in providing performance nutrition support for the athletes</li>
       <li>Kendall Reagan Nutrition Center, an outpatient clinic in Fort Collins with a focus on eating disorder care</li>
-      <li>The Vegetable Connection, a nonprofit that helps families access nutritious, locally grown food, where I helped provide nutrition education and teach cooking classes</li>
+      <li>The Vegetable Connection, a nonprofit that helps families access nutritious, locally grown food, and provides nutrition education and hosts cooking classes</li>
     </ul>
     <p>I'm preparing to take the Registered Dietician exam (spring 2023).</p>
   </div>
