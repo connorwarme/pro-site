@@ -105,6 +105,27 @@ h1 {
   visibility: visible;
   opacity: 1;
 }
+/* about page and nutrition page animation */
+.about-animate,
+.animate-title {
+  width: fit-content;
+  transition-duration: 2s;
+}
+.about-animate::after,
+.animate-title::after {
+  display: block;
+  content: "";
+  height: 4px;
+  width: 100%;
+  background-color: rgb(254, 7, 62);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 1s ease-out;
+}
+.active::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 @media screen and (min-width: 770px) {
   .nav-links {
     display: flex;

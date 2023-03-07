@@ -38,7 +38,7 @@ const flareURL = "../src/images/icons/flare-custom.png";
 
 <BaseLayout pageTitle="Amity | Nutrition" img={image}>
   <div class="nutrition-wrapper">
-    <h1 class="dietician-title">Dietician</h1>
+    <h1 class="dietician-title animate-title">Dietician</h1>
     <div class="nutrition-intro-container">
       <p>I'm passionate about helping fellow athletes understand their fueling needs and using nutrition to maximize performance and promote long-term health.</p>
     </div>
@@ -55,14 +55,14 @@ const flareURL = "../src/images/icons/flare-custom.png";
       </ul>
     </div>
     <div id="symptoms" class="symptoms-container">
-      <h2>Can You Relate?</h2>
+      <h2 class="animate-title">Can You Relate?</h2>
       <p><em>Do you:</em></p>
       <ul class="symptoms">
         {symptoms.map((item) => <li>{item} </li> )}
       </ul>
     </div>
     <div id="fuel" class="fuel-container">
-      <h2>Fuel Well to Perform</h2>
+      <h2 class="animate-title">Fuel Well to Perform</h2>
       <p><em>Proper nutrition can help:</em></p>
       <ul class="fuel">
         {fuel.map((item) => (
@@ -71,12 +71,12 @@ const flareURL = "../src/images/icons/flare-custom.png";
       </ul>
     </div>
     <div id="philosophy" class="philosophy-container">
-      <h2>Philosophy</h2>
+      <h2 class="animate-title">Philosophy</h2>
       <p>Here's where my philosophy goes...</p>
     </div>
     <Counseling id="counseling"/>
     <div id="creds" class="creds-container">
-      <h2>Credentials</h2>
+      <h2 class="animate-title">Credentials</h2>
       <p>I have a Master's in Sports Nutrition from the University of Colorado in Colorado Springs (December 2021).</p>
       <p>In 2022, I completed 1000 supervised practice hours, split between the following organizations:</p>
       <ul class="creds-list">
@@ -101,15 +101,25 @@ const flareURL = "../src/images/icons/flare-custom.png";
   }
   .dietician-title {
     font-size: 2.5rem;
-    width: fit-content;
     margin: 0;
   }
-  .dietician-title::after {
+  .animate-title {
+    width: fit-content;
+    transition-duration: 2s;
+  }
+  .animate-title::after {
     display: block;
     content: "";
     height: 4px;
     width: 100%;
     background-color: rgb(254, 7, 62);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 1s ease-out;
+  }
+  .active::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
   .nutrition-intro-container > p {
     margin: 12px 0 4px 0;
@@ -190,4 +200,23 @@ const flareURL = "../src/images/icons/flare-custom.png";
     jump.classList.toggle('visible');
     document.querySelector('div.links-container').classList.toggle('reveal');
   })
+  const addObserver = (element) => {
+    let observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('active')
+          }, 1000);
+          observer.unobserve(entry.target)
+        }
+      })
+    })
+    observer.observe(element);
+  }
+  const scrollTrigger = (selector) => {
+    let targets = Array.from(document.querySelectorAll(selector));
+    console.log(targets);
+    targets.forEach(target => addObserver(target));
+  }
+  scrollTrigger('.animate-title')
 </script>

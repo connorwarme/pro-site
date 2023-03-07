@@ -75,29 +75,11 @@ const image = {
   .about-nutrition {
     border-radius: 0 0 3px 3px;
   }
-  .about-animate::after {
-    display: block;
-    content: "";
-    height: 4px;
-    width: 100%;
-    border-radius: 2px;
-    background-color: #FE073E;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 1s ease-out;
-  }
   h1, h2 {
     width: fit-content;
   }
   p {
 
-  }
-  .about-animate {
-    transition-duration: 2s;
-  }
-  .active::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
   }
   @media screen and (min-width: 770px) {
     .about-wrapper {
