@@ -64,9 +64,7 @@ const fuel = [
       <h2 class="animate-title">Fuel Well to Perform</h2>
       <p><em>Proper nutrition can help:</em></p>
       <ul class="fuel">
-        {fuel.map((item) => (
-          <li>{item}</li> 
-          ))}
+        {fuel.map((item) => <li>{item}</li> )}
       </ul>
     </div>
     <div id="philosophy" class="philosophy-container">
@@ -103,10 +101,7 @@ const fuel = [
   .dietician-title {
     font-size: 2.5rem;
     margin: 0;
-  }
-  .animate-title {
-    width: fit-content;
-    transition-duration: 2s;
+    align-self: center;
   }
   .animate-title::after {
     display: block;

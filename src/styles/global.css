@@ -109,7 +109,6 @@ h1 {
 .about-animate,
 .animate-title {
   width: fit-content;
-  transition-duration: 2s;
 }
 .about-animate::after,
 .animate-title::after {
