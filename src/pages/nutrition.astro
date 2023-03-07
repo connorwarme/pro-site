@@ -33,7 +33,6 @@ const fuel = [
   'Increase coordination and concentration',
   'Untangle disordered eating patterns and anxiety around food',
 ]
-const flareURL = "../src/images/icons/flare-custom.png";
 ---
 
 <BaseLayout pageTitle="Amity | Nutrition" img={image}>
@@ -88,7 +87,7 @@ const flareURL = "../src/images/icons/flare-custom.png";
     </div>
   </div>
 </BaseLayout>
-<style define:vars={{flareURL}}>
+<style>
   .nutrition-wrapper {
     display: flex;
     flex-direction: column;
@@ -150,9 +149,6 @@ const flareURL = "../src/images/icons/flare-custom.png";
   .visible {
     transform: rotate(180deg);
   }
-  /* .links-list {
-    transition: 250ms;
-  } */
   .links-container > ul {
     visibility: hidden;
     margin: 0;
@@ -182,17 +178,11 @@ const flareURL = "../src/images/icons/flare-custom.png";
     margin: 0;
     padding: 2px 22px;
     list-style: none;
-    background-image: url("../src/images/icons/biner.png");
+    background-image: url("../src/images/icons/list-arrow.png");
     background-repeat: no-repeat;
     background-position: left 5px;
     background-size: 20px;
   }
-  /* .fuel > li::before {
-    content: '';
-    display: inline-block;
-    height: 15px;
-    background-image: url(../src/images/icons/biner.png);
-  } */
 </style>
 <script defer>
   const jump = document.querySelector('img.jump-arrow');
