@@ -37,63 +37,68 @@ const fuel = [
 
 <BaseLayout pageTitle="Amity | Nutrition" img={image}>
   <div class="nutrition-wrapper">
-    <h1 class="dietician-title animate-title">Dietician</h1>
-    <div class="nutrition-intro-container">
-      <p>I'm passionate about helping fellow athletes understand their fueling needs and using nutrition to maximize performance and promote long-term health.</p>
-    </div>
-    <div class="links-container">
-      <div>Jump to:
-        <img class="jump-arrow" src={arrow} aria-label="Click to reveal links" />
+    <div class="nutrition-container">
+      <h1 class="dietician-title animate-title">Dietician</h1>
+      <div class="nutrition-intro-container">
+        <p>I'm passionate about helping fellow athletes understand their fueling needs and using nutrition to maximize performance and promote long-term health.</p>
       </div>
-      <ul class="links-list">
-        <li><a href="#symptoms">Can You Relate?</a></li>
-        <li><a href="#fuel">Fuel Well to Perform Well</a></li>
-        <li><a href="#philosophy">My Philosophy</a></li>
-        <li><a href="#counseling">Counseling Services</a></li>
-        <li><a href="#creds">My Credentials</a></li>
-      </ul>
-    </div>
-    <div id="symptoms" class="symptoms-container">
-      <h2 class="animate-title">Can You Relate?</h2>
-      <p><em>Do you:</em></p>
-      <ul class="symptoms">
-        {symptoms.map((item) => <li>{item} </li> )}
-      </ul>
-    </div>
-    <div id="fuel" class="fuel-container">
-      <h2 class="animate-title">Fuel Well to Perform</h2>
-      <p><em>Proper nutrition can help:</em></p>
-      <ul class="fuel">
-        {fuel.map((item) => <li>{item}</li> )}
-      </ul>
-    </div>
-    <div id="philosophy" class="philosophy-container">
-      <h2 class="animate-title">Philosophy</h2>
-      <p>My nutrition coaching focuses on helping you develop a sustainable approach to fueling that empowers you in your athletic performance and encourages long-term health.</p> 
-      <p>I strive to offer a scientific and strategic approach to fueling that is tailored specifically to YOU - balancing your goals, protecting long-term health, and understanding your lifestyle and preferences. Together, we’ll work to understand your relationship with food, untangle unhealthy influences, and develop sustainable and practical strategies to help you utilize nutrition to optimize your health and performance.</p>
-      <p>I promise to facilitate a safe, encouraging environment where you can share information without fear of judgment or shame regarding your health and weight history, body image and food-related struggles, along with dietary preferences and questions. </p>
-    </div>
-    <Counseling id="counseling"/>
-    <div id="creds" class="creds-container">
-      <h2 class="animate-title">Credentials</h2>
-      <p>I have a Master's in Sports Nutrition from the University of Colorado in Colorado Springs (December 2021).</p>
-      <p>In 2022, I completed 1000 supervised practice hours, split between the following organizations:</p>
-      <ul class="creds-list">
-        <li>Phoenix Suns, an NBA team, assisting the team dietician in providing performance nutrition support for the athletes</li>
-        <li>Kendall Reagan Nutrition Center, an outpatient clinic in Fort Collins with a focus on eating disorder care</li>
-        <li>The Vegetable Connection, a nonprofit that helps families access nutritious, locally grown food, and provides nutrition education and hosts cooking classes</li>
-      </ul>
-      <p>I'm preparing to take the Registered Dietician exam (spring 2023).</p>
+      <div class="links-container">
+        <div>Jump to:
+          <img class="jump-arrow" src={arrow} aria-label="Click to reveal links" />
+        </div>
+        <ul class="links-list">
+          <li><a href="#symptoms">Can You Relate?</a></li>
+          <li><a href="#fuel">Fuel Well to Perform Well</a></li>
+          <li><a href="#philosophy">My Philosophy</a></li>
+          <li><a href="#counseling">Counseling Services</a></li>
+          <li><a href="#creds">My Credentials</a></li>
+        </ul>
+      </div>
+      <div id="symptoms" class="symptoms-container">
+        <h2 class="animate-title">Can You Relate?</h2>
+        <p><em>Do you:</em></p>
+        <ul class="symptoms">
+          {symptoms.map((item) => <li>{item} </li> )}
+        </ul>
+      </div>
+      <div id="fuel" class="fuel-container">
+        <h2 class="animate-title">Fuel Well to Perform</h2>
+        <p><em>Proper nutrition can help:</em></p>
+        <ul class="fuel">
+          {fuel.map((item) => <li>{item}</li> )}
+        </ul>
+      </div>
+      <div id="philosophy" class="philosophy-container">
+        <h2 class="animate-title">Philosophy</h2>
+        <p>My nutrition coaching focuses on helping you develop a sustainable approach to fueling that empowers you in your athletic performance and encourages long-term health.</p> 
+        <p>I strive to offer a scientific and strategic approach to fueling that is tailored specifically to YOU - balancing your goals, protecting long-term health, and understanding your lifestyle and preferences. Together, we’ll work to understand your relationship with food, untangle unhealthy influences, and develop sustainable and practical strategies to help you utilize nutrition to optimize your health and performance.</p>
+        <p>I promise to facilitate a safe, encouraging environment where you can share information without fear of judgment or shame regarding your health and weight history, body image and food-related struggles, along with dietary preferences and questions. </p>
+      </div>
+      <Counseling id="counseling"/>
+      <div id="creds" class="creds-container">
+        <h2 class="animate-title">Credentials</h2>
+        <p>I have a Master's in Sports Nutrition from the University of Colorado in Colorado Springs (December 2021).</p>
+        <p>In 2022, I completed 1000 supervised practice hours, split between the following organizations:</p>
+        <ul class="creds-list">
+          <li>Phoenix Suns, an NBA team, assisting the team dietician in providing performance nutrition support for the athletes</li>
+          <li>Kendall Reagan Nutrition Center, an outpatient clinic in Fort Collins with a focus on eating disorder care</li>
+          <li>The Vegetable Connection, a nonprofit that helps families access nutritious, locally grown food, provides nutrition education and hosts cooking classes</li>
+        </ul>
+        <p>I'm preparing to take the Registered Dietician exam (spring 2023).</p>
+      </div>
     </div>
   </div>
 </BaseLayout>
 <style>
   .nutrition-wrapper {
+    display: block;
+    margin-top: 55vh;
+  }
+  .nutrition-container {
     display: flex;
     flex-direction: column;
     color: rgb(64,64,64);
     background-color: rgb(245, 245, 245);
-    margin-top: 55vh;
     width: 100vw;
     max-width: 575px;
     padding: 0 1.5rem;
@@ -123,9 +128,6 @@ const fuel = [
   em {
     font-style: normal;
     font-weight: 600;
-  }
-  div {
-    background-color: whitesmoke;
   }
   .links-container {
     max-height: 40px;
@@ -179,6 +181,18 @@ const fuel = [
     background-repeat: no-repeat;
     background-position: left 5px;
     background-size: 20px;
+  }
+  @media screen and (min-width: 770px) {
+    .nutrition-wrapper {
+      display: grid;
+      grid-template-columns: 2fr 2fr 1fr;
+    }
+    .nutrition-container {
+      grid-column: 1/2;
+      margin-left: 2rem;
+      border-radius: 3px;
+      box-shadow: 0 0 3px rgb(64,64,64)
+    }
   }
 </style>
 <script defer>
