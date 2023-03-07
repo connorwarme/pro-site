@@ -1,7 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Counseling from "../components/Counseling.astro";
+import List from "../components/List.astro";
 import arrow from "../images/icons/arrow-simple.svg";
+import star from "../images/icons/flare-custom.png";
 
 const image = {
   url: "../src/images/gallery/sixstar.jpeg",
@@ -33,6 +35,7 @@ const fuel = [
   'Increase coordination and concentration',
   'Untangle disordered eating patterns and anxiety around food',
 ]
+const flareURL = "../src/images/icons/flare-custom.png";
 ---
 
 <BaseLayout pageTitle="Amity | Nutrition" img={image}>
@@ -41,7 +44,7 @@ const fuel = [
     <div class="nutrition-intro-container">
       <p>I'm passionate about helping fellow athletes understand their fueling needs and using nutrition to maximize performance and promote long-term health.</p>
     </div>
-    <div class="links-container hidden">
+    <div class="links-container">
       <div>Jump to:
         <img class="jump-arrow" src={arrow} aria-label="Click to reveal links" />
       </div>
@@ -57,16 +60,14 @@ const fuel = [
       <h2>Can You Relate?</h2>
       <p><em>Do you:</em></p>
       <ul class="symptoms">
-        {symptoms.map((item) => {
-          return <li>{item}</li>
-        })}
+        {symptoms.map((item) => <List item={item} /> )}
       </ul>
     </div>
     <div id="fuel" class="fuel-container">
       <h2>Fuel Well to Perform</h2>
       <p><em>Proper nutrition can help:</em></p>
       <ul class="fuel">
-        {fuel.map((item) => <li>{item}</li>)}
+        {fuel.map((item) => <List item={item} /> )}
       </ul>
     </div>
     <div id="philosophy" class="philosophy-container">
@@ -87,7 +88,7 @@ const fuel = [
     </div>
   </div>
 </BaseLayout>
-<style>
+<style define:vars={{flareURL}}>
   .nutrition-wrapper {
     display: flex;
     flex-direction: column;
@@ -116,7 +117,6 @@ const fuel = [
   em {
     font-style: normal;
     font-weight: 600;
-    text-transform: uppercase;
   }
   div {
     background-color: whitesmoke;
@@ -146,9 +146,24 @@ const fuel = [
   .links-container > ul {
     visibility: hidden;
     margin: 0;
+    list-style: circle;
   }
   .reveal > ul {
     visibility: visible;
+  }
+  .links-container a {
+    color: rgb(64,64,64);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 300ms ease;
+  }
+  .links-container a:hover {
+    cursor: pointer;
+    border-color: rgb(64, 64, 64);
+  }
+  .symptoms {
+    list-style: none;
+    /* list-style: georgian outside url("../src/images/icons/biner.png"); */
   }
 </style>
 <script defer>
