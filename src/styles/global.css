@@ -104,6 +104,7 @@ h1 {
 .expanded > .nav-overlay {
   visibility: visible;
   opacity: 1;
+  z-index: 1;
 }
 /* about page and nutrition page animation */
 .about-animate,
