@@ -126,6 +126,11 @@ h1 {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+/* content page tags reveal/hide */
+.reveal > .tag-index-container {
+  visibility: visible;
+}
+
 @media screen and (min-width: 770px) {
   .nav-links {
     display: flex;

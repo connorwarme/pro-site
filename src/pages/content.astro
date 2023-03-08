@@ -2,6 +2,8 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import TagDisplay from "../components/TagDisplay.astro";
 import BlogPost from "../components/BlogPost.astro";
+import arrow from "../images/icons/arrow-simple.svg";
+
 const allPosts = await Astro.glob('./posts/*.md');
 const sortedPosts = [...allPosts].sort((a, b) => {
   return +new Date(b.frontmatter.pubDate) - +new Date(a.frontmatter.pubDate)
@@ -11,12 +13,56 @@ const pageTitle = "Content";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-	<h3>Reflections, Recipies, Podcasts and More!</h3>
-  <TagDisplay array={uniqueTags} />
-  <ul>
-    {sortedPosts.map((post) => {
-      const { title, description, pubDate } = post.frontmatter;
-      return <BlogPost url={post.url} title={title} description={description} date={pubDate} />
-    })}
-  </ul>
+  <div class="content-wrapper">
+    <div class="content-container">
+      <h1 class="content-title">{pageTitle}</h1>
+      <p>Reflections, Recipies, Podcasts and More!</p>
+      <div class="tags-container">
+        <div class="arrow-container">Search by tags:
+          <img class="jump-arrow" src={arrow} aria-label="Click to reveal tags" />
+        </div>
+        <TagDisplay array={uniqueTags} />
+      </div>
+      <ul>
+        {sortedPosts.map((post) => {
+          const { title, description, pubDate } = post.frontmatter;
+          return <BlogPost url={post.url} title={title} description={description} date={pubDate} />
+        })}
+      </ul>
+    </div>
+  </div>
 </BaseLayout>
+<style>
+  .content-wrapper {
+
+  }
+  .content-container {
+    background-color: rgb(245, 245, 245);
+  }
+  .tags-container {
+    max-height: 40px;
+    overflow: hidden;
+    transition: all .3s ease;
+  }
+  .tags-container.reveal {
+    max-height: 440px;
+  }
+  .arrow-container {
+    display: flex;
+    align-items: center;
+  }
+  .jump-arrow {
+    height: 40px;
+    cursor: pointer;
+  }
+  .visible {
+    transform: rotate(180deg);
+  }
+</style>
+<script>
+  const jump = document.querySelector('img.jump-arrow');
+  jump.addEventListener('click', () => {
+    jump.classList.toggle('visible');
+    document.querySelector('div.tags-container').classList.toggle('reveal');
+  })
+</script>
