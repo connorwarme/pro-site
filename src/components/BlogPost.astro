@@ -3,6 +3,9 @@ const { title, description, url, date, type } = Astro.props;
 ---
 
 <li class="bloglist-item" id={type}>
+  <div>
+    <p class="type">{type}</p>
+  </div>
   <a href={url}>
     <h4>{title}</h4>
     <p>{description}</p>
@@ -13,5 +16,32 @@ const { title, description, url, date, type } = Astro.props;
   li {
     list-style: none;
     padding: 0 0 20px 0;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    place-items: center;
+  }
+  div {
+    height: 100%;
+    max-width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 15px solid rgb(254, 7, 62);
+  }
+  #blog > div {
+    border-color: #F4A261;
+  }
+  #media > div {
+    border-color: #40798C;
+  }
+  #recipe > div {
+    border-color: #81B29A;
+  }
+  #podcast > div {
+    border-color: #40798C;
+  }
+  .type {
+    transform: rotate(-90deg);
+    font-family: "Unbound";
   }
 </style>
