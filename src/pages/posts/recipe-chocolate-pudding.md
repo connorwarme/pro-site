@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MdPostLayout.astro
-title: 'Recipe: Chocolate Chia Protein Pudding'
+title: 'Chocolate Chia Protein Pudding'
 pubDate: 2022-03-07
 description: "Enjoy a nutritious, date-sweetened chocolate pudding"
 author: Amity Warme

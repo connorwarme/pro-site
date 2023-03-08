@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MdPostLayout.astro
-title: 'Recipe: Banana Bread Granola'
+title: 'Banana Bread Granola'
 pubDate: 2022-07-21
 description: "A nutritious snack to fuel your next adventure"
 author: Amity Warme

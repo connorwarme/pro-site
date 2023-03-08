@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MdPostLayout.astro
-title: 'Recipe: Lemon Zucchini Muffins'
+title: 'Lemon Zucchini Muffins'
 pubDate: 2021-07-13
 description: "An on-the-go fuel to energize on pre-dawn adventures"
 author: Amity Warme

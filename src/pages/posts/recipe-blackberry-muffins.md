@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MdPostLayout.astro
-title: 'Recipe: Northwest Blackberry Muffins'
+title: 'Northwest Blackberry Muffins'
 pubDate: 2021-09-19
 description: "Enjoy delicious and protein-packed blackberry muffins"
 author: Amity Warme

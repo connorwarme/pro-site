@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MdPostLayout.astro
-title: 'Podcast: The Nugget Climbing'
+title: 'The Nugget Climbing'
 pubDate: 2022-01-31
 description: "A conversation with Steven about life, climbing, and more"
 author: false
