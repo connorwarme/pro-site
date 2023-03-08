@@ -12,6 +12,7 @@ origin:
   url: "https://anchor.fm/johnfreakinmuir/episodes/Big-Wall-Climber-Amity-Warme-e13q2ao"
   date: 2021-07-10
 tags: ["climbing", "big wall", "Yosemite", "reflections", "podcast"]
+type: podcast
 ---
 
 Summary from Doc:

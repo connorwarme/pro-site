@@ -11,6 +11,7 @@ origin:
   sponsor: 'Enduro Bites'
   url: "https://endurobites.com/blogs/recipes/pumpkin-buckwheat-gingerbread-recipe"
 tags: ["nutrition", "recipe", "bread"]
+type: recipe
 ---
 Originally posted by [Enduro Bites](https://endurobites.com/blogs/recipes/pumpkin-buckwheat-gingerbread-recipe)
 

@@ -25,8 +25,8 @@ const pageTitle = "Content";
       </div>
       <ul>
         {sortedPosts.map((post) => {
-          const { title, description, pubDate } = post.frontmatter;
-          return <BlogPost url={post.url} title={title} description={description} date={pubDate} />
+          const { title, description, pubDate, type } = post.frontmatter;
+          return <BlogPost url={post.url} title={title} description={description} date={pubDate} type={type} />
         })}
       </ul>
     </div>

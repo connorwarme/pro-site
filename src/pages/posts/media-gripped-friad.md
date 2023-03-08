@@ -12,6 +12,7 @@ origin:
   url: "https://gripped.com/news/amity-warme-becomes-fifth-woman-to-free-el-capitan-in-a-day/"
   date: 2022-04-23
 tags: ["climbing", "Yosemite", "FRIAD", "El Capitan", "news", "media"]
+type: media
 ---
 "On April 10, Brent Barghahn and Amity Warme started up El Capitan just after midnight and then climbed to the top of the 32-pitch Freerider 5.13a in 18 hours and 16 minutes."
 

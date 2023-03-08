@@ -12,6 +12,7 @@ origin:
   url: "https://endurobites.com/blogs/recipes/lemon-zucchini-muffin-recipe-pre-dawn-adventure-fuel"
   date: 2021-07-13
 tags: ["nutrition", "recipe", "muffins"]
+type: recipe
 ---
 Originally posted by [Enduro Bites](https://endurobites.com/blogs/recipes/lemon-zucchini-muffin-recipe-pre-dawn-adventure-fuel)
 

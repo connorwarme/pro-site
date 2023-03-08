@@ -12,6 +12,7 @@ origin:
   url: "https://enormocast.com/2022/12/enormocast-254-amity-warme-putting-the-hammer-down/"
   date: 2022-12-16
 tags: ["climbing", "big wall", "Yosemite", "reflections", "podcast"]
+type: podcast
 ---
 
 Summary from Chris:

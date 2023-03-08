@@ -12,6 +12,7 @@ origin:
   url: "https://endurobites.com/blogs/recipes/chocolate-chia-protein-pudding-recipe"
   date: 2022-03-07
 tags: ["nutrition", "recipe", "chocolate"]
+type: recipe
 ---
 Originally posted by [Enduro Bites](https://endurobites.com/blogs/recipes/chocolate-chia-protein-pudding-recipe)
 

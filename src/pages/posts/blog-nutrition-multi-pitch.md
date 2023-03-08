@@ -13,6 +13,7 @@ origin:
     url: 'https://www.nutritionforclimbers.com/nutrition-for-multi-pitch-big-wall-climbing/'
     date: 2022-04-13
 tags: ["nutrition", "climbing", "fueling", "blog"]
+type: blog
 ---
 ## Optimize your energy: fueling strategies for your multi-pitch adventure
 

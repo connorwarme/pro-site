@@ -12,6 +12,7 @@ origin:
   url: "https://endurobites.com/blogs/recipes/banana-bread-granola-recipe"
   date: 2022-07-21
 tags: ["nutrition", "recipe", "granola"]
+type: recipe
 ---
 Originally posted by [Enduro Bites](https://endurobites.com/blogs/recipes/banana-bread-granola-recipe)
 

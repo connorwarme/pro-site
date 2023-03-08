@@ -12,6 +12,7 @@ origin:
     url: 'https://himalilife.com/thefinalfrontier'
     date: 2021-08-26
 tags: ["climbing", "Yosemite", "reflections", "blog"]
+type: blog
 ---
 Originally posted by [HIMALI](https://himalilife.com/thefinalfrontier)
 

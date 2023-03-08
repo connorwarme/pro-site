@@ -12,6 +12,7 @@ origin:
   url: "https://thenuggetclimbing.com/episodes/amity-warme"
   date: 2022-01-31
 tags: ["climbing", "big wall", "Yosemite", "reflections", "nutrition", "podcast"]
+type: podcast
 ---
 
 Summary from Steven:
