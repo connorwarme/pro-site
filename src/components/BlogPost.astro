@@ -1,5 +1,6 @@
 ---
-const { title, description, url, date, type } = Astro.props;
+const { title, description, url, date, type, img } = Astro.props;
+// not sure about including the image..
 ---
 
 <li class="bloglist-item" id={type}>
@@ -11,6 +12,7 @@ const { title, description, url, date, type } = Astro.props;
     <p>{description}</p>
     <p>{date}</p>
   </a>
+  <!-- { img ? <img src={img.url} alt={img.alt} /> : null } -->
 </li>
 <style>
   li {
@@ -29,7 +31,7 @@ const { title, description, url, date, type } = Astro.props;
     border-right: 15px solid rgb(254, 7, 62);
   }
   #blog > div {
-    border-color: #ff5400;
+    border-color: #3da5d9;
   }
   #media > div {
     border-color: #0ead69;
@@ -38,10 +40,13 @@ const { title, description, url, date, type } = Astro.props;
     border-color: #fcca46;
   }
   #podcast > div {
-    border-color: #3da5d9;
+    border-color: #7209b7;
   }
   .type {
     transform: rotate(-90deg);
     font-family: "Unbound";
   }
+  /* img {
+    max-height: 167px;
+  } */
 </style>
