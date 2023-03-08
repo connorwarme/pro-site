@@ -10,41 +10,61 @@ const { title, description, url, date, type, img } = Astro.props;
   <a href={url}>
     <h4>{title}</h4>
     <p>{description}</p>
-    <p>{date}</p>
   </a>
   <!-- { img ? <img src={img.url} alt={img.alt} /> : null } -->
 </li>
 <style>
   li {
     list-style: none;
-    padding: 0 0 20px 0;
+    margin: 0 5px 10px 5px;
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 5fr;
     place-items: center;
+    border: 2px solid transparent;
+    border-radius: 5px;
   }
   div {
+    place-self: start;
     height: 100%;
     max-width: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-right: 15px solid rgb(254, 7, 62);
   }
-  #blog > div {
-    border-color: #3da5d9;
+  #blog {
+    border-color: rgb(254, 7, 62);
   }
-  #media > div {
-    border-color: #0ead69;
+  #media {
+    border-color: rgb(14, 173, 105);
   }
-  #recipe > div {
-    border-color: #fcca46;
+  #recipe {
+    border-color: rgb(252, 202, 70);
   }
-  #podcast > div {
-    border-color: #7209b7;
+  #podcast {
+    border-color: rgb(61, 165, 217);
   }
   .type {
+    margin: 5px 0;
     transform: rotate(-90deg);
     font-family: "Unbound";
+    color: rgb(64, 64, 64);
+  }
+  #blog > div {
+    background-color: rgb(254, 7, 62);
+  }
+  #media > div {
+    background-color: rgb(14, 173, 105);
+  }
+  #recipe > div {
+    background-color: rgb(252, 202, 70);
+  }
+  #podcast > div {
+    background-color: rgb(61, 165, 217);
+  }
+  a {
+    text-decoration: none;
+    color: rgb(64, 64, 64);
+    margin-left: 5px;
   }
   /* img {
     max-height: 167px;
