@@ -21,8 +21,9 @@ export async function getStaticPaths() {
 
 const { tag } = Astro.params;
 const { posts } = Astro.props;
+const title = `Tag: ${tag}`;
 ---
-<BaseLayout pageTitle={tag}>
+<BaseLayout pageTitle={title}>
   <div class="content-wrapper">
     <div class="content-container">
       <p>Posts tagged with <em>{tag}</em></p>
@@ -37,8 +38,7 @@ const { posts } = Astro.props;
 </BaseLayout>
 <style>
   em {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 500;
-    text-transform: capitalize;
   }
 </style>

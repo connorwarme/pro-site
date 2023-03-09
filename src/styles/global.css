@@ -176,4 +176,12 @@ h1 {
   .mobile-hamburger {
     display: none;
   }
+  .content-container {
+    max-width: 1250px;
+  }
+  .blogs-container,
+  .tag-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
