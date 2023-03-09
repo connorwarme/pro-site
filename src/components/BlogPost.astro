@@ -17,6 +17,7 @@ const { title, description, url, date, type, img } = Astro.props;
     list-style: none;
     margin-bottom: 10px;
     display: grid;
+    align-items: center;
     grid-template-columns: 40px 1fr;
     border: 2px solid transparent;
     border-radius: 5px;
@@ -69,5 +70,10 @@ const { title, description, url, date, type, img } = Astro.props;
   }
   a:hover h4 {
     text-decoration: underline;
+  }
+  @media screen and (min-width: 770px) { 
+    li {
+      margin: 10px 15px;
+    }
   }
 </style>

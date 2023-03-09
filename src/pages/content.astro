@@ -76,6 +76,18 @@ const pageTitle = "Content";
     margin: 0;
     padding: 0;
   }
+  @media screen and (min-width: 770px) {
+    .content-container {
+      max-width: 1250px;
+    }
+    .arrow-container {
+      margin-left: 30px;
+    }
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
 </style>
 <script>
   const jump = document.querySelector('img.jump-arrow');
