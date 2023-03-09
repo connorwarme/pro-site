@@ -130,6 +130,27 @@ h1 {
 .reveal > .tag-index-container {
   visibility: visible;
 }
+/* content page and tag page */
+.content-wrapper {
+  margin-top: 50vh;
+}
+.content-container {
+  color: rgb(64, 64, 64);
+  background-color: rgb(245, 245, 245);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.5rem;
+  box-shadow: 0 0 3px rgb(64, 64, 64);
+  border-radius: 3px;
+  max-width: 575px;
+}
+.blogs-container,
+.tag-container {
+  margin: 0;
+  padding: 0;
+}
 
 @media screen and (min-width: 770px) {
   .nav-links {

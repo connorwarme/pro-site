@@ -23,7 +23,7 @@ const pageTitle = "Content";
         </div>
         <TagDisplay array={uniqueTags} />
       </div>
-      <ul>
+      <ul class="blogs-container">
         {sortedPosts.map((post) => {
           const { title, description, pubDate, type, image } = post.frontmatter;
           return <BlogPost url={post.url} title={title} description={description} date={pubDate} type={type} img={image} />
@@ -33,7 +33,7 @@ const pageTitle = "Content";
   </div>
 </BaseLayout>
 <style>
-  .content-wrapper {
+  /* .content-wrapper {
     margin-top: 50vh;
   }
   .content-container {
@@ -47,7 +47,7 @@ const pageTitle = "Content";
     box-shadow: 0 0 3px rgb(64, 64, 64);
     border-radius: 3px;
     max-width: 575px;
-  }
+  } */
   .content-title {
     width: fit-content;
     margin: 0;
@@ -71,10 +71,6 @@ const pageTitle = "Content";
   }
   .visible {
     transform: rotate(180deg);
-  }
-  ul {
-    margin: 0;
-    padding: 0;
   }
   @media screen and (min-width: 770px) {
     .content-container {
