@@ -3,7 +3,7 @@ const array = Astro.props.array;
 ---
 <div class="tag-index-container">
   {array.map((tag) => (
-    <p class="tag-item"><a href={`/tags/${tag}`}>{tag}</a></p> 
+    <a class="tag-item" href={`/tags/${tag}`}>{tag}</a> 
     ))}
 </div>
 <style>
@@ -16,23 +16,23 @@ const array = Astro.props.array;
 }
 .tag-item {
   margin: 0.25em;
-  border: dotted 1px #a1a1a1;
+  border: dotted 1px rgb(161, 161, 161);
   border-radius: 0.25em;
   padding: 0.25em 0.5em;
   font-size: 1em;
+  color: rgb(64, 64, 64);
   background-color: #f8fcfd;
   transition: all .3s ease-in;
 }
 .tag-item:hover {
   border: 1px solid rgb(64, 64, 64);
+  background-color: rgba(161, 161, 161, 0.3);
 }
-a {
-  color: #00539f;
-  transition: transform .3s ease-in;
+.tag-item:active {
+  transform: scale(0.97);
+  box-shadow: 1px 1px rgb(64, 64, 64);
 }
-a:active {
-  transform: scale(0.95);
-  color: rgb(64, 64, 64)
+.tag-item:focus {
+  color: rgb(64, 64, 64);
 }
-
 </style>
