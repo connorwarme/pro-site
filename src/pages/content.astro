@@ -16,7 +16,7 @@ const pageTitle = "Content";
   <div class="content-wrapper">
     <div class="content-container">
       <h1 class="content-title">{pageTitle}</h1>
-      <p>Reflections, Recipies, Podcasts and More!</p>
+      <p>Stories, Recipies, Podcasts and More!</p>
       <div class="tags-container">
         <div class="arrow-container">Search by tags:
           <img class="jump-arrow" src={arrow} aria-label="Click to reveal tags" />
@@ -37,11 +37,13 @@ const pageTitle = "Content";
     margin-top: 50vh;
   }
   .content-container {
+    color: rgb(64, 64, 64);
     background-color: rgb(245, 245, 245);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0 1.5rem;
   }
   .content-title {
     width: fit-content;
@@ -67,7 +69,7 @@ const pageTitle = "Content";
     transform: rotate(180deg);
   }
   ul {
-    margin: 0 8px;
+    margin: 0;
     padding: 0;
   }
 </style>
