@@ -151,6 +151,27 @@ h1 {
   margin: 0;
   padding: 0;
 }
+.tag-item {
+  margin: 0.25em;
+  border: dotted 1px rgb(161, 161, 161);
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  font-size: 1em;
+  color: rgb(64, 64, 64);
+  background-color: #f8fcfd;
+  transition: all .3s ease-in;
+}
+.tag-item:hover {
+  border: 1px solid rgb(64, 64, 64);
+  background-color: rgba(161, 161, 161, 0.3);
+}
+.tag-item:active {
+  transform: scale(0.97);
+  box-shadow: 1px 1px rgb(64, 64, 64);
+}
+.tag-item:focus {
+  color: rgb(64, 64, 64);
+}
 
 @media screen and (min-width: 770px) {
   .nav-links {
