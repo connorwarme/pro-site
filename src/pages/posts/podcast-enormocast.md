@@ -5,8 +5,9 @@ pubDate: 2022-12-16
 description: "A conversation with Chris about life, climbing, and more"
 author: false
 image: 
-  url: "https://docs.astro.build/default-og-image.png"
-  alt: "The word “astro” against an illustration of planets and stars."
+  url: "../src/images/posts/enormo.jpg"
+  alt: "Amity in action"
+  cred: 'Felipe Nordenflycht, Scott Eubank, Tempei Takeuchi'
 origin: 
   name: 'Enormocast'
   url: "https://enormocast.com/2022/12/enormocast-254-amity-warme-putting-the-hammer-down/"
