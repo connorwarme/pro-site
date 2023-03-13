@@ -7,12 +7,11 @@ const { frontmatter } = Astro.props;
     <h1 class="blog-title">{frontmatter.title}</h1>
     <p class="blog-intro">{frontmatter.pubDate.slice(5,10)}-{frontmatter.pubDate.slice(0,4)}</p>
     <p class="blog-intro"><em>{frontmatter.description}</em></p>
-    { frontmatter.author ? <p class="blog-intro">Written by: {frontmatter.author}</p> : null }
-    <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
+    { frontmatter.author ? <p class="blog-intro"> {frontmatter.author}</p> : null }
+    <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
     { frontmatter.image.cred ? <figcaption>Credit: {frontmatter.image.cred}</figcaption> : null }
     <slot />
     <div class="tag-index-container">
-      <!-- <div>tagged with:</div> -->
       {frontmatter.tags.map((tag) => (
         <a class="tag-item" href={`/tags/${tag}`}>{tag}</a>
       ))}
@@ -27,20 +26,23 @@ const { frontmatter } = Astro.props;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 1.5rem;
+    padding: 0 1rem;  
+  }
+  .blog-title {
+    font-size: 32px;
   }
   .blog-intro {
     text-align: center;
   }
+  img {
+    max-width: 300px;
+  }
   .tag-index-container {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
+    margin: 1rem auto;
     justify-content: center;
     align-items: center;
   }
-  /* .tag-index-container > div:first-child {
-    color: #00539f;
-    font-family: "Unbounded";
-  } */
+
 </style>
