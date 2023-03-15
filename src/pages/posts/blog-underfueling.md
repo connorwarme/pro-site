@@ -5,8 +5,10 @@ pubDate: 2020-11-17
 description: "Learn about Low Energy Availability and how to properly fuel for you adventure"
 author: Amity Warme
 image: 
-  url: "https://docs.astro.build/default-og-image.png"
-  alt: "The word “astro” against an illustration of planets and stars."
+  url: "../src/images/gallery/JohnnyLat.jpg"
+  alt: Amity climbing in Turkey Rocks
+  caption: Amity on Johnny Lat (5.12c) in Turkey Rocks, CO
+  cred: Adam Pawlikiewicz
 origin: 
   sponsor: 'Sterling'
   url: "https://sterlingrope.com/sterling-solid/under-fueling-the-ultimate-sandbag"
@@ -14,7 +16,6 @@ origin:
 tags: ["climbing", "nutrition", "reflections", "underfueling", "Low Energy Availability", "blog"]
 type: blog
 ---
-figure out how to include the images...
 
 I love trying really freaking hard. I love digging deep, tapping the last reserves, and emptying the tank as I push my limits physically and mentally on the rock. I pursue climbing as a way of life because I enjoy exploring new places, meeting fellow adventure enthusiasts, and playing in the great outdoors. I am currently pursuing a Master’s degree in Sport Nutrition at the University of Colorado in Colorado Springs. My goal is to help athletes use nutrition to maximize their health and performance. Through my studies, I have grown aware of the past inadequacy of my own dietary practices as well as the widespread acceptance of an unhealthy approach to food, diet, and weight throughout the climbing community. In this article, I want to draw attention to the pervasive presence of Low Energy Availability (LEA) among climbers, explain the detrimental effects of LEA, and reframe the conversation around body image and performance.
 
@@ -23,6 +24,8 @@ I love trying really freaking hard. I love digging deep, tapping the last reserv
 A recent research study surveyed a sample of climbers regarding their dietary intake and attitudes toward food. The results indicated that 82% of respondents were not consuming enough energy on a daily basis – on average these participants only met 79% of their daily energy needs. Many in the climbing community mistakenly prioritize low body weight and leanness while neglecting the role of food as fuel for optimal performance, growth and development, and long-term health.
 
 Low energy availability occurs when the amount of energy expended through physical activity is greater than the amount of energy taken in from food.
+
+![Amity expending energy on Tricks are for Kids (5.13) in Indian Creek, UT](../src/images/posts/tricks.webp)
 
 ##### Energy Output > Energy Intake => Low Energy Availability
 
