@@ -9,6 +9,7 @@ const { frontmatter } = Astro.props;
     <p class="blog-intro"><em>{frontmatter.description}</em></p>
     { frontmatter.author ? <p class="blog-intro"> {frontmatter.author}</p> : null }
     <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
+    { frontmatter.image.caption ? <figcaption>{frontmatter.image.caption}</figcaption> : null }
     { frontmatter.image.cred ? <figcaption>Credit: {frontmatter.image.cred}</figcaption> : null }
     <slot />
     <div class="tag-index-container">
