@@ -5,8 +5,10 @@ pubDate: 2022-07-08
 description: Underfueling hinders performance and negatively impacts health 
 author: Amity Warme
 image: 
-    url: "https://astro.build/assets/blog/astro-showcase/astro-showcase-screenshot.jpg"
-    alt: "Thumbnails of websites from the Astro Showcase site."
+    url: "../src/images/posts/fuel.jpg"
+    alt: Amity on Cosmic Debris, Yosemite
+    caption: Amity on Cosmic Debris (5.13b) in Yosemite, CA
+    cred: Max Buschini
 origin: 
     sponsor: 'SCARPA'
     url: 'https://us.scarpa.com/community/blog/article/fuel-your-body-to-climb-your-best'
@@ -112,7 +114,7 @@ Without proper fueling I couldn’t have sent Freerider and Golden Gate this spr
 
 ### Connect with me:
 
-If you have questions or comments, please feel free to reach out to me at amity.warme@gmail.com or on Instagram @amity.warme. I would be happy to answer questions or point you toward additional resources.
+If you have questions or comments, please feel free to reach out to me through the site or on Instagram [@amity.warme](https://www.instagram.com/amity.warme/). I would be happy to answer questions or point you toward additional resources.
 
 Powerful stories of other climbers dealing with and recovering from RED-S:
 
