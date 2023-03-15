@@ -10,7 +10,7 @@ image:
     caption: Amity on Cosmic Debris (5.13b) in Yosemite, CA
     cred: Max Buschini
 origin: 
-    sponsor: 'SCARPA'
+    name: 'SCARPA'
     url: 'https://us.scarpa.com/community/blog/article/fuel-your-body-to-climb-your-best'
     date: 2022-04-26
 tags: ["nutrition", "RED-S", "underfueling", "reflections", "blog"]

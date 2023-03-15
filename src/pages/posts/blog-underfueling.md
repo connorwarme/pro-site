@@ -10,7 +10,7 @@ image:
   caption: Amity on Johnny Lat (5.12c) in Turkey Rocks, CO
   cred: Adam Pawlikiewicz
 origin: 
-  sponsor: 'Sterling'
+  name: 'STERLING'
   url: "https://sterlingrope.com/sterling-solid/under-fueling-the-ultimate-sandbag"
   date: 2020-11-17
 tags: ["climbing", "nutrition", "reflections", "underfueling", "Low Energy Availability", "blog"]

@@ -10,8 +10,7 @@ image:
     caption: Amity on Golden Gate (5.13a) on El Capitan
     cred: Felipe Nordenflycht
 origin: 
-    sponsor: false,
-    other: 'Marisa Michael, MSc, RDN, CSSD'
+    name: 'Marisa Michael'
     url: 'https://www.nutritionforclimbers.com/nutrition-for-multi-pitch-big-wall-climbing/'
     date: 2022-04-13
 tags: ["nutrition", "climbing", "fueling", "blog"]

@@ -17,7 +17,7 @@ const { frontmatter } = Astro.props;
     <img class="blog-main-image" src={frontmatter.image.url} alt={frontmatter.image.alt} />
     { frontmatter.image.caption ? <figcaption>{frontmatter.image.caption}</figcaption> : null }
     { frontmatter.image.cred ? <figcaption class="cap-credit">Credit: {frontmatter.image.cred}</figcaption> : null }
-    { frontmatter.origin ? <p>Originally posted by <a href={frontmatter.origin.url}>{frontmatter.origin.name}</a></p> : null }
+    { frontmatter.origin ? <p class="origin">Originally posted by <a href={frontmatter.origin.url}>{frontmatter.origin.name}</a></p> : null }
     <div class="blog-slot">
       <slot />
     </div>
@@ -56,6 +56,9 @@ const { frontmatter } = Astro.props;
   }
   .cap-credit {
     font-style: italic;
+  }
+  .origin {
+    margin: 6px 0 0 0;
   }
   .tag-index-container {
     display: flex;

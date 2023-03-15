@@ -10,7 +10,7 @@ image:
     caption: Amity on the first ascent of Barnacle Scars (5.13) in RMNP.
     cred: 'Taylor Shaffer'
 origin: 
-    sponsor: 'HIMALI'
+    name: 'HIMALI'
     url: 'https://himalilife.com/was-it-worth-it'
 tags: ["alpine", "climbing", "RMNP", "Honeymoon", "reflections", "blog"]
 type: blog

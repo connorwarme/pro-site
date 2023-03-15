@@ -10,7 +10,7 @@ image:
   caption: Amity on Silly Rabbit (5.12-) in Indian Creek, UT
   cred: Felipe Nordenflycht
 origin: 
-  sponsor: 'Sterling'
+  name: 'STERLING'
   url: "https://sterlingrope.com/sterling-solid/onsighting-moonlight-buttress"
   date: 2021-02-23
 tags: ["climbing", "Zion", "reflections", "blog"]
