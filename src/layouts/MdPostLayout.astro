@@ -17,6 +17,7 @@ const { frontmatter } = Astro.props;
     <img class="blog-main-image" src={frontmatter.image.url} alt={frontmatter.image.alt} />
     { frontmatter.image.caption ? <figcaption>{frontmatter.image.caption}</figcaption> : null }
     { frontmatter.image.cred ? <figcaption class="cap-credit">Credit: {frontmatter.image.cred}</figcaption> : null }
+    { frontmatter.origin ? <p>Originally posted by <a href={frontmatter.origin.url}>{frontmatter.origin.name}</a></p> : null }
     <div class="blog-slot">
       <slot />
     </div>
@@ -36,10 +37,10 @@ const { frontmatter } = Astro.props;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 4vw;  
+    padding: 0 7.5vw;  
   }
   .blog-title {
-    font-size: 32px;
+    font-size: 26px;
   }
   .blog-intro {
     text-align: center;
@@ -51,7 +52,7 @@ const { frontmatter } = Astro.props;
     margin: 8px 0;
   }
   figcaption {
-    font-size: small;
+    font-size: 12px;
   }
   .cap-credit {
     font-style: italic;

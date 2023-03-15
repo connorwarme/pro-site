@@ -173,9 +173,15 @@ h1 {
   color: rgb(64, 64, 64);
 }
 /* blog post styling */
+.blog-slot p {
+  display: grid;
+}
+.blog-slot img {
+  justify-self: center;
+}
 .blog-slot img,
 .blog-main-image {
-  max-width: 92vw;
+  max-width: 85vw;
   border-radius: 3px;
   box-shadow: 0 0 4px rgb(64, 64, 64);
 }
