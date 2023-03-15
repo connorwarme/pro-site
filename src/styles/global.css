@@ -172,6 +172,13 @@ h1 {
 .tag-item:focus {
   color: rgb(64, 64, 64);
 }
+/* blog post styling */
+.blog-slot img,
+.blog-main-image {
+  max-width: 92vw;
+  border-radius: 3px;
+  box-shadow: 0 0 4px rgb(64, 64, 64);
+}
 
 @media screen and (min-width: 770px) {
   .nav-links {

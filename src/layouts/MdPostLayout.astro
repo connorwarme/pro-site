@@ -8,10 +8,12 @@ const { frontmatter } = Astro.props;
     <p class="blog-intro">{frontmatter.pubDate.slice(5,10)}-{frontmatter.pubDate.slice(0,4)}</p>
     <p class="blog-intro"><em>{frontmatter.description}</em></p>
     { frontmatter.author ? <p class="blog-intro"> {frontmatter.author}</p> : null }
-    <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
+    <img class="blog-main-image" src={frontmatter.image.url} alt={frontmatter.image.alt} />
     { frontmatter.image.caption ? <figcaption>{frontmatter.image.caption}</figcaption> : null }
     { frontmatter.image.cred ? <figcaption>Credit: {frontmatter.image.cred}</figcaption> : null }
-    <slot />
+    <div class="blog-slot">
+      <slot />
+    </div>
     <div class="tag-index-container">
       {frontmatter.tags.map((tag) => (
         <a class="tag-item" href={`/tags/${tag}`}>{tag}</a>
@@ -27,16 +29,13 @@ const { frontmatter } = Astro.props;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 1rem;  
+    padding: 0 4vw;  
   }
   .blog-title {
     font-size: 32px;
   }
   .blog-intro {
     text-align: center;
-  }
-  img {
-    max-width: 300px;
   }
   .tag-index-container {
     display: flex;
