@@ -5,8 +5,10 @@ pubDate: 2022-04-13
 description: Insight and ideas to fuel your big climbing days 
 author: Amity Warme
 image: 
-    url: "https://astro.build/assets/blog/astro-showcase/astro-showcase-screenshot.jpg"
-    alt: "Thumbnails of websites from the Astro Showcase site."
+    url: "../src/images/gallery/gate.jpg"
+    alt: Amity on Golden Gate, El Cap
+    caption: Amity on Golden Gate (5.13a) on El Capitan
+    cred: Felipe Nordenflycht
 origin: 
     sponsor: false,
     other: 'Marisa Michael, MSc, RDN, CSSD'
