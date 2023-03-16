@@ -20,7 +20,6 @@ type: blog
 Underfueling prohibits you from meeting your potential. It limits your physical and mental capacity to work, to train, and to perform. As athletes, we strive for peak performance and flawless physique. In many sports, carrying extra weight is a disadvantage. The problem arises, however, when athletes mistakenly prioritize low body weight and leanness while neglecting the role of food as fuel for optimal performance, growth and development, and long-term health.
 
 Do you:
-
 * Train hard but fail to see results commensurate with your effort?
 * Experience chronic fatigue or difficulty completing intended workouts?
 * Get sick often?
@@ -44,7 +43,7 @@ Your body requires energy for everything it does – breathing, normal cell turn
 
 The exact EA needed to maintain health and performance varies widely from one individual to another depending on body composition, age, gender, and metabolism. If EA falls below the minimum amount, your body enters a state of low energy availability. At this point your body goes into energy saving mode. Picture a cell phone with low battery that turns off background apps to conserve energy. The problem? These background functions (hormone levels, immunity, bone density, and more) are essential to your long-term health.
 
-## Signs, symptoms, and performance consequences of RED-S:
+## Signs, symptoms, & performance consequences of RED-S:
 
 RED-S may manifest in different ways for each individual and one can easily fall into a vicious cycle. An athlete may restrict food intake to lose weight, but over time their metabolism slows down to conserve energy. Weight loss and body composition changes stagnate. The athlete may interpret this as not restricting enough or not training hard enough and double down on their efforts, thus perpetuating the issue. An athlete struggling with RED-S may have trouble objectively assessing their condition, so it is important to be aware of the following signs, symptoms, and performance consequences in yourself and those around you.
 
@@ -76,17 +75,17 @@ We all want to find the silver bullet that leads to improved sport performance. 
 
 Eating enough calories to match your energy demands is critical. If you think you may be experiencing RED-S, work with a sports dietitian to determine the underlying cause of your underfueling. Disordered eating and intentional food restriction commonly lead to RED-S but many athletes under-eat inadvertently. Maybe you are too busy, too tired, don’t feel hungry, want to lose weight, want to look a certain way, or want to perform better, but underfueling your body can have serious consequences. Instead of subscribing to the idea that being a better athlete requires commitment to dieting, chronic calorie restriction, and continual weight loss, let’s think of food as fuel. Don’t limit yourself by not fueling properly. Adequate energy empowers you to pursue the activities you love, maximize your potential, and perform at your peak.
 
-*Total Daily Energy Expenditure (TDEE) includes:
+#### Total Daily Energy Expenditure (TDEE) includes:
+* Exercise 
+  * Varies by: intensity, duration, body weight, genetics
+* Non-exercise activity thermogenesis (NEAT) 
+  * Includes: activities of daily living (cooking, cleaning, gardening), fidgeting, etc.
+* Thermic effect of food (TEF) 
+  * Varies by: amount and composition of food consumed
+* Basal metabolic rate (BMR) 
+  * Varies by: weight, age, gender, body composition, hormones
 
-Exercise Varies by: intensity, duration, body weight, genetics
-
-Non-exercise activity thermogenesis (NEAT) Includes: activities of daily living (cooking, cleaning, gardening), fidgeting, etc.
-
-Thermic effect of food (TEF) Varies by: amount and composition of food consumed
-
-Basal metabolic rate (BMR) Varies by: weight, age, gender, body composition, hormones
-
-*Energy availability reflects the number of calories remaining after subtracting calories burned in exercise from total calorie intake and is expressed in terms of kcal/kg of lean body mass.
+#### Energy availability reflects the number of calories remaining after subtracting calories burned in exercise from total calorie intake and is expressed in terms of kcal/kg of lean body mass.
 
 ### My story navigating RED-S:
 

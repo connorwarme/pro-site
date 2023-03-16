@@ -3,10 +3,12 @@ layout: ../../layouts/MdPostLayout.astro
 title: 'Big News On El Cap: First New Route in Years, and a Fast Free Golden Gate Ascent'
 pubDate: 2021-06-07
 description: "Adams and Wickstrom establish 1,100 feet of new terrain; Warme and Karow go ground up on all-team-free ascent."
-author: Chris Van Leuvan
+author: Chris Van Leuven
 image: 
-  url: "https://docs.astro.build/default-og-image.png"
-  alt: "The word “astro” against an illustration of planets and stars."
+  url: "../src/images/gallery/Amity_Goldengate.Lite.jpg"
+  alt: Amity on Golden Gate
+  caption: Amity freeing Golden Gate on El Capitan
+  cred: Felipe Nordenflycht
 origin: 
   name: 'Climbing'
   url: "https://www.climbing.com/news/first-new-route-el-cap-two-years-fast-ascent-golden-gate/"

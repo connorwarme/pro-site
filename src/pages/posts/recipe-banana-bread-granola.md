@@ -34,4 +34,4 @@ type: recipe
   * Arrange mixture on baking sheets, using fingers to make small clumps
   * Bake for 30-35 minutes or until starting to brown, stirring halfway through
 
-Once cooled, we like to store this in small re-sealable containers or ziplock bags so it’s easy to grab a serving or two as we’re heading out he door. 
+Once cooled, we like to store this in small re-sealable containers or ziplock bags so it’s easy to grab a serving or two as we’re heading out the door. 

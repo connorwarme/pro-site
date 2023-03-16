@@ -6,7 +6,9 @@ description: Seeking progression while climbing in Yosemite National Park
 author: Amity Warme
 image: 
     url: "../src/images/posts/finalfrontier1.jpg"
-    alt: "Amity on Final Frontier"
+    alt: Amity on Final Frontier
+    caption: Amity on her free ascent of Final Frontier
+    cred: Will Sharp
 origin: 
     name: 'HIMALI'
     url: 'https://himalilife.com/thefinalfrontier'

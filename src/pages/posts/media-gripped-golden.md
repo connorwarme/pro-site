@@ -3,10 +3,12 @@ layout: ../../layouts/MdPostLayout.astro
 title: 'Amity Warme Sends Golden Gate on El Capitan'
 pubDate: 2021-06-02
 description: "She's the second woman to free the huge route this year..."
-author: Gripped
+author: null
 image: 
-  url: "https://docs.astro.build/default-og-image.png"
-  alt: "The word “astro” against an illustration of planets and stars."
+  url: "../src/images/gallery/Amity_Goldengate.Lite.jpg"
+  alt: Amity on Golden Gate
+  caption: Amity freeing Golden Gate on El Capitan
+  cred: Felipe Nordenflycht
 origin: 
   name: 'Gripped'
   url: "https://gripped.com/news/amity-warme-sends-golden-gate-5-13b-on-el-capitan/"
