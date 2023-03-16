@@ -179,8 +179,18 @@ h1 {
   border-radius: 3px;
   box-shadow: 0 0 4px rgb(64, 64, 64);
 }
+blockquote {
+  background-color: rgba(152, 183, 242, 0.5);
+  margin: 4px;
+  padding: 0 16px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px rgb(161, 161, 161);
+}
+blockquote > p {
+  text-align: center;
+}
 blockquote > p > em {
-  font-size: 1.3rem;
+  font-size: 1.15rem;
 }
 .youtube-embed {
   width: 100%;
@@ -226,5 +236,12 @@ iframe.instagram-media {
   .blog-slot img,
   .blog-main-image {
     max-width: 655px;
+  }
+  blockquote {
+    padding: 0 24px;
+    margin: 4px 16px;
+  }
+  blockquote > p > em {
+    font-size: 1.3rem;
   }
 }
