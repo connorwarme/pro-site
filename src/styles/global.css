@@ -173,11 +173,20 @@ h1 {
   color: rgb(64, 64, 64);
 }
 /* blog post styling */
+.blog-slot a,
+.origin > a {
+  color: rgb(53, 84, 136);
+  font-weight: 500;
+  text-decoration: none;
+}
 .blog-slot img,
 .blog-main-image {
   max-width: 85vw;
   border-radius: 3px;
   box-shadow: 0 0 4px rgb(64, 64, 64);
+}
+.blog-slot li > ul {
+  padding-left: 20px;
 }
 blockquote {
   background-color: rgba(152, 183, 242, 0.5);
