@@ -8,14 +8,12 @@ image:
   url: "../../src/images/posts/bananabread.png"
   alt: "Bananabread Granola"
 origin: 
-  sponsor: 'Enduro Bites'
+  name: 'Enduro Bites'
   url: "https://endurobites.com/blogs/recipes/banana-bread-granola-recipe"
   date: 2022-07-21
 tags: ["nutrition", "recipe", "granola"]
 type: recipe
 ---
-Originally posted by [Enduro Bites](https://endurobites.com/blogs/recipes/banana-bread-granola-recipe)
-
 ### Ingredients
 
   * 3 very ripe bananas

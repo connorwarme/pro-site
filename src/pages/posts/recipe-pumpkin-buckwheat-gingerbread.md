@@ -8,13 +8,11 @@ image:
   url: "../../src/images/posts/pumpkin.png"
   alt: "Pumpkin Buckwheat Gingerbread"
 origin: 
-  sponsor: 'Enduro Bites'
+  name: 'Enduro Bites'
   url: "https://endurobites.com/blogs/recipes/pumpkin-buckwheat-gingerbread-recipe"
 tags: ["nutrition", "recipe", "bread"]
 type: recipe
 ---
-Originally posted by [Enduro Bites](https://endurobites.com/blogs/recipes/pumpkin-buckwheat-gingerbread-recipe)
-
 ### Ingredients
 * 1 cup pumpkin puree (I used canned pumpkin)
 * ½ cup coconut oil

@@ -8,14 +8,12 @@ image:
   url: "../../src/images/posts/zucchini.png"
   alt: "Lemon Zucchini Muffins"
 origin: 
-  sponsor: 'Enduro Bites'
+  name: 'Enduro Bites'
   url: "https://endurobites.com/blogs/recipes/lemon-zucchini-muffin-recipe-pre-dawn-adventure-fuel"
   date: 2021-07-13
 tags: ["nutrition", "recipe", "muffins"]
 type: recipe
 ---
-Originally posted by [Enduro Bites](https://endurobites.com/blogs/recipes/lemon-zucchini-muffin-recipe-pre-dawn-adventure-fuel)
-
 Many of my summer adventures in the mountains start well before dawn and end well after dark. I am usually not ready for a full breakfast at 3am, but I know I need to fuel my body before launching into an all-day objective. These muffins fit the bill perfectly! They have some zip without being too sweet. They provide a balance of carbohydrates, protein, and fat for both quick energy and sustained fueling. Plus, they are easy to take on the go and share with your adventure partners!
 
 ### Tips for Making Fluffy High-Top Muffins (without over-flowing the pan):

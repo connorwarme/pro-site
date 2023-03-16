@@ -8,14 +8,12 @@ image:
   url: "../../src/images/posts/blackberry.png"
   alt: "Northwest Blackberry Muffins"
 origin: 
-  sponsor: 'Enduro Bites'
+  name: 'Enduro Bites'
   url: "https://endurobites.com/blogs/recipes/northwest-blackberry-muffins"
   date: 2021-09-19
 tags: ["nutrition", "recipe", "muffins"]
 type: recipe
 ---
-Originally posted by [Enduro Bites](https://endurobites.com/blogs/recipes/northwest-blackberry-muffins)
-
 ### Yield: 
 10 Muffins
 
