@@ -30,7 +30,7 @@ const img = {
   url: "../src/images/gallery/Amity_Goldengate.Lite.jpg",
   position: "75%",
 }
-const arrow = "../src/images/icons/arrow-simple.svg";
+const arrow = "../src/images/icons/arrow-custom.png";
 ---
 <BaseLayout pageTitle={pageTitle} img={img}>
   <div class="home-wrapper">
@@ -122,12 +122,15 @@ const arrow = "../src/images/icons/arrow-simple.svg";
   }
   .scroll-container > a > img {
     height: 60px;
-    filter: invert(100%) sepia(52%) saturate(137%) hue-rotate(212deg) brightness(111%) contrast(92%);
+    transition: all 0.3s ease-in;
+  }
+  .scroll-container > a:hover img {
+    transform: scale(1.1);
   }
   .home-athlete-wrapper,
   .home-dietician-wrapper {
     width: 100vw;
-    background-color: whitesmoke;
+    background-color: rgb(245, 245, 245);
   }
   .home-athlete-content > h1 {
     margin: 0;
