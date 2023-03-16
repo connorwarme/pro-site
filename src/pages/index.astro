@@ -1,10 +1,135 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Greeting from '../components/Greeting.jsx';
+import Wall from "../components/Wall.astro";
+const bigwall = [
+  {
+    climb: 'El Corazon',
+    grade: '5.13b',
+    pitches: 32,
+    style: 'ground-up',
+    location: 'Yosemite',
+  },
+  {
+    climb: 'FRIAD: Freerider In A Day',
+    grade: '5.13a',
+    pitches: 32,
+    style: 'self-supported, no rehearsal or stashing',
+    location: 'Yosemite',
+  },
+  {
+    climb: 'Golden Gate',
+    grade: '5.13a',
+    pitches: 33,
+    style: 'ground-up',
+    location: 'Yosemite',
+  }
+]
 
 const pageTitle = "Amity | Home"
+const img = {
+  url: "../src/images/gallery/Amity_Goldengate.Lite.jpg",
+  position: "75%",
+}
+const arrow = "../src/images/icons/arrow-simple.svg";
 ---
-<BaseLayout pageTitle={pageTitle}>
-  <h2>blog subtitle</h2>
-  <Greeting client:load messages={["Hola", "Mahalo", "Marhaba", "Bonjour", "Hi", "Hello", "Hey there", "Howdy"]} />
+<BaseLayout pageTitle={pageTitle} img={img}>
+  <div class="home-wrapper">
+    <div class="home-title-wrapper">
+      <div class="home-title-content">
+        <h1>Athlete</h1>
+        <h1>Dietician</h1>
+      </div>
+      <div class="home-spacer">
+        <div class="scroll-container">
+          <a href="#athlete" aria-label="Link to Athlete">
+            <img src={arrow} alt="" aria-label="Scroll Down">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="athlete" class="home-athlete-wrapper">
+      <div class="home-athlete-content">
+        <h1>Athlete</h1>
+        <h3>Achievements</h3>
+        <div class="achieve-container">
+          {bigwall.map((item) => <Wall climb={item} />)}
+        </div>
+        <div class="athlete-img-container">
+          <img>
+        </div>
+        <div class="athlete-more-wrapper">
+          <a href="/athlete">
+            <img src="" alt="">
+            <p>View More</p>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="home-dietician-wrapper">
+      <div class="home-dietician-content">
+        <h1>Dietician</h1>
+        <h3>Fuel Well to Perform Well</h3>
+        <p>Accepting clients for nutrition counseling!</p>
+        <a href="/dietician">
+          <img>
+          <p>Learn More</p>
+        </a>
+      </div>
+    </div>
+  </div>
 </BaseLayout>
+<style>
+  .home-wrapper {
+    color: rgb(64, 64, 64);
+  }
+  .home-title-wrapper {
+    width: 100vw;
+    min-height: calc(100vh - 59px);
+    font-family: "Unbound", "Playfair", Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .home-title-content {
+    width: fit-content;
+    margin: 1rem 0 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .home-title-content > h1 {
+    color: rgb(245, 245, 245);
+    text-shadow: 1px 1px 3px rgb(64, 64, 64);
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  .home-title-content > h1:first-child::after {
+    display: block;
+    content: "";
+    height: 4px;
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+    border-radius: 1px;
+    box-shadow: 1px 1px 3px rgb(64, 64, 64);
+  }
+  .home-spacer {
+    align-self: center;
+  }
+  .scroll-container {
+    width: fit-content;
+    transition: visibility 200ms;
+  }
+  .scroll-container > a > img {
+    height: 60px;
+    filter: invert(100%) sepia(52%) saturate(137%) hue-rotate(212deg) brightness(111%) contrast(92%);
+  }
+  .home-athlete-wrapper,
+  .home-dietician-wrapper {
+    width: 100vw;
+    background-color: whitesmoke;
+  }
+  .home-athlete-content > h1 {
+    margin: 0;
+  }
+</style>
