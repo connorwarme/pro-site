@@ -7,7 +7,7 @@ author: Amity Warme
 image: 
     url: "../src/images/posts/fuel.jpg"
     alt: Amity on Cosmic Debris, Yosemite
-    caption: Amity on Cosmic Debris (5.13b) in Yosemite, CA
+    caption: Amity on Cosmic Debris (5.13b) in Yosemite
     cred: Max Buschini
 origin: 
     name: 'SCARPA'

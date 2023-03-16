@@ -5,8 +5,8 @@ pubDate: 2022-09-28
 description: "Three ladies test their mettle on the Diamond..."
 author: Chris Weidner
 image: 
-  url: "https://docs.astro.build/default-og-image.png"
-  alt: "The word “astro” against an illustration of planets and stars."
+  url: null
+  alt: null
 origin: 
   name: 'Daily Camera'
   url: "https://www.dailycamera.com/2022/09/28/girl-crew-storms-the-honeymoon-on-longs-peak/"

@@ -8,7 +8,8 @@ image:
   url: "../src/images/posts/enormo.jpg"
   alt: "Amity in action"
   cred: 'Felipe Nordenflycht, Scott Eubank, Tempei Takeuchi'
-origin: 
+origin: null
+intel:
   name: 'Enormocast'
   url: "https://enormocast.com/2022/12/enormocast-254-amity-warme-putting-the-hammer-down/"
   date: 2022-12-16

@@ -5,8 +5,10 @@ pubDate: 2022-08-30
 description: “Amity doesn’t seem to take rest days. ... That's probably the biggest influence on her impressive ticklist."
 author: Chloe Anderson
 image: 
-  url: "https://docs.astro.build/default-og-image.png"
-  alt: "The word “astro” against an illustration of planets and stars."
+  url: "../src/images/gallery/Amity_Goldengate.Lite.jpg"
+  alt: Amity on the A5 Traverse
+  caption: Amity on the A5 Traverse
+  cred: Felipe Nordenflycht
 origin: 
   name: 'Climbing'
   url: "https://www.climbing.com/people/amity-warme-profile/"

@@ -7,13 +7,15 @@ author: false
 image: 
   url: null
   alt: null
-origin: 
+origin: null
+intel:
   name: 'The John Freakin Muir Podcast'
   url: "https://anchor.fm/johnfreakinmuir/episodes/Big-Wall-Climber-Amity-Warme-e13q2ao"
   date: 2021-07-10
 tags: ["climbing", "big wall", "Yosemite", "reflections", "podcast"]
 type: podcast
 ---
+Visit [The John Freakin Muir](https://anchor.fm/johnfreakinmuir/episodes/Big-Wall-Climber-Amity-Warme-e13q2ao) or your podcast platform to listen!
 
 Summary from Doc:
 
