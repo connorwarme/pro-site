@@ -185,6 +185,7 @@ h1 {
 }
 iframe.instagram-media {
   min-width: 272px !important;
+  align-self: center;
 }
 
 @media screen and (min-width: 770px) {
@@ -218,5 +219,9 @@ iframe.instagram-media {
   .tag-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+  .blog-slot img,
+  .blog-main-image {
+    max-width: 655px;
   }
 }

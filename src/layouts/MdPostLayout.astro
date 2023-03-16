@@ -8,36 +8,41 @@ const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={frontmatter.title} img={image}>
   <div class="blog-wrapper">
-    <h1 class="blog-title">{frontmatter.title}</h1>
-    <div class="intro-block">
-      <p class="blog-intro">{frontmatter.pubDate.slice(5,10)}-{frontmatter.pubDate.slice(0,4)}</p>
-      <p class="blog-intro"><em>{frontmatter.description}</em></p>
-      { frontmatter.author ? <p class="blog-intro"> {frontmatter.author}</p> : null }
-    </div>
-    <img class="blog-main-image" src={frontmatter.image.url} alt={frontmatter.image.alt} />
-    { frontmatter.image.caption ? <figcaption>{frontmatter.image.caption}</figcaption> : null }
-    { frontmatter.image.cred ? <figcaption class="cap-credit">Credit: {frontmatter.image.cred}</figcaption> : null }
-    { frontmatter.origin ? <p class="origin">Originally posted by <a href={frontmatter.origin.url}>{frontmatter.origin.name}</a></p> : null }
-    <div class="blog-slot">
-      <slot />
-    </div>
-    <div class="tag-index-container">
-      {frontmatter.tags.map((tag) => (
-        <a class="tag-item" href={`/tags/${tag}`}>{tag}</a>
-      ))}
+    <div class="blog-container">
+      <h1 class="blog-title">{frontmatter.title}</h1>
+      <div class="intro-block">
+        <p class="blog-intro">{frontmatter.pubDate.slice(5,10)}-{frontmatter.pubDate.slice(0,4)}</p>
+        <p class="blog-intro"><em>{frontmatter.description}</em></p>
+        { frontmatter.author ? <p class="blog-intro"> {frontmatter.author}</p> : null }
+      </div>
+      <img class="blog-main-image" src={frontmatter.image.url} alt={frontmatter.image.alt} />
+      { frontmatter.image.caption ? <figcaption>{frontmatter.image.caption}</figcaption> : null }
+      { frontmatter.image.cred ? <figcaption class="cap-credit">Credit: {frontmatter.image.cred}</figcaption> : null }
+      { frontmatter.origin ? <p class="origin">Originally posted by <a href={frontmatter.origin.url}>{frontmatter.origin.name}</a></p> : null }
+      <div class="blog-slot">
+        <slot />
+      </div>
+      <div class="tag-index-container">
+        {frontmatter.tags.map((tag) => (
+          <a class="tag-item" href={`/tags/${tag}`}>{tag}</a>
+        ))}
+      </div>
     </div>
   </div>
 </BaseLayout>
 <style>
   .blog-wrapper {
-    margin-top: 50vh;
+    margin-top: 50vh; 
+  }
+  .blog-container {
     background-color: rgb(245, 245, 245);
     color: rgb(64, 64, 64);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 7.5vw;  
+    padding: 0 7.5vw; 
+    box-shadow: 0 0 3px rgb(64, 64, 64);
   }
   .blog-title {
     font-size: 26px;
@@ -61,6 +66,8 @@ const { frontmatter } = Astro.props;
     margin: 6px 0 0 0;
   }
   .blog-slot {
+    display: flex;
+    flex-direction: column;
     width: 100%;
   }
   .tag-index-container {
@@ -70,5 +77,30 @@ const { frontmatter } = Astro.props;
     justify-content: center;
     align-items: center;
   }
-
+  @media screen and (min-width: 770px) {
+    .blog-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .blog-container {
+      width: 770px;
+      grid-column: 2/3;
+      padding: 0 56px;
+      margin-right: 3rem;
+      border-radius: 3px;
+    }
+    .blog-title {
+      font-size: 2rem;
+      text-align: center;
+    }
+    .blog-main-image {
+      margin-bottom: 0.5rem;
+    }
+    figcaption {
+      font-size: 0.85rem;
+    }
+    .origin {
+      margin-top: 12px;
+    }
+  }
 </style>

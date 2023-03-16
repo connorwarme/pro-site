@@ -6,7 +6,7 @@ description: "A conversation with Steven about life, climbing, and more"
 author: false
 image: 
   url: "https://images.squarespace-cdn.com/content/v1/5e12721e9cacc8033cd889f6/34eeccbb-34c1-4c97-ac10-ea96e2fdcfd4/--Episode+Cover.png"
-  alt: "The word “astro” against an illustration of planets and stars."
+  alt: "Amity cover image"
 origin: null
 intel:
   name: The Nugget Climbing Podcast
