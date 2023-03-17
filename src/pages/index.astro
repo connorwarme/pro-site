@@ -80,6 +80,7 @@ const psycho = "../src/images/gallery/psycho.jpg";
         </a>
       </div>
     </div>
+    <div class="bg-img2"></div>
   </div>
 </BaseLayout>
 <style>
@@ -176,13 +177,19 @@ const psycho = "../src/images/gallery/psycho.jpg";
   .athlete-img-container {
     display: none;
   }
-  .bg-img1 {
+  .bg-img1,
+  .bg-img2 {
     height: 100vh;
     position: relative;
-    background-image: url(../src/images/gallery/psycho.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  .bg-img1 {
+    background-image: url(../src/images/gallery/psycho.jpg);
+  }
+  .bg-img2 {
+    background-image: url(../src/images/gallery/JohnnyLat.jpg);
   }
 </style>
