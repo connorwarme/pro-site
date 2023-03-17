@@ -49,19 +49,21 @@ const arrow = "../src/images/icons/arrow-custom.png";
     </div>
     <div id="athlete" class="home-athlete-wrapper">
       <div class="home-athlete-content">
-        <h1>Athlete</h1>
-        <h3>Achievements</h3>
-        <div class="achieve-container">
-          {bigwall.map((item) => <Wall climb={item} />)}
+        <div class="athlete-content-simple">
+          <h1>Athlete</h1>
+          <h2>Achievements</h2>
+          <div class="achieve-container">
+            {bigwall.map((item) => <Wall climb={item} />)}
+          </div>
+          <div class="athlete-more-wrapper">
+            <a href="/athlete">
+              <img src="../src/images/icons/arrow-simple.svg" alt="">
+              <p>View More</p>
+            </a>
+          </div>
         </div>
         <div class="athlete-img-container">
           <img>
-        </div>
-        <div class="athlete-more-wrapper">
-          <a href="/athlete">
-            <img src="" alt="">
-            <p>View More</p>
-          </a>
         </div>
       </div>
     </div>
@@ -132,7 +134,44 @@ const arrow = "../src/images/icons/arrow-custom.png";
     width: 100vw;
     background-color: rgb(245, 245, 245);
   }
-  .home-athlete-content > h1 {
+  .athlete-content-simple > h1 {
     margin: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .athlete-content-simple > h2 {
+    margin: 0;
+  }
+  .athlete-content-simple {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .achieve-container {
+    margin: 1rem 1rem 0.5rem 1rem;
+    text-align: center;
+  }
+  .athlete-more-wrapper {
+    width: 100%;
+  }
+  .athlete-more-wrapper > a {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+
+  }
+  .athlete-more-wrapper > a > p {
+    display: none;
+    transition: 0.5s ease-in;
+  }
+  .athlete-more-wrapper > a:hover p {
+    display: block;
+  }
+  .athlete-more-wrapper > a > img {
+    height: 60px;
+    transform: rotate(-90deg);
+  }
+  .athlete-img-container {
+    display: none;
   }
 </style>
