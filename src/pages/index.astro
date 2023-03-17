@@ -56,9 +56,9 @@ const psycho = "../src/images/gallery/psycho.jpg";
           <div class="achieve-container">
             {bigwall.map((item) => <Wall climb={item} />)}
           </div>
-          <div class="athlete-more-wrapper">
+          <div class="athlete more-wrapper">
             <a href="/athlete">
-              <img src="../src/images/icons/arrow-simple.svg" alt="">
+              <img src="../src/images/icons/arrow-simple.svg" alt="⇒">
               <p>View More</p>
             </a>
           </div>
@@ -71,13 +71,17 @@ const psycho = "../src/images/gallery/psycho.jpg";
     <div class="bg-img1"></div>
     <div class="home-dietician-wrapper">
       <div class="home-dietician-content">
-        <h1>Dietician</h1>
-        <h3>Fuel Well to Perform Well</h3>
-        <p>Accepting clients for nutrition counseling!</p>
-        <a href="/dietician">
-          <img>
-          <p>Learn More</p>
-        </a>
+        <div class="dietician-content-simple">
+          <h1>Dietician</h1>
+          <h3>Fuel Well to Perform Well</h3>
+          <p>Accepting clients for nutrition counseling!</p>
+          <div class="dietician more-wrapper">
+            <a href="/dietician">
+              <img src="../src/images/icons/arrow-simple.svg" alt="⇒">
+              <p>Learn More</p>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
     <div class="bg-img2"></div>
@@ -138,15 +142,17 @@ const psycho = "../src/images/gallery/psycho.jpg";
     background-color: rgb(245, 245, 245);
   }
   .athlete-content-simple > h1,
-  .home-dietician-content > h1 {
+  .dietician-content-simple > h1 {
     margin: 0;
     text-transform: uppercase;
     font-weight: 700;
   }
-  .athlete-content-simple > h2 {
+  .athlete-content-simple > h2,
+  .dietician-content-simple > h3 {
     margin: 0;
   }
-  .athlete-content-simple {
+  .athlete-content-simple,
+  .dietician-content-simple  {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -155,22 +161,22 @@ const psycho = "../src/images/gallery/psycho.jpg";
     margin: 1rem 1rem 0.5rem 1rem;
     text-align: center;
   }
-  .athlete-more-wrapper {
+  .more-wrapper {
     width: 100%;
   }
-  .athlete-more-wrapper > a {
+  .more-wrapper > a {
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
   }
-  .athlete-more-wrapper > a > p {
+  .more-wrapper > a > p {
     display: none;
     transition: 0.5s ease-in;
   }
-  .athlete-more-wrapper > a:hover p {
+  .more-wrapper > a:hover p {
     display: block;
   }
-  .athlete-more-wrapper > a > img {
+  .more-wrapper > a > img {
     height: 60px;
     transform: rotate(-90deg);
   }
