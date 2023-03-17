@@ -31,6 +31,7 @@ const img = {
   position: "75%",
 }
 const arrow = "../src/images/icons/arrow-custom.png";
+const psycho = "../src/images/gallery/psycho.jpg";
 ---
 <BaseLayout pageTitle={pageTitle} img={img}>
   <div class="home-wrapper">
@@ -67,6 +68,7 @@ const arrow = "../src/images/icons/arrow-custom.png";
         </div>
       </div>
     </div>
+    <div class="bg-img1"></div>
     <div class="home-dietician-wrapper">
       <div class="home-dietician-content">
         <h1>Dietician</h1>
@@ -134,7 +136,8 @@ const arrow = "../src/images/icons/arrow-custom.png";
     width: 100vw;
     background-color: rgb(245, 245, 245);
   }
-  .athlete-content-simple > h1 {
+  .athlete-content-simple > h1,
+  .home-dietician-content > h1 {
     margin: 0;
     text-transform: uppercase;
     font-weight: 700;
@@ -158,7 +161,6 @@ const arrow = "../src/images/icons/arrow-custom.png";
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
-
   }
   .athlete-more-wrapper > a > p {
     display: none;
@@ -173,5 +175,14 @@ const arrow = "../src/images/icons/arrow-custom.png";
   }
   .athlete-img-container {
     display: none;
+  }
+  .bg-img1 {
+    height: 100vh;
+    position: relative;
+    background-image: url(../src/images/gallery/psycho.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 </style>
