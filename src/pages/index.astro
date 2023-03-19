@@ -163,29 +163,61 @@ const psycho = "../src/images/gallery/psycho.jpg";
   }
   .more-wrapper {
     width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
   }
   .more-wrapper > a {
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin-right: 10vw;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: "Unbound";
+    transition: all 0.25s ease-in;
   }
   .more-wrapper > a > p {
-    visibility: hidden;
-    transition: 0.5s ease-in;
+    color: rgb(64, 64, 64);
+    height: 60px;
+    font-size: 14px;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: 0.25s ease-in-out;
+    background-color: lightgrey;
+    border-radius: 3px 0 0 3px;
+    margin: 0;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
   }
   .more-wrapper > a:hover p {
-    visibility: visible;
+    transform: scaleX(1);
+    transform-origin: bottom right;
   }
   .more-wrapper > a > img {
     height: 60px;
     transform: rotate(-90deg);
+    background-color: lightgrey;
+    border-radius: 3px;
+    transition: all 0.25s ease-in;
+  }
+  .more-wrapper > a:hover img {
+    border-radius: 0 0 3px 3px;
+  }
+  .more-wrapper > a:active {
+    transform: scale(0.95);
+    box-shadow: 1px 1px 3px rgba(64, 64, 64, 0.5);
   }
   .athlete-img-container {
     display: none;
   }
   .bg-img1,
   .bg-img2 {
-    height: 100vh;
+    height: 110vh;
     position: relative;
     background-attachment: fixed;
     background-position: center;

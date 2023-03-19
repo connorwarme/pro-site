@@ -78,7 +78,8 @@ h1 {
   color: rgb(241, 245, 249);
   transition: 300ms ease-in-out;
 }
-.nav-links a:hover, a:focus {
+.nav-links a:hover,
+.nav-links a:focus {
   background-color: rgba(241, 245, 249, 0.5);
   text-shadow: none;
   color: rgb(255, 255, 255);
