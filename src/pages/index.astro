@@ -38,7 +38,7 @@ const psycho = "../src/images/gallery/psycho.jpg";
     <div class="home-title-wrapper">
       <div class="home-title-content">
         <h1>Athlete</h1>
-        <h1>Dietician</h1>
+        <h1>Dietitian</h1>
       </div>
       <div class="home-spacer">
         <div class="scroll-container">
@@ -72,10 +72,14 @@ const psycho = "../src/images/gallery/psycho.jpg";
     <div class="home-dietician-wrapper">
       <div class="home-dietician-content">
         <div class="dietician-content-simple">
-          <h1>Dietician</h1>
+          <h1>Dietitian</h1>
           <h3>Fuel Well to Perform Well</h3>
-          <p>I want to help <em>you</em> develop a sustainable approach to fueling that empowers you in your athletic performance and encourages long-term health.</p>
-          <p>Accepting clients for nutrition counseling!</p>
+          <p class="dietician-text">I want to help <em>you</em> develop a sustainable approach to fueling that empowers you in your athletic performance and encourages long-term health.</p>
+          <ul class="dietician-list">
+            <li>Registered Dietitian</li>
+            <li>Master's in Sports Nutrition</li>
+            <li>Now accepting clients!</li>
+          </ul>
           <div class="dietician more-wrapper">
             <a href="/dietician">
               <img src="../src/images/icons/arrow-simple.svg" alt="⇒">
@@ -180,6 +184,7 @@ const psycho = "../src/images/gallery/psycho.jpg";
     text-decoration: none;
     font-family: "Unbound";
     transition: all 0.25s ease-in;
+    background-color: transparent;
   }
   .more-wrapper > a > p {
     color: rgb(64, 64, 64);
@@ -206,6 +211,9 @@ const psycho = "../src/images/gallery/psycho.jpg";
     border-radius: 3px;
     transition: all 0.25s ease-in;
   }
+  .more-wrapper > a:hover {
+    background-color: lightgrey;
+  }
   .more-wrapper > a:hover img {
     border-radius: 0 0 3px 3px;
   }
@@ -215,6 +223,25 @@ const psycho = "../src/images/gallery/psycho.jpg";
   }
   .athlete-img-container {
     display: none;
+  }
+  .dietician.more-wrapper {
+    margin-top: 0.5rem;
+  }
+  .dietician-text {
+    margin: 0.5rem 1.5rem;
+  }
+  .dietician-list {
+    margin: 0;
+    padding-left: 20px;
+  }
+  .dietician-list > li {
+    margin: 0;
+    padding: 2px 22px;
+    list-style: none;
+    background-image: url(../src/images/icons/list-arrow.png);
+    background-repeat: no-repeat;
+    background-position: left 5px;
+    background-size: 20px;
   }
   .bg-img1,
   .bg-img2 {
