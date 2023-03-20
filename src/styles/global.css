@@ -133,7 +133,7 @@ h1 {
 }
 /* content page and tag page */
 .content-wrapper {
-  margin-top: 50vh;
+  margin: 50vh 0;
 }
 .content-container {
   color: rgb(64, 64, 64);

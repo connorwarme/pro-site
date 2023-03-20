@@ -11,17 +11,43 @@ const fb = "../src/images/icons/facebook.svg"
     <Social platform="facebook" username="amity.martin" image={fb} />
   </div>
   <div class="copyright">Copyright &#169 2023 Sendy Nutrition LLC</div>
+  <div class="built">Built by 
+    <a href="https://github.com/connorwarme" target="_blank" rel="noreferrer">Connor Warme</a>
+  </div>
 </footer>
 
 <style>
   footer {
-    /* background-color: rgb(64, 64, 64); */
-    background-color: whitesmoke;
+    background-color: rgb(245, 245, 245);
+    color: rgb(64, 64, 64);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 2rem 1rem;
     width: 100%;
+  }
+  .back-top,
+  .built a {
+    font-family: "Unbound";
+    color: rgb(64, 64, 64);
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .built {
+    width: 100%;
+    text-align: center;
+    border-top: 2px solid rgba(64, 64, 64, 0.7);
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+  }
+  @media screen and (min-width: 770px) {
+    footer {
+      padding: 2rem 4rem;
+    }
+    .built {
+      margin-top: 1rem;
+      padding-top: 1rem;
+    }
   }
 </style>
