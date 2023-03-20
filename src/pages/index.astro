@@ -64,7 +64,7 @@ const psycho = "../src/images/gallery/psycho.jpg";
           </div>
         </div>
         <div class="athlete-img-container">
-          <img>
+          
         </div>
       </div>
     </div>
@@ -93,13 +93,15 @@ const psycho = "../src/images/gallery/psycho.jpg";
   </div>
 </BaseLayout>
 <style>
+  h1 {
+    font-family: "Unbound", "Playfair", Georgia, 'Times New Roman', Times, serif;
+  }
   .home-wrapper {
     color: rgb(64, 64, 64);
   }
   .home-title-wrapper {
     width: 100vw;
     min-height: calc(100vh - 59px);
-    font-family: "Unbound", "Playfair", Georgia, 'Times New Roman', Times, serif;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -178,7 +180,7 @@ const psycho = "../src/images/gallery/psycho.jpg";
     justify-content: center;
     align-items: center;
     width: fit-content;
-    margin-right: 10vw;
+    margin-right: 5vw;
     border-radius: 3px;
     text-transform: uppercase;
     text-decoration: none;
@@ -267,6 +269,33 @@ const psycho = "../src/images/gallery/psycho.jpg";
     }
     .home-title-content > h1 {
       font-size: 64px;
+    }
+    .home-athlete-content {
+      display: grid;
+      align-items: center;
+      grid-template-columns: 1fr 2fr;
+    }
+    .athlete-content-simple {
+      height: 450px;
+    }
+    .athlete-content-simple > h1,
+    .athlete-content-simple > h2,
+    .achieve-container,
+    .athlete.more-wrapper {
+      flex-grow: 1;
+    }
+    .more-wrapper > a {
+      margin-right: 2vw;
+    }
+    .athlete-img-container {
+      display: block;
+      height: 500px;
+      background-image: url(../src/images/gallery/corazon.jpg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 1rem;
     }
   }
 </style>
