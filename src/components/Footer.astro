@@ -1,15 +1,22 @@
 ---
 import Social from "./Social.astro";
+const insta = "../src/images/icons/instagram.svg"
+const fb = "../src/images/icons/facebook.svg"
 ---
 
 <footer>
-  <Social platform="instagram" username="amity.warme" />
+  <a href="#top" class="back-top">Back to Top</a>
+  <div class="sm-container">
+    <Social platform="instagram" username="amity.warme" image={insta} />
+    <Social platform="facebook" username="amity.martin" image={fb} />
+  </div>
 </footer>
 
 <style>
   footer {
+    background-color: rgb(64, 64, 64);
     display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
+    padding: 2rem;
+    width: 100%;
   }
 </style>
