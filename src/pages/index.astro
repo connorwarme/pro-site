@@ -87,6 +87,7 @@ const psycho = "../src/images/gallery/psycho.jpg";
             </a>
           </div>
         </div>
+        <div class="dietician-img-container"></div>
       </div>
     </div>
     <div class="bg-img2"></div>
@@ -223,7 +224,8 @@ const psycho = "../src/images/gallery/psycho.jpg";
     transform: scale(0.95);
     box-shadow: 1px 1px 3px rgba(64, 64, 64, 0.5);
   }
-  .athlete-img-container {
+  .athlete-img-container,
+  .dietician-img-container {
     display: none;
   }
   .dietician.more-wrapper {
@@ -270,32 +272,52 @@ const psycho = "../src/images/gallery/psycho.jpg";
     .home-title-content > h1 {
       font-size: 64px;
     }
-    .home-athlete-content {
+    .home-athlete-content,
+    .home-dietician-content {
       display: grid;
       align-items: center;
-      grid-template-columns: 1fr 2fr;
+      grid-template-columns: 1fr 1fr 1fr;
     }
-    .athlete-content-simple {
+    .athlete-content-simple,
+    .dietician-content-simple {
       height: 450px;
+    }
+    .dietician-content-simple {
+      margin-right: 2vw;
     }
     .athlete-content-simple > h1,
     .athlete-content-simple > h2,
     .achieve-container,
-    .athlete.more-wrapper {
+    .more-wrapper,
+    .dietician-content-simple > h1,
+    .dietician-content-simple > h3,
+    .dietician-text,
+    .dietician-list {
       flex-grow: 1;
     }
     .more-wrapper > a {
       margin-right: 2vw;
     }
-    .athlete-img-container {
+    .athlete-img-container,
+    .dietician-img-container {
       display: block;
       height: 500px;
-      background-image: url(../src/images/gallery/corazon.jpg);
       position: relative;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
       margin: 1rem;
+    }
+    .athlete-img-container {
+      background-image: url(../src/images/gallery/corazon.jpg);
+      grid-column: 2/4;
+    }
+    .dietician-img-container {
+      background-image: url(../src/images/gallery/SCM_220409_8994.jpg);
+      grid-area: 1/1/2/3;
+    }
+    .dietician-content-simple {
+      grid-column: 3/4;
     }
   }
 </style>
