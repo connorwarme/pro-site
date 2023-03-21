@@ -21,12 +21,16 @@ body {
   /* justify-content: center; */
   align-items: center;
   font-family: "Playfair", Georgia, 'Times New Roman', Times, serif;
+  background-color: rgb(245, 245, 245);
 }
 
 * {
   box-sizing: border-box;
 }
-
+a {
+  color: rgb(53, 84, 136);
+  text-decoration: 1px underline;
+}
 h1 {
   margin: 1rem 0;
   font-size: 2.5rem;
@@ -176,9 +180,7 @@ h1 {
 /* blog post styling */
 .blog-slot a,
 .origin > a {
-  color: rgb(53, 84, 136);
   font-weight: 500;
-  text-decoration: none;
 }
 .blog-slot img,
 .blog-main-image {
