@@ -1,13 +1,15 @@
 ---
 const { title, description, url, date, type, img } = Astro.props;
 // not sure about including the image..
+const prositeURL = `/pro-site/${url}`;
 ---
 
 <li class="bloglist-item" id={type}>
   <div>
     <p class="type">{type}</p>
   </div>
-  <a href={url}>
+  <!-- <a href={url}> -->
+  <a href={prositeURL}>
     <h4>{title}</h4>
     <p>{description}</p>
   </a>

@@ -3,7 +3,8 @@ const array = Astro.props.array;
 ---
 <div class="tag-index-container">
   {array.map((tag) => (
-    <a class="tag-item" href={`/tags/${tag}`}>{tag}</a> 
+    // <a class="tag-item" href={`/tags/${tag}`}>{tag}</a> 
+    <a class="tag-item" href={`/pro-site/tags/${tag}`}>{tag}</a> 
     ))}
 </div>
 <style>
