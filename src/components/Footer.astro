@@ -1,7 +1,8 @@
 ---
 import Social from "./Social.astro";
-const insta = "../src/images/icons/instagram.svg"
-const fb = "../src/images/icons/facebook.svg"
+import insta from "../images/icons/instagram.svg";
+import fb from "../images/icons/facebook.svg";
+
 ---
 
 <footer>
@@ -10,7 +11,7 @@ const fb = "../src/images/icons/facebook.svg"
     <Social platform="instagram" username="amity.warme" image={insta} />
     <Social platform="facebook" username="amity.martin" image={fb} />
   </div>
-  <div class="copyright">Copyright &#169 2023 Sendy Nutrition LLC</div>
+  <div class="copyright">Copyright &#169 2023 Amity's Sendy Nutrition LLC</div>
   <div class="built">Built by 
     <a href="https://github.com/connorwarme" target="_blank" rel="noreferrer">Connor Warme</a>
   </div>
