@@ -2,9 +2,12 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Counseling from "../components/Counseling.astro";
 import arrow from "../images/icons/arrow-simple.svg";
+import arrowList from "../images/icons/list-arrow.png";
+import sixstar from "../images/gallery/sixstar.jpeg";
+
 
 const image = {
-  url: "../src/images/gallery/sixstar.jpeg",
+  url: sixstar,
   position: '70%',
 }
 
@@ -33,6 +36,7 @@ const fuel = [
   'Increase coordination and concentration',
   'Untangle disordered eating patterns and anxiety around food',
 ]
+const arrowVar = `url(${arrowList})`;
 ---
 
 <BaseLayout pageTitle="Amity | Dietitian" img={image}>
@@ -89,7 +93,7 @@ const fuel = [
     </div>
   </div>
 </BaseLayout>
-<style>
+<style define:vars={{arrowVar}}>
   .nutrition-wrapper {
     display: block;
     margin: 55vh 0 35vh 0;
@@ -179,7 +183,7 @@ const fuel = [
     margin: 0;
     padding: 2px 22px;
     list-style: none;
-    background-image: url("../src/images/icons/list-arrow.png");
+    background-image: var(--arrowVar);
     background-repeat: no-repeat;
     background-position: left 5px;
     background-size: 20px;
