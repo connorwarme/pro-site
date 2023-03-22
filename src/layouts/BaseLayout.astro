@@ -1,12 +1,11 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import lifeline from "../images/gallery/lifeline.jpg";
 import '../styles/global.css';
 
 const { pageTitle, img } = Astro.props;
-const baseImage = "src/images/gallery/lifeline.jpg"
-// const background = img ? `url(${img.url})` : `url(${baseImage})`;
-const background = img ? `${img.url}` : `${baseImage}`;
+const background = img ? `url(${img.url})` : `url(${lifeline})`;
 const position = img ? `${img.position}` : 'center';
 
 ---
@@ -19,7 +18,7 @@ const position = img ? `${img.position}` : 'center';
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
 	</head>
-	<body style=`background-image: url(${background});` >
+	<body>
     <Header />
     <slot />
     <Footer />
@@ -29,7 +28,7 @@ const position = img ? `${img.position}` : 'center';
     </script>
     <style define:vars={{background, position}}>
       body {
-        /* background-image: var(--background); */
+        background-image: var(--background);
         background-position: var(--position);
         background-repeat: no-repeat;
         background-attachment: fixed;

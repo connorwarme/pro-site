@@ -1,11 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Wall from "../components/Wall.astro";
+import golden from "../images/gallery/Amity_Goldengate.Lite.jpg";
 import arrow from "../images/icons/arrow-custom.png";
 import arrowSimple from "../images/icons/arrow-simple.svg";
 import arrowList from "../images/icons/list-arrow.png";
 import psycho from "../images/gallery/psycho.jpg";
 import turkey from "../images/gallery/JohnnyLat.jpg";
+import corazon from "../images/gallery/corazon.jpg";
+import mark from "../images/gallery/SCM_220409_8994.jpg";
 
 const bigwall = [
   {
@@ -33,13 +36,15 @@ const bigwall = [
 
 const pageTitle = "Amity | Home"
 const img = {
-  url: "src/images/gallery/Amity_Goldengate.Lite.jpg",
+  url: golden,
   position: "75%",
 }
 
-const arr = `url(${arrowList})`;
-const psy = `url(${psycho})`;
-const tur = `url(${turkey})`;
+const arrowVar = `url(${arrowList})`;
+const psychoVar = `url(${psycho})`;
+const turkeyVar = `url(${turkey})`;
+const corazonVar = `url(${corazon})`;
+const markVar = `url(${mark})`;
 
 ---
 <BaseLayout pageTitle={pageTitle} img={img}>
@@ -102,7 +107,7 @@ const tur = `url(${turkey})`;
     <div class="bg-img2"></div>
   </div>
 </BaseLayout>
-<style define:vars={{psy, tur, arr}}>
+<style define:vars={{psychoVar, turkeyVar, arrowVar, corazonVar, markVar}}>
   h1 {
     font-family: "Unbound", "Playfair", Georgia, 'Times New Roman', Times, serif;
   }
@@ -258,7 +263,7 @@ const tur = `url(${turkey})`;
     margin: 0;
     padding: 2px 22px;
     list-style: none;
-    background-image: var(--arr);
+    background-image: var(--arrowVar);
     background-repeat: no-repeat;
     background-position: left 5px;
     background-size: 20px;
@@ -273,12 +278,10 @@ const tur = `url(${turkey})`;
     background-size: cover;
   }
   .bg-img1 {
-    /* background-image: url(src/images/gallery/psycho.jpg); */
-    background-image: var(--psy);
+    background-image: var(--psychoVar);
   }
   .bg-img2 {
-    /* background-image: url(src/images/gallery/JohnnyLat.jpg); */
-    background-image: var(--tur);
+    background-image: var(--turkeyVar);
   }
   @media screen and (min-width: 770px) {
     .home-title-wrapper {
@@ -326,11 +329,11 @@ const tur = `url(${turkey})`;
       margin: 1rem;
     }
     .athlete-img-container {
-      background-image: url(src/images/gallery/corazon.jpg);
+      background-image: var(--corazonVar);
       grid-column: 2/4;
     }
     .dietician-img-container {
-      background-image: url(src/images/gallery/SCM_220409_8994.jpg);
+      background-image: var(--markVar);
       grid-area: 1/1/2/3;
     }
     .dietician-content-simple {
