@@ -30,8 +30,8 @@ const img = {
   url: "../src/images/gallery/Amity_Goldengate.Lite.jpg",
   position: "75%",
 }
-const arrow = "../src/images/icons/arrow-custom.png";
-const psycho = "../src/images/gallery/psycho.jpg";
+const arrow = "src/images/icons/arrow-custom.png";
+const psycho = "src/images/gallery/psycho.jpg";
 ---
 <BaseLayout pageTitle={pageTitle} img={img}>
   <div class="home-wrapper">
@@ -58,7 +58,7 @@ const psycho = "../src/images/gallery/psycho.jpg";
           </div>
           <div class="athlete more-wrapper">
             <a href="/athlete">
-              <img src="../src/images/icons/arrow-simple.svg" alt="↓">
+              <img src="src/images/icons/arrow-simple.svg" alt="↓">
               <p>View More</p>
             </a>
           </div>
@@ -82,7 +82,7 @@ const psycho = "../src/images/gallery/psycho.jpg";
           </ul>
           <div class="dietician more-wrapper">
             <a href="/dietician">
-              <img src="../src/images/icons/arrow-simple.svg" alt="↓">
+              <img src="src/images/icons/arrow-simple.svg" alt="↓">
               <p>Learn More</p>
             </a>
           </div>
@@ -249,7 +249,7 @@ const psycho = "../src/images/gallery/psycho.jpg";
     margin: 0;
     padding: 2px 22px;
     list-style: none;
-    background-image: url(../src/images/icons/list-arrow.png);
+    background-image: url(src/images/icons/list-arrow.png);
     background-repeat: no-repeat;
     background-position: left 5px;
     background-size: 20px;
@@ -264,10 +264,10 @@ const psycho = "../src/images/gallery/psycho.jpg";
     background-size: cover;
   }
   .bg-img1 {
-    background-image: url(../src/images/gallery/psycho.jpg);
+    background-image: url(src/images/gallery/psycho.jpg);
   }
   .bg-img2 {
-    background-image: url(../src/images/gallery/JohnnyLat.jpg);
+    background-image: url(src/images/gallery/JohnnyLat.jpg);
   }
   @media screen and (min-width: 770px) {
     .home-title-wrapper {
@@ -315,11 +315,11 @@ const psycho = "../src/images/gallery/psycho.jpg";
       margin: 1rem;
     }
     .athlete-img-container {
-      background-image: url(../src/images/gallery/corazon.jpg);
+      background-image: url(src/images/gallery/corazon.jpg);
       grid-column: 2/4;
     }
     .dietician-img-container {
-      background-image: url(../src/images/gallery/SCM_220409_8994.jpg);
+      background-image: url(src/images/gallery/SCM_220409_8994.jpg);
       grid-area: 1/1/2/3;
     }
     .dietician-content-simple {

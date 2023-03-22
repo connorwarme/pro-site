@@ -4,7 +4,7 @@ import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
 const { pageTitle, img } = Astro.props;
-const baseImage = "../src/images/gallery/lifeline.jpg"
+const baseImage = "src/images/gallery/lifeline.jpg"
 const background = img ? `url(${img.url})` : `url(${baseImage})`;
 const position = img ? `${img.position}` : 'center';
 
@@ -13,7 +13,7 @@ const position = img ? `${img.position}` : 'center';
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/png" href="/a-custom.png" />
+		<link rel="icon" type="image/png" href="/pro-site/a-custom.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
