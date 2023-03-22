@@ -1,6 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Wall from "../components/Wall.astro";
+import arrow from "../images/icons/arrow-custom.png";
+import arrowSimple from "../images/icons/arrow-simple.svg";
+import arrowList from "../images/icons/list-arrow.png";
+import psycho from "../images/gallery/psycho.jpg";
+import turkey from "../images/gallery/JohnnyLat.jpg";
+
 const bigwall = [
   {
     climb: 'El Corazon',
@@ -30,9 +36,11 @@ const img = {
   url: "src/images/gallery/Amity_Goldengate.Lite.jpg",
   position: "75%",
 }
-const arrow = "src/images/icons/arrow-custom.png";
-const psycho = "url(src/images/gallery/psycho.jpg)";
-const turkey = "url(src/images/gallery/JohnnyLat.jpg)";
+
+const arr = `url(${arrowList})`;
+const psy = `url(${psycho})`;
+const tur = `url(${turkey})`;
+
 ---
 <BaseLayout pageTitle={pageTitle} img={img}>
   <div class="home-wrapper">
@@ -59,7 +67,7 @@ const turkey = "url(src/images/gallery/JohnnyLat.jpg)";
           </div>
           <div class="athlete more-wrapper">
             <a href="/athlete">
-              <img src="src/images/icons/arrow-simple.svg" alt="↓">
+              <img src={arrowSimple} alt="↓">
               <p>View More</p>
             </a>
           </div>
@@ -83,7 +91,7 @@ const turkey = "url(src/images/gallery/JohnnyLat.jpg)";
           </ul>
           <div class="dietician more-wrapper">
             <a href="/dietician">
-              <img src="src/images/icons/arrow-simple.svg" alt="↓">
+              <img src={arrowSimple} alt="↓">
               <p>Learn More</p>
             </a>
           </div>
@@ -94,7 +102,7 @@ const turkey = "url(src/images/gallery/JohnnyLat.jpg)";
     <div class="bg-img2"></div>
   </div>
 </BaseLayout>
-<style define:vars={{psycho, turkey, arrow}}>
+<style define:vars={{psy, tur, arr}}>
   h1 {
     font-family: "Unbound", "Playfair", Georgia, 'Times New Roman', Times, serif;
   }
@@ -250,7 +258,7 @@ const turkey = "url(src/images/gallery/JohnnyLat.jpg)";
     margin: 0;
     padding: 2px 22px;
     list-style: none;
-    background-image: url(src/images/icons/list-arrow.png);
+    background-image: var(--arr);
     background-repeat: no-repeat;
     background-position: left 5px;
     background-size: 20px;
@@ -266,11 +274,11 @@ const turkey = "url(src/images/gallery/JohnnyLat.jpg)";
   }
   .bg-img1 {
     /* background-image: url(src/images/gallery/psycho.jpg); */
-    background-image: var(--psycho);
+    background-image: var(--psy);
   }
   .bg-img2 {
     /* background-image: url(src/images/gallery/JohnnyLat.jpg); */
-    background-image: var(--turkey);
+    background-image: var(--tur);
   }
   @media screen and (min-width: 770px) {
     .home-title-wrapper {
