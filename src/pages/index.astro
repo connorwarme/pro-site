@@ -31,7 +31,8 @@ const img = {
   position: "75%",
 }
 const arrow = "src/images/icons/arrow-custom.png";
-const psycho = "src/images/gallery/psycho.jpg";
+const psycho = "url(src/images/gallery/psycho.jpg)";
+const turkey = "url(src/images/gallery/JohnnyLat.jpg)";
 ---
 <BaseLayout pageTitle={pageTitle} img={img}>
   <div class="home-wrapper">
@@ -93,7 +94,7 @@ const psycho = "src/images/gallery/psycho.jpg";
     <div class="bg-img2"></div>
   </div>
 </BaseLayout>
-<style>
+<style define:vars={{psycho, turkey, arrow}}>
   h1 {
     font-family: "Unbound", "Playfair", Georgia, 'Times New Roman', Times, serif;
   }
@@ -264,10 +265,12 @@ const psycho = "src/images/gallery/psycho.jpg";
     background-size: cover;
   }
   .bg-img1 {
-    background-image: url(src/images/gallery/psycho.jpg);
+    /* background-image: url(src/images/gallery/psycho.jpg); */
+    background-image: var(--psycho);
   }
   .bg-img2 {
-    background-image: url(src/images/gallery/JohnnyLat.jpg);
+    /* background-image: url(src/images/gallery/JohnnyLat.jpg); */
+    background-image: var(--turkey);
   }
   @media screen and (min-width: 770px) {
     .home-title-wrapper {
