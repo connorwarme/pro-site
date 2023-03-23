@@ -4,7 +4,7 @@ import TagDisplay from "../components/TagDisplay.astro";
 import BlogPost from "../components/BlogPost.astro";
 import arrow from "../images/icons/arrow-simple.svg";
 
-const allPosts = await Astro.glob('./posts/*.md');
+const allPosts = await Astro.glob('./posts/*.mdx');
 const sortedPosts = [...allPosts].sort((a, b) => {
   return +new Date(b.frontmatter.pubDate) - +new Date(a.frontmatter.pubDate)
 });

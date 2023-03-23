@@ -1,10 +1,26 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import gate from "../images/gallery/gate.jpg";
+import rabbit from "../images/gallery/rabbit.jpg";
+import frontier from "../images/posts/finalfrontier1.jpg";
+import fuel from "../images/posts/fuel.jpg";
+import turkey from "../images/gallery/JohnnyLat.jpg";
+import barnacle from "../images/gallery/Shaffer_Taylor-17.Lite.jpg";
+
 const image = {
   url: gate,
   position: "25%",
 }
+
+const images = [
+  rabbit,
+  frontier, 
+  fuel,
+  gate,
+  turkey,
+  barnacle,
+  
+]
 const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={frontmatter.title} img={image}>
@@ -16,7 +32,7 @@ const { frontmatter } = Astro.props;
         <p class="blog-intro"><em>{frontmatter.description}</em></p>
         { frontmatter.author ? <p class="blog-intro"> {frontmatter.author}</p> : null }
       </div>
-      <img class="blog-main-image" src={frontmatter.image.url} alt={frontmatter.image.alt} />
+      <img class="blog-main-image" src={images[frontmatter.image.index]} alt={frontmatter.image.alt} />
       { frontmatter.image.caption ? <figcaption>{frontmatter.image.caption}</figcaption> : null }
       { frontmatter.image.cred ? <figcaption class="cap-credit">Credit: {frontmatter.image.cred}</figcaption> : null }
       { frontmatter.origin ? <p class="origin">Originally posted by <a href={frontmatter.origin.url}>{frontmatter.origin.name}</a></p> : null }
