@@ -11,46 +11,48 @@ const image = {
 
 <BaseLayout pageTitle={pageTitle} img={image}>
   <div class="about-wrapper">
-    <div class="about-initial">
-      <h1 class="about-animate">About Amity</h1>
-      <p>You'll often find me exceedingly stoked and always in motion, often rock climbing. I'm constantly pursuing the next big adventure.</p>
-      <p>My secret climbing superpower is trying REALLY hard - I don’t give up!</p>
-      <p>Feel free to say hi if you ever see me around!!</p>
-    </div>
-    <div class="about-climbing">
-      <h2 class="about-animate">Why Climbing?</h2>
-      <p>
-        I find climbing compelling because it provides the opportunity to challenge myself while exploring incredible landscapes and connecting with others in the mountain adventure tribe.
-        I thrive when an objective pushes me to the limit, physically and mentally. I love digging deep to accomplish a goal.
-      </p>
-      <p>
-        I enjoy all climbing disciplines but feel most drawn to big wall climbing because it requires a combination of every skill in your repertoire in order to pull off a successful ascent!
-      </p>
-      <p>
-        I also appreciate connecting with climbing partners through a shared experience. I am always amazed at the accomplishments that teamwork and mutual stoke can lead to and I value learning from those around me. 
-        I find great joy in empowering others to believe in themselves and their ability to achieve something great.
-      </p>
-    </div>
-    <div class="about-nutrition">
-      <h2 class="about-animate">Why Nutrition?</h2>
-      <p>
-        I've been immersed in 'weight sensitive' sports my entire life. 
-        I'm acutely aware of the harmful mental and physical effects of underfueling, in one's athletic performance and long-term health.
-      </p>
-      <p>
-        I grew up doing competitive gymnastics. While I was fortunate to have positive role models around me as a young gymnast I still saw the negative ramifications of underfueling in others.
-        I suffered a career ending back injury, which may have been partly related to unintentional nutritional deficiencies.
-      </p>
-      <p>
-        After finding climbing, I became more aware of a pervasive attitude around weight and diet that encouraged underfueling. 
-        I saw this play out in my climbing journey and experienced the negative effects firsthand, and I have witnessed it in countless climbers around me.
-      </p>
-      <p>
-        Having long had an interest in sports performance and physiology, along with a passion for food and cooking, it seemed like a natural connection to integrate both aspects into a career.
-      </p>
-      <p>
-        Now, my goal is to help athletes use nutrition to maximize their performance while protecting long term health!
-      </p>
+    <div class="about-content">
+      <div class="about-initial">
+        <h1 class="about-animate">About Amity</h1>
+        <p>You'll often find me exceedingly stoked and always in motion, often rock climbing. I'm constantly pursuing the next big adventure.</p>
+        <p>My secret climbing superpower is trying REALLY hard - I don’t give up!</p>
+        <p>Feel free to say hi if you ever see me around!!</p>
+      </div>
+      <div class="about-climbing">
+        <h2 class="about-animate">Why Climbing?</h2>
+        <p>
+          I find climbing compelling because it provides the opportunity to challenge myself while exploring incredible landscapes and connecting with others in the mountain adventure tribe.
+          I thrive when an objective pushes me to the limit, physically and mentally. I love digging deep to accomplish a goal.
+        </p>
+        <p>
+          I enjoy all climbing disciplines but feel most drawn to big wall climbing because it requires a combination of every skill in your repertoire in order to pull off a successful ascent!
+        </p>
+        <p>
+          I also appreciate connecting with climbing partners through a shared experience. I am always amazed at the accomplishments that teamwork and mutual stoke can lead to and I value learning from those around me. 
+          I find great joy in empowering others to believe in themselves and their ability to achieve something great.
+        </p>
+      </div>
+      <div class="about-nutrition">
+        <h2 class="about-animate">Why Nutrition?</h2>
+        <p>
+          I've been immersed in 'weight sensitive' sports my entire life. 
+          I'm acutely aware of the harmful mental and physical effects of underfueling, in one's athletic performance and long-term health.
+        </p>
+        <p>
+          I grew up doing competitive gymnastics. While I was fortunate to have positive role models around me as a young gymnast I still saw the negative ramifications of underfueling in others.
+          I suffered a career ending back injury, which may have been partly related to unintentional nutritional deficiencies.
+        </p>
+        <p>
+          After finding climbing, I became more aware of a pervasive attitude around weight and diet that encouraged underfueling. 
+          I saw this play out in my climbing journey and experienced the negative effects firsthand, and I have witnessed it in countless climbers around me.
+        </p>
+        <p>
+          Having long had an interest in sports performance and physiology, along with a passion for food and cooking, it seemed like a natural connection to integrate both aspects into a career.
+        </p>
+        <p>
+          Now, my goal is to help athletes use nutrition to maximize their performance while protecting long term health!
+        </p>
+      </div>
     </div>
   </div>
 </BaseLayout>
@@ -60,22 +62,14 @@ const image = {
     flex-direction: column;  
     margin-top: 50vh;
   }
-  .about-initial,
-  .about-climbing,
-  .about-nutrition {
+  .about-content {
+    background-color: rgb(245, 245, 245);
     color: rgb(64, 64, 64);
-    background-color: #f8f8f8;
     width: 100vw;
     max-width: 575px;
     padding: 0 2rem;
-  }
-  .about-initial {
-    box-shadow: 1px 1px 4px rgb(64, 64, 64);
-    border-radius: 3px 3px 0 0;
-  }
-  .about-nutrition {
-    border-radius: 0 0 3px 3px;
     margin-bottom: 35vh;
+    border-radius: 3px;
   }
   h1 {
     font-family: "Unbound";
@@ -91,9 +85,7 @@ const image = {
       display: grid;
       grid-template-columns: auto 1fr 1fr auto;
     }
-    .about-initial,
-    .about-climbing,
-    .about-nutrition {
+    .about-content {
       grid-column: 3/4;
       margin-right: 2rem;
     }
