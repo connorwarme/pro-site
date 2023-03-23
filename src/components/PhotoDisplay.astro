@@ -19,8 +19,6 @@ import space from "../images/gallery/space.jpeg";
 import gate from "../images/gallery/gate.jpg";
 import arrow from "../images/icons/arrow-custom.png";
 
-const images = [golden, barnacle, wolverine]
-const photoArray = Astro.props.array;
 const array = [
   {
     src: golden,
@@ -48,7 +46,7 @@ const array = [
     caption: 'Barnacle Scars',
     location: `Ship's Prow, RMNP`,
     credit: {
-      name: 'Taylor Schaffer',
+      name: 'Taylor Shaffer',
       site: 'https://www.taylorshaffer.com/',
     }
   },
@@ -58,8 +56,8 @@ const array = [
     caption: 'Stingray',
     location: `Joshua Tree, CA`,
     credit: {
-      name: 'Jeremy Schoenborn',
-      site: 'https://www.instagram.com/jerrrrrrrrbs/',
+      name: 'Connor Brown',
+      site: 'https://www.connorbrownphotography.com/',
     }
   },
   {
@@ -139,7 +137,7 @@ const array = [
     location: `The Fins, ID`,
     credit: {
       name: 'Ben Crawford',
-      site: '',
+      site: null,
     }
   },
   {
@@ -169,7 +167,7 @@ const array = [
     location: 'Cathedral Spires, CO',
     credit: {
       name: 'Connor Warme',
-      site: '',
+      site: null,
     }
   },
   {
@@ -294,6 +292,7 @@ button {
 .slide[data-active] {
   opacity: 1;
   transition-delay: 0ms;
+  z-index: 3;
 }
 .slide > img {
   display: block;
