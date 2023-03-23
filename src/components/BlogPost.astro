@@ -8,7 +8,7 @@ const prositeURL = `/pro-site/${url}`;
   <div>
     <p class="type">{type}</p>
   </div>
-  <a href={url}>
+  <a class="blog-card" href={url}>
   <!-- <a href={prositeURL}> -->
     <h4>{title}</h4>
     <p>{description}</p>
@@ -62,7 +62,7 @@ const prositeURL = `/pro-site/${url}`;
   #podcast > div {
     background-color: rgb(61, 165, 217);
   }
-  a {
+  a.blog-card {
     text-decoration: none;
     color: rgb(64, 64, 64);
     margin: 0 16px;

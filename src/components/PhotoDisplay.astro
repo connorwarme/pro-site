@@ -137,7 +137,7 @@ const array = [
     location: `The Fins, ID`,
     credit: {
       name: 'Ben Crawford',
-      site: null,
+      site: 'https://www.instagram.com/bencrawford17/',
     }
   },
   {
@@ -167,7 +167,7 @@ const array = [
     location: 'Cathedral Spires, CO',
     credit: {
       name: 'Connor Warme',
-      site: null,
+      site: 'https://www.instagram.com/amity.warme',
     }
   },
   {
@@ -326,28 +326,38 @@ button {
 }
 .credit-text-wrapper > p > a {
   color: rgb(245, 245, 245);
-  text-decoration: none;
+  text-decoration: 1px underline;
 }
 .credit-text-wrapper > p:last-child {
   cursor: pointer;
 }
 .slide[data-active] .credit-container {
-  animation: reveal 17s 1;
+  animation: reveal 16s 1;
   animation-fill-mode: forwards;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 @keyframes reveal {
   0% {
     opacity: 0;
   }
-  25% {
+  20% {
     opacity: 1;
   }
-  75% {
+  80% {
     opacity: 1;
   }
   100% {
     opacity: 0;
+  }
+}
+/* trying to have a hover effect on caption, but animation trumps this.. */
+.slide[data-active] .credit-container:hover {
+  opacity: 1;
+}
+@media screen and (min-width: 770px) {
+  .credit-text-wrapper {
+    font-size: 20px;
+    padding: 1.5vw 2.5vw;
   }
 }
 </style>
