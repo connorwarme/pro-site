@@ -53,7 +53,8 @@ const { frontmatter } = Astro.props;
       <img class="blog-main-image" src={images[frontmatter.image.index] || null} alt={frontmatter.image.alt} />
       { frontmatter.image.caption ? <figcaption>{frontmatter.image.caption}</figcaption> : null }
       { frontmatter.image.cred ? <figcaption class="cap-credit">Credit: {frontmatter.image.cred}</figcaption> : null }
-      { frontmatter.origin ? <p class="origin">Originally posted by <a href={frontmatter.origin.url}>{frontmatter.origin.name}</a></p> : null }
+      { frontmatter.origin ? <p class="origin">Originally posted by <a href={frontmatter.origin.url} target="_blank" rel="noreferrer">{frontmatter.origin.name}</a></p> : null }
+      { frontmatter.intel ? <p class="intel">Visit <a href={frontmatter.intel.url} target="_blank" rel="noreferrer">{frontmatter.intel.name}</a> or your podcast platform to listen!</p> : null }
       <div class="blog-slot">
         <slot />
       </div>
