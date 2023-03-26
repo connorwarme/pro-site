@@ -2,6 +2,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import lifeline from "../images/gallery/lifeline.jpg";
+import golden from "../images/gallery/Amity_Goldengate.Lite.jpg";
 import '../styles/global.css';
 
 const { pageTitle, img } = Astro.props;
@@ -20,6 +21,9 @@ const position = img ? `${img.position}` : 'center';
 	</head>
 	<body>
     <Header />
+    <div class="mobile-img">
+      <img src={golden} />
+    </div>
     <slot />
     <Footer />
     <script>
@@ -37,7 +41,19 @@ const position = img ? `${img.position}` : 'center';
       }
       @media (hover: none) {
         body {
-          background-attachment: scroll;
+          background-image: none;
+        }
+        .mobile-img {
+          position: fixed;
+          height: 100vh;
+          min-width: 100vw;
+          z-index: -1;
+        }
+        .mobile-img > img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          object-position: 75%;
         }
       }
     </style>

@@ -48,10 +48,7 @@ const markVar = `url(${mark})`;
 
 // take out img={img} from baselayout
 ---
-<BaseLayout pageTitle={pageTitle} >
-  <div class="mobile-img">
-    <img src={golden} />
-  </div>
+<BaseLayout pageTitle={pageTitle} > 
   <div class="home-wrapper">
     <div class="home-title-wrapper">
       <div class="home-title-content">
@@ -114,15 +111,6 @@ const markVar = `url(${mark})`;
 <style define:vars={{psychoVar, turkeyVar, arrowVar, corazonVar, markVar}}>
   h1 {
     font-family: "Unbound", "Playfair", Georgia, 'Times New Roman', Times, serif;
-  }
-  .mobile-img {
-    position: fixed;
-    height: 100vh;
-    min-width: 100vw;
-    z-index: -1;
-  }
-  .mobile-img > img {
-    height: 100%;
   }
   .home-wrapper {
     color: rgb(64, 64, 64);

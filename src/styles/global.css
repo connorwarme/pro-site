@@ -7,7 +7,7 @@
   src: url(./PlayfairDisplay-VariableFont_wght.ttf) format("truetype");
 }
 html {
-  background-color: #f1f5f9;
+  background-color: transparent;
   font-family: sans-serif;
   scroll-behavior: smooth;
 }
