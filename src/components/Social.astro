@@ -12,8 +12,10 @@ const { platform, username, image } = Astro.props;
   }
   img {
     height: 50px;
-    /* background-color: rgb(254, 7, 62); */
-    padding: 0.5rem 1rem;
-    border-radius: 3px;
+    padding: 0.35rem 1rem;
+    transition: all 0.2s ease-in;
+  }
+  a:hover img {
+    transform: translateY(-5px);
   }
 </style>
