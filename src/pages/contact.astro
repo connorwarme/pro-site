@@ -1,8 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const fakeimg = {
+  url: false,
+  blur: true,
+}
 ---
 
-<BaseLayout pageTitle="Contact Me">
+<BaseLayout pageTitle="Contact Me" img={fakeimg}>
   <div class="contact-wrapper">
     <div class="contact-content">
       <h1>Reach Out</h1>
@@ -10,22 +15,22 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <form action="https://formsubmit.co/d3a941f5652a2e6a2dce66170423a79f" method="POST" >
         <label for="first-name">
           <span>First Name:</span>
-          <input type="text" id="first-name" name="first_name" placeholder="First Name*" required />
+          <input type="text" id="first-name" name="first_name" placeholder="First Name*" maxlength="256" required />
           <span class="error" aria-live="polite"></span>
         </label>
         <label for="family-name">
           <span>Family Name:</span>
-          <input type="text" id="family-name" name="family_name" placeholder="Family Name" />
+          <input type="text" id="family-name" name="family_name" placeholder="Family Name" maxlength="256" />
           <span class="error" aria-live="polite"></span>
         </label>
         <label for="email">
           <span>Your Email:</span>
-          <input type="email" id="email" name="email" placeholder="Email*" required />
+          <input type="email" id="email" name="email" placeholder="Email*" maxlength="256" required />
           <span class="error" aria-live="polite"></span>
         </label>
         <label for="message">
           <span>Your Message:</span>
-          <textarea id="message" name="message" placeholder="Message" required />
+          <textarea id="message" name="message" placeholder="Message" maxlength="5000" required />
           <span class="error" aria-live="polite"></span>
         </label>
         <button type="submit" id="submit-btn">Submit</button>
@@ -39,28 +44,35 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   .contact-wrapper {
     display: flex;
     flex-direction: column;
-    margin-top: 35vh;
+    margin: 0;
   }
   .contact-content {
     background-color: rgb(245, 245, 245);
     color: rgb(64,64,64);
     width: 100vw;
-    max-width: 575px;
+    /* max-width: 575px; */
     padding: 0 2rem;
     border-radius: 3px;
+    display: grid;
+    grid-template-columns: auto;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
   }
   h1 {
     font-family: "Unbound";
     font-size: 2rem;
     text-align: center;
+    margin-bottom: 0;
+  }
+  p {
+    text-align: center;
   }
   form {
-    /* display: flex;
-    flex-direction: column; */
-    /* justify-content: center;
-    align-items: flex-start; */
     display: grid;
     grid-template-columns: auto;
+    max-width: 575px;
+    width: calc(100vw - 4rem);
   }
   label {
     display: grid;
@@ -71,6 +83,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   }
   input, textarea {
     min-height: 50px;
+    width: 100%;
     font-family: "Playfair", Georgia, 'Times New Roman', Times, serif;
     font-size: 1rem;
     letter-spacing: -0.3px;
@@ -97,5 +110,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   button:hover {
     cursor: pointer;
   }
-  @media screen and (min-width: 480px)
+  @media screen and (min-width: 480px) {
+
+  }
 </style>

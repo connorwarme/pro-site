@@ -1,9 +1,13 @@
 ---
 import Hamburger from "./Hamburger.astro";
 import Nav from "./Nav.astro";
+
+const { blur } = Astro.props;
+
+const bgblur = blur === true ? 'blur-active' : '';
 ---
 
-<header id="top">
+<header id="top" class={bgblur}>
   <div class="mobile-box">
     <a href="/"><h1 class="header-name">Amity Warme</h1></a>
     <Hamburger />
@@ -18,6 +22,10 @@ import Nav from "./Nav.astro";
     justify-content: space-between;
     align-items: center;
     font-family: "Unbound", Georgia, 'Times New Roman', Times, serif;
+    /* backdrop-filter: blur(1px) brightness(80%); */
+  }
+  header.blur-active {
+    backdrop-filter: brightness(70%);
   }
   .mobile-box {
     width: 100vw;

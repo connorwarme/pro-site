@@ -9,6 +9,7 @@ const { pageTitle, img } = Astro.props;
 const mobilebackground = img ? img.url : lifeline;
 const background = img ? `url(${img.url})` : `url(${lifeline})`;
 const position = img ? `${img.position}` : 'center';
+const blur = img.url === false ? true : false;
 
 ---
 
@@ -21,7 +22,7 @@ const position = img ? `${img.position}` : 'center';
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-    <Header />
+    <Header blur={blur}/>
     <div class="mobile-img">
       <img src={mobilebackground} />
     </div>
@@ -33,6 +34,7 @@ const position = img ? `${img.position}` : 'center';
     </script>
     <style define:vars={{background, position}}>
       body {
+        background-color: whitesmoke;
         background-image: var(--background);
         background-position: var(--position);
         background-repeat: no-repeat;
