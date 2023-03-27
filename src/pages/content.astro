@@ -3,6 +3,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import TagDisplay from "../components/TagDisplay.astro";
 import BlogPost from "../components/BlogPost.astro";
 import arrow from "../images/icons/arrow-simple.svg";
+import lifeline from "../images/gallery/lifeline.jpg";
+
+const img = {
+  url: lifeline,
+  position: '70%',
+}
 
 const allPosts = await Astro.glob('./posts/*.mdx');
 const sortedPosts = [...allPosts].sort((a, b) => {
@@ -12,7 +18,7 @@ const uniqueTags = [...new Set(allPosts.map((post) => post.frontmatter.tags).fla
 const pageTitle = "Amity | Content";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={pageTitle} img={img}>
   <div class="content-wrapper">
     <div class="content-container">
       <h1 class="content-title">Content</h1>

@@ -6,6 +6,7 @@ import golden from "../images/gallery/Amity_Goldengate.Lite.jpg";
 import '../styles/global.css';
 
 const { pageTitle, img } = Astro.props;
+const mobilebackground = img ? img.url : lifeline;
 const background = img ? `url(${img.url})` : `url(${lifeline})`;
 const position = img ? `${img.position}` : 'center';
 
@@ -22,7 +23,7 @@ const position = img ? `${img.position}` : 'center';
 	<body>
     <Header />
     <div class="mobile-img">
-      <img src={golden} />
+      <img src={mobilebackground} />
     </div>
     <slot />
     <Footer />
@@ -39,11 +40,15 @@ const position = img ? `${img.position}` : 'center';
         min-height: 100vh;
         background-size: cover;
       }
-      @media (hover: none) {
+      .mobile-img {
+        display: none;
+      }
+      @media (hover: none), (max-width: 769px) {
         body {
           background-image: none;
         }
         .mobile-img {
+          display: block;
           position: fixed;
           height: 100vh;
           min-width: 100vw;
@@ -53,7 +58,7 @@ const position = img ? `${img.position}` : 'center';
           height: 100%;
           width: 100%;
           object-fit: cover;
-          object-position: 75%;
+          object-position: var(--position);
         }
       }
     </style>
