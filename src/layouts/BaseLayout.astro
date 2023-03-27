@@ -6,7 +6,7 @@ import golden from "../images/gallery/Amity_Goldengate.Lite.jpg";
 import '../styles/global.css';
 
 const { pageTitle, img } = Astro.props;
-const blur = img.noimg === true ? true : false;
+const blur = (img && img.noimg) ? true : false;
 const mobilebackground = (img && !blur) ? img.url : lifeline;
 const backgroundimg = (img && !blur) ? `url(${img.url})` : `url(${lifeline})`;
 const position = (img && !blur) ? `${img.position}` : 'center';
