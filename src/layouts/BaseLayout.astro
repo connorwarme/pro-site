@@ -37,8 +37,9 @@ const position = img ? `${img.position}` : 'center';
         background-position: var(--position);
         background-repeat: no-repeat;
         background-attachment: fixed;
-        min-height: 100vh;
         background-size: cover;
+        min-height: 100vh;
+
       }
       .mobile-img {
         display: none;
@@ -60,6 +61,9 @@ const position = img ? `${img.position}` : 'center';
           object-fit: cover;
           object-position: var(--position);
         }
+      }
+      @media (hover: none) and (orientation: portrait) {
+        min-height: -webkit-fill-available;
       }
     </style>
 	</body>
