@@ -28,7 +28,8 @@ const array = [
     credit: {
       name: 'Felipe Nordenflycht',
       site: 'https://www.felipesh.com/',
-    }
+    },
+    position: '75%',
   },
   {
     src: johnny,
@@ -38,7 +39,8 @@ const array = [
     credit: {
       name: 'Adam Pawlikiewicz',
       site: 'https://www.adampawlikiewicz.com/',
-    }
+    },
+    position: '28%',
   },
   {
     src: barnacle,
@@ -48,7 +50,8 @@ const array = [
     credit: {
       name: 'Taylor Shaffer',
       site: 'https://www.taylorshaffer.com/',
-    }
+    },
+    position: '25%',
   },
   {
     src: stingray,
@@ -58,7 +61,8 @@ const array = [
     credit: {
       name: 'Connor Brown',
       site: 'https://www.connorbrownphotography.com/',
-    }
+    },
+    position: '80%',
   },
   {
     src: psycho,
@@ -68,7 +72,8 @@ const array = [
     credit: {
       name: 'Samuel Crossley',
       site: 'https://samuelcrossley.media/',
-    }
+    },
+    position: '55%',
   },
   {
     src: corazon,
@@ -78,7 +83,8 @@ const array = [
     credit: {
       name: 'Scott Eubank',
       site: 'https://www.scotteubank.com/',
-    }
+    },
+    position: '25%',
   },
   {
     src: lifeline,
@@ -88,7 +94,8 @@ const array = [
     credit: {
       name: 'Blake McCord',
       site: 'https://www.mccordmedia.org/',
-    }
+    },
+    position: '70%',
   },
   {
     src: six,
@@ -98,7 +105,8 @@ const array = [
     credit: {
       name: 'Tempei Takeuchi',
       site: 'https://www.tempeiphotography.com/',
-    }
+    },
+    position: '70%',
   },
   {
     src: wolverine,
@@ -108,7 +116,8 @@ const array = [
     credit: {
       name: 'JP Melville',
       site: 'https://www.youtube.com/@v3rtmedia/',
-    }
+    },
+    position: '60%',
   },
   {
     src: mark,
@@ -118,7 +127,8 @@ const array = [
     credit: {
       name: 'Samuel Crossley',
       site: 'https://samuelcrossley.media/',
-    }
+    },
+    position: '75%',
   },
   {
     src: air,
@@ -128,7 +138,8 @@ const array = [
     credit: {
       name: 'Scott Eubank',
       site: 'https://www.scotteubank.com/',
-    }
+    },
+    position: '65%',
   },
   {
     src: dragon,
@@ -138,7 +149,8 @@ const array = [
     credit: {
       name: 'Ben Crawford',
       site: 'https://www.instagram.com/bencrawford17/',
-    }
+    },
+    position: '10%',
   },
   {
     src: fly,
@@ -148,7 +160,8 @@ const array = [
     credit: {
       name: 'Felipe Nordenflycht',
       site: 'https://www.felipesh.com/',
-    }
+    },
+    position: '40%',
   },
   {
     src: gate,
@@ -158,7 +171,8 @@ const array = [
     credit: {
       name: 'Felipe Nordenflycht',
       site: 'https://www.felipesh.com/',
-    }
+    },
+    position: '30%',
   },
   {
     src: space,
@@ -168,7 +182,8 @@ const array = [
     credit: {
       name: 'Connor Warme',
       site: 'https://www.instagram.com/amity.warme',
-    }
+    },
+    position: '70%',
   },
   {
     src: monastery,
@@ -178,7 +193,8 @@ const array = [
     credit: {
       name: 'Felipe Nordenflycht',
       site: 'https://www.felipesh.com/',
-    }
+    },
+    position: '15%',
   },
   {
     src: rude,
@@ -188,7 +204,8 @@ const array = [
     credit: {
       name: 'Simon Carter',
       site: 'https://www.onsight.com/au/',
-    }
+    },
+    position: '75%',
   },
   {
     src: gear,
@@ -198,7 +215,8 @@ const array = [
     credit: {
       name: 'Taylor Shaffer',
       site: 'https://www.taylorshaffer.com/',
-    }
+    },
+    position: '30%',
   },
 ]
 ---
@@ -213,7 +231,7 @@ const array = [
     <ul data-slides>
       {array.map((image) => (
         <li class="slide">
-          <img src={image.src} alt='' />
+          <img src={image.src} alt='' style={'object-position:' + image.position }/>
           <div class="credit-container">
             <div class="credit-text-wrapper">
               <p>{image.caption}</p>
