@@ -3,37 +3,75 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout pageTitle="Contact Me">
-  <h3>I'd love to hear from you!</h3>
-<form action="https://formsubmit.co/d3a941f5652a2e6a2dce66170423a79f" method="POST" >
-  <label for="first-name">
-    <span>First Name:</span>
-    <input type="text" id="first-name" name="first_name" required />
-    <span class="error" aria-live="polite"></span>
-  </label>
-  <label for="family-name">
-    <span>Family Name:</span>
-    <input type="text" id="family-name" name="family_name" required />
-    <span class="error" aria-live="polite"></span>
-  </label>
-  <label for="email">
-    <span>Your Email:</span>
-    <input type="email" id="email" name="email" required />
-    <span class="error" aria-live="polite"></span>
-  </label>
-  <label for="message">
-    <span>Your Message:</span>
-    <textarea id="message" name="message" required />
-    <span class="error" aria-live="polite"></span>
-  </label>
-  <button type="submit" id="submit-btn">Send</button>
-</form>
+  <div class="contact-wrapper">
+    <div class="contact-content">
+      <h3>I'd love to hear from you!</h3>
+      <form action="https://formsubmit.co/d3a941f5652a2e6a2dce66170423a79f" method="POST" >
+        <label for="first-name">
+          <span>First Name:</span>
+          <input type="text" id="first-name" name="first_name" placeholder="First Name*" required />
+          <span class="error" aria-live="polite"></span>
+        </label>
+        <label for="family-name">
+          <span>Family Name:</span>
+          <input type="text" id="family-name" name="family_name" placeholder="Family Name" />
+          <span class="error" aria-live="polite"></span>
+        </label>
+        <label for="email">
+          <span>Your Email:</span>
+          <input type="email" id="email" name="email" placeholder="Email*" required />
+          <span class="error" aria-live="polite"></span>
+        </label>
+        <label for="message">
+          <span>Your Message:</span>
+          <textarea id="message" name="message" placeholder="Message" required />
+          <span class="error" aria-live="polite"></span>
+        </label>
+        <button type="submit" id="submit-btn">Send</button>
+      </form>
+    </div>
+  </div>
+
 </BaseLayout>
 
 <style>
-  form {
+  .contact-wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    margin-top: 35vh;
   }
+  .contact-content {
+    background-color: rgb(245, 245, 245);
+    color: rgb(64,64,64);
+    width: 100vw;
+    max-width: 575px;
+    padding: 0 2rem;
+    border-radius: 3px;
+  }
+  form {
+    /* display: flex;
+    flex-direction: column; */
+    /* justify-content: center;
+    align-items: flex-start; */
+    display: grid;
+    grid-template-columns: auto;
+  }
+  label {
+    display: grid;
+    width: inherit;
+  }
+  label > span:first-child {
+    display: none;
+  }
+  input, textarea {
+    min-height: 50px;
+    font-family: "Playfair", Georgia, 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    letter-spacing: -0.3px;
+    border: 2px solid rgb(211, 211, 211);
+    border-radius: 3px;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+  }
+  @media screen and (min-width: 480px)
 </style>
