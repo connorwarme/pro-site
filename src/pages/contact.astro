@@ -1,8 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import logo from "../public/a-custom.png"
 
 const fakeimg = {
-  url: false,
+  fake: true,
   blur: true,
 }
 ---
@@ -10,6 +11,7 @@ const fakeimg = {
 <BaseLayout pageTitle="Contact Me" img={fakeimg}>
   <div class="contact-wrapper">
     <div class="contact-content">
+      <img src={logo} alt='Amity logo' />
       <h1>Reach Out</h1>
       <p>I'd love to hear from you!</p>
       <form action="https://formsubmit.co/d3a941f5652a2e6a2dce66170423a79f" method="POST" >
@@ -50,39 +52,39 @@ const fakeimg = {
     background-color: rgb(245, 245, 245);
     color: rgb(64,64,64);
     width: 100vw;
-    /* max-width: 575px; */
-    padding: 0 2rem;
+    padding: 1rem 2rem;
     border-radius: 3px;
     display: grid;
     grid-template-columns: auto;
-    /* flex-direction: column; */
-    justify-content: center;
+    justify-items: center;
     align-items: center;
+  }
+  img {
+    height: 128px;
   }
   h1 {
     font-family: "Unbound";
     font-size: 2rem;
-    text-align: center;
     margin-bottom: 0;
-  }
-  p {
-    text-align: center;
   }
   form {
     display: grid;
     grid-template-columns: auto;
-    max-width: 575px;
-    width: calc(100vw - 4rem);
+    min-width: 256px;
+    width: 100%;
+    max-width: 775px;
   }
   label {
     display: grid;
     width: inherit;
+    justify-items: center;
   }
   label > span:first-child {
     display: none;
   }
   input, textarea {
     min-height: 50px;
+    max-width: 580px;
     width: 100%;
     font-family: "Playfair", Georgia, 'Times New Roman', Times, serif;
     font-size: 1rem;
@@ -96,16 +98,18 @@ const fakeimg = {
     min-height: 100px;
   }
   button {
-    height: 60px;
-    width: 100px;
+    padding: 1rem 2rem;
     margin: 0.5rem;
     justify-self: center;
     border: 2px solid rgb(254, 7, 62);
     border-radius: 5px;
-    background-color: rgb(245, 245, 245);
-    font-family: "Playfair";
+    background-color: rgb(254, 7, 62);
+    color: rgb(245, 245, 245);
+    font-family: "Unbound";
     font-size: 1.15rem;
-    color: rgb(64,64,64);
+    font-weight: 800;
+    letter-spacing: 1px;
+    box-shadow: 1px 1px 3px rgb(64, 64, 64);
   }
   button:hover {
     cursor: pointer;

@@ -6,11 +6,13 @@ import golden from "../images/gallery/Amity_Goldengate.Lite.jpg";
 import '../styles/global.css';
 
 const { pageTitle, img } = Astro.props;
-const mobilebackground = img ? img.url : lifeline;
-const background = img ? `url(${img.url})` : `url(${lifeline})`;
-const position = img ? `${img.position}` : 'center';
-const blur = img.url === false ? true : false;
-
+const blur = img.fake === true ? true : false;
+const mobilebackground = (img && !blur) ? img.url : lifeline;
+const backgroundimg = (img && !blur) ? `url(${img.url})` : `url(${lifeline})`;
+const position = (img && !blur) ? `${img.position}` : 'center';
+// add check to remove background image on contact page (mobile and regular)
+const blurvar = blur ? 'none' : 'block';
+const background = blur ? 'none' : backgroundimg;
 ---
 
 <html lang="en">
@@ -32,7 +34,7 @@ const blur = img.url === false ? true : false;
       import "../scripts/menu.js";
 
     </script>
-    <style define:vars={{background, position}}>
+    <style define:vars={{background, position, blurvar}}>
       body {
         background-color: whitesmoke;
         background-image: var(--background);
@@ -51,7 +53,7 @@ const blur = img.url === false ? true : false;
           background-image: none;
         }
         .mobile-img {
-          display: block;
+          display: var(--blurvar);
           position: fixed;
           height: 100vh;
           min-width: 100vw;
