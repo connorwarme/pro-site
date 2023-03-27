@@ -4,25 +4,25 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <BaseLayout pageTitle="Contact Me">
   <h3>I'd love to hear from you!</h3>
-<form novalidate>
+<form action="https://formsubmit.co/connor.warme@gmail.com" method="POST" >
   <label for="first-name">
     <span>First Name:</span>
-    <input type="text" id="first-name" required />
+    <input type="text" id="first-name" name="first_name" required />
     <span class="error" aria-live="polite"></span>
   </label>
   <label for="family-name">
     <span>Family Name:</span>
-    <input type="text" id="family-name" required />
+    <input type="text" id="family-name" name="family_name" required />
     <span class="error" aria-live="polite"></span>
   </label>
   <label for="email">
     <span>Your Email:</span>
-    <input type="email" id="email" required />
+    <input type="email" id="email" name="email" required />
     <span class="error" aria-live="polite"></span>
   </label>
   <label for="message">
     <span>Your Message:</span>
-    <textarea id="message" required />
+    <textarea id="message" name="message" required />
     <span class="error" aria-live="polite"></span>
   </label>
   <button type="submit" id="submit-btn">Send</button>
