@@ -6,7 +6,7 @@ import golden from "../images/gallery/Amity_Goldengate.Lite.jpg";
 import '../styles/global.css';
 
 const { pageTitle, img } = Astro.props;
-const blur = img.fake === true ? true : false;
+const blur = img.noimg === true ? true : false;
 const mobilebackground = (img && !blur) ? img.url : lifeline;
 const backgroundimg = (img && !blur) ? `url(${img.url})` : `url(${lifeline})`;
 const position = (img && !blur) ? `${img.position}` : 'center';
@@ -32,7 +32,6 @@ const background = blur ? 'none' : backgroundimg;
     <Footer />
     <script>
       import "../scripts/menu.js";
-
     </script>
     <style define:vars={{background, position, blurvar}}>
       body {
@@ -43,7 +42,6 @@ const background = blur ? 'none' : backgroundimg;
         background-attachment: fixed;
         background-size: cover;
         min-height: 100vh;
-
       }
       .mobile-img {
         display: none;
@@ -67,9 +65,6 @@ const background = blur ? 'none' : backgroundimg;
         }
       }
       @media (hover: none) and (orientation: portrait) {
-        body {
-          min-height: -webkit-fill-available;
-        }
       }
     </style>
 	</body>
