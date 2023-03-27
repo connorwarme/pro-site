@@ -31,7 +31,7 @@ h1 {
 }
 .header-name {
   color: rgb(245, 245, 245);
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  text-shadow: 1px 1px 3px rgb(64, 64, 64);
 }
 /* nav styles */
 .mobile-hamburger {
