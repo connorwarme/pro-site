@@ -5,7 +5,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 <BaseLayout pageTitle="Contact Me">
   <div class="contact-wrapper">
     <div class="contact-content">
-      <h3>I'd love to hear from you!</h3>
+      <h1>Reach Out</h1>
+      <p>I'd love to hear from you!</p>
       <form action="https://formsubmit.co/d3a941f5652a2e6a2dce66170423a79f" method="POST" >
         <label for="first-name">
           <span>First Name:</span>
@@ -27,7 +28,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <textarea id="message" name="message" placeholder="Message" required />
           <span class="error" aria-live="polite"></span>
         </label>
-        <button type="submit" id="submit-btn">Send</button>
+        <button type="submit" id="submit-btn">Submit</button>
       </form>
     </div>
   </div>
@@ -47,6 +48,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     max-width: 575px;
     padding: 0 2rem;
     border-radius: 3px;
+  }
+  h1 {
+    font-family: "Unbound";
+    font-size: 2rem;
+    text-align: center;
   }
   form {
     /* display: flex;
@@ -72,6 +78,24 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     border-radius: 3px;
     padding: 0.5rem;
     margin: 0.5rem 0;
+  }
+  textarea {
+    min-height: 100px;
+  }
+  button {
+    height: 60px;
+    width: 100px;
+    margin: 0.5rem;
+    justify-self: center;
+    border: 2px solid rgb(254, 7, 62);
+    border-radius: 5px;
+    background-color: rgb(245, 245, 245);
+    font-family: "Playfair";
+    font-size: 1.15rem;
+    color: rgb(64,64,64);
+  }
+  button:hover {
+    cursor: pointer;
   }
   @media screen and (min-width: 480px)
 </style>
