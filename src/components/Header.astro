@@ -5,7 +5,7 @@ import Nav from "./Nav.astro";
 
 <header id="top">
   <div class="mobile-box">
-    <h1 class="header-name">Amity Warme</h1>
+    <a href="/"><h1 class="header-name">Amity Warme</h1></a>
     <Hamburger />
   </div>
   <Nav />
@@ -24,6 +24,9 @@ import Nav from "./Nav.astro";
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  .mobile-box a {
+    text-decoration: none;
   }
   .header-name {
     margin: 1rem 2rem;

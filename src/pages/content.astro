@@ -40,8 +40,12 @@ const pageTitle = "Amity | Content";
 </BaseLayout>
 <style>
   .content-title {
+    font-family: "Unbound", "Playfair", Georgia, 'Times New Roman', Times, serif;
     width: fit-content;
-    margin: 0;
+    margin: 0.5rem 0 0 0;
+  }
+  .content-container > p {
+    margin: 0.25rem 0;
   }
   .tags-container {
     max-height: 40px;
@@ -66,6 +70,13 @@ const pageTitle = "Amity | Content";
   @media screen and (min-width: 770px) {
     .arrow-container {
       margin-left: 30px;
+    }
+    .content-title {
+      margin: 1rem 0 0 0;
+    }
+    .content-container > p {
+      margin: 0.5rem 0;
+      font-size: 1.25rem;
     }
   }
 </style>
