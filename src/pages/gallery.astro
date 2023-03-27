@@ -28,4 +28,9 @@ import '../styles/global.css';
     width: 100vw;
     z-index: 800;
   }
+  @media (hover: none) and (orientation: portrait) {
+    body {
+      min-height: -webkit-fill-available;
+    }
+  }
 </style>

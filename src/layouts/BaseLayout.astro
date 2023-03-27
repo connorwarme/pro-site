@@ -63,7 +63,9 @@ const position = img ? `${img.position}` : 'center';
         }
       }
       @media (hover: none) and (orientation: portrait) {
-        min-height: -webkit-fill-available;
+        body {
+          min-height: -webkit-fill-available;
+        }
       }
     </style>
 	</body>
