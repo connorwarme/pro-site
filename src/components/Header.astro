@@ -22,8 +22,8 @@ const bgblur = blur === true ? 'blur-active' : '';
     justify-content: space-between;
     align-items: center;
     font-family: "Unbound", Georgia, 'Times New Roman', Times, serif;
-    background-color: rgba(245, 245, 245, 0.85);
-    /* backdrop-filter: blur(1px) brightness(80%); */
+    background-color: rgba(245, 245, 245, 0.99);
+    box-shadow: 0 0 3px rgb(64, 64, 64);
   }
   header.blur-active {
     background-color: rgb(245, 245, 245);
@@ -53,10 +53,10 @@ const bgblur = blur === true ? 'blur-active' : '';
       font-size: 1.15rem;
     }
   }
-  @media screen and (min-width: 980px) {
+  @media screen and (min-width: 1000px) {
     .header-name {
       font-size: 1.75rem;
-      margin-left: 2rem;
+      margin-left: 2.75rem;
     }
   }
 </style>

@@ -20,7 +20,7 @@ body {
   /* justify-content: center; */
   align-items: center;
   font-family: "Playfair", Georgia, 'Times New Roman', Times, serif;
-  background-color: rgba(245, 245, 245, 0.85);
+  background-color: rgba(245, 245, 245, 0.99);
 }
 * {
   box-sizing: border-box;
@@ -147,7 +147,7 @@ h1 {
 }
 .content-container {
   color: rgb(64, 64, 64);
-  background-color: rgba(245, 245, 245, 0.85);
+  background-color: rgba(245, 245, 245, 0.99);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -235,8 +235,11 @@ iframe.instagram-media {
     background: none;
     margin-right: 1rem;
   }
+  a.nav-home {
+    display: none;
+  }
   .nav-links a {
-    display: inline-block;
+    /* display: inline-block; */
     font-size: 0.75rem;
     padding: 0.25rem 0.5rem;
   }
@@ -291,7 +294,7 @@ iframe.instagram-media {
     font-size: 1.3rem;
   }
 }
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 1000px) {
   .nav-links {
     margin-right: 2rem;
   }
