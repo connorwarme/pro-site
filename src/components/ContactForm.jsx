@@ -15,13 +15,18 @@ export default function Contact() {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
       },
-      body: JSON.stringify(Object.fromEntries(new FormData(e.target)))
+      body: JSON.stringify({
+        first_name: firstName, 
+        family_name: familyName, 
+        email: email, 
+        message: message
+      })
     })
       .then(response => response.json())
       .then(data => console.log(data))
       .catch(error => {
         console.log(error);
-        setError('There was an error sending your message.');
+        setError(error);
       });
   }
   
