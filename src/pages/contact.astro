@@ -15,8 +15,14 @@ const fakeimg = {
       <h1>Reach Out</h1>
       <p>I'd love to hear from you!</p>
       <form action="https://formsubmit.co/d3a941f5652a2e6a2dce66170423a79f" method="POST" >
+        <!-- honeypot -->
         <input type="text" name="_honey" style="display:none">
+        <!-- disable captcha -->
         <input type="hidden" name="_captcha" value="false">
+        <!-- add webhook -->
+        <input type="hidden" name="_webhook" value="https://connorwarme.github.io/pro-site/success-data">
+        <!-- next page -->
+        <input type="hidden" name="_next" value="https://connorwarme.github.io/pro-site/thanks">
         <label for="first-name">
           <span>First Name:</span>
           <input type="text" id="first-name" name="first_name" placeholder="First Name*" maxlength="256" required />

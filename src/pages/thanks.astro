@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import logo from "/a-custom.png"
+
+const fakeimg = {
+  noimg: true,
+  blur: true,
+}
+---
+
+<BaseLayout pageTitle="Contact Me" img={fakeimg}>
+  <div class="contact-wrapper">
+    <div class="contact-content">
+      <img src={logo} alt='Amity logo' />
+      <h1>Reach Out - Success!</h1>
+      <p>Thanks for the message! I'll get back to you promptly.</p>
+
+    </div>
+  </div>
+
+</BaseLayout>
+
+<style>
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  .contact-content {
+    background-color: rgb(245, 245, 245);
+    color: rgb(64,64,64);
+    width: 100vw;
+    padding: 1rem 2rem;
+    border-radius: 3px;
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+    align-items: center;
+  }
+  img {
+    height: 128px;
+  }
+  h1 {
+    font-family: "Unbound";
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+
+
+
+  @media screen and (min-width: 480px) {
+
+  }
+</style>
+<script defer>
+fetch("https://connorwarme.github.io/pro-site/success-data")
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+</script>
