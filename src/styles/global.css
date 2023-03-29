@@ -38,15 +38,25 @@ h1 {
 .mobile-hamburger {
   cursor: pointer;
   margin-right: 2rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 2px;
+  transition: 0.2s ease-in;
 }
 .mobile-hamburger .line {
   display: block;
   width: 32px;
   height: 4px;
   margin: 5px 0 5px 0;
-  background-color: rgb(245, 245, 245);
-  box-shadow: 0 0 3px rgb(64, 64, 64);
+  background-color: rgb(64, 64, 64);
+  box-shadow: 0 0 2px rgba(64, 64, 64, 0.5);
   border-radius: 1.5px;
+}
+.mobile-hamburger:hover {
+  box-shadow: 1px 1px 3px rgb(64, 64, 64);
+}
+.mobile-hamburger:active {
+  box-shadow: 1px 1px 3px rgb(64, 64, 64);
+  transform: scale(0.95);
 }
 .nav-links {
   position: fixed;
@@ -58,7 +68,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(245, 245, 245);
   z-index: 2;
   margin: 0;
   transform: translateX(200px);
@@ -70,19 +80,17 @@ h1 {
   text-align: center;
   padding: 0.5rem 0;
   text-decoration: none;
-  text-shadow: 1px 1px 3px rgb(0, 0, 0, 0.7);
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
-  color: rgb(241, 245, 249);
+  color: rgb(64, 64, 64);
   transition: 300ms ease-in-out;
 }
 .nav-links a:hover,
 .nav-links a:focus {
-  background-color: rgba(241, 245, 249, 0.5);
-  text-shadow: none;
-  color: rgb(255, 255, 255);
   transform: translateY(-3px);
+  background-color: rgb(64, 64, 64);
+  color: rgb(245, 245, 245);
 }
 .nav-overlay {
   position: fixed;
@@ -139,7 +147,7 @@ h1 {
 }
 .content-container {
   color: rgb(64, 64, 64);
-  background-color: rgb(245, 245, 245);
+  background-color: rgba(245, 245, 245, 0.9);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -215,9 +223,6 @@ iframe.instagram-media {
 }
 
 @media screen and (min-width: 770px) {
-  header {
-    height: 90px;
-  }
   .nav-links {
     display: flex;
     flex-direction: row;
@@ -228,15 +233,40 @@ iframe.instagram-media {
     transform: translateX(0);
     width: auto;
     background: none;
-    margin-right: 2rem;
+    margin-right: 1rem;
   }
   .nav-links a {
     display: inline-block;
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
   }
-  .nav-links a:hover, a:focus {
-    color: black;
+  .nav-links a:hover,
+  .nav-links a:focus {
+    transform: translateY(-3px);
+    background-color: transparent;
+    color: rgb(64, 64, 64);
+  }
+  .nav-links a::after {
+    display: block;
+    background-color: rgb(64, 64, 64);
+    /* position: relative;
+    left: 0;
+    bottom: 0; */
+    content: "";
+    height: 2px;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: bottom right;
+    transform-origin: bottom right;
+    transition: -webkit-transform .25s ease-out;
+    transition: transform .25s ease-out;
+    width: 100%;
+  }
+  .nav-links a:hover::after {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: bottom left;
+    transform-origin: bottom left;
   }
   .mobile-hamburger {
     display: none;
@@ -259,5 +289,14 @@ iframe.instagram-media {
   }
   blockquote > p > em {
     font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 980px) {
+  .nav-links {
+    margin-right: 2rem;
+  }
+  .nav-links a {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.75rem;
   }
 }
