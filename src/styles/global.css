@@ -30,8 +30,9 @@ h1 {
   font-size: 2.5rem;
 }
 .header-name {
-  color: rgb(245, 245, 245);
-  text-shadow: 1px 1px 3px rgb(64, 64, 64);
+  color: rgb(64, 64, 64);
+  letter-spacing: -.5px;
+  font-weight: 800;
 }
 /* nav styles */
 .mobile-hamburger {
