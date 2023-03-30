@@ -23,7 +23,7 @@ export default function Contact() {
     e.preventDefault();
     setPending(true);
 
-    fetch("https://formsubmit.co/ajax/d3a941f5652a2e6a2dce66170423a79f", {
+    fetch("https://formsubmit.co/d3a941f5652a2e6a2dce66170423a79f", {
       method: "POST",
       headers: { 
           'Content-Type': 'application/json',
