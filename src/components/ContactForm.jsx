@@ -6,10 +6,26 @@ export default function Contact() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
+  const [success, setSuccess] = useState(false);
+  const [isPending, setPending] = useState(true);
 
+  const buildName = () => {
+    let name = '';
+    if (firstName.length > 0) {
+      name = `${firstName},`;
+    } 
+    else if (familyName.length > 0) {
+      name = `${firstName} ${familyName},`;
+    }
+    return name;
+  }
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("https://formsubmit.co/d3a941f5652a2e6a2dce66170423a79f", {
+    setPending(true);
+
+    fetch(
+      // "https://formsubmit.co/d3a941f5652a2e6a2dce66170423a79f", 
+      {
       method: "POST",
       headers: { 
           'Content-Type': 'application/json',
@@ -23,7 +39,11 @@ export default function Contact() {
       })
     })
       .then(response => response.json())
-      .then(data => console.log(data))
+      .then(data => {
+        console.log(data);
+        setSuccess(true);
+        setPending(false);
+      })
       .catch(error => {
         console.log(error);
         setError(error);
@@ -32,8 +52,16 @@ export default function Contact() {
   
   return (
     <div class="form-wrapper">
-      <p>{error}</p>
-      <form class="contact-form" onSubmit={handleSubmit}> 
+      <div class="message-wrapper">
+        { error.length > 0 && <p>{error}</p> }
+        { success && <div class="success-wrapper">
+          <p class="success-contact-name">{buildName()}</p>
+          <p>Thank you for your message! I will get back with you soon.</p>
+          <a href="/" class="return-home">Return to Home</a>
+        </div> }
+      </div>
+      { !success && <form class="contact-form" onSubmit={handleSubmit}>
+        <p>I'd love to hear from you!</p> 
         <input type="text" name="_honey" style="display:none" />
         <input type="hidden" name="_captcha" value="false"  />
         <label for="first-name">
@@ -89,14 +117,23 @@ export default function Contact() {
             required />
           <span class="error" aria-live="polite"></span>
         </label>
-        <button 
+        { !isPending && <button 
           type="submit" 
           id="submit-btn">
             Submit
+          </button> }
+        { isPending && <button
+          id="pseudo-submit-btn"
+          disabled>
+            Sending...
+          </button> }
+        { (isPending && (error.length > 0)) && <button
+          id="pseudo-submit-btn"
+          disabled>
+            Error!
           </button>
-        <p>{firstName}</p>
-        <p>{familyName}</p>
-      </form>
+          }
+      </form> }
     </div>
   )
 }

@@ -234,6 +234,9 @@ form.contact-form {
   width: 100%;
   max-width: 775px;
 }
+.contact-form > p {
+  text-align: center;
+}
 .contact-form label {
   display: grid;
   width: inherit;
@@ -264,7 +267,9 @@ form.contact-form {
   border-color: rgb(254, 7, 62);
   outline: none;
 }
-button#submit-btn {
+button#submit-btn,
+button#pseudo-submit-btn,
+a.return-home {
   padding: 1rem 2rem;
   margin: 0.5rem;
   justify-self: center;
@@ -282,9 +287,25 @@ button#submit-btn {
 button#submit-btn:hover {
   cursor: pointer;
 }
-button#submit-btn:active {
+button#submit-btn:active,
+a.return-home:active {
   transform: scale(0.95);
   box-shadow: 1px 1px 5px rgb(64, 64, 64);
+}
+.success-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.success-contact-name {
+  font-weight: 500;
+  font-size: 1.25rem;
+  margin-bottom: 0;
+}
+a.return-home {
+  font-size: 0.85rem;
+  text-decoration: none;
 }
 
 @media screen and (min-width: 770px) {
@@ -357,6 +378,9 @@ button#submit-btn:active {
   }
   blockquote > p > em {
     font-size: 1.3rem;
+  }
+  a.return-home {
+    font-size: 1.15rem;
   }
 }
 @media screen and (min-width: 1000px) {

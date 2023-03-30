@@ -7,53 +7,6 @@ const fakeimg = {
   noimg: true,
   blur: true,
 }
-
-const submitFn = (e) => {
-  fetch("https://formsubmit.co/d3a941f5652a2e6a2dce66170423a79f", {
-    method: "POST",
-    headers: { 
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-    },
-    body: JSON.stringify(Object.fromEntries(new FormData(e.target))),
-  })
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.log(error));
-  
-  console.log('submitFn fired');
-}
-// <form method="POST" onsubmit={submitFn}>
-//         <!-- honeypot -->
-//         <input type="text" name="_honey" style="display:none">
-//         <!-- disable captcha -->
-//         <input type="hidden" name="_captcha" value="false">
-//         <!-- add webhook -->
-//         <input type="hidden" name="_webhook" value="https://connorwarme.github.io/pro-site/thanks-data/">
-//         <!-- next page -->
-//         <input type="hidden" name="_next" value="https://connorwarme.github.io/pro-site/thanks/">
-//         <label for="first-name">
-//           <span>First Name:</span>
-//           <input type="text" id="first-name" name="first_name" placeholder="First Name*" maxlength="256" required />
-//           <span class="error" aria-live="polite"></span>
-//         </label>
-//         <label for="family-name">
-//           <span>Family Name:</span>
-//           <input type="text" id="family-name" name="family_name" placeholder="Family Name" maxlength="256" />
-//           <span class="error" aria-live="polite"></span>
-//         </label>
-//         <label for="email">
-//           <span>Your Email:</span>
-//           <input type="email" id="email" name="email" placeholder="Email*" maxlength="256" required />
-//           <span class="error" aria-live="polite"></span>
-//         </label>
-//         <label for="message">
-//           <span>Your Message:</span>
-//           <textarea id="message" name="message" placeholder="Message" maxlength="5000" required />
-//           <span class="error" aria-live="polite"></span>
-//         </label>
-//         <button type="submit" id="submit-btn" onclick={(e) => {e.preventDefault()}}>Submit</button>
-//       </form>
 ---
 
 <BaseLayout pageTitle="Contact Me" img={fakeimg}>
@@ -61,7 +14,6 @@ const submitFn = (e) => {
     <div class="contact-content">
       <img src={logo} alt='Amity logo' />
       <h1>Reach Out</h1>
-      <p>I'd love to hear from you!</p>
       <Contact client:load />
     </div>
   </div>
@@ -96,16 +48,3 @@ const submitFn = (e) => {
 
   }
 </style>
-<script defer>
-//   fetch("https://formsubmit.co/d3a941f5652a2e6a2dce66170423a79f", {
-//     method: "POST",
-//     headers: { 
-//         'Content-Type': 'application/json',
-//         'Accept': 'application/json'
-//     },
-//     body: JSON.stringify(Object.fromEntries(new FormData(e.target)))
-// })
-//     .then(response => response.json())
-//     .then(data => console.log(data))
-//     .catch(error => console.log(error));
-</script>
