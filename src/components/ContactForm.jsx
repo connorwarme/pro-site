@@ -23,7 +23,7 @@ export default function Contact() {
     e.preventDefault();
     setPending(true);
 
-    fetch("https://formsubmit.co/ajax/amity.warme@gmail.com", {
+    fetch("https://formsubmit.co/ajax/9df28410a796feb69f63a79cfffc45d5", {
       method: "POST",
       headers: { 
           'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ export default function Contact() {
         setError('Apologies! There was an error sending your message. Please refresh the page to try again, or contact me on Instagram. Sorry for the inconvenience!');
       });
   }
-  // onSubmit={handleSubmit}
+
   
   return (
     <div class="form-wrapper">
@@ -58,11 +58,12 @@ export default function Contact() {
           <a href="/" class="return-home">Return to Home</a>
         </div> }
       </div>
-      { !success && <form class="contact-form" action="https://formsubmit.co/amity.warme@gmail.com" method="POST">
+      { !success && <form class="contact-form" onSubmit={handleSubmit}>
         { error.length === 0 && <p>I'd love to hear from you!</p> }
-        <input type="text" name="_honey" style="display:none" />
-        <input type="hidden" name="_captcha" value="false"  />
-        <input type="hidden" name="_template" value="table" />
+        <input type="text" name="_honey" style="display:none" ></input>
+        <input type="hidden" name="_captcha" value="false"  ></input>
+        <input type="hidden" name="_subject" value="Contact request from website!"></input>
+        <input type="hidden" name="_template" value="table" ></input>
         <label for="first-name">
           <span>First Name:</span>
           <input 
