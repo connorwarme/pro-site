@@ -9,6 +9,6 @@ import mdx from "@astrojs/mdx";
 // https://astro.build/config
 export default defineConfig({
   integrations: [preact(), mdx()],
-  site: 'https://connorwarme.github.io',
-  base: '/pro-site'
+  site: 'https://amitywarme.com',
+  base: '/'
 });

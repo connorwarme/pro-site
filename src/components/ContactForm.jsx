@@ -33,7 +33,7 @@ export default function Contact() {
         first_name: firstName, 
         family_name: familyName, 
         email: email, 
-        message: message
+        message: message,
       })
     })
       .then(response => response.json())
