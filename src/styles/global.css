@@ -225,7 +225,9 @@ iframe.instagram-media {
 .form-wrapper {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 form.contact-form {
   display: grid;

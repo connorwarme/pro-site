@@ -30,6 +30,7 @@ const background = blur ? 'none' : backgroundimg;
       <img src={mobilebackground} />
     </div>
     <slot />
+    <div class="body-spacer"></div>
     <Footer />
     <script>
       import "../scripts/menu.js";
@@ -46,6 +47,9 @@ const background = blur ? 'none' : backgroundimg;
       }
       .mobile-img {
         display: none;
+      }
+      .body-spacer {
+        flex-grow: 1;
       }
       @media (hover: none), (max-width: 769px) {
         body {

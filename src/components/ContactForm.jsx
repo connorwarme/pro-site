@@ -6,8 +6,8 @@ export default function Contact() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
-  const [success, setSuccess] = useState(false);
-  const [isPending, setPending] = useState(true);
+  const [success, setSuccess] = useState(true);
+  const [isPending, setPending] = useState(false);
 
   const buildName = () => {
     let name = '';
@@ -23,9 +23,7 @@ export default function Contact() {
     e.preventDefault();
     setPending(true);
 
-    fetch(
-      // "https://formsubmit.co/d3a941f5652a2e6a2dce66170423a79f", 
-      {
+    fetch("https://formsubmit.co/d3a941f5652a2e6a2dce66170423a79f", {
       method: "POST",
       headers: { 
           'Content-Type': 'application/json',
@@ -46,7 +44,7 @@ export default function Contact() {
       })
       .catch(error => {
         console.log(error);
-        setError(error);
+        setError('Apologies! There was an error sending your message. Please refresh the page to try again, or contact me on Instagram. Sorry for the inconvenience!');
       });
   }
   
@@ -61,7 +59,7 @@ export default function Contact() {
         </div> }
       </div>
       { !success && <form class="contact-form" onSubmit={handleSubmit}>
-        <p>I'd love to hear from you!</p> 
+        { error.length === 0 && <p>I'd love to hear from you!</p> }
         <input type="text" name="_honey" style="display:none" />
         <input type="hidden" name="_captcha" value="false"  />
         <label for="first-name">
