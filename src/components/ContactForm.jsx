@@ -46,6 +46,7 @@ export default function Contact() {
         setError('Apologies! There was an error sending your message. Please refresh the page to try again, or contact me on Instagram. Sorry for the inconvenience!');
       });
   }
+  // onSubmit={handleSubmit}
   
   return (
     <div class="form-wrapper">
@@ -57,7 +58,7 @@ export default function Contact() {
           <a href="/" class="return-home">Return to Home</a>
         </div> }
       </div>
-      { !success && <form class="contact-form" onSubmit={handleSubmit}>
+      { !success && <form class="contact-form" action="https://formsubmit.co/amity.warme@gmail.com">
         { error.length === 0 && <p>I'd love to hear from you!</p> }
         <input type="text" name="_honey" style="display:none" />
         <input type="hidden" name="_captcha" value="false"  />
