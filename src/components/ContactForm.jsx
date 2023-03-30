@@ -44,7 +44,8 @@ export default function Contact() {
       })
       .catch(error => {
         console.log(error);
-        setError('Apologies! There was an error sending your message. Please refresh the page to try again, or contact me on Instagram. Sorry for the inconvenience!');
+        setError(error);
+        // setError('Apologies! There was an error sending your message. Please refresh the page to try again, or contact me on Instagram. Sorry for the inconvenience!');
       });
   }
   
@@ -120,7 +121,7 @@ export default function Contact() {
           id="submit-btn">
             Submit
           </button> }
-        { isPending && <button
+        { (isPending && (error.length === 0)) && <button
           id="pseudo-submit-btn"
           disabled>
             Sending...
