@@ -58,7 +58,7 @@ export default function Contact() {
           <a href="/" class="return-home">Return to Home</a>
         </div> }
       </div>
-      { !success && <form class="contact-form" action="https://formsubmit.co/amity.warme@gmail.com">
+      { !success && <form class="contact-form" action="https://formsubmit.co/amity.warme@gmail.com" method="POST">
         { error.length === 0 && <p>I'd love to hear from you!</p> }
         <input type="text" name="_honey" style="display:none" />
         <input type="hidden" name="_captcha" value="false"  />
