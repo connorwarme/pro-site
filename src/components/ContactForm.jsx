@@ -33,7 +33,7 @@ export default function Contact() {
   return (
     <div class="form-wrapper">
       <p>{error}</p>
-      <form onSubmit={handleSubmit}> 
+      <form class="contact-form" onSubmit={handleSubmit}> 
         <input type="text" name="_honey" style="display:none" />
         <input type="hidden" name="_captcha" value="false"  />
         <label for="first-name">
