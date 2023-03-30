@@ -61,6 +61,7 @@ export default function Contact() {
         { error.length === 0 && <p>I'd love to hear from you!</p> }
         <input type="text" name="_honey" style="display:none" />
         <input type="hidden" name="_captcha" value="false"  />
+        <input type="hidden" name="_template" value="table" />
         <label for="first-name">
           <span>First Name:</span>
           <input 
