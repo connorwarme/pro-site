@@ -381,6 +381,9 @@ a.return-home {
   blockquote > p > em {
     font-size: 1.3rem;
   }
+  .message-wrapper {
+    margin: 0 2rem;
+  }
   a.return-home {
     font-size: 1.15rem;
   }
