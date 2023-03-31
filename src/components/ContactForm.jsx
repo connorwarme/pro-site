@@ -113,7 +113,7 @@ export default function Contact() {
             placeholder="Message" 
             maxlength="5000" 
             value={message}
-            onChange={(e) => setMessage(e.target.value)}
+            onInput={(e) => setMessage(e.target.value)}
             required />
           <span class="error" aria-live="polite"></span>
         </label>
