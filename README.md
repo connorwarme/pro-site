@@ -1,4 +1,33 @@
-# Astro Starter Kit: Minimal
+# [Pro Site](https://amitywarme.com)  
+![homepage](https://github.com/connorwarme/pro-site/blob/main/screenshots/pro-home.png?raw=true "homepage preview")  
+
+## objectives
+* build Amity a proper website to showcase her as athlete and dieititian  
+* learn and utilize Astro
+* include a gallery of images, with caption animation  
+* build a contact page!  
+* incorporate a blog with stories, recipies, podcasts, and more  
+* responsive design - for desktop, tablet, mobile  
+* cross-browser functionality - tested in Chrome, Firefox, and Safari  
+  
+## reflections  
+* I'm happy with the result! Proud of how it turned out.  
+* learned about Astro, about differences between browsers (particularly regarding background image in Safari mobile), about forms (and their functionality).  
+* I spent a lot of time on little details, not sure many folks will notice but I hope the site provides a polished/professional feel.  
+
+## screenshots  
+![gallery](https://github.com/connorwarme/pro-site/blob/main/screenshots/pro-gallery.png?raw=true "gallery preview")  
+![dietitian](https://github.com/connorwarme/pro-site/blob/main/screenshots/pro-dietitian.png?raw=true "dietitian preview")  
+![about](https://github.com/connorwarme/pro-site/blob/main/screenshots/pro-about.png?raw=true "about Amity on mobile preview")  
+![contact](https://github.com/connorwarme/pro-site/blob/main/screenshots/pro-contact.png?raw=true "contact on mobile preview")  
+
+## improvements 
+* build my own backend for the contact page  
+* and learn about how to host that backend!  
+
+
+
+## Astro Starter Kit: Minimal
 
 ```
 npm create astro@latest -- --template minimal
