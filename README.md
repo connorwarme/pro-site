@@ -17,7 +17,7 @@
 
 ## screenshots  
 ![gallery](https://github.com/connorwarme/pro-site/blob/main/src/images/screenshots/pro-gallery.png?raw=true "gallery preview")  
-![dietitian](https://github.com/connorwarme/pro-site/blob/main/src/images/screenshots/pro-dietitian.png?raw=true "dietitian preview")  
+![dietitian](https://github.com/connorwarme/pro-site/blob/main/src/images/screenshots/pro-diet.png?raw=true "dietitian preview")  
 ![about](https://github.com/connorwarme/pro-site/blob/main/src/images/screenshots/pro-about.png?raw=true "about Amity on mobile preview")  
 ![contact](https://github.com/connorwarme/pro-site/blob/main/src/images/screenshots/pro-contact.png?raw=true "contact on mobile preview")  
 
