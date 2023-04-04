@@ -16,8 +16,10 @@
 * I spent a lot of time on little details, not sure many folks will notice but I hope the site provides a polished/professional feel.  
 
 ## screenshots  
+* full screen  
 ![gallery](https://github.com/connorwarme/pro-site/blob/main/src/images/screenshots/pro-gallery.png?raw=true "gallery preview")  
 ![dietitian](https://github.com/connorwarme/pro-site/blob/main/src/images/screenshots/pro-diet.png?raw=true "dietitian preview")  
+* mobile mode  
 ![about](https://github.com/connorwarme/pro-site/blob/main/src/images/screenshots/pro-about.png?raw=true "about Amity on mobile preview")  
 ![contact](https://github.com/connorwarme/pro-site/blob/main/src/images/screenshots/pro-contact.png?raw=true "contact on mobile preview")  
 
