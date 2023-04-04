@@ -1,5 +1,5 @@
 # [Pro Site](https://amitywarme.com)  
-![homepage](https://github.com/connorwarme/pro-site/blob/main/screenshots/pro-home.png?raw=true "homepage preview")  
+![homepage](https://github.com/connorwarme/pro-site/blob/main/src/images/screenshots/pro-home.png?raw=true "homepage preview")  
 
 ## objectives
 * build Amity a proper website to showcase her as athlete and dieititian  
@@ -16,10 +16,10 @@
 * I spent a lot of time on little details, not sure many folks will notice but I hope the site provides a polished/professional feel.  
 
 ## screenshots  
-![gallery](https://github.com/connorwarme/pro-site/blob/main/screenshots/pro-gallery.png?raw=true "gallery preview")  
-![dietitian](https://github.com/connorwarme/pro-site/blob/main/screenshots/pro-dietitian.png?raw=true "dietitian preview")  
-![about](https://github.com/connorwarme/pro-site/blob/main/screenshots/pro-about.png?raw=true "about Amity on mobile preview")  
-![contact](https://github.com/connorwarme/pro-site/blob/main/screenshots/pro-contact.png?raw=true "contact on mobile preview")  
+![gallery](https://github.com/connorwarme/pro-site/blob/main/src/images/screenshots/pro-gallery.png?raw=true "gallery preview")  
+![dietitian](https://github.com/connorwarme/pro-site/blob/main/src/images/screenshots/pro-dietitian.png?raw=true "dietitian preview")  
+![about](https://github.com/connorwarme/pro-site/blob/main/src/images/screenshots/pro-about.png?raw=true "about Amity on mobile preview")  
+![contact](https://github.com/connorwarme/pro-site/blob/main/src/images/screenshots/pro-contact.png?raw=true "contact on mobile preview")  
 
 ## improvements 
 * build my own backend for the contact page  
