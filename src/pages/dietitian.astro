@@ -45,7 +45,7 @@ const arrowVar = `url(${arrowList})`;
       <h1 class="dietician-title animate-title">Registered Dietitian</h1>
       <div class="nutrition-intro-container">
         <p>I'm passionate about helping fellow athletes understand their fueling needs and using nutrition to maximize performance and promote long-term health.</p>
-        <p>Ready to get started? <a href="/contact">Contact me!</a></p>
+        <p>Ready to get started? <a href="/contact" class="simple-link">Contact me!</a></p>
       </div>
       <div class="links-container">
         <div>Jump to:
@@ -78,11 +78,11 @@ const arrowVar = `url(${arrowList})`;
       <div id="howitworks" class="how-container">
         <h2 class="animate-title">How It Works</h2>
         <ul>
-          <li><a href="/contact">Send me a message</a>, including a brief description of who you are and your main goals with nutrition counseling.</li>
+          <li><a href="/contact" class="simple-link">Send me a message</a>, including a brief description of who you are and your main goals with nutrition counseling.</li>
           <ul>
             <li>If you any further questions about the process, I'll respond as soon as possible.</li>
           </ul>
-          <li>I will send a New Client Link to the HIPAA-compliant online platform Healthie, with a checklist including:</li>
+          <li>I will send a link to the HIPAA-compliant online platform Healthie, with a checklist including:</li>
           <ul>
             <li>New Client Questionnaire</li>
             <li>Consent to Nutrition Services</li>
@@ -200,7 +200,8 @@ const arrowVar = `url(${arrowList})`;
   }
   .symptoms > li,
   .fuel > li,
-  .creds-list > li {
+  .creds-list > li,
+  .how-container > ul > li {
     margin: 0;
     padding: 2px 22px;
     list-style: none;
@@ -208,6 +209,17 @@ const arrowVar = `url(${arrowList})`;
     background-repeat: no-repeat;
     background-position: left 5px;
     background-size: 20px;
+  }
+  .how-container > ul > li > ul {
+    list-style: circle;
+  }
+  .simple-link {
+    color: rgb(64, 64, 64);
+    font-weight: 500;
+    text-decoration: underline;
+  }
+  .simple-link:hover {
+    cursor: pointer;
   }
   @media screen and (min-width: 770px) {
     .nutrition-wrapper {
