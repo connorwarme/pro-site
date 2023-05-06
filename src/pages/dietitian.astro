@@ -45,6 +45,7 @@ const arrowVar = `url(${arrowList})`;
       <h1 class="dietician-title animate-title">Registered Dietitian</h1>
       <div class="nutrition-intro-container">
         <p>I'm passionate about helping fellow athletes understand their fueling needs and using nutrition to maximize performance and promote long-term health.</p>
+        <p>Ready to get started? <a href="/contact">Contact me!</a></p>
       </div>
       <div class="links-container">
         <div>Jump to:
@@ -53,8 +54,9 @@ const arrowVar = `url(${arrowList})`;
         <ul class="links-list">
           <li><a href="#symptoms">Can You Relate?</a></li>
           <li><a href="#fuel">Fuel Well to Perform Well</a></li>
-          <li><a href="#philosophy">My Philosophy</a></li>
           <li><a href="#counseling">Counseling Services</a></li>
+          <li><a href="#howitworks">How It Works</a></li>
+          <li><a href="#philosophy">My Philosophy</a></li>
           <li><a href="#creds">My Credentials</a></li>
         </ul>
       </div>
@@ -72,13 +74,31 @@ const arrowVar = `url(${arrowList})`;
           {fuel.map((item) => <li>{item}</li> )}
         </ul>
       </div>
+      <Counseling id="counseling"/>
+      <div id="howitworks" class="how-container">
+        <h2 class="animate-title">How It Works</h2>
+        <ul>
+          <li><a href="/contact">Send me a message</a>, including a brief description of who you are and your main goals with nutrition counseling.</li>
+          <ul>
+            <li>If you any further questions about the process, I'll respond as soon as possible.</li>
+          </ul>
+          <li>I will send a New Client Link to the HIPAA-compliant online platform Healthie, with a checklist including:</li>
+          <ul>
+            <li>New Client Questionnaire</li>
+            <li>Consent to Nutrition Services</li>
+          </ul>
+          <li>We will schedule a time to meet via video call for a 60 minute intake session.</li>
+          <li>We can schedule follow-up sessions as needed.</li>
+          <li>I will be available to answer questions via email throughout the time we are working together.</li>
+        </ul>
+        <p>I look forward to hearing from you!</p>
+      </div>
       <div id="philosophy" class="philosophy-container">
         <h2 class="animate-title">Philosophy</h2>
         <p>My nutrition coaching focuses on helping you develop a sustainable approach to fueling that empowers you in your athletic performance and encourages long-term health.</p> 
         <p>I strive to offer a scientific and strategic approach to fueling that is tailored specifically to YOU - balancing your goals, protecting long-term health, and understanding your lifestyle and preferences. Together, we’ll work to understand your relationship with food, untangle unhealthy influences, and develop sustainable and practical strategies to help you utilize nutrition to optimize your health and performance.</p>
         <p>I promise to facilitate a safe, encouraging environment where you can share information without fear of judgment or shame regarding your health and weight history, body image and food-related struggles, along with dietary preferences and questions. </p>
       </div>
-      <Counseling id="counseling"/>
       <div id="creds" class="creds-container">
         <h2 class="animate-title">Credentials</h2>
         <p>I am a board-certified Registered Dietitian (RDN).</p>
