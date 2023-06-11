@@ -2,7 +2,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import lifeline from "../images/gallery/lifelineaz.jpg";
-import golden from "../images/gallery/thumbnail.jpg";
+import thumbnail from "../images/gallery/a-thumbnail.jpg";
 import '../styles/global.css';
 
 const { pageTitle, img } = Astro.props;
@@ -20,8 +20,17 @@ const background = blur ? 'none' : backgroundimg;
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/png" href="/a-custom.png" />
 		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-    <meta name="thumbnail" content={golden} />
+    <meta name="description" content="Professional climber and registered dietician." />
+    <meta name="og:locale" content="en_US" />
+    <meta name="og:type" content="website" />
+    <meta name="og:title" content="Amity Warme" />
+    <meta name="og:description" content="Professional climber and registered dietician." />
+    <meta name="og:url" content="https://amitywarme.com/" />
+    <meta name="og:site-name" content="Amity Warme" />
+    <meta name="og:image" content={thumbnail} />
+    <meta name="og:image-width" content="3500" />
+    <meta name="og:image-height" content="1832" />
+    <meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
 	</head>
 	<body>
