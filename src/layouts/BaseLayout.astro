@@ -5,7 +5,7 @@ import lifeline from "../images/gallery/lifelineaz.jpg";
 import thumbnail from "../images/gallery/a-thumbnail.png";
 import '../styles/global.css';
 
-const { pageTitle, img } = Astro.props;
+const { pageTitle, img, url } = Astro.props;
 const blur = (img && img.noimg) ? true : false;
 const mobilebackground = (img && !blur) ? img.url : lifeline;
 const backgroundimg = (img && !blur) ? `url(${img.url})` : `url(${lifeline})`;
@@ -20,12 +20,12 @@ const background = blur ? 'none' : backgroundimg;
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/png" href="/a-custom.png" />
 		<meta name="viewport" content="width=device-width" />
-    <meta name="description" content="Professional climber and registered dietician." />
+    <meta name="description" content="Amity Warme - professional climber and registered dietician." />
     <meta name="og:locale" content="en_US" />
     <meta name="og:type" content="website" />
-    <meta name="og:title" content="Amity Warme" />
-    <meta name="og:description" content="Professional climber and registered dietician." />
-    <meta name="og:url" content="https://amitywarme.com/" />
+    <meta name="og:title" content={pageTitle} />
+    <meta name="og:description" content="Amity Warme - professional climber and registered dietician." />
+    <meta name="og:url" content={url} />
     <meta name="og:site-name" content="Amity Warme" />
     <meta name="og:image" content={thumbnail} />
     <meta name="og:image-width" content="3500" />

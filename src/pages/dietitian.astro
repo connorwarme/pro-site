@@ -39,7 +39,7 @@ const fuel = [
 const arrowVar = `url(${arrowList})`;
 ---
 
-<BaseLayout pageTitle="Amity | Dietitian" img={image}>
+<BaseLayout pageTitle="Amity | Dietitian" img={image} url="https://amitywarme.com/dietitian">
   <div class="nutrition-wrapper">
     <div class="nutrition-container">
       <h1 class="dietician-title animate-title">Registered Dietitian</h1>
@@ -221,6 +221,9 @@ const arrowVar = `url(${arrowList})`;
   }
   .simple-link:hover {
     cursor: pointer;
+  }
+  @media screen and (min-width: 470px) {
+    
   }
   @media screen and (min-width: 770px) {
     .nutrition-wrapper {

@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import logo from "/a-custom.png"
-import Contact from "../components/ContactForm.jsx";
+import ContactForm from "../components/ContactForm.jsx";
 
 const fakeimg = {
   noimg: true,
@@ -9,12 +9,12 @@ const fakeimg = {
 }
 ---
 
-<BaseLayout pageTitle="Contact Me" img={fakeimg}>
+<BaseLayout pageTitle="Contact Me" img={fakeimg} url="https://amitywarme.com/contact">
   <div class="contact-wrapper">
     <div class="contact-content">
       <img src={logo} alt='Amity logo' />
       <h1>Reach Out</h1>
-      <Contact client:load />
+      <ContactForm client:load />
     </div>
   </div>
 </BaseLayout>
