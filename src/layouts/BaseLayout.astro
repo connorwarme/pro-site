@@ -2,7 +2,6 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import lifeline from "../images/gallery/lifelineaz.jpg";
-import thumbnail from "../images/gallery/a-thumbnail.png";
 import '../styles/global.css';
 
 const { pageTitle, img, url } = Astro.props;
@@ -13,6 +12,8 @@ const position = (img && !blur) ? `${img.position}` : 'center';
 // add check to remove background image on contact page (mobile and regular)
 const blurvar = blur ? 'none' : 'block';
 const background = blur ? 'none' : backgroundimg;
+
+const thumbnail = "https://github.com/connorwarme/pro-site/blob/main/src/images/gallery/a-thumbnail.png?raw=true"
 ---
 
 <html lang="en">
