@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import PhotoDisplay from "../components/PhotoDisplay.astro";
+import thumbnail from "../images/gallery/a-thumbnail.png";
 import '../styles/global.css';
 ---
 <html lang="en">
@@ -8,6 +9,16 @@ import '../styles/global.css';
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/png" href="/a-custom.png" />
 		<meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Photo gallery for pro-climber Amity Warme." />
+    <meta name="og:locale" content="en_US" />
+    <meta name="og:type" content="website" />
+    <meta name="og:title" content="Amity | Gallery"/>
+    <meta name="og:description" content="Photo gallery for pro-climber Amity Warme." />
+    <meta name="og:url" content="https://amitywarme.com/gallery" />
+    <meta name="og:site-name" content="Amity Warme" />
+    <meta name="og:image" content={thumbnail} />
+    <meta name="og:image-width" content="3500" />
+    <meta name="og:image-height" content="1832" />
 		<meta name="generator" content={Astro.generator} />
     <script src="../scripts/menu.js" />
 		<title>Amity | Gallery</title>
