@@ -14,6 +14,7 @@ const position = (img && !blur) ? `${img.position}` : 'center';
 const blurvar = blur ? 'none' : 'block';
 const background = blur ? 'none' : backgroundimg;
 
+const date = new Date('2023-06-12')
 ---
 
 <html lang="en">
@@ -28,11 +29,12 @@ const background = blur ? 'none' : backgroundimg;
     <meta property="og:url" content={url} />
     <meta property="og:site-name" content="Amity Warme" />
     <meta name="image" property="og:image" content={thumbnail} />
+    <meta property="og:image:secure_url" content="https://github.com/connorwarme/pro-site/raw/main/src/images/gallery/a-thumbnail-2.png" />
     <meta property="og:image-width" content="1200" />
     <meta property="og:image-height" content="627" />
     <meta name="author" content="Connor Warme" />
-    <meta name="publish_date" property="og:publish_date" content="2023-04-23" />
-    <meta property="article:modifiedtime" content={Date.now().toString()}/>
+    <meta name="publish_date" property="article:published_time" content="2023-04-23" />
+    <meta property="article:modified_time" content={date.toISOString()}/>
     <meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
 	</head>
