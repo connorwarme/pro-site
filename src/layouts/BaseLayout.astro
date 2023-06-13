@@ -2,6 +2,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import lifeline from "../images/gallery/lifelineaz.jpg";
+import thumbnail from "../images/gallery/a-thumbnail-2.png";
 import '../styles/global.css';
 
 const { pageTitle, img, url } = Astro.props;
@@ -13,7 +14,6 @@ const position = (img && !blur) ? `${img.position}` : 'center';
 const blurvar = blur ? 'none' : 'block';
 const background = blur ? 'none' : backgroundimg;
 
-const thumbnail = "https://github.com/connorwarme/pro-site/raw/main/src/images/gallery/a-thumbnail-2.png"
 ---
 
 <html lang="en">
@@ -22,7 +22,7 @@ const thumbnail = "https://github.com/connorwarme/pro-site/raw/main/src/images/g
 		<link rel="icon" type="image/png" href="/a-custom.png" />
 		<meta name="viewport" content="width=device-width" />
     <meta name="title" property="og:title" content={pageTitle} />
-    <meta name="description" property="og:description" content="Amity Warme - professional climber and registered dietician. Amity's accomplishments include Freerider in a Day (FRIAD), El Corazon, and Golden Gate on El Cap. As a dietitian, Amity seeks to help athletes use nutrition to maximize their performance and protect long-term health." />
+    <meta name="description" property="og:description" content="Amity Warme - climber and registered dietitian. Amity's accomplishments include Freerider in a Day (FRIAD), El Corazon, and Golden Gate on El Capitan. As a dietitian, Amity seeks to help athletes use nutrition to maximize their performance and protect long-term health." />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={url} />
@@ -30,6 +30,9 @@ const thumbnail = "https://github.com/connorwarme/pro-site/raw/main/src/images/g
     <meta name="image" property="og:image" content={thumbnail} />
     <meta property="og:image-width" content="1200" />
     <meta property="og:image-height" content="627" />
+    <meta name="author" content="Connor Warme" />
+    <meta name="publish_date" property="og:publish_date" content="2023-04-23" />
+    <meta property="article:modifiedtime" content={Date.now().toString()}/>
     <meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
 	</head>
