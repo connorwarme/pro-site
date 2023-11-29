@@ -36,6 +36,19 @@ const fuel = [
   'Increase coordination and concentration',
   'Untangle disordered eating patterns and anxiety around food',
 ]
+const testimonial = [
+  { 
+    client: 'Jonathan Morgan',
+    text: `Before I started working with Amity, I struggled with my weight, energy levels, and had an unhealthy relationship with food - particularly carbohydrates. Amity took the time to truly understand my unique needs and goals. She helped me design a personalized nutrition plan that was easy to follow and tailored to my specific dietary preferences. She also provided me with the knowledge and tools to make sustainable, long-term changes to my eating habits.
+      Amity has been a constant source of support and motivation. She is not only incredibly knowledgeable, but also an excellent communicator, explaining complex concepts in a way that's easy to understand.
+      As a result of Amity's guidance, I've achieved remarkable progress. I've lost weight, gained more energy, and developed a healthier attitude towards food. I now have the tools and knowledge to make informed choices that benefit my health. My relationship with food has been transformed, and I no longer feel overwhelmed or guilty about what I eat.
+      I wholeheartedly recommend Amity to anyone seeking to improve their health and well-being through nutrition.`
+  },
+  {
+    client: 'David Reiman',
+    text: `Amity was extremely helpful, she addressed the dietary issues I was having efficiently with solid easy to enact solutions. She replaced some long held misconceptions about food with facts that have had an extremely beneficial impact on my climbing and daily life. When I hit a snag she was very good at helping me work through it. Since implementing the solutions we discussed I've seen my daily energy levels increase, my training sessions become more enjoyable and effective, and my climbing days last longer with great results.`
+  },
+]
 const arrowVar = `url(${arrowList})`;
 ---
 
@@ -54,6 +67,7 @@ const arrowVar = `url(${arrowList})`;
         <ul class="links-list">
           <li><a href="#symptoms">Can You Relate?</a></li>
           <li><a href="#fuel">Fuel Well to Perform Well</a></li>
+          <li><a href="#testimonial">Testimonials</a></li>
           <li><a href="#counseling">Counseling Services</a></li>
           <li><a href="#howitworks">How It Works</a></li>
           <li><a href="#philosophy">My Philosophy</a></li>
@@ -72,6 +86,19 @@ const arrowVar = `url(${arrowList})`;
         <p><em>Proper nutrition can help:</em></p>
         <ul class="fuel">
           {fuel.map((item) => <li>{item}</li> )}
+        </ul>
+      </div>
+      <div id="testimonial" class="testimonial-container">
+        <h2 class="animate-title">Testimonials</h2>
+        <ul class="testimonial">
+          { testimonial.map((object) => {
+            return (
+              <li>
+                <p>{object[0].text}</p>
+                <p><em>-{object[0].client}</em></p>
+              </li>
+            )
+          })}
         </ul>
       </div>
       <Counseling id="counseling"/>
