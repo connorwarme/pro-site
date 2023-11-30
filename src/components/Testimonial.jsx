@@ -16,10 +16,9 @@ export default function Testimonial({ intel }) {
     <>
       <div className="testimonial-unit-container">
         <div className="testimonial-text-container">
-          { !showFull && <p>{intel.clip}</p> }
-          { showFull && <p>{intel.full}</p> }
+          { !showFull && <p>"{intel.clip}"<img class='jump-arrow' src={arrow} aria-label="Click to reveal links" onClick={handleShow} /></p> }
+          { showFull && <p>"{intel.full}"<img class='jump-arrow visible' src={arrow} aria-label="Click to reveal links" onClick={handleShow} /></p> }
         </div>
-        <img class={`jump-arrow ${showFull ? 'visible' : ''}`} src={arrow} aria-label="Click to reveal links" onClick={handleShow} />
         <p><em>- {intel.client}</em></p>
       </div>
     </>
