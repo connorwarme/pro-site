@@ -101,13 +101,21 @@ const handleClick = (e) => {
         <h2 class="animate-title">Testimonials</h2>
         <div class="testimonial-unit-container">
           <p class="testimonial-clip">{testimonial[0].clip}</p>
-          <p class="testimonial-full">{testimonial[0].full}</p>
+          <div class="testimonial-full">
+            <p>Before I started working with Amity, I struggled with my weight, energy levels, and had an unhealthy relationship with food - particularly carbohydrates. Amity took the time to truly understand my unique needs and goals. She helped me design a personalized nutrition plan that was easy to follow and tailored to my specific dietary preferences. She also provided me with the knowledge and tools to make sustainable, long-term changes to my eating habits.</p>
+            <p>Amity has been a constant source of support and motivation. She is not only incredibly knowledgeable, but also an excellent communicator, explaining complex concepts in a way that's easy to understand.</p>
+            <p>As a result of Amity's guidance, I've achieved remarkable progress. I've lost weight, gained more energy, and developed a healthier attitude towards food. I now have the tools and knowledge to make informed choices that benefit my health. My relationship with food has been transformed, and I no longer feel overwhelmed or guilty about what I eat.</p>
+            <p><i>I wholeheartedly recommend Amity to anyone seeking to improve their health and well-being through nutrition.</i></p>
+          </div>
           <img class='test-arrow1' src={arrow} aria-label="Click to toggle testimonial" />
           <p class="testimonial-client"><em>- {testimonial[0].client}</em></p>
         </div>
         <div class="testimonial-unit-container">
           <p class="testimonial-clip">{testimonial[1].clip}</p>
-          <p class="testimonial-full">{testimonial[1].full}</p>
+          <div class="testimonial-full">
+            <p>Amity was extremely helpful, she addressed the dietary issues I was having efficiently with solid easy to enact solutions. She replaced some long held misconceptions about food with facts that have had an extremely beneficial impact on my climbing and daily life.</p>
+            <p>When I hit a snag she was very good at helping me work through it. Since implementing the solutions we discussed <i>I've seen my daily energy levels increase, my training sessions become more enjoyable and effective, and my climbing days last longer with great results.</i></p>
+          </div>
           <img class='test-arrow2' src={arrow} aria-label="Click to toggle testimonial" />
           <p class="testimonial-client"><em>- {testimonial[1].client}</em></p>
         </div>
@@ -266,19 +274,24 @@ const handleClick = (e) => {
     display: grid;
   }
   .test-arrow1,
-  .test-arrow2 {
+  .test-arrow2,
+  .testimonial-client {
     justify-self: center;
   }
   .testimonial-unit-container .testimonial-clip {
+    display: block;
     visibility: visible;
   }
   .testimonial-unit-container .testimonial-full {
+    display: none;
     visibility: hidden;
   }
   .testimonial-unit-container.full .testimonial-clip {
+    display: none;
     visibility: hidden;
   }
   .testimonial-unit-container.full .testimonial-full {
+    display: block;
     visibility: visible;
   }
   @media screen and (min-width: 470px) {
