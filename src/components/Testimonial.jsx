@@ -9,6 +9,7 @@ export default function Testimonial({ intel }) {
   const [showFull, setShowFull] = useState(false);
   
   const handleShow = () => {
+    console.log('click handleShow')
     setShowFull(!showFull)
   }
 
@@ -16,8 +17,8 @@ export default function Testimonial({ intel }) {
     <>
       <div className="testimonial-unit-container">
         <div className="testimonial-text-container">
-          { !showFull && <p>"{intel.clip}"<img class='jump-arrow' src={arrow} aria-label="Click to reveal links" onClick={handleShow} /></p> }
-          { showFull && <p>"{intel.full}"<img class='jump-arrow visible' src={arrow} aria-label="Click to reveal links" onClick={handleShow} /></p> }
+          { !showFull && <p>"{intel.clip}"<img class='jump-arrow' src={arrow} aria-label="Click to expand testimonial" onClick={handleShow} style="height:30px" /></p> }
+          { showFull && <p>"{intel.full}"<img class='jump-arrow visible' src={arrow} aria-label="Click to hide testimonial" onClick={handleShow} style="height:30px" /></p> }
         </div>
         <p><em>- {intel.client}</em></p>
       </div>
