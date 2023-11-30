@@ -54,6 +54,11 @@ const testimonial = [
   },
 ]
 const arrowVar = `url(${arrowList})`;
+
+const handleClick = (e) => {
+  e.target.classList.toggle('visible')
+  e.target.parent.classList.toggle('full')
+}
 ---
 
 <BaseLayout pageTitle="Amity | Dietitian" img={image} url="https://amitywarme.com/dietitian">
@@ -94,8 +99,18 @@ const arrowVar = `url(${arrowList})`;
       </div>
       <div id="testimonial" class="testimonial-container">
         <h2 class="animate-title">Testimonials</h2>
-        <Testimonial intel={testimonial[0]} />
-        <Testimonial intel={testimonial[1]} />
+        <div class="testimonial-unit-container">
+          <p class="testimonial-clip">{testimonial[0].clip}</p>
+          <p class="testimonial-full">{testimonial[0].full}</p>
+          <img class='test-arrow1' src={arrow} aria-label="Click to toggle testimonial" />
+          <p class="testimonial-client"><em>- {testimonial[0].client}</em></p>
+        </div>
+        <div class="testimonial-unit-container">
+          <p class="testimonial-clip">{testimonial[1].clip}</p>
+          <p class="testimonial-full">{testimonial[1].full}</p>
+          <img class='test-arrow2' src={arrow} aria-label="Click to toggle testimonial" />
+          <p class="testimonial-client"><em>- {testimonial[1].client}</em></p>
+        </div>
       </div>
       <Counseling id="counseling"/>
       <div id="howitworks" class="how-container">
@@ -191,7 +206,9 @@ const arrowVar = `url(${arrowList})`;
     display: flex;
     align-items: center;
   }
-  .jump-arrow {
+  .jump-arrow,
+  .test-arrow1,
+  .test-arrow2 {
     height: 40px;
     cursor: pointer;
   }
@@ -245,6 +262,25 @@ const arrowVar = `url(${arrowList})`;
   .simple-link:hover {
     cursor: pointer;
   }
+  .testimonial-unit-container {
+    display: grid;
+  }
+  .test-arrow1,
+  .test-arrow2 {
+    justify-self: center;
+  }
+  .testimonial-unit-container .testimonial-clip {
+    visibility: visible;
+  }
+  .testimonial-unit-container .testimonial-full {
+    visibility: hidden;
+  }
+  .testimonial-unit-container.full .testimonial-clip {
+    visibility: hidden;
+  }
+  .testimonial-unit-container.full .testimonial-full {
+    visibility: visible;
+  }
   @media screen and (min-width: 470px) {
     
   }
@@ -268,6 +304,16 @@ const arrowVar = `url(${arrowList})`;
   jump.addEventListener('click', () => {
     jump.classList.toggle('visible');
     document.querySelector('div.links-container').classList.toggle('reveal');
+  })
+  const testArrow1 = document.querySelector('img.test-arrow1');
+  testArrow1.addEventListener('click', () => {
+    testArrow1.classList.toggle('visible');
+    testArrow1.parentElement.classList.toggle('full');
+  })
+  const testArrow2 = document.querySelector('img.test-arrow2');
+  testArrow2.addEventListener('click', () => {
+    testArrow2.classList.toggle('visible');
+    testArrow2.parentElement.classList.toggle('full');
   })
   const addObserver = (element) => {
     let observer = new IntersectionObserver((entries, observer) => {
