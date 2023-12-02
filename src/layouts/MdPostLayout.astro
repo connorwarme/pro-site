@@ -16,6 +16,7 @@ import friad from "../images/posts/friad.jpeg";
 import struggle from "../images/posts/struggle.jpg";
 import stingray from "../images/gallery/stingray.jpg";
 import tainted from "../images/gallery/tainted1.jpg";
+import silly from "../images/gallery/silly.jpg";
 
 const image = {
   url: gate,
@@ -40,6 +41,7 @@ const images = [
   struggle,
   stingray,
   tainted,
+  silly,
 ]
 const { frontmatter } = Astro.props;
 ---
@@ -62,7 +64,6 @@ const { frontmatter } = Astro.props;
       </div>
       <div class="tag-index-container">
         {frontmatter.tags.map((tag) => (
-          // <a class="tag-item" href={`/tags/${tag}`}>{tag}</a>
           <a class="tag-item" href={`/tags/${tag}`}>{tag}</a>
         ))}
       </div>
