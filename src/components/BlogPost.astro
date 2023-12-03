@@ -21,6 +21,7 @@ const { title, description, url, type } = Astro.props;
     grid-template-columns: 40px 1fr;
     border: 2px solid transparent;
     border-radius: 5px;
+    background-color: rgba(245, 245, 245, 1);
   }
   div {
     place-self: start;
@@ -34,7 +35,7 @@ const { title, description, url, type } = Astro.props;
   #blog {
     border-color: rgb(254, 7, 62);
   }
-  #media {
+  #video {
     border-color: rgb(14, 173, 105);
   }
   #recipe {
@@ -42,6 +43,9 @@ const { title, description, url, type } = Astro.props;
   }
   #podcast {
     border-color: rgb(61, 165, 217);
+  }
+  #news {
+    border-color: rgb(154, 70, 247);
   }
   .type {
     margin: 5px 0;
@@ -52,7 +56,7 @@ const { title, description, url, type } = Astro.props;
   #blog > div {
     background-color: rgb(254, 7, 62);
   }
-  #media > div {
+  #video > div {
     background-color: rgb(14, 173, 105);
   }
   #recipe > div {
@@ -60,6 +64,9 @@ const { title, description, url, type } = Astro.props;
   }
   #podcast > div {
     background-color: rgb(61, 165, 217);
+  }
+  #news > div {
+    background-color: rgb(154, 70, 247);
   }
   a.blog-card {
     text-decoration: none;
