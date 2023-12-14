@@ -52,6 +52,16 @@ const testimonial = [
     When I hit a snag she was very good at helping me work through it. Since implementing the solutions we discussed I've seen my daily energy levels increase, my training sessions become more enjoyable and effective, and my climbing days last longer with great results.`,
     clip: `Amity was extremely helpful... I've seen my daily energy levels increase, my training sessions become more enjoyable and effective, and my climbing days last longer with great results.`
   },
+  {
+    client: 'Nancy Feagin',
+    full: 'I worked with Amity to time specific weight loss to send my hardest sport route. Not only did she give me some great technical ideas on how to do it, but she was super supportive of my goal. I felt like she was rooting for me and on my team! The plan worked perfectly, and I sent the route almost exactly when we planned.',
+    clip: '',
+  },
+  {
+    client: 'Leslie Brandt',
+    full: `Working with Amity was really helpful in planning for a big multi-pitch objective in RMNP last summer. She helped me come up with ideas for fueling the morning of and during the climb itself. It was nice wrapping a big day of climbing and hiking and still having energy. I was not feeling ravenous and low energy which allowed me to move safely and quickly all day. She also helped me manage protein intake on a day to day basis and we worked through some dietary challenges. Amity is thoughtful and responsive. She draws on her experience of big days in the mountains, as well as her academic experience, to set up an effective nutrition strategy for climbers. I'm psyched we were able to work together!`,
+    clip: `Amity is thoughtful and responsive. She draws on her experience of big days in the mountains, as well as her academic experience, to set up an effective nutrition strategy for climbers. I'm psyched we were able to work together!`,
+  }
 ]
 const arrowVar = `url(${arrowList})`;
 
@@ -111,6 +121,10 @@ const handleClick = (e) => {
           <p class="testimonial-client"><em>- {testimonial[0].client}</em></p>
         </div>
         <div class="testimonial-unit-container">
+          <p class="testimonial-clip">"{testimonial[2].full}"</p>
+          <p class="testimonial-client"><em>- {testimonial[2].client}</em></p>
+        </div>
+        <div class="testimonial-unit-container">
           <p class="testimonial-clip">"{testimonial[1].clip}"</p>
           <div class="testimonial-full">
             <p>"Amity was extremely helpful, she addressed the dietary issues I was having efficiently with solid easy to enact solutions. She replaced some long held misconceptions about food with facts that have had an extremely beneficial impact on my climbing and daily life.</p>
@@ -118,6 +132,15 @@ const handleClick = (e) => {
           </div>
           <img class='test-arrow2' src={arrow} aria-label="Click to toggle testimonial" title="Toggle View" />
           <p class="testimonial-client"><em>- {testimonial[1].client}</em></p>
+        </div>
+        <div class="testimonial-unit-container">
+          <p class="testimonial-clip">"{testimonial[3].clip}"</p>
+          <div class="testimonial-full">
+            <p>"Working with Amity was really helpful in planning for a big multi-pitch objective in RMNP last summer. She helped me come up with ideas for fueling the morning of and during the climb itself. It was nice wrapping a big day of climbing and hiking and still having energy. I was not feeling ravenous and low energy which allowed me to move safely and quickly all day. She also helped me manage protein intake on a day to day basis and we worked through some dietary challenges.</p>
+            <p>Amity is thoughtful and responsive. She draws on her experience of big days in the mountains, as well as her academic experience, to set up an effective nutrition strategy for climbers. I'm psyched we were able to work together!"</p>
+          </div>
+          <img class='test-arrow3' src={arrow} aria-label="Click to toggle testimonial" title="Toggle View" />
+          <p class="testimonial-client"><em>- {testimonial[3].client}</em></p>
         </div>
       </div>
       <Counseling id="counseling"/>
@@ -216,7 +239,8 @@ const handleClick = (e) => {
   }
   .jump-arrow,
   .test-arrow1,
-  .test-arrow2 {
+  .test-arrow2,
+  .test-arrow3 {
     height: 40px;
     cursor: pointer;
   }
@@ -275,12 +299,14 @@ const handleClick = (e) => {
   }
   .test-arrow1,
   .test-arrow2,
+  .test-arrow3,
   .testimonial-client {
     justify-self: center;
   }
   .testimonial-unit-container .testimonial-clip {
     display: block;
     visibility: visible;
+    margin-bottom: 0;
   }
   .testimonial-unit-container .testimonial-full {
     display: none;
@@ -327,6 +353,11 @@ const handleClick = (e) => {
   testArrow2.addEventListener('click', () => {
     testArrow2.classList.toggle('visible');
     testArrow2.parentElement.classList.toggle('full');
+  })
+  const testArrow3 = document.querySelector('img.test-arrow3');
+  testArrow3.addEventListener('click', () => {
+    testArrow3.classList.toggle('visible');
+    testArrow3.parentElement.classList.toggle('full');
   })
   const addObserver = (element) => {
     let observer = new IntersectionObserver((entries, observer) => {
