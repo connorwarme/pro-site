@@ -19,7 +19,7 @@ const image = {
     </div>
     <div class="scroll-container">
       <a href="#achievements" aria-label="Link to Achievements">
-        <img src={arrow} alt="↓" aria-label="Scroll down">
+        <img class="down-arrow" src={arrow} alt="↓" aria-label="Scroll down">
       </a>
       <!-- <span>Scroll Down</span> -->
     </div>
@@ -66,5 +66,25 @@ const image = {
   }
   .scroll-container > a > img {
     height: 60px;
+  }
+  .down-arrow {
+    animation: animateArrow 2s ease-in-out 1s 1 forwards;
+  }
+  @keyframes animateArrow {
+    0% {
+      transform: translateY(0px);
+    }
+    25% {
+      transform: translateY(-40px);
+    }
+    50% {
+      transform: translateY(0px);
+    }
+    75% {
+      transform: translateY(-40px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
   }
 </style>
