@@ -39,12 +39,13 @@ const date = new Date('2023-06-12')
 		<title>{page.title}</title>
 	</head>
 	<body>
+    <a href="#main" class="skip-to-content">Skip to Content</a>
     <img src={img.url} alt={img.alt} class="bg-img">
     <Header blur={blur}/>
     <div class="mobile-img">
       <img src={mobilebackground} />
     </div>
-    <main>
+    <main id="main">
       <slot />
       <div class="body-spacer"></div>
     </main>
@@ -55,15 +56,31 @@ const date = new Date('2023-06-12')
     <style define:vars={{background, position, blurvar}}>
       body {
         background-color: whitesmoke;
-        background-image: var(--background);
+        /* removed bg-image to use img element (and provide alt label) */
+        /* background-image: var(--background);
         background-position: var(--position);
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-size: cover;
+        background-size: cover; */
         min-height: 100vh;
       }
-      .bg-img {
+      .skip-to-content {
+        background-color: whitesmoke;
+        box-shadow: 0 0 3px rgb(64, 64, 64);
+        color: rgb(64, 64, 64);
+        padding: 1rem;
+        opacity: 0;
         position: absolute;
+        left: -9999px;
+        z-index: 999; 
+      }
+      .skip-to-content:focus {
+        opacity: 1;
+        left: 50%;
+        transform: translate(-50%, 80px);
+      }
+      .bg-img {
+        position: fixed;
         top: 0;
         left: 0;
         height: 100%;
