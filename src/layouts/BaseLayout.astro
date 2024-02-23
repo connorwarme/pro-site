@@ -44,8 +44,10 @@ const date = new Date('2023-06-12')
     <div class="mobile-img">
       <img src={mobilebackground} />
     </div>
-    <slot />
-    <div class="body-spacer"></div>
+    <main>
+      <slot />
+      <div class="body-spacer"></div>
+    </main>
     <Footer />
     <script>
       import "../scripts/menu.js";
