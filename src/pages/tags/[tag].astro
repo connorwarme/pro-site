@@ -21,9 +21,12 @@ export async function getStaticPaths() {
 
 const { tag } = Astro.params;
 const { posts } = Astro.props;
-const title = `Tag: ${tag}`;
+const pageInfo = {
+  title: `Tag: ${tag}`,
+  description: `A collection of Amity content that includes the ${tag} tag.`
+};
 ---
-<BaseLayout pageTitle={title}>
+<BaseLayout page={pageInfo}>
   <div class="content-wrapper">
     <div class="content-container">
       <p>Posts tagged with <em>{tag}</em></p>
