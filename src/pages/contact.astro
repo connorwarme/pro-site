@@ -3,13 +3,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import logo from "/a-custom.png"
 import ContactForm from "../components/ContactForm.jsx";
 
+const pageInfo = {
+  title: 'Contact Me',
+  description: `Questions about climbing? Interested in working together to tailor your approach to food and fueling? Please reach out! I'd love to connect with you.`
+}
 const fakeimg = {
   noimg: true,
   blur: true,
+  alt: 'No background image on the contact page'
 }
 ---
 
-<BaseLayout pageTitle="Contact Me" img={fakeimg} url="https://amitywarme.com/contact">
+<BaseLayout page={pageInfo} img={fakeimg} url="https://amitywarme.com/contact">
   <div class="contact-wrapper">
     <div class="contact-content">
       <img src={logo} alt='Amity logo' />

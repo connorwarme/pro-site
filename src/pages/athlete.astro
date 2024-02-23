@@ -5,13 +5,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import wolverine from "../images/gallery/Wolverine.Lite.jpg";
 import arrow from "../images/icons/arrow-simple-white.svg";
 
+const pageInfo = {
+  title: 'Amity | Athlete',
+  description: 'Relentlessly pursuing big walls and big goals with tenacity and grit, Amity enjoys the challenge of pushing physical and mental limits in the vertical realm.'
+}
 const image = {
   url: wolverine,
   position: '60%',
+  alt: 'Amity climbing Wolverine, 13a trad, onsight'
 }
 ---
 
-<BaseLayout pageTitle="Amity | Athlete" img={image} url="https://amitywarme.com/athlete">
+<BaseLayout page={pageInfo} img={image} url="https://amitywarme.com/athlete">
   <div class="athlete-spacer">
     <div class="athlete-title">
       <p class="athlete-title-one">PRO</p>
