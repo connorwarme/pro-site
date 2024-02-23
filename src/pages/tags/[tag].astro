@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogPost from "../../components/BlogPost.astro";
+import tainted from "../../images/gallery/tainted2.jpg"
 
 export async function getStaticPaths() {
   const allPosts = await Astro.glob('../posts/*.mdx');
@@ -25,8 +26,14 @@ const pageInfo = {
   title: `Tag: ${tag}`,
   description: `A collection of Amity content that includes the ${tag} tag.`
 };
+const img = {
+  url: tainted,
+  position: '60% 100%',
+  alt: 'Amity stemming high above Howe Sound in Squamish, BC'
+}
+const url = `https://amitywarme.com/tags/${tag}`
 ---
-<BaseLayout page={pageInfo}>
+<BaseLayout page={pageInfo} img={img} url={url}>
   <div class="content-wrapper">
     <div class="content-container">
       <p>Posts tagged with <em>{tag}</em></p>
