@@ -5,7 +5,7 @@ import lifeline from "../images/gallery/lifelineaz.jpg";
 import thumbnail from "../images/gallery/a-thumbnail-2.png";
 import '../styles/global.css';
 
-const { pageTitle, img, url } = Astro.props;
+const { page, img, url } = Astro.props;
 const blur = (img && img.noimg) ? true : false;
 const mobilebackground = (img && !blur) ? img.url : lifeline;
 const backgroundimg = (img && !blur) ? `url(${img.url})` : `url(${lifeline})`;
@@ -21,9 +21,9 @@ const date = new Date('2023-06-12')
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/png" href="/a-custom.png" />
-		<meta name="viewport" content="width=device-width" />
-    <meta name="title" property="og:title" content={pageTitle} />
-    <meta name="description" property="og:description" content="Amity Warme - climber and registered dietitian. Amity's accomplishments include Freerider in a Day (FRIAD), El Corazon, and Golden Gate on El Capitan. As a dietitian, Amity seeks to help athletes use nutrition to maximize their performance and protect long-term health." />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" property="og:title" content={page.title} />
+    <meta name="description" property="og:description" content={page.description} />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={url} />
@@ -36,9 +36,10 @@ const date = new Date('2023-06-12')
     <meta name="publish_date" property="article:published_time" content="2023-04-23" />
     <meta property="article:modified_time" content={date.toISOString()}/>
     <meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
+		<title>{page.title}</title>
 	</head>
 	<body>
+    <img src={img.url} alt={img.alt} class="bg-img">
     <Header blur={blur}/>
     <div class="mobile-img">
       <img src={mobilebackground} />
@@ -58,6 +59,16 @@ const date = new Date('2023-06-12')
         background-attachment: fixed;
         background-size: cover;
         min-height: 100vh;
+      }
+      .bg-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-position: var(--position);
+        object-fit: cover;
+        z-index: -1;
       }
       .mobile-img {
         display: none;
