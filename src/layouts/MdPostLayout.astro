@@ -21,6 +21,7 @@ import silly from "../images/gallery/silly.jpg";
 const image = {
   url: gate,
   position: "25%",
+  alt: 'Amity all smiles on Golden Gate in Yosemite, CA'
 }
 
 const images = [
@@ -44,8 +45,13 @@ const images = [
   silly,
 ]
 const { frontmatter } = Astro.props;
+
+const pageInfo = {
+  title: frontmatter.title,
+  description: ''
+}
 ---
-<BaseLayout pageTitle={frontmatter.title} img={image}>
+<BaseLayout page={pageInfo} img={image}>
   <div class="blog-wrapper">
     <div class="blog-container">
       <h1 class="blog-title">{frontmatter.title}</h1>
