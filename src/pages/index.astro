@@ -34,10 +34,14 @@ const bigwall = [
   }
 ]
 
-const pageTitle = "Amity | Home"
+const pageInfo = {
+  title: "Amity | Home",
+  description: "Pro climber with five free ascents of El Capitan and registered dietitian who helps athletes use nutrition to maximize performance and long-term health.",
+}
 const img = {
   url: golden,
   position: "75%",
+  alt: "Amity on Golden Gate, high on El Capitan"
 }
 
 const arrowVar = `url(${arrowList})`;
@@ -47,7 +51,7 @@ const corazonVar = `url(${corazon})`;
 const markVar = `url(${mark})`;
 
 ---
-<BaseLayout pageTitle={pageTitle} img={img} url="https://amitywarme.com/"> 
+<BaseLayout page={pageInfo} img={img} url="https://amitywarme.com/"> 
   <div class="home-wrapper">
     <div class="home-title-wrapper">
       <div class="home-title-content">
@@ -87,7 +91,7 @@ const markVar = `url(${mark})`;
       <div class="home-dietician-content">
         <div class="dietician-content-simple">
           <h1>Dietitian</h1>
-          <h3>Fuel Well to Perform Well</h3>
+          <h2>Fuel Well to Perform Well</h2>
           <p class="dietician-text">I want to help <em>you</em> develop a sustainable approach to fueling that empowers you in your athletic performance and encourages long-term health.</p>
           <ul class="dietician-list">
             <li>Registered Dietitian</li>
@@ -170,7 +174,7 @@ const markVar = `url(${mark})`;
     font-weight: 700;
   }
   .athlete-content-simple > h2,
-  .dietician-content-simple > h3 {
+  .dietician-content-simple > h2 {
     margin: 0;
   }
   .athlete-content-simple,

@@ -10,6 +10,7 @@ import sixstar from "../images/gallery/sixstar.jpeg";
 const image = {
   url: sixstar,
   position: '70%',
+  alt: 'Amity enjoying every moment on Six Star Crack in Indian Creek, UT'
 }
 
 const symptoms = [
@@ -69,9 +70,14 @@ const handleClick = (e) => {
   e.target.classList.toggle('visible')
   e.target.parent.classList.toggle('full')
 }
+
+const pageInfo = {
+  title: 'Amity | Dietitian',
+  description: `I'm passionate about helping fellow athletes understand their fueling needs and using nutrition to maximize performance and promote long-term health.`
+}
 ---
 
-<BaseLayout pageTitle="Amity | Dietitian" img={image} url="https://amitywarme.com/dietitian">
+<BaseLayout page={pageInfo} img={image} url="https://amitywarme.com/dietitian">
   <div class="nutrition-wrapper">
     <div class="nutrition-container">
       <h1 class="dietician-title animate-title">Registered Dietitian</h1>
