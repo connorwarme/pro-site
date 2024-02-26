@@ -7,7 +7,7 @@ import arrowSimple from "../images/icons/arrow-simple.svg";
 import arrowList from "../images/icons/list-arrow.png";
 import psycho from "../images/gallery/psycho.jpg";
 import turkey from "../images/gallery/JohnnyLat.jpg";
-import corazon from "../images/gallery/corazon.jpg";
+import book from "../images/gallery/book1.jpg";
 import mark from "../images/gallery/SCM_220409_8994.jpg";
 
 const bigwall = [
@@ -47,7 +47,7 @@ const img = {
 const arrowVar = `url(${arrowList})`;
 const psychoVar = `url(${psycho})`;
 const turkeyVar = `url(${turkey})`;
-const corazonVar = `url(${corazon})`;
+const bookVar = `url(${book})`;
 const markVar = `url(${mark})`;
 
 ---
@@ -109,7 +109,7 @@ const markVar = `url(${mark})`;
     <div class="bg-img2" role="img" aria-label="Amity climbing in Turkey Rocks, CO with a stunning sunset"></div>
   </div>
 </BaseLayout>
-<style define:vars={{psychoVar, turkeyVar, arrowVar, corazonVar, markVar}}>
+<style define:vars={{psychoVar, turkeyVar, arrowVar, bookVar, markVar}}>
   h1 {
     font-family: "Unbound", "Playfair", Georgia, 'Times New Roman', Times, serif;
   }
@@ -332,7 +332,7 @@ const markVar = `url(${mark})`;
       margin: 1rem;
     }
     .athlete-img-container {
-      background-image: var(--corazonVar);
+      background-image: var(--bookVar);
       grid-column: 2/4;
     }
     .dietician-img-container {
