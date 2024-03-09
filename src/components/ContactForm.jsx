@@ -38,7 +38,12 @@ export default function Contact() {
     })
     .then(response => response.json())
     .then(data => {
-      setSuccess(true);
+      if (data && data.errors) {
+        setSuccess(false)
+        setError('Apologies! There was an error sending your message. Please refresh the page to try again, or email amity@amitywarme.com. Sorry for the inconvenience!')
+      } else {
+        setSuccess(true)
+      }
       setPending(false);
 
       // console.log(data)
@@ -47,7 +52,7 @@ export default function Contact() {
       console.log(e)
       setSuccess(false)
       setPending(false)
-      setError('Apologies! There was an error sending your message. Please refresh the page to try again, or contact me on Instagram. Sorry for the inconvenience!');
+      setError('Apologies! There was an error sending your message. Please refresh the page to try again, or email amity@amitywarme.com. Sorry for the inconvenience!');
     })
   }
 
@@ -65,9 +70,6 @@ export default function Contact() {
       { !success && <form class="contact-form" onSubmit={handleSubmit}>
         { error.length === 0 && <p>I'd love to hear from you!</p> }
         <input type="text" name="_honey" style="display:none" ></input>
-        <input type="hidden" name="_captcha" value="false"  ></input>
-        <input type="hidden" name="_subject" value="Contact request from website!"></input>
-        <input type="hidden" name="_template" value="table" ></input>
         <label for="first-name">
           <span>First Name:</span>
           <input 
