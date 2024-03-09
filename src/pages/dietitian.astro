@@ -8,7 +8,7 @@ import sixstar from "../images/gallery/sixstar.jpeg";
 
 
 const image = {
-  url: sixstar,
+  url: sixstar.src,
   position: '70%',
   alt: 'Amity enjoying every moment on Six Star Crack in Indian Creek, UT'
 }
@@ -64,7 +64,7 @@ const testimonial = [
     clip: `Amity is thoughtful and responsive. She draws on her experience of big days in the mountains, as well as her academic experience, to set up an effective nutrition strategy for climbers. I'm psyched we were able to work together!`,
   }
 ]
-const arrowVar = `url(${arrowList})`;
+const arrowVar = `url(${arrowList.src})`;
 
 const handleClick = (e) => {
   e.target.classList.toggle('visible')
@@ -87,7 +87,7 @@ const pageInfo = {
       </div>
       <div class="links-container">
         <div>Jump to:
-          <img class="jump-arrow" src={arrow} aria-label="Click to reveal links" />
+          <img class="jump-arrow" src={arrow.src} aria-label="Click to reveal links" />
         </div>
         <ul class="links-list">
           <li><a href="#symptoms">Can You Relate?</a></li>
@@ -123,7 +123,7 @@ const pageInfo = {
             <p>As a result of Amity's guidance, I've achieved remarkable progress. I've lost weight, gained more energy, and developed a healthier attitude towards food. I now have the tools and knowledge to make informed choices that benefit my health. My relationship with food has been transformed, and I no longer feel overwhelmed or guilty about what I eat.</p>
             <p>I wholeheartedly recommend Amity to anyone seeking to improve their health and well-being through nutrition."</p>
           </div>
-          <img class='test-arrow1' src={arrow} aria-label="Click to toggle testimonial" title="Toggle View" />
+          <img class='test-arrow1' src={arrow.src} aria-label="Click to toggle testimonial" title="Toggle View" />
           <p class="testimonial-client"><em>- {testimonial[0].client}</em></p>
         </div>
         <div class="testimonial-unit-container">
@@ -136,7 +136,7 @@ const pageInfo = {
             <p>"Amity was extremely helpful, she addressed the dietary issues I was having efficiently with solid easy to enact solutions. She replaced some long held misconceptions about food with facts that have had an extremely beneficial impact on my climbing and daily life.</p>
             <p>When I hit a snag she was very good at helping me work through it. Since implementing the solutions we discussed I've seen my daily energy levels increase, my training sessions become more enjoyable and effective, and my climbing days last longer with great results."</p>
           </div>
-          <img class='test-arrow2' src={arrow} aria-label="Click to toggle testimonial" title="Toggle View" />
+          <img class='test-arrow2' src={arrow.src} aria-label="Click to toggle testimonial" title="Toggle View" />
           <p class="testimonial-client"><em>- {testimonial[1].client}</em></p>
         </div>
         <div class="testimonial-unit-container">
@@ -145,7 +145,7 @@ const pageInfo = {
             <p>"Working with Amity was really helpful in planning for a big multi-pitch objective in RMNP last summer. She helped me come up with ideas for fueling the morning of and during the climb itself. It was nice wrapping a big day of climbing and hiking and still having energy. I was not feeling ravenous and low energy which allowed me to move safely and quickly all day. She also helped me manage protein intake on a day to day basis and we worked through some dietary challenges.</p>
             <p>Amity is thoughtful and responsive. She draws on her experience of big days in the mountains, as well as her academic experience, to set up an effective nutrition strategy for climbers. I'm psyched we were able to work together!"</p>
           </div>
-          <img class='test-arrow3' src={arrow} aria-label="Click to toggle testimonial" title="Toggle View" />
+          <img class='test-arrow3' src={arrow.src} aria-label="Click to toggle testimonial" title="Toggle View" />
           <p class="testimonial-client"><em>- {testimonial[3].client}</em></p>
         </div>
       </div>

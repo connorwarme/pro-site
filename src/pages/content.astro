@@ -6,7 +6,7 @@ import arrow from "../images/icons/arrow-simple.svg";
 import tainted from "../images/gallery/tainted2.jpg";
 
 const img = {
-  url: tainted,
+  url: tainted.src,
   position: '60% 100%',
   alt: 'Amity stemming high above Howe Sound in Squamish, BC'
 }
@@ -29,7 +29,7 @@ const pageInfo = {
       <p>Stories, Recipes, Podcasts and More!</p>
       <div class="tags-container">
         <div class="arrow-container">Search by tags:
-          <img class="jump-arrow" src={arrow} aria-label="Click to reveal tags" />
+          <img class="jump-arrow" src={arrow.src} aria-label="Click to reveal tags" />
         </div>
         <TagDisplay array={uniqueTags} />
       </div>
