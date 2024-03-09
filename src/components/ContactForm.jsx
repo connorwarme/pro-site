@@ -23,7 +23,7 @@ export default function Contact() {
     e.preventDefault();
     setPending(true);
 
-    fetch("http://localhost:3001/contact", {
+    fetch("https://dubmailer.fly.dev/contact", {
       method: "POST",
       headers: { 
           'Content-Type': 'application/json',
@@ -38,34 +38,17 @@ export default function Contact() {
     })
     .then(response => response.json())
     .then(data => {
-      console.log('it worked!')
+      setSuccess(true);
+      setPending(false);
+
+      // console.log(data)
     })
     .catch(e => {
       console.log(e)
+      setSuccess(false)
+      setPending(false)
+      setError('Apologies! There was an error sending your message. Please refresh the page to try again, or contact me on Instagram. Sorry for the inconvenience!');
     })
-
-    // fetch("https://formsubmit.co/ajax/9df28410a796feb69f63a79cfffc45d5", {
-    //   method: "POST",
-    //   headers: { 
-    //       'Content-Type': 'application/json',
-    //       'Accept': 'application/json'
-    //   },
-    //   body: JSON.stringify({
-    //     first_name: firstName, 
-    //     family_name: familyName, 
-    //     email: email, 
-    //     message: message,
-    //   })
-    // })
-    //   .then(response => response.json())
-    //   .then(data => {
-    //     setSuccess(true);
-    //     setPending(false);
-    //   })
-    //   .catch(error => {
-    //     console.log(error);
-    //     setError('Apologies! There was an error sending your message. Please refresh the page to try again, or contact me on Instagram. Sorry for the inconvenience!');
-    //   });
   }
 
   
