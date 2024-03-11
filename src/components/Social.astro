@@ -3,7 +3,7 @@ const { platform, username, image } = Astro.props;
 ---
 
 <a href={`https://www.${platform}.com/${username}`} target="_blank" rel="noreferrer" aria-label=`Open new tab to Amity's ${platform} profile`>
-  <img class="sm-icon" src={image} alt={platform} >
+  <img class="sm-icon" src={image.src} alt={platform} >
 </a>
 
 <style>

@@ -7,8 +7,8 @@ import '../styles/global.css';
 
 const { page, img, url } = Astro.props;
 const blur = (img && img.noimg) ? true : false;
-const mobilebackground = (img && !blur) ? img.url : lifeline;
-const backgroundimg = (img && !blur) ? `url(${img.url})` : `url(${lifeline})`;
+const mobilebackground = (img && !blur) ? img.url : lifeline.src;
+const backgroundimg = (img && !blur) ? `url(${img.url})` : `url(${lifeline.src})`;
 const position = (img && !blur) ? `${img.position}` : 'center';
 // add check to remove background image on contact page (mobile and regular)
 const blurvar = blur ? 'none' : 'block';
