@@ -6,7 +6,7 @@
 * learn and utilize Astro
 * include a gallery of images, with caption animation  
 * build a contact page!  
-* incorporate a blog with stories, recipies, podcasts, and more  
+* incorporate a blog with stories, recipes, podcasts, and more  
 * responsive design - for desktop, tablet, mobile  
 * cross-browser functionality - tested in Chrome, Firefox, and Safari  
   
