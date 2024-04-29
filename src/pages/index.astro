@@ -117,7 +117,10 @@ const markVar = `url(${mark.src})`;
     color: rgb(64, 64, 64);
   }
   .home-title-wrapper {
-    width: 100vw;
+    width: 100%;
+    width: fill-available;
+    width: -moz-available;
+    width: -webkit-fill-available;
     min-height: calc(100vh - 59px);
     display: flex;
     flex-direction: column;
@@ -162,7 +165,10 @@ const markVar = `url(${mark.src})`;
   }
   .home-athlete-wrapper,
   .home-dietician-wrapper {
-    width: 100vw;
+    width: 100%;
+    width: fill-available;
+    width: -moz-available;
+    width: -webkit-fill-available;
     background-color: rgb(245, 245, 245);
   }
   .athlete-content-simple > h1,
