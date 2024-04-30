@@ -17,7 +17,7 @@ const date = new Date('2023-06-12')
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://amitywarme.com/gallery" />
     <meta property="og:site-name" content="Amity Warme" />
-    <meta name="image" property="og:image" content={thumbnail} />
+    <meta name="image" property="og:image" content={thumbnail.src} />
     <meta property="og:image:secure_url" content="https://github.com/connorwarme/pro-site/raw/main/src/images/gallery/a-thumbnail-2.png" />
     <meta property="og:image-width" content="1200" />
     <meta property="og:image-height" content="627" />
@@ -46,6 +46,12 @@ const date = new Date('2023-06-12')
     width: -moz-available;
     width: -webkit-fill-available;
     z-index: 800;
+  }
+  .gallery-container {
+    width: 100%;
+    width: -fill-available;
+    width: -moz-available;
+    width: -webkit-fill-available;
   }
   @media (hover: none) and (orientation: portrait) {
     body {
