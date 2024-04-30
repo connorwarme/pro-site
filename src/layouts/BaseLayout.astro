@@ -103,7 +103,10 @@ const date = new Date('2023-06-12')
           display: var(--blurvar);
           position: fixed;
           height: 100vh;
-          min-width: 100vw;
+          width: 100%;
+          width: fill-available;
+          width: -moz-available;
+          width: -webkit-fill-available;
           z-index: -1;
         }
         .mobile-img > img {

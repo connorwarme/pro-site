@@ -16,7 +16,10 @@ const bgblur = blur === true ? 'blur-active' : '';
 </header>
 <style>
   header {
-    width: 100vw;
+    width: 100%;
+    width: fill-available;
+    width: -moz-available;
+    width: -webkit-fill-available;;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -29,7 +32,10 @@ const bgblur = blur === true ? 'blur-active' : '';
     background-color: rgb(245, 245, 245);
   }
   .mobile-box {
-    width: 100vw;
+    width: 100%;
+    width: fill-available;
+    width: -moz-available;
+    width: -webkit-fill-available;
     display: flex;
     justify-content: space-between;
     align-items: center;
