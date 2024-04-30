@@ -199,9 +199,6 @@ const pageInfo = {
     color: rgb(64, 64, 64);
     background-color: rgba(245, 245, 245, 0.99);
     width: 100%;
-    width: fill-available;
-    width: -moz-available;
-    width: -webkit-fill-available;
     max-width: 595px;
     padding: 0 1.5rem;
     box-shadow: 0 0 3px rgb(64, 64, 64);
@@ -330,9 +327,15 @@ const pageInfo = {
     visibility: visible;
   }
   @media screen and (min-width: 470px) {
-    
+    .nutrition-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+    .nutrition-container {
+      margin: 0 1rem;
+    }
   }
-  @media screen and (min-width: 770px) {
+  @media screen and (min-width: 970px) {
     .nutrition-wrapper {
       display: grid;
       grid-template-columns: 2fr 2fr 1fr;
@@ -344,6 +347,16 @@ const pageInfo = {
     .dietician-title {
       font-size: 2.5rem;
       margin: 1rem 0;
+    }
+  }
+  @media screen and (min-width: 970px) {
+    .nutrition-container {
+      margin-left: 3.5rem;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    .nutrition-container {
+      margin-left: 5rem;
     }
   }
 </style>
