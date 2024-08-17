@@ -2,10 +2,14 @@ import { useState } from 'preact/hooks';
 
 export default function Contact() {
   const [firstName, setFirstName] = useState('');
+  const [firstErr, setFirstErr] = useState(null)
   const [familyName, setFamilyName] = useState('');
+  const [familyErr, setFamilyErr] = useState(null)
   const [email, setEmail] = useState('');
+  const [emailErr, setEmailErr] = useState(null)
   const [message, setMessage] = useState('');
-  const [error, setError] = useState('');
+  const [msgErr, setMsgErr] = useState(null)
+  const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
   const [isPending, setPending] = useState(false);
 
@@ -18,6 +22,25 @@ export default function Contact() {
       name = `${firstName} ${familyName},`;
     }
     return name;
+  }
+  const handleErrors = (array) => {
+    const errorArray = Array.from(array)
+    errorArray.forEach(err => {
+      if (err.path) {
+        if (err.path === 'first_name') {
+          setFirstErr(true)
+        } 
+        else if (err.path === 'family_name') {
+          setFamilyErr(true)
+        } 
+        else if (err.path === 'email') {
+          setEmailErr(true)
+        } 
+        else if (err.path === 'message') {
+          setMsgErr(true)
+        } 
+      }
+    })
   }
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -40,7 +63,11 @@ export default function Contact() {
     .then(data => {
       if (data && data.errors) {
         setSuccess(false)
-        setError('Apologies! There was an error sending your message. Please refresh the page to try again, or email amity@amitywarme.com. Sorry for the inconvenience!')
+        // display specific errors, highlight error fields, reload previously submitted data
+        handleErrors(data.errors)
+        setError(data.errors)
+        // instead of the generic error
+        // setError('Apologies! There was an error sending your message. Please refresh the page to try again, or email amity@amitywarme.com. Sorry for the inconvenience!')
       } else {
         setSuccess(true)
       }
@@ -60,7 +87,7 @@ export default function Contact() {
   return (
     <div class="form-wrapper">
       <div class="message-wrapper">
-        { error.length > 0 && <p>{error}</p> }
+        {/* { error.length > 0 && <p>{error}</p> } */}
         { success && <div class="success-wrapper">
           <p class="success-contact-name">{buildName()}</p>
           <p>Thank you for your message! I will get back with you soon.</p>
@@ -123,12 +150,22 @@ export default function Contact() {
             required />
           <span class="error" aria-live="polite"></span>
         </label>
+        { error && (
+          <div className="errors-container">
+            { !Array.isArray(error) && (
+              <div>{error}</div>
+            )}
+            { Array.isArray(error) && (
+              error.map((err, index) => <div key={index}>"{err.msg}" error in input field: {err.path}</div> )
+            )}
+          </div>
+        )}
         { !isPending && <button 
           type="submit" 
           id="submit-btn">
             Submit
           </button> }
-        { (isPending && (error.length == 0)) && <button
+        { (isPending && (!error)) && <button
           id="pseudo-submit-btn"
           disabled>
             Sending...
