@@ -23,6 +23,12 @@ export default function Contact() {
     }
     return name;
   }
+  const handleFieldEdit = (event, setState, setStateError, length) => {
+    setState(event.target.value)
+    if (event.target.classList && event.target.value.length > length) {
+      setStateError(null)
+    }
+  }
   const handleErrors = (array) => {
     const errorArray = Array.from(array)
     errorArray.forEach(err => {
@@ -105,7 +111,8 @@ export default function Contact() {
             name="first_name" 
             placeholder="First Name*" 
             maxlength="256" 
-            onChange={(e) => setFirstName(e.target.value)}
+            onChange={(e) => handleFieldEdit(e, setFirstName, setFirstErr, 0)}
+            className={firstErr ? 'input-error' : null}
             required>
               {firstName}
             </input>
@@ -119,7 +126,8 @@ export default function Contact() {
             name="family_name" 
             placeholder="Family Name" 
             maxlength="256"
-            onChange={(e) => setFamilyName(e.target.value)}>
+            onChange={(e) => handleFieldEdit(e, setFamilyName, setFamilyErr, 0)}
+            className={familyErr ? 'input-error' : null}>
               {familyName}
             </input>
           <span class="error" aria-live="polite"></span>
@@ -132,7 +140,8 @@ export default function Contact() {
             name="email" 
             placeholder="Email*" 
             maxlength="256" 
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => handleFieldEdit(e, setEmail, setEmailErr, 3)}
+            className={emailErr ? 'input-error' : null}
             required>
               {email}
             </input>
@@ -146,7 +155,8 @@ export default function Contact() {
             placeholder="Message" 
             maxlength="5000" 
             value={message}
-            onInput={(e) => setMessage(e.target.value)}
+            onInput={(e) => handleFieldEdit(e, setMessage, setMsgErr, 0)}
+            className={msgErr ? 'input-error' : null}
             required />
           <span class="error" aria-live="polite"></span>
         </label>
@@ -156,7 +166,12 @@ export default function Contact() {
               <div>{error}</div>
             )}
             { Array.isArray(error) && (
-              error.map((err, index) => <div key={index}>"{err.msg}" error in input field: {err.path}</div> )
+              <ul className="error-list">
+                {
+                  error.map((err, index) => <li key={index}>{err.msg}</li> )
+                }
+              </ul>
+              
             )}
           </div>
         )}
@@ -165,17 +180,11 @@ export default function Contact() {
           id="submit-btn">
             Submit
           </button> }
-        { (isPending && (!error)) && <button
+        { (isPending) && <button
           id="pseudo-submit-btn"
           disabled>
             Sending...
           </button> }
-        { (isPending && (error.length > 0)) && <button
-          id="pseudo-submit-btn"
-          disabled>
-            Error!
-          </button>
-          }
       </form> }
     </div>
   )

@@ -265,6 +265,7 @@ form.contact-form {
 .contact-form .errors-container {
   max-width: 580px;
   width: 100%;
+  justify-self: center;
 }
 .contact-form .errors-container ul {
   list-style-type: circle;   
@@ -278,7 +279,6 @@ form.contact-form {
 .contact-form input:focus, 
 .contact-form textarea:focus {
   border-color: rgb(53, 84, 136);
-  border-color: rgb(254, 7, 62);
   outline: none;
 }
 button#submit-btn,
