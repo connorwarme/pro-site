@@ -259,6 +259,19 @@ form.contact-form {
   padding: 0.5rem;
   margin: 0.5rem 0;
 }
+.contact-form .input-error {
+  border-color: rgb(254, 7, 62);
+}
+.contact-form .errors-container {
+  max-width: 580px;
+  width: 100%;
+}
+.contact-form .errors-container ul {
+  list-style-type: circle;   
+}
+.contact-form .errors-container ul li::marker {
+  color: rgb(254, 7, 62);
+}
 .contact-form textarea {
   min-height: 100px;
 }
