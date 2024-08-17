@@ -2,10 +2,14 @@ import { useState } from 'preact/hooks';
 
 export default function Contact() {
   const [firstName, setFirstName] = useState('');
+  const [firstErr, setFirstErr] = useState(null)
   const [familyName, setFamilyName] = useState('');
+  const [familyErr, setFamilyErr] = useState(null)
   const [email, setEmail] = useState('');
+  const [emailErr, setEmailErr] = useState(null)
   const [message, setMessage] = useState('');
-  const [error, setError] = useState('');
+  const [msgErr, setMsgErr] = useState(null)
+  const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
   const [isPending, setPending] = useState(false);
 
@@ -18,6 +22,31 @@ export default function Contact() {
       name = `${firstName} ${familyName},`;
     }
     return name;
+  }
+  const handleFieldEdit = (event, setState, setStateError, length) => {
+    setState(event.target.value)
+    if (event.target.classList && event.target.value.length > length) {
+      setStateError(null)
+    }
+  }
+  const handleErrors = (array) => {
+    const errorArray = Array.from(array)
+    errorArray.forEach(err => {
+      if (err.path) {
+        if (err.path === 'first_name') {
+          setFirstErr(true)
+        } 
+        else if (err.path === 'family_name') {
+          setFamilyErr(true)
+        } 
+        else if (err.path === 'email') {
+          setEmailErr(true)
+        } 
+        else if (err.path === 'message') {
+          setMsgErr(true)
+        } 
+      }
+    })
   }
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -40,7 +69,11 @@ export default function Contact() {
     .then(data => {
       if (data && data.errors) {
         setSuccess(false)
-        setError('Apologies! There was an error sending your message. Please refresh the page to try again, or email amity@amitywarme.com. Sorry for the inconvenience!')
+        // display specific errors, highlight error fields, reload previously submitted data
+        handleErrors(data.errors)
+        setError(data.errors)
+        // instead of the generic error
+        // setError('Apologies! There was an error sending your message. Please refresh the page to try again, or email amity@amitywarme.com. Sorry for the inconvenience!')
       } else {
         setSuccess(true)
       }
@@ -60,7 +93,7 @@ export default function Contact() {
   return (
     <div class="form-wrapper">
       <div class="message-wrapper">
-        { error.length > 0 && <p>{error}</p> }
+        {/* { error.length > 0 && <p>{error}</p> } */}
         { success && <div class="success-wrapper">
           <p class="success-contact-name">{buildName()}</p>
           <p>Thank you for your message! I will get back with you soon.</p>
@@ -78,7 +111,8 @@ export default function Contact() {
             name="first_name" 
             placeholder="First Name*" 
             maxlength="256" 
-            onChange={(e) => setFirstName(e.target.value)}
+            onChange={(e) => handleFieldEdit(e, setFirstName, setFirstErr, 0)}
+            className={firstErr ? 'input-error' : null}
             required>
               {firstName}
             </input>
@@ -92,7 +126,8 @@ export default function Contact() {
             name="family_name" 
             placeholder="Family Name" 
             maxlength="256"
-            onChange={(e) => setFamilyName(e.target.value)}>
+            onChange={(e) => handleFieldEdit(e, setFamilyName, setFamilyErr, 0)}
+            className={familyErr ? 'input-error' : null}>
               {familyName}
             </input>
           <span class="error" aria-live="polite"></span>
@@ -105,7 +140,8 @@ export default function Contact() {
             name="email" 
             placeholder="Email*" 
             maxlength="256" 
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => handleFieldEdit(e, setEmail, setEmailErr, 3)}
+            className={emailErr ? 'input-error' : null}
             required>
               {email}
             </input>
@@ -119,26 +155,36 @@ export default function Contact() {
             placeholder="Message" 
             maxlength="5000" 
             value={message}
-            onInput={(e) => setMessage(e.target.value)}
+            onInput={(e) => handleFieldEdit(e, setMessage, setMsgErr, 0)}
+            className={msgErr ? 'input-error' : null}
             required />
           <span class="error" aria-live="polite"></span>
         </label>
+        { error && (
+          <div className="errors-container">
+            { !Array.isArray(error) && (
+              <div>{error}</div>
+            )}
+            { Array.isArray(error) && (
+              <ul className="error-list">
+                {
+                  error.map((err, index) => <li key={index}>{err.msg}</li> )
+                }
+              </ul>
+              
+            )}
+          </div>
+        )}
         { !isPending && <button 
           type="submit" 
           id="submit-btn">
             Submit
           </button> }
-        { (isPending && (error.length == 0)) && <button
+        { (isPending) && <button
           id="pseudo-submit-btn"
           disabled>
             Sending...
           </button> }
-        { (isPending && (error.length > 0)) && <button
-          id="pseudo-submit-btn"
-          disabled>
-            Error!
-          </button>
-          }
       </form> }
     </div>
   )
