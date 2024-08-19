@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Wall from "../components/Wall.astro";
+import Video from '../components/Video.astro';
 import golden from "../images/gallery/Amity_Goldengate.Lite.jpg";
 import arrow from "../images/icons/arrow-custom.png";
 import arrowSimple from "../images/icons/arrow-simple.svg";
@@ -9,6 +10,7 @@ import psycho from "../images/gallery/psycho.jpg";
 import turkey from "../images/gallery/JohnnyLat.jpg";
 import book from "../images/gallery/book1.jpg";
 import mark from "../images/gallery/SCM_220409_8994.jpg";
+import tales from "../images/gallery/tales.jpg";
 
 const bigwall = [
   {
@@ -19,11 +21,11 @@ const bigwall = [
     location: 'Yosemite',
   },
   {
-    climb: 'El Corazon',
-    grade: '5.13b',
-    pitches: 32,
-    style: 'ground-up',
-    location: 'Yosemite',
+    climb: 'Sendero Luminoso',
+    grade: '5.13d',
+    pitches: 13,
+    style: 'first female ascent',
+    location: 'Wind River Range',
   },
   {
     climb: 'FRIAD: Freerider In A Day',
@@ -47,7 +49,7 @@ const img = {
 const arrowVar = `url(${arrowList.src})`;
 const psychoVar = `url(${psycho.src})`;
 const turkeyVar = `url(${turkey.src})`;
-const bookVar = `url(${book.src})`;
+const talesVar = `url(${tales.src})`;
 const markVar = `url(${mark.src})`;
 
 ---
@@ -76,15 +78,16 @@ const markVar = `url(${mark.src})`;
           </div>
           <div class="athlete more-wrapper">
             <a href="/athlete">
-              <img src={arrowSimple.src} alt="↓">
+              <img src={arrowSimple.src} alt="Arrow icon, click to view Athlete page">
               <p>View More</p>
             </a>
           </div>
         </div>
-        <div class="athlete-img-container" role="img" aria-label="Amity climbing high above the Valley floor on El Corazon"></div>
+        <div class="athlete-img-container" role="img" aria-label="Amity loving life, climbing Tales of Power in Yosemite"></div>
       </div>
     </div>
-    <div class="bg-img1" role="img" aria-label="Amity in the thin-crack crux of Mark of the Beast in Yosemite, CA"></div>
+    <Video />
+    <!-- <div class="bg-img1" role="img" aria-label="Amity in the thin-crack crux of Mark of the Beast in Yosemite, CA"></div> -->
     <div class="home-dietician-wrapper">
       <div class="home-dietician-content">
         <div class="dietician-content-simple">
@@ -98,7 +101,7 @@ const markVar = `url(${mark.src})`;
           </ul>
           <div class="dietician more-wrapper">
             <a href="/dietitian">
-              <img src={arrowSimple.src} alt="↓">
+              <img src={arrowSimple.src} alt="Arrow icon, click to view Dietitian page">
               <p>Learn More</p>
             </a>
           </div>
@@ -109,7 +112,7 @@ const markVar = `url(${mark.src})`;
     <div class="bg-img2" role="img" aria-label="Amity climbing in Turkey Rocks, CO with a stunning sunset"></div>
   </div>
 </BaseLayout>
-<style define:vars={{psychoVar, turkeyVar, arrowVar, bookVar, markVar}}>
+<style define:vars={{psychoVar, turkeyVar, arrowVar, talesVar, markVar}}>
   h1 {
     font-family: "Unbound", "Playfair", Georgia, 'Times New Roman', Times, serif;
   }
@@ -338,7 +341,7 @@ const markVar = `url(${mark.src})`;
       margin: 1rem;
     }
     .athlete-img-container {
-      background-image: var(--bookVar);
+      background-image: var(--talesVar);
       grid-column: 2/4;
     }
     .dietician-img-container {
