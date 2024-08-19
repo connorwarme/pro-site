@@ -10,6 +10,7 @@ import psycho from "../images/gallery/psycho.jpg";
 import turkey from "../images/gallery/JohnnyLat.jpg";
 import book from "../images/gallery/book1.jpg";
 import mark from "../images/gallery/SCM_220409_8994.jpg";
+import tales from "../images/gallery/tales.jpg";
 
 const bigwall = [
   {
@@ -20,11 +21,11 @@ const bigwall = [
     location: 'Yosemite',
   },
   {
-    climb: 'El Corazon',
-    grade: '5.13b',
-    pitches: 32,
-    style: 'ground-up',
-    location: 'Yosemite',
+    climb: 'Sendero Luminoso',
+    grade: '5.13d',
+    pitches: 13,
+    style: 'first female ascent',
+    location: 'Wind River Range',
   },
   {
     climb: 'FRIAD: Freerider In A Day',
@@ -48,7 +49,7 @@ const img = {
 const arrowVar = `url(${arrowList.src})`;
 const psychoVar = `url(${psycho.src})`;
 const turkeyVar = `url(${turkey.src})`;
-const bookVar = `url(${book.src})`;
+const talesVar = `url(${tales.src})`;
 const markVar = `url(${mark.src})`;
 
 ---
@@ -82,7 +83,7 @@ const markVar = `url(${mark.src})`;
             </a>
           </div>
         </div>
-        <div class="athlete-img-container" role="img" aria-label="Amity climbing high above the Valley floor on El Corazon"></div>
+        <div class="athlete-img-container" role="img" aria-label="Amity loving life, climbing Tales of Power in Yosemite"></div>
       </div>
     </div>
     <Video />
@@ -111,7 +112,7 @@ const markVar = `url(${mark.src})`;
     <div class="bg-img2" role="img" aria-label="Amity climbing in Turkey Rocks, CO with a stunning sunset"></div>
   </div>
 </BaseLayout>
-<style define:vars={{psychoVar, turkeyVar, arrowVar, bookVar, markVar}}>
+<style define:vars={{psychoVar, turkeyVar, arrowVar, talesVar, markVar}}>
   h1 {
     font-family: "Unbound", "Playfair", Georgia, 'Times New Roman', Times, serif;
   }
@@ -340,7 +341,7 @@ const markVar = `url(${mark.src})`;
       margin: 1rem;
     }
     .athlete-img-container {
-      background-image: var(--bookVar);
+      background-image: var(--talesVar);
       grid-column: 2/4;
     }
     .dietician-img-container {
