@@ -27,7 +27,7 @@ const pageInfo = {
   description: `A collection of Amity content that includes the ${tag} tag.`
 };
 const img = {
-  url: tainted,
+  url: tainted.src,
   position: '60% 100%',
   alt: 'Amity stemming high above Howe Sound in Squamish, BC'
 }
@@ -47,6 +47,11 @@ const url = `https://amitywarme.com/tags/${tag}`
   </div>
 </BaseLayout>
 <style>
+  .content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   em {
     font-size: 28px;
     font-weight: 500;
