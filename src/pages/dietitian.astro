@@ -5,6 +5,7 @@ import Testimonial from "../components/Testimonial.jsx";
 import arrow from "../images/icons/arrow-simple.svg";
 import arrowList from "../images/icons/list-arrow.png";
 import sixstar from "../images/gallery/sixstar.jpeg";
+import badge from "../images/logo/REDSbadge.png";
 
 
 const image = {
@@ -83,6 +84,7 @@ const pageInfo = {
       <h1 class="dietician-title animate-title">Registered Dietitian</h1>
       <div class="nutrition-intro-container">
         <p>I'm passionate about helping fellow athletes understand their fueling needs and using nutrition to maximize performance and promote long-term health.</p>
+        <p>I'm a board-certified Registered Dietitian (RDN), with a Master's in Sports Nutrition, and a Certified REDs Informed Provider.</p>
         <p>Ready to get started? <a href="/contact" class="simple-link">Contact me!</a></p>
       </div>
       <div class="links-container">
@@ -175,8 +177,12 @@ const pageInfo = {
         <p>I promise to facilitate a safe, encouraging environment where you can share information without fear of judgment or shame regarding your health and weight history, body image and food-related struggles, along with dietary preferences and questions. </p>
       </div>
       <div id="creds" class="creds-container">
+        <div class="badge-container">
+          <img src={badge.src} alt="Badge certifying Amity as a RED-S informed provider" />
+        </div>
         <h2 class="animate-title">Credentials</h2>
         <p>I am a board-certified Registered Dietitian (RDN).</p>
+        <p>I am a Certified REDs Informed Provider.</p>
         <p>I have a Master's in Sports Nutrition from the University of Colorado in Colorado Springs (December 2021).</p>
         <p>In 2022, I completed 1000 supervised practice hours, split between the following organizations:</p>
         <ul class="creds-list">
@@ -326,6 +332,22 @@ const pageInfo = {
     display: block;
     visibility: visible;
   }
+  .creds-container {
+    position: relative;
+    margin-top: 12px;
+  }
+  .creds-container > .animate-title{
+    padding: 12px 0;
+  }
+  .badge-container {
+    position: absolute;
+    top: -12px;
+    right: 10%;
+    z-index: 1;
+  }
+  .badge-container > img {
+    height: 100px;
+  }
   @media screen and (min-width: 470px) {
     .nutrition-wrapper {
       display: flex;
@@ -333,6 +355,21 @@ const pageInfo = {
     }
     .nutrition-container {
       margin: 0 1rem;
+    }
+    .badge-container {
+      right: 20%;
+    }
+  }
+  @media screen and (min-width: 612px) {
+    .badge-container {
+      top: 42px;
+      right: 24px;
+    }
+    .creds-container {
+    margin-top: 0px;
+    }
+    .creds-container > .animate-title{
+      padding: 0;
     }
   }
   @media screen and (min-width: 970px) {
@@ -344,6 +381,16 @@ const pageInfo = {
       grid-column: 1/2;
       margin-left: 3.5rem;
     }
+    .creds-container {
+    margin-top: 12px;
+    }
+    .creds-container > .animate-title{
+      padding: 12px 0;
+    }
+    .badge-container {
+      top: -12px;
+      right: 20%;
+    }
   }
   @media screen and (min-width: 1280px) {
     .nutrition-container {
@@ -352,6 +399,23 @@ const pageInfo = {
     .dietician-title {
       font-size: 2.5rem;
       margin: 1rem 0;
+    }
+  }
+  @media screen and (min-width: 1380px) {
+    .creds-container {
+    margin-top: 0px;
+    }
+    .creds-container > .animate-title{
+      padding: 0;
+    }
+    .badge-container {
+      top: 42px;
+      right: 5%;
+    }
+  }
+  @media screen and (min-width: 1480px) {
+    .badge-container {
+      right: 10%;
     }
   }
 </style>

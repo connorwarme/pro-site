@@ -8,10 +8,9 @@ import arrowSimple from "../images/icons/arrow-simple.svg";
 import arrowList from "../images/icons/list-arrow.png";
 import psycho from "../images/gallery/psycho.jpg";
 import turkey from "../images/gallery/JohnnyLat.jpg";
-import book from "../images/gallery/book1.jpg";
-import mark from "../images/gallery/SCM_220409_8994.jpg";
 import tales from "../images/gallery/tales.jpg";
-
+import dickles from "../images/gallery/DicklesDelight.jpg";
+ 
 const bigwall = [
   {
     climb: 'El Niño',
@@ -19,6 +18,13 @@ const bigwall = [
     pitches: 25,
     style: 'ground-up',
     location: 'Yosemite',
+  }, 
+  {
+    climb: 'Real Ultimate Power',
+    grade: '5.14a',
+    pitches: 5,
+    style: 'first in-a-day ascent',
+    location: 'Mormon Canyon',
   },
   {
     climb: 'Sendero Luminoso',
@@ -50,7 +56,7 @@ const arrowVar = `url(${arrowList.src})`;
 const psychoVar = `url(${psycho.src})`;
 const turkeyVar = `url(${turkey.src})`;
 const talesVar = `url(${tales.src})`;
-const markVar = `url(${mark.src})`;
+const dicklesVar = `url(${dickles.src})`;
 
 ---
 <BaseLayout page={pageInfo} img={img} url="https://amitywarme.com/"> 
@@ -96,6 +102,7 @@ const markVar = `url(${mark.src})`;
           <p class="dietician-text">I want to help <em>you</em> develop a sustainable approach to fueling that empowers you in your athletic performance and encourages long-term health.</p>
           <ul class="dietician-list">
             <li>Registered Dietitian</li>
+            <li>Certified REDs Informed Provider</li>
             <li>Master's in Sports Nutrition</li>
             <li>Now accepting clients!</li>
           </ul>
@@ -112,7 +119,7 @@ const markVar = `url(${mark.src})`;
     <div class="bg-img2" role="img" aria-label="Amity climbing in Turkey Rocks, CO with a stunning sunset"></div>
   </div>
 </BaseLayout>
-<style define:vars={{psychoVar, turkeyVar, arrowVar, talesVar, markVar}}>
+<style define:vars={{psychoVar, turkeyVar, arrowVar, talesVar, dicklesVar}}>
   h1 {
     font-family: "Unbound", "Playfair", Georgia, 'Times New Roman', Times, serif;
   }
@@ -341,11 +348,11 @@ const markVar = `url(${mark.src})`;
       margin: 1rem;
     }
     .athlete-img-container {
-      background-image: var(--talesVar);
+      background-image: var(--dicklesVar);
       grid-column: 2/4;
     }
     .dietician-img-container {
-      background-image: var(--markVar);
+      background-image: var(--talesVar);
       grid-area: 1/1/2/3;
     }
     .dietician-content-simple {
