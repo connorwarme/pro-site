@@ -1,49 +1,64 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 import lifeline from "../images/gallery/lifelineaz.jpg";
 import thumbnail from "../images/gallery/a-thumbnail-2.png";
-import '../styles/global.css';
+import "../styles/global.css";
 
 const { page, img, url } = Astro.props;
-const blur = (img && img.noimg) ? true : false;
-const mobilebackground = (img && !blur) ? img.url : lifeline.src;
-const backgroundimg = (img && !blur) ? `url(${img.url})` : `url(${lifeline.src})`;
-const position = (img && !blur) ? `${img.position}` : 'center';
+const blur = img && img.noimg ? true : false;
+const mobilebackground = img && !blur ? img.url : lifeline.src;
+const mobileAlt =
+  img && !blur
+    ? img.alt
+    : "Background image of Amity climbing a sandstone splitter in Arizona";
+const backgroundimg = img && !blur ? `url(${img.url})` : `url(${lifeline.src})`;
+const position = img && !blur ? `${img.position}` : "center";
 // add check to remove background image on contact page (mobile and regular)
-const blurvar = blur ? 'none' : 'block';
-const background = blur ? 'none' : backgroundimg;
+const blurvar = blur ? "none" : "block";
+const background = blur ? "none" : backgroundimg;
 
-const date = new Date('2023-06-12')
+const date = new Date("2023-06-12");
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/png" href="/a-custom.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/a-custom.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="title" property="og:title" content={page.title} />
-    <meta name="description" property="og:description" content={page.description} />
+    <meta
+      name="description"
+      property="og:description"
+      content={page.description}
+    />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={url ? url : null} />
     <meta property="og:site-name" content="Amity Warme" />
     <meta name="image" property="og:image" content={thumbnail.src} />
-    <meta property="og:image:secure_url" content="https://github.com/connorwarme/pro-site/raw/main/src/images/gallery/a-thumbnail-2.png" />
+    <meta
+      property="og:image:secure_url"
+      content="https://github.com/connorwarme/pro-site/raw/main/src/images/gallery/a-thumbnail-2.png"
+    />
     <meta property="og:image-width" content="1200" />
     <meta property="og:image-height" content="627" />
     <meta name="author" content="Connor Warme" />
-    <meta name="publish_date" property="article:published_time" content="2023-04-23" />
-    <meta property="article:modified_time" content={date.toISOString()}/>
+    <meta
+      name="publish_date"
+      property="article:published_time"
+      content="2023-04-23"
+    />
+    <meta property="article:modified_time" content={date.toISOString()} />
     <meta name="generator" content={Astro.generator} />
-		<title>{page.title}</title>
-	</head>
-	<body>
+    <title>{page.title}</title>
+  </head>
+  <body>
     <a href="#main" class="skip-to-content">Skip to Content</a>
-    <img src={img.url} alt={img.alt} class="bg-img">
-    <Header blur={blur}/>
+    <img src={img.url} alt={img.alt} class="bg-img" />
+    <Header blur={blur} />
     <div class="mobile-img">
-      <img src={mobilebackground} />
+      <img src={mobilebackground} alt={mobileAlt} />
     </div>
     <main id="main">
       <slot />
@@ -53,7 +68,7 @@ const date = new Date('2023-06-12')
     <script>
       import "../scripts/menu.js";
     </script>
-    <style define:vars={{background, position, blurvar}}>
+    <style define:vars={{ background, position, blurvar }}>
       body {
         background-color: whitesmoke;
         /* removed bg-image to use img element (and provide alt label) */
@@ -72,7 +87,7 @@ const date = new Date('2023-06-12')
         opacity: 0;
         position: absolute;
         left: -9999px;
-        z-index: 999; 
+        z-index: 999;
       }
       .skip-to-content:focus {
         opacity: 1;
@@ -126,5 +141,5 @@ const date = new Date('2023-06-12')
       @media (hover: none) and (orientation: portrait) {
       }
     </style>
-	</body>
+  </body>
 </html>

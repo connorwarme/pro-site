@@ -1,6 +1,5 @@
 ---
 const { title, description, url, type } = Astro.props;
-
 ---
 
 <li class="bloglist-item" id={type}>
@@ -8,7 +7,7 @@ const { title, description, url, type } = Astro.props;
     <p class="type">{type}</p>
   </div>
   <a class="blog-card" href={url}>
-    <h4>{title}</h4>
+    <h2>{title}</h2>
     <p>{description}</p>
   </a>
 </li>
@@ -33,19 +32,19 @@ const { title, description, url, type } = Astro.props;
     align-items: center;
   }
   #blog {
-    border-color: rgb(254, 7, 62);
+    border-color: rgba(254, 7, 62, 0.75);
   }
   #video {
-    border-color: rgb(14, 173, 105);
+    border-color: rgba(14, 173, 105, 0.75);
   }
   #recipe {
     border-color: rgb(252, 202, 70);
   }
   #podcast {
-    border-color: rgb(61, 165, 217);
+    border-color: rgba(61, 165, 217, 0.6);
   }
   #news {
-    border-color: rgb(154, 70, 247);
+    border-color: rgba(154, 70, 247, 0.6);
   }
   .type {
     margin: 5px 0;
@@ -54,19 +53,19 @@ const { title, description, url, type } = Astro.props;
     color: rgb(64, 64, 64);
   }
   #blog > div {
-    background-color: rgb(254, 7, 62);
+    background-color: rgba(254, 7, 62, 0.75);
   }
   #video > div {
-    background-color: rgb(14, 173, 105);
+    background-color: rgba(14, 173, 105, 0.75);
   }
   #recipe > div {
     background-color: rgb(252, 202, 70);
   }
   #podcast > div {
-    background-color: rgb(61, 165, 217);
+    background-color: rgba(61, 165, 217, 0.6);
   }
   #news > div {
-    background-color: rgb(154, 70, 247);
+    background-color: rgba(154, 70, 247, 0.6);
   }
   a.blog-card {
     text-decoration: none;
@@ -80,7 +79,7 @@ const { title, description, url, type } = Astro.props;
   a:hover h4 {
     text-decoration: underline;
   }
-  @media screen and (min-width: 770px) { 
+  @media screen and (min-width: 770px) {
     li {
       margin: 10px 15px;
     }

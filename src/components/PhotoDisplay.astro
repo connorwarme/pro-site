@@ -21,458 +21,542 @@ import jetstream from "../images/gallery/jetstream.jpg";
 import arrow from "../images/icons/arrow-custom.png";
 import tainted from "../images/gallery/tainted1.jpg";
 import taintedlove from "../images/gallery/tainted2.jpg";
-import lucy from "../images/gallery/Lucy.jpg"
-import book from "../images/gallery/book2.jpg"
-import bookHate from "../images/gallery/book3.jpg"
+import lucy from "../images/gallery/Lucy.jpg";
+import book from "../images/gallery/book2.jpg";
+import bookHate from "../images/gallery/book3.jpg";
+import prosthetics from "../images/gallery/Prosthetics1.jpg";
+import prosthetics2 from "../images/gallery/Prosthetics2.jpg";
+import cousin from "../images/gallery/CousinOfDeathP2.jpg";
+import cousin2 from "../images/gallery/CousinOfDeathP4.jpg";
+import dickles from "../images/gallery/DicklesDelight.jpg";
+import dickles2 from "../images/gallery/DicklesDelight2.jpg";
 
 const array = [
   {
-    src: golden.src,
-    alt: 'Amity on Golden Gate',
-    caption: 'The A5 Traverse',
-    location: 'El Capitan, Yosemite',
+    src: cousin2.src,
+    alt: "Amity on Cousin of Death, pitch 4",
+    caption: "Cousin of Death",
+    location: "Insomnia Canyon, AZ",
     credit: {
-      name: 'Felipe Nordenflycht',
-      site: 'https://www.felipesh.com/',
+      name: "Ian Dzilenski",
+      site: "https://www.iandzilenski.com/",
     },
-    position: '75%',
+    position: "25%",
+  },
+  {
+    src: golden.src,
+    alt: "Amity on Golden Gate",
+    caption: "The A5 Traverse",
+    location: "El Capitan, Yosemite",
+    credit: {
+      name: "Felipe Nordenflycht",
+      site: "https://www.felipesh.com/",
+    },
+    position: "75%",
   },
   {
     src: tales.src,
-    alt: 'Amity on Tales of Power',
-    caption: 'Tales of Power',
-    location: 'Yosemite',
+    alt: "Amity on Tales of Power",
+    caption: "Tales of Power",
+    location: "Yosemite",
     credit: {
-      name: 'Taylor Shaffer',
-      site: 'https://www.taylorshaffer.com/',
+      name: "Taylor Shaffer",
+      site: "https://www.taylorshaffer.com/",
     },
-    position: '50%',
+    position: "50%",
+  },
+  {
+    src: dickles.src,
+    alt: "Amity on Dickles Delight",
+    caption: "Dickles Delight",
+    location: "Mormon Canyon, AZ",
+    credit: {
+      name: "Ian Dzilenski",
+      site: "https://www.iandzilenski.com/",
+    },
+    position: "70%",
   },
   {
     src: barnacle.src,
-    alt: 'Amity on Barnacle Scars',
-    caption: 'Barnacle Scars',
+    alt: "Amity on Barnacle Scars",
+    caption: "Barnacle Scars",
     location: `Ship's Prow, RMNP`,
     credit: {
-      name: 'Taylor Shaffer',
-      site: 'https://www.taylorshaffer.com/',
+      name: "Taylor Shaffer",
+      site: "https://www.taylorshaffer.com/",
     },
-    position: '25%',
+    position: "25%",
   },
   {
     src: taintedlove.src,
-    alt: 'Amity on Tainted Love',
-    caption: 'Tainted Love',
+    alt: "Amity on Tainted Love",
+    caption: "Tainted Love",
     location: `Squamish, BC`,
     credit: {
-      name: 'Rachel Ross',
-      site: 'https://www.rachelrossmedia.com/',
+      name: "Rachel Ross",
+      site: "https://www.rachelrossmedia.com/",
     },
-    position: '65%',
+    position: "65%",
   },
   {
-    src: jetstream.src,
-    alt: 'Amity on Jet Stream',
-    caption: 'Jet Stream',
-    location: 'Red Rock, NV',
+    src: cousin.src,
+    alt: "Amity on Cousin of Death, pitch 2",
+    caption: "Cousin of Death",
+    location: "Insomnia Canyon, AZ",
     credit: {
-      name: 'JP Melville',
-      site: 'https://www.youtube.com/@v3rtmedia/',
+      name: "Ian Dzilenski",
+      site: "https://www.iandzilenski.com/",
     },
-    position: '45% 0%',
+    position: "29%",
   },
   {
     src: book.src,
-    alt: 'Amity on Book of Hate',
-    caption: 'Book of Hate',
-    location: 'Yosemite',
+    alt: "Amity on Book of Hate",
+    caption: "Book of Hate",
+    location: "Yosemite",
     credit: {
-      name: 'Samuel Crossley',
-      site: 'https://samuelcrossley.media/',
+      name: "Samuel Crossley",
+      site: "https://samuelcrossley.media/",
     },
-    position: '29% 0%',
+    position: "29% 0%",
+  },
+  {
+    src: jetstream.src,
+    alt: "Amity on Jet Stream",
+    caption: "Jet Stream",
+    location: "Red Rock, NV",
+    credit: {
+      name: "JP Melville",
+      site: "https://www.youtube.com/@v3rtmedia/",
+    },
+    position: "45% 0%",
   },
   {
     src: stingray.src,
-    alt: 'Amity on Stingray',
-    caption: 'Stingray',
+    alt: "Amity on Stingray",
+    caption: "Stingray",
     location: `Joshua Tree, CA`,
     credit: {
-      name: 'Connor Brown',
-      site: 'https://www.connorbrownphotography.com/',
+      name: "Connor Brown",
+      site: "https://www.connorbrownphotography.com/",
     },
-    position: '80% 5%',
+    position: "80% 5%",
+  },
+  {
+    src: dickles2.src,
+    alt: "Amity on Dickles Delight",
+    caption: "Dickles Delight",
+    location: "Mormon Canyon, AZ",
+    credit: {
+      name: "Ian Dzilenski",
+      site: "https://www.iandzilenski.com/",
+    },
+    position: "25%",
   },
   {
     src: johnny.src,
-    alt: 'Amity on Johnny Lat',
-    caption: 'Johnny Lat',
+    alt: "Amity on Johnny Lat",
+    caption: "Johnny Lat",
     location: `Turkey Rocks, CO`,
     credit: {
-      name: 'Adam Pawlikiewicz',
-      site: 'https://www.adampawlikiewicz.com/',
+      name: "Adam Pawlikiewicz",
+      site: "https://www.adampawlikiewicz.com/",
     },
-    position: '28%',
+    position: "28%",
+  },
+  {
+    src: prosthetics.src,
+    alt: "Amity on Prosthetics",
+    caption: "Prosthetics",
+    location: `Southeastern Utah`,
+    credit: {
+      name: "Ian Dzilenski",
+      site: "https://www.iandzilenski.com/",
+    },
+    position: "30%",
   },
   {
     src: psycho.src,
-    alt: 'Amity on Mark of the Beast',
-    caption: 'Mark of the Beast',
+    alt: "Amity on Mark of the Beast",
+    caption: "Mark of the Beast",
     location: `Yosemite`,
     credit: {
-      name: 'Samuel Crossley',
-      site: 'https://samuelcrossley.media/',
+      name: "Samuel Crossley",
+      site: "https://samuelcrossley.media/",
     },
-    position: '55% 0%',
+    position: "55% 0%",
   },
   {
     src: corazon.src,
-    alt: 'Amity on El Corazon',
-    caption: 'El Corazon',
+    alt: "Amity on El Corazon",
+    caption: "El Corazon",
     location: `El Capitan, Yosemite`,
     credit: {
-      name: 'Scott Eubank',
-      site: 'https://www.scotteubank.com/',
+      name: "Scott Eubank",
+      site: "https://www.scotteubank.com/",
     },
-    position: '25% 40%',
+    position: "25% 40%",
   },
   {
     src: lifeline.src,
-    alt: 'Amity on Lifeline',
-    caption: 'Lifeline',
+    alt: "Amity on Lifeline",
+    caption: "Lifeline",
     location: `Sedona, AZ`,
     credit: {
-      name: 'Blake McCord',
-      site: 'https://www.mccordmedia.org/',
+      name: "Blake McCord",
+      site: "https://www.mccordmedia.org/",
     },
-    position: '70% 33%',
+    position: "70% 33%",
+  },
+  {
+    src: prosthetics2.src,
+    alt: "Amity on Prosthetics",
+    caption: "Prosthetics",
+    location: `Southeastern Utah`,
+    credit: {
+      name: "Ian Dzilenski",
+      site: "https://www.iandzilenski.com/",
+    },
+    position: "40%",
   },
   {
     src: lucy.src,
-    alt: 'Amity on Lucy the Labrador, high on El Niño',
-    caption: 'El Niño',
+    alt: "Amity on Lucy the Labrador, high on El Niño",
+    caption: "El Niño",
     location: `El Capitan, Yosemite`,
     credit: {
-      name: 'Nelson Klein',
-      site: 'https://www.nelsonklein.com/',
+      name: "Nelson Klein",
+      site: "https://www.nelsonklein.com/",
     },
-    position: '37%',
+    position: "37%",
   },
   {
     src: six.src,
-    alt: 'Amity on Six Star Crack',
-    caption: 'Six Star Crack',
+    alt: "Amity on Six Star Crack",
+    caption: "Six Star Crack",
     location: `Indian Creek, UT`,
     credit: {
-      name: 'Tempei Takeuchi',
-      site: 'https://www.tempeiphotography.com/',
+      name: "Tempei Takeuchi",
+      site: "https://www.tempeiphotography.com/",
     },
-    position: '70%',
+    position: "70%",
   },
   {
     src: wolverine.src,
-    alt: 'Amity onsighting Wolverine',
-    caption: 'Onsighting Wolverine (13-)',
-    location: 'The Waterfall, AZ',
+    alt: "Amity onsighting Wolverine",
+    caption: "Onsighting Wolverine (13-)",
+    location: "The Waterfall, AZ",
     credit: {
-      name: 'JP Melville',
-      site: 'https://www.youtube.com/@v3rtmedia/',
+      name: "JP Melville",
+      site: "https://www.youtube.com/@v3rtmedia/",
     },
-    position: '60% 0%',
+    position: "60% 0%",
   },
   {
     src: bookHate.src,
-    alt: 'Amity on Book of Hate',
-    caption: 'Book of Hate',
-    location: 'Yosemite',
+    alt: "Amity on Book of Hate",
+    caption: "Book of Hate",
+    location: "Yosemite",
     credit: {
-      name: 'Samuel Crossley',
-      site: 'https://samuelcrossley.media/',
+      name: "Samuel Crossley",
+      site: "https://samuelcrossley.media/",
     },
-    position: '55% 0%',
+    position: "55% 0%",
   },
   {
     src: guns.src,
-    alt: 'Amity flexing her arms',
-    caption: 'Tools of the Trade',
-    location: 'Yosemite',
+    alt: "Amity flexing her arms",
+    caption: "Tools of the Trade",
+    location: "Yosemite",
     credit: {
-      name: 'Taylor Shaffer',
-      site: 'https://www.taylorshaffer.com/',
+      name: "Taylor Shaffer",
+      site: "https://www.taylorshaffer.com/",
     },
-    position: '50%',
+    position: "50%",
   },
   {
     src: mark.src,
-    alt: 'Amity on Mark of the Beast',
-    caption: 'Mark of the Beast',
+    alt: "Amity on Mark of the Beast",
+    caption: "Mark of the Beast",
     location: `Yosemite`,
     credit: {
-      name: 'Samuel Crossley',
-      site: 'https://samuelcrossley.media/',
+      name: "Samuel Crossley",
+      site: "https://samuelcrossley.media/",
     },
-    position: '75% 0%',
+    position: "75% 0%",
   },
   {
     src: tainted.src,
-    alt: 'Amity on Tainted Love',
-    caption: 'Tainted Love',
+    alt: "Amity on Tainted Love",
+    caption: "Tainted Love",
     location: `Squamish, BC`,
     credit: {
-      name: 'Rachel Ross',
-      site: 'https://www.rachelrossmedia.com/',
+      name: "Rachel Ross",
+      site: "https://www.rachelrossmedia.com/",
     },
-    position: '83%',
+    position: "83%",
   },
   {
     src: air.src,
-    alt: 'Amity attempting Air Swedin',
-    caption: 'Air Swedin',
-    location: 'Indian Creek, UT',
+    alt: "Amity attempting Air Swedin",
+    caption: "Air Swedin",
+    location: "Indian Creek, UT",
     credit: {
-      name: 'Scott Eubank',
-      site: 'https://www.scotteubank.com/',
+      name: "Scott Eubank",
+      site: "https://www.scotteubank.com/",
     },
-    position: '65% 35%',
+    position: "65% 35%",
   },
   {
     src: dragon.src,
-    alt: 'Amity on Enter the Dragon',
-    caption: 'Enter the Dragon',
+    alt: "Amity on Enter the Dragon",
+    caption: "Enter the Dragon",
     location: `The Fins, ID`,
     credit: {
-      name: 'Ben Crawford',
-      site: 'https://www.instagram.com/bencrawford17/',
+      name: "Ben Crawford",
+      site: "https://www.instagram.com/bencrawford17/",
     },
-    position: '10% 55%',
+    position: "10% 55%",
   },
   {
     src: fly.src,
-    alt: 'Amity on Learning to Fly',
-    caption: 'Learning to Fly',
-    location: 'Indian Creek, UT',
+    alt: "Amity on Learning to Fly",
+    caption: "Learning to Fly",
+    location: "Indian Creek, UT",
     credit: {
-      name: 'Felipe Nordenflycht',
-      site: 'https://www.felipesh.com/',
+      name: "Felipe Nordenflycht",
+      site: "https://www.felipesh.com/",
     },
-    position: '40%',
+    position: "40%",
   },
   {
     src: gate.src,
-    alt: 'Amity on Golden Gate',
-    caption: 'Golden Gate',
+    alt: "Amity on Golden Gate",
+    caption: "Golden Gate",
     location: `El Capitan, Yosemite`,
     credit: {
-      name: 'Felipe Nordenflycht',
-      site: 'https://www.felipesh.com/',
+      name: "Felipe Nordenflycht",
+      site: "https://www.felipesh.com/",
     },
-    position: '30% 0%',
+    position: "30% 0%",
   },
   {
     src: monastery.src,
-    alt: 'Amity on Psychatomic',
-    caption: 'Psychatomic',
+    alt: "Amity on Psychatomic",
+    caption: "Psychatomic",
     location: `The Monastery, CO`,
     credit: {
-      name: 'Felipe Nordenflycht',
-      site: 'https://www.felipesh.com/',
+      name: "Felipe Nordenflycht",
+      site: "https://www.felipesh.com/",
     },
-    position: '15%',
+    position: "15%",
   },
   {
     src: gear.src,
-    alt: 'Amity gearing up in RMNP',
-    caption: 'Racking up',
+    alt: "Amity gearing up in RMNP",
+    caption: "Racking up",
     location: `Chasm Lake, RMNP`,
     credit: {
-      name: 'Taylor Shaffer',
-      site: 'https://www.taylorshaffer.com/',
+      name: "Taylor Shaffer",
+      site: "https://www.taylorshaffer.com/",
     },
-    position: '30% 0%',
+    position: "30% 0%",
   },
-]
+];
 ---
+
 <section aria-label="Photo Gallery">
   <div class="gallery" data-gallery>
     <button class="gallery-button prev" data-gallery-button="prev">
-      <img src={arrow.src} alt="&#8656;">
+      <img src={arrow.src} alt="⇐" />
     </button>
     <button class="gallery-button next" data-gallery-button="next">
-      <img src={arrow.src} alt="&#8658;">
+      <img src={arrow.src} alt="⇒" />
     </button>
     <ul data-slides>
-      {array.map((image) => (
-        <li class="slide">
-          <img src={image.src} alt='' style={'object-position:' + image.position }/>
-          <div class="credit-container">
-            <div class="credit-text-wrapper">
-              <p>{image.caption}</p>
-              <p>{image.location}</p>
-              <p><a href={image.credit.site} target="_blank" rel="noreferrer">{image.credit.name}</a></p>
+      {
+        array.map((image) => (
+          <li class="slide">
+            <img
+              src={image.src}
+              alt=""
+              style={"object-position:" + image.position}
+            />
+            <div class="credit-container">
+              <div class="credit-text-wrapper">
+                <p>{image.caption}</p>
+                <p>{image.location}</p>
+                <p>
+                  <a href={image.credit.site} target="_blank" rel="noreferrer">
+                    {image.credit.name}
+                  </a>
+                </p>
+              </div>
             </div>
-            </div>
-        </li>
-      ))}
+          </li>
+        ))
+      }
     </ul>
   </div>
 </section>
 <style>
-*::before, *::after {
-  box-sizing: border-box;
-}
-body {
-  margin: 0;
-}
-button {
-  margin: 0;
-  padding: 0;
-}
-.gallery {
-  height: calc(100vh + 1px);
-  width: 100%;
-  width: fill-available;
-  width: -moz-available;
-  width: -webkit-fill-available;
-  position: relative;
-}
-.gallery-button {
-  position: absolute;
-  z-index: 8;
-  background: none;
-  border: none;
-  top: calc(50% - 25px);
-  color: rgb(245, 245, 245);
-  cursor: pointer;
-  border-radius: 50%;
-  /* background-color: rgba(0, 0, 0, 0.15); */
-}
-.gallery-button.prev > img,
-.gallery-button.next > img {
-  height: 50px;
-  border-radius: 50%;
-  background-color: rgba(64, 64, 64, 0);
-  transition: 150ms ease-in-out;
-  outline: none;
-}
-.gallery-button img:hover,
-.gallery-button img:focus {
-  background-color: rgba(64, 64, 64, 0.6);
-}
-.gallery-button img:active {
-  transform: scale(0.9);
-  box-shadow: 0 0 3px black;
-}
-.gallery-button.prev {
-  left: 2%;
-  transform: rotate(90deg);
-}
-.gallery-button.next {
-  right: 2%;
-  transform: rotate(-90deg);
-}
-.gallery > ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.slide {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  transition: 250ms opacity ease-in-out;
-  transition-delay: 150ms;
-}
-.slide[data-active] {
-  opacity: 1;
-  transition-delay: 0ms;
-  z-index: 3;
-}
-.slide > img {
-  display: block;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-.credit-container {
-  opacity: 0;
-  position: absolute;
-  bottom: 0;
-  padding: 2vw;
-  transition: 1s opacity ease-in;
-}
-.credit-text-wrapper {
-  padding: 2vw 3vw;
-  background-color: rgba(64, 64, 64, 0.9);
-  border-radius: 3px;
-  border-top: 6px solid rgb(254, 7, 62);
-  border-left: 12px solid rgb(245, 245, 245);
-  box-shadow: 0 0 3px rgb(64, 64, 64);
-}
-.credit-text-wrapper > p {
-  margin: 0;
-  font-weight: 400;
-  color: rgb(245, 245, 245);
-  cursor: zoom-in;
-}
-.credit-text-wrapper > p:first-child {
-  font-weight: 600;
-}
-.credit-text-wrapper > p > a {
-  color: rgb(245, 245, 245);
-  text-decoration: 1px underline;
-}
-.credit-text-wrapper > p:last-child {
-  cursor: pointer;
-}
-.slide[data-active] .credit-container {
-  animation: reveal 16s 1;
-  animation-fill-mode: forwards;
-  animation-delay: 1s;
-}
-@keyframes reveal {
-  0% {
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+  }
+  button {
+    margin: 0;
+    padding: 0;
+  }
+  .gallery {
+    height: calc(100vh + 1px);
+    width: 100%;
+    width: fill-available;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    position: relative;
+  }
+  .gallery-button {
+    position: absolute;
+    z-index: 8;
+    background: none;
+    border: none;
+    top: calc(50% - 25px);
+    color: rgb(245, 245, 245);
+    cursor: pointer;
+    border-radius: 50%;
+    /* background-color: rgba(0, 0, 0, 0.15); */
+  }
+  .gallery-button.prev > img,
+  .gallery-button.next > img {
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(64, 64, 64, 0);
+    transition: 150ms ease-in-out;
+    outline: none;
+  }
+  .gallery-button img:hover,
+  .gallery-button img:focus {
+    background-color: rgba(64, 64, 64, 0.6);
+  }
+  .gallery-button img:active {
+    transform: scale(0.9);
+    box-shadow: 0 0 3px black;
+  }
+  .gallery-button.prev {
+    left: 2%;
+    transform: rotate(90deg);
+  }
+  .gallery-button.next {
+    right: 2%;
+    transform: rotate(-90deg);
+  }
+  .gallery > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .slide {
+    position: absolute;
+    inset: 0;
     opacity: 0;
+    transition: 250ms opacity ease-in-out;
+    transition-delay: 150ms;
   }
-  20% {
+  .slide[data-active] {
     opacity: 1;
+    transition-delay: 0ms;
+    z-index: 3;
   }
-  80% {
-    opacity: 1;
+  .slide > img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
   }
-  100% {
+  .credit-container {
     opacity: 0;
+    position: absolute;
+    bottom: 0;
+    padding: 2vw;
+    transition: 1s opacity ease-in;
   }
-}
-/* trying to have a hover effect on caption, but animation trumps this.. */
-.slide[data-active] .credit-container:hover {
-  opacity: 1;
-}
-@media screen and (min-width: 770px) {
   .credit-text-wrapper {
-    font-size: 20px;
-    padding: 1.5vw 2.5vw;
+    padding: 2vw 3vw;
+    background-color: rgba(64, 64, 64, 0.9);
+    border-radius: 3px;
+    border-top: 6px solid rgb(254, 7, 62);
+    border-left: 12px solid rgb(245, 245, 245);
+    box-shadow: 0 0 3px rgb(64, 64, 64);
   }
-}
+  .credit-text-wrapper > p {
+    margin: 0;
+    font-weight: 400;
+    color: rgb(245, 245, 245);
+    cursor: zoom-in;
+  }
+  .credit-text-wrapper > p:first-child {
+    font-weight: 600;
+  }
+  .credit-text-wrapper > p > a {
+    color: rgb(245, 245, 245);
+    text-decoration: 1px underline;
+  }
+  .credit-text-wrapper > p:last-child {
+    cursor: pointer;
+  }
+  .slide[data-active] .credit-container {
+    animation: reveal 16s 1;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+  }
+  @keyframes reveal {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  /* trying to have a hover effect on caption, but animation trumps this.. */
+  .slide[data-active] .credit-container:hover {
+    opacity: 1;
+  }
+  @media screen and (min-width: 770px) {
+    .credit-text-wrapper {
+      font-size: 20px;
+      padding: 1.5vw 2.5vw;
+    }
+  }
 </style>
 <script defer>
-  const initialActive = document.querySelector('li.slide');
-  initialActive.setAttribute('data-active', '');
-  const nextBtn = document.querySelector('button.next');
-  const prevBtn = document.querySelector('button.prev')
+  const initialActive = document.querySelector("li.slide");
+  initialActive.setAttribute("data-active", "");
+  const nextBtn = document.querySelector("button.next");
+  const prevBtn = document.querySelector("button.prev");
 
   const changeSlide = (button) => {
-    const offset = button.dataset.galleryButton === 'next' ? 1 : -1;
+    const offset = button.dataset.galleryButton === "next" ? 1 : -1;
     const slides = button
-      .closest('[data-gallery]')
-      .querySelector('[data-slides]')
-    const activeSlide = slides.querySelector('[data-active]')
-    let newIndex = [...slides.children].indexOf(activeSlide) + offset
-    if (newIndex < 0) newIndex = slides.children.length - 1
-    if (newIndex >= slides.children.length) newIndex = 0
+      .closest("[data-gallery]")
+      .querySelector("[data-slides]");
+    const activeSlide = slides.querySelector("[data-active]");
+    let newIndex = [...slides.children].indexOf(activeSlide) + offset;
+    if (newIndex < 0) newIndex = slides.children.length - 1;
+    if (newIndex >= slides.children.length) newIndex = 0;
     slides.children[newIndex].dataset.active = true;
-    delete activeSlide.dataset.active
-  }
-  nextBtn.addEventListener('click', () => changeSlide(nextBtn))
-  prevBtn.addEventListener('click', () => changeSlide(prevBtn))
+    delete activeSlide.dataset.active;
+  };
+  nextBtn.addEventListener("click", () => changeSlide(nextBtn));
+  prevBtn.addEventListener("click", () => changeSlide(prevBtn));
 </script>

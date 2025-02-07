@@ -7,75 +7,74 @@ import arrowList from "../images/icons/list-arrow.png";
 import sixstar from "../images/gallery/sixstar.jpeg";
 import badge from "../images/logo/REDSbadge.png";
 
-
 const image = {
   url: sixstar.src,
-  position: '70%',
-  alt: 'Amity enjoying every moment on Six Star Crack in Indian Creek, UT'
-}
+  position: "70%",
+  alt: "Amity enjoying every moment on Six Star Crack in Indian Creek, UT",
+};
 
 const symptoms = [
-  'Feel confused about what to eat to feel your best?', 
-  'Feel unsure how to properly fuel for your sport?',
-  'Have difficulty planning meals or snacks?',
-  'Want help navigating the nutrition information available on the internet?',
-  'Experience chronic fatigue?',
-  'Get sick or injured often?',
-  'Struggle with stomach or gut issues/discomfort?',
-  'Have difficulty building strength or gaining muscle?',
-  'Train hard but fail to see improved performance?',
-  'Feel too tired to complete intended workouts?',
-  'Have a negative or complicated relationship with food?',
-  'Miss menstrual cycles or have decreased sex drive?',
-]
+  "Feel confused about what to eat to feel your best?",
+  "Feel unsure how to properly fuel for your sport?",
+  "Have difficulty planning meals or snacks?",
+  "Want help navigating the nutrition information available on the internet?",
+  "Experience chronic fatigue?",
+  "Get sick or injured often?",
+  "Struggle with stomach or gut issues/discomfort?",
+  "Have difficulty building strength or gaining muscle?",
+  "Train hard but fail to see improved performance?",
+  "Feel too tired to complete intended workouts?",
+  "Have a negative or complicated relationship with food?",
+  "Miss menstrual cycles or have decreased sex drive?",
+];
 const fuel = [
-  'Increase energy levels',
-  'Speed up recovery after training or physical activity',
-  'Build strength',
-  'Improve power and endurance for your sport',
-  'Normalize sleep patterns',
-  'Reduce frequency of injury and illness',
-  'Improve mental health',
-  'Increase coordination and concentration',
-  'Untangle disordered eating patterns and anxiety around food',
-]
+  "Increase energy levels",
+  "Speed up recovery after training or physical activity",
+  "Build strength",
+  "Improve power and endurance for your sport",
+  "Normalize sleep patterns",
+  "Reduce frequency of injury and illness",
+  "Improve mental health",
+  "Increase coordination and concentration",
+  "Untangle disordered eating patterns and anxiety around food",
+];
 const testimonial = [
-  { 
-    client: 'Jonathan Morgan',
+  {
+    client: "Jonathan Morgan",
     full: `Before I started working with Amity, I struggled with my weight, energy levels, and had an unhealthy relationship with food - particularly carbohydrates. Amity took the time to truly understand my unique needs and goals. She helped me design a personalized nutrition plan that was easy to follow and tailored to my specific dietary preferences. She also provided me with the knowledge and tools to make sustainable, long-term changes to my eating habits.
       Amity has been a constant source of support and motivation. She is not only incredibly knowledgeable, but also an excellent communicator, explaining complex concepts in a way that's easy to understand.
       As a result of Amity's guidance, I've achieved remarkable progress. I've lost weight, gained more energy, and developed a healthier attitude towards food. I now have the tools and knowledge to make informed choices that benefit my health. My relationship with food has been transformed, and I no longer feel overwhelmed or guilty about what I eat.
       I wholeheartedly recommend Amity to anyone seeking to improve their health and well-being through nutrition.`,
-    clip: '... I wholeheartedly recommend Amity to anyone seeking to improve their health and well-being through nutrition.'
+    clip: "... I wholeheartedly recommend Amity to anyone seeking to improve their health and well-being through nutrition.",
   },
   {
-    client: 'David Reiman',
+    client: "David Reiman",
     full: `Amity was extremely helpful, she addressed the dietary issues I was having efficiently with solid easy to enact solutions. She replaced some long held misconceptions about food with facts that have had an extremely beneficial impact on my climbing and daily life. 
     When I hit a snag she was very good at helping me work through it. Since implementing the solutions we discussed I've seen my daily energy levels increase, my training sessions become more enjoyable and effective, and my climbing days last longer with great results.`,
-    clip: `Amity was extremely helpful... I've seen my daily energy levels increase, my training sessions become more enjoyable and effective, and my climbing days last longer with great results.`
+    clip: `Amity was extremely helpful... I've seen my daily energy levels increase, my training sessions become more enjoyable and effective, and my climbing days last longer with great results.`,
   },
   {
-    client: 'Nancy Feagin',
-    full: 'I worked with Amity to time specific weight loss to send my hardest sport route. Not only did she give me some great technical ideas on how to do it, but she was super supportive of my goal. I felt like she was rooting for me and on my team! The plan worked perfectly, and I sent the route almost exactly when we planned.',
-    clip: '',
+    client: "Nancy Feagin",
+    full: "I worked with Amity to time specific weight loss to send my hardest sport route. Not only did she give me some great technical ideas on how to do it, but she was super supportive of my goal. I felt like she was rooting for me and on my team! The plan worked perfectly, and I sent the route almost exactly when we planned.",
+    clip: "",
   },
   {
-    client: 'Leslie Brandt',
+    client: "Leslie Brandt",
     full: `Working with Amity was really helpful in planning for a big multi-pitch objective in RMNP last summer. She helped me come up with ideas for fueling the morning of and during the climb itself. It was nice wrapping a big day of climbing and hiking and still having energy. I was not feeling ravenous and low energy which allowed me to move safely and quickly all day. She also helped me manage protein intake on a day to day basis and we worked through some dietary challenges. Amity is thoughtful and responsive. She draws on her experience of big days in the mountains, as well as her academic experience, to set up an effective nutrition strategy for climbers. I'm psyched we were able to work together!`,
     clip: `Amity is thoughtful and responsive. She draws on her experience of big days in the mountains, as well as her academic experience, to set up an effective nutrition strategy for climbers. I'm psyched we were able to work together!`,
-  }
-]
+  },
+];
 const arrowVar = `url(${arrowList.src})`;
 
 const handleClick = (e) => {
-  e.target.classList.toggle('visible')
-  e.target.parent.classList.toggle('full')
-}
+  e.target.classList.toggle("visible");
+  e.target.parent.classList.toggle("full");
+};
 
 const pageInfo = {
-  title: 'Amity | Dietitian',
-  description: `I'm passionate about helping fellow athletes understand their fueling needs and using nutrition to maximize performance and promote long-term health.`
-}
+  title: "Amity | Dietitian",
+  description: `I'm passionate about helping fellow athletes understand their fueling needs and using nutrition to maximize performance and promote long-term health.`,
+};
 ---
 
 <BaseLayout page={pageInfo} img={image} url="https://amitywarme.com/dietitian">
@@ -83,13 +82,29 @@ const pageInfo = {
     <div class="nutrition-container">
       <h1 class="dietician-title animate-title">Registered Dietitian</h1>
       <div class="nutrition-intro-container">
-        <p>I'm passionate about helping fellow athletes understand their fueling needs and using nutrition to maximize performance and promote long-term health.</p>
-        <p>I'm a board-certified Registered Dietitian (RDN), with a Master's in Sports Nutrition, and a Certified REDs Informed Provider.</p>
-        <p>Ready to get started? <a href="/contact" class="simple-link">Contact me!</a></p>
+        <p>
+          I'm passionate about helping fellow athletes understand their fueling
+          needs and using nutrition to maximize performance and promote
+          long-term health.
+        </p>
+        <p>
+          I'm a board-certified Registered Dietitian (RDN), with a Master's in
+          Sports Nutrition, and a Certified REDs Informed Provider.
+        </p>
+        <p>
+          Ready to get started? <a href="/contact" class="simple-link"
+            >Contact me!</a
+          >
+        </p>
       </div>
       <div class="links-container">
-        <div>Jump to:
-          <img class="jump-arrow" src={arrow.src} aria-label="Click to reveal links" />
+        <div>
+          Jump to:
+          <img
+            class="jump-arrow"
+            src={arrow.src}
+            aria-label="Click to reveal links"
+          />
         </div>
         <ul class="links-list">
           <li><a href="#symptoms">Can You Relate?</a></li>
@@ -105,14 +120,14 @@ const pageInfo = {
         <h2 class="animate-title">Can You Relate?</h2>
         <p><em>Do you:</em></p>
         <ul class="symptoms">
-          {symptoms.map((item) => <li>{item} </li> )}
+          {symptoms.map((item) => <li>{item} </li>)}
         </ul>
       </div>
       <div id="fuel" class="fuel-container">
         <h2 class="animate-title">Fuel Well to Perform</h2>
         <p><em>Proper nutrition can help:</em></p>
         <ul class="fuel">
-          {fuel.map((item) => <li>{item}</li> )}
+          {fuel.map((item) => <li>{item}</li>)}
         </ul>
       </div>
       <div id="testimonial" class="testimonial-container">
@@ -120,12 +135,41 @@ const pageInfo = {
         <div class="testimonial-unit-container">
           <p class="testimonial-clip">"{testimonial[0].clip}"</p>
           <div class="testimonial-full">
-            <p>"Before I started working with Amity, I struggled with my weight, energy levels, and had an unhealthy relationship with food - particularly carbohydrates. Amity took the time to truly understand my unique needs and goals. She helped me design a personalized nutrition plan that was easy to follow and tailored to my specific dietary preferences. She also provided me with the knowledge and tools to make sustainable, long-term changes to my eating habits.</p>
-            <p>Amity has been a constant source of support and motivation. She is not only incredibly knowledgeable, but also an excellent communicator, explaining complex concepts in a way that's easy to understand.</p>
-            <p>As a result of Amity's guidance, I've achieved remarkable progress. I've lost weight, gained more energy, and developed a healthier attitude towards food. I now have the tools and knowledge to make informed choices that benefit my health. My relationship with food has been transformed, and I no longer feel overwhelmed or guilty about what I eat.</p>
-            <p>I wholeheartedly recommend Amity to anyone seeking to improve their health and well-being through nutrition."</p>
+            <p>
+              "Before I started working with Amity, I struggled with my weight,
+              energy levels, and had an unhealthy relationship with food -
+              particularly carbohydrates. Amity took the time to truly
+              understand my unique needs and goals. She helped me design a
+              personalized nutrition plan that was easy to follow and tailored
+              to my specific dietary preferences. She also provided me with the
+              knowledge and tools to make sustainable, long-term changes to my
+              eating habits.
+            </p>
+            <p>
+              Amity has been a constant source of support and motivation. She is
+              not only incredibly knowledgeable, but also an excellent
+              communicator, explaining complex concepts in a way that's easy to
+              understand.
+            </p>
+            <p>
+              As a result of Amity's guidance, I've achieved remarkable
+              progress. I've lost weight, gained more energy, and developed a
+              healthier attitude towards food. I now have the tools and
+              knowledge to make informed choices that benefit my health. My
+              relationship with food has been transformed, and I no longer feel
+              overwhelmed or guilty about what I eat.
+            </p>
+            <p>
+              I wholeheartedly recommend Amity to anyone seeking to improve
+              their health and well-being through nutrition."
+            </p>
           </div>
-          <img class='test-arrow1' src={arrow.src} aria-label="Click to toggle testimonial" title="Toggle View" />
+          <img
+            class="test-arrow1"
+            src={arrow.src}
+            aria-label="Click to toggle testimonial"
+            title="Toggle View"
+          />
           <p class="testimonial-client"><em>- {testimonial[0].client}</em></p>
         </div>
         <div class="testimonial-unit-container">
@@ -135,66 +179,154 @@ const pageInfo = {
         <div class="testimonial-unit-container">
           <p class="testimonial-clip">"{testimonial[1].clip}"</p>
           <div class="testimonial-full">
-            <p>"Amity was extremely helpful, she addressed the dietary issues I was having efficiently with solid easy to enact solutions. She replaced some long held misconceptions about food with facts that have had an extremely beneficial impact on my climbing and daily life.</p>
-            <p>When I hit a snag she was very good at helping me work through it. Since implementing the solutions we discussed I've seen my daily energy levels increase, my training sessions become more enjoyable and effective, and my climbing days last longer with great results."</p>
+            <p>
+              "Amity was extremely helpful, she addressed the dietary issues I
+              was having efficiently with solid easy to enact solutions. She
+              replaced some long held misconceptions about food with facts that
+              have had an extremely beneficial impact on my climbing and daily
+              life.
+            </p>
+            <p>
+              When I hit a snag she was very good at helping me work through it.
+              Since implementing the solutions we discussed I've seen my daily
+              energy levels increase, my training sessions become more enjoyable
+              and effective, and my climbing days last longer with great
+              results."
+            </p>
           </div>
-          <img class='test-arrow2' src={arrow.src} aria-label="Click to toggle testimonial" title="Toggle View" />
+          <img
+            class="test-arrow2"
+            src={arrow.src}
+            aria-label="Click to toggle testimonial"
+            title="Toggle View"
+          />
           <p class="testimonial-client"><em>- {testimonial[1].client}</em></p>
         </div>
         <div class="testimonial-unit-container">
           <p class="testimonial-clip">"{testimonial[3].clip}"</p>
           <div class="testimonial-full">
-            <p>"Working with Amity was really helpful in planning for a big multi-pitch objective in RMNP last summer. She helped me come up with ideas for fueling the morning of and during the climb itself. It was nice wrapping a big day of climbing and hiking and still having energy. I was not feeling ravenous and low energy which allowed me to move safely and quickly all day. She also helped me manage protein intake on a day to day basis and we worked through some dietary challenges.</p>
-            <p>Amity is thoughtful and responsive. She draws on her experience of big days in the mountains, as well as her academic experience, to set up an effective nutrition strategy for climbers. I'm psyched we were able to work together!"</p>
+            <p>
+              "Working with Amity was really helpful in planning for a big
+              multi-pitch objective in RMNP last summer. She helped me come up
+              with ideas for fueling the morning of and during the climb itself.
+              It was nice wrapping a big day of climbing and hiking and still
+              having energy. I was not feeling ravenous and low energy which
+              allowed me to move safely and quickly all day. She also helped me
+              manage protein intake on a day to day basis and we worked through
+              some dietary challenges.
+            </p>
+            <p>
+              Amity is thoughtful and responsive. She draws on her experience of
+              big days in the mountains, as well as her academic experience, to
+              set up an effective nutrition strategy for climbers. I'm psyched
+              we were able to work together!"
+            </p>
           </div>
-          <img class='test-arrow3' src={arrow.src} aria-label="Click to toggle testimonial" title="Toggle View" />
+          <img
+            class="test-arrow3"
+            src={arrow.src}
+            aria-label="Click to toggle testimonial"
+            title="Toggle View"
+          />
           <p class="testimonial-client"><em>- {testimonial[3].client}</em></p>
         </div>
       </div>
-      <Counseling id="counseling"/>
+      <Counseling id="counseling" />
       <div id="howitworks" class="how-container">
         <h2 class="animate-title">How It Works</h2>
         <ul>
-          <li><a href="/contact" class="simple-link">Send me a message</a>, including a brief description of who you are and your main goals with nutrition counseling.</li>
-          <ul>
-            <li>If you have any further questions, I'll respond as soon as possible.</li>
-          </ul>
-          <li>I will send a link to the HIPAA-compliant online platform Healthie, with a checklist including:</li>
-          <ul>
-            <li>New Client Questionnaire</li>
-            <li>Consent to Nutrition Services</li>
-          </ul>
-          <li>We will schedule a time to meet via video call for an intake session.</li>
+          <li>
+            <a href="/contact" class="simple-link">Send me a message</a>,
+            including a brief description of who you are and your main goals
+            with nutrition counseling.
+            <ul style={{ marginLeft: "-20px" }}>
+              <li>
+                If you have any further questions, I'll respond as soon as
+                possible.
+              </li>
+            </ul>
+          </li>
+          <li>
+            I will send a link to the HIPAA-compliant online platform Healthie,
+            with a checklist including:
+            <ul style={{ marginLeft: "-20px" }}>
+              <li>New Client Questionnaire</li>
+              <li>Consent to Nutrition Services</li>
+            </ul>
+          </li>
+          <li>
+            We will schedule a time to meet via video call for an intake
+            session.
+          </li>
           <li>We can schedule follow-up sessions as needed.</li>
-          <li>I will be available to answer questions via email throughout the time we are working together.</li>
+          <li>
+            I will be available to answer questions via email throughout the
+            time we are working together.
+          </li>
         </ul>
         <p>I look forward to hearing from you!</p>
       </div>
       <div id="philosophy" class="philosophy-container">
         <h2 class="animate-title">Philosophy</h2>
-        <p>My nutrition coaching focuses on helping you develop a sustainable approach to fueling that empowers you in your athletic performance and encourages long-term health.</p> 
-        <p>I strive to offer a scientific and strategic approach to fueling that is tailored specifically to YOU - balancing your goals, protecting long-term health, and understanding your lifestyle and preferences. Together, we’ll work to understand your relationship with food, untangle unhealthy influences, and develop sustainable and practical strategies to help you utilize nutrition to optimize your health and performance.</p>
-        <p>I promise to facilitate a safe, encouraging environment where you can share information without fear of judgment or shame regarding your health and weight history, body image and food-related struggles, along with dietary preferences and questions. </p>
+        <p>
+          My nutrition coaching focuses on helping you develop a sustainable
+          approach to fueling that empowers you in your athletic performance and
+          encourages long-term health.
+        </p>
+        <p>
+          I strive to offer a scientific and strategic approach to fueling that
+          is tailored specifically to YOU - balancing your goals, protecting
+          long-term health, and understanding your lifestyle and preferences.
+          Together, we’ll work to understand your relationship with food,
+          untangle unhealthy influences, and develop sustainable and practical
+          strategies to help you utilize nutrition to optimize your health and
+          performance.
+        </p>
+        <p>
+          I promise to facilitate a safe, encouraging environment where you can
+          share information without fear of judgment or shame regarding your
+          health and weight history, body image and food-related struggles,
+          along with dietary preferences and questions.
+        </p>
       </div>
       <div id="creds" class="creds-container">
         <div class="badge-container">
-          <img src={badge.src} alt="Badge certifying Amity as a RED-S informed provider" />
+          <img
+            src={badge.src}
+            alt="Badge certifying Amity as a RED-S informed provider"
+          />
         </div>
         <h2 class="animate-title">Credentials</h2>
         <p>I am a board-certified Registered Dietitian (RDN).</p>
         <p>I am a Certified REDs Informed Provider.</p>
-        <p>I have a Master's in Sports Nutrition from the University of Colorado in Colorado Springs (December 2021).</p>
-        <p>In 2022, I completed 1000 supervised practice hours, split between the following organizations:</p>
+        <p>
+          I have a Master's in Sports Nutrition from the University of Colorado
+          in Colorado Springs (December 2021).
+        </p>
+        <p>
+          In 2022, I completed 1000 supervised practice hours, split between the
+          following organizations:
+        </p>
         <ul class="creds-list">
-          <li>Phoenix Suns, an NBA team, assisting the team dietitian in providing performance nutrition support for the athletes</li>
-          <li>Kendall Reagan Nutrition Center, an outpatient clinic in Fort Collins with a focus on eating disorder care</li>
-          <li>The Vegetable Connection, a nonprofit that helps families access nutritious, locally grown food, provides nutrition education and hosts cooking classes</li>
+          <li>
+            Phoenix Suns, an NBA team, assisting the team dietitian in providing
+            performance nutrition support for the athletes
+          </li>
+          <li>
+            Kendall Reagan Nutrition Center, an outpatient clinic in Fort
+            Collins with a focus on eating disorder care
+          </li>
+          <li>
+            The Vegetable Connection, a nonprofit that helps families access
+            nutritious, locally grown food, provides nutrition education and
+            hosts cooking classes
+          </li>
         </ul>
       </div>
     </div>
   </div>
 </BaseLayout>
-<style define:vars={{arrowVar}}>
+<style define:vars={{ arrowVar }}>
   .nutrition-wrapper {
     display: block;
     margin: 55vh 0 35vh 0;
@@ -240,7 +372,7 @@ const pageInfo = {
   .links-container {
     max-height: 40px;
     overflow: hidden;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
   .links-container.reveal {
     max-height: 210px;
@@ -268,7 +400,7 @@ const pageInfo = {
     visibility: visible;
   }
   .links-container a {
-    color: rgb(64,64,64);
+    color: rgb(64, 64, 64);
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: all 300ms ease;
@@ -336,7 +468,7 @@ const pageInfo = {
     position: relative;
     margin-top: 12px;
   }
-  .creds-container > .animate-title{
+  .creds-container > .animate-title {
     padding: 12px 0;
   }
   .badge-container {
@@ -366,9 +498,9 @@ const pageInfo = {
       right: 24px;
     }
     .creds-container {
-    margin-top: 0px;
+      margin-top: 0px;
     }
-    .creds-container > .animate-title{
+    .creds-container > .animate-title {
       padding: 0;
     }
   }
@@ -382,9 +514,9 @@ const pageInfo = {
       margin-left: 3.5rem;
     }
     .creds-container {
-    margin-top: 12px;
+      margin-top: 12px;
     }
-    .creds-container > .animate-title{
+    .creds-container > .animate-title {
       padding: 12px 0;
     }
     .badge-container {
@@ -403,9 +535,9 @@ const pageInfo = {
   }
   @media screen and (min-width: 1380px) {
     .creds-container {
-    margin-top: 0px;
+      margin-top: 0px;
     }
-    .creds-container > .animate-title{
+    .creds-container > .animate-title {
       padding: 0;
     }
     .badge-container {
@@ -420,43 +552,43 @@ const pageInfo = {
   }
 </style>
 <script defer>
-  const jump = document.querySelector('img.jump-arrow');
-  jump.addEventListener('click', () => {
-    jump.classList.toggle('visible');
-    document.querySelector('div.links-container').classList.toggle('reveal');
-  })
-  const testArrow1 = document.querySelector('img.test-arrow1');
-  testArrow1.addEventListener('click', () => {
-    testArrow1.classList.toggle('visible');
-    testArrow1.parentElement.classList.toggle('full');
-  })
-  const testArrow2 = document.querySelector('img.test-arrow2');
-  testArrow2.addEventListener('click', () => {
-    testArrow2.classList.toggle('visible');
-    testArrow2.parentElement.classList.toggle('full');
-  })
-  const testArrow3 = document.querySelector('img.test-arrow3');
-  testArrow3.addEventListener('click', () => {
-    testArrow3.classList.toggle('visible');
-    testArrow3.parentElement.classList.toggle('full');
-  })
+  const jump = document.querySelector("img.jump-arrow");
+  jump.addEventListener("click", () => {
+    jump.classList.toggle("visible");
+    document.querySelector("div.links-container").classList.toggle("reveal");
+  });
+  const testArrow1 = document.querySelector("img.test-arrow1");
+  testArrow1.addEventListener("click", () => {
+    testArrow1.classList.toggle("visible");
+    testArrow1.parentElement.classList.toggle("full");
+  });
+  const testArrow2 = document.querySelector("img.test-arrow2");
+  testArrow2.addEventListener("click", () => {
+    testArrow2.classList.toggle("visible");
+    testArrow2.parentElement.classList.toggle("full");
+  });
+  const testArrow3 = document.querySelector("img.test-arrow3");
+  testArrow3.addEventListener("click", () => {
+    testArrow3.classList.toggle("visible");
+    testArrow3.parentElement.classList.toggle("full");
+  });
   const addObserver = (element) => {
     let observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting) {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
           setTimeout(() => {
-            entry.target.classList.add('active')
+            entry.target.classList.add("active");
           }, 1000);
-          observer.unobserve(entry.target)
+          observer.unobserve(entry.target);
         }
-      })
-    })
+      });
+    });
     observer.observe(element);
-  }
+  };
   const scrollTrigger = (selector) => {
     let targets = Array.from(document.querySelectorAll(selector));
     console.log(targets);
-    targets.forEach(target => addObserver(target));
-  }
-  scrollTrigger('.animate-title')
+    targets.forEach((target) => addObserver(target));
+  };
+  scrollTrigger(".animate-title");
 </script>

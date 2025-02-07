@@ -1,5 +1,5 @@
 ---
-import BaseLayout from './BaseLayout.astro';
+import BaseLayout from "./BaseLayout.astro";
 import gate from "../images/gallery/gate.jpg";
 import frontier from "../images/posts/finalfrontier1.jpg";
 import fuel from "../images/posts/fuel.jpg";
@@ -25,11 +25,11 @@ import wolverine from "../images/gallery/Wolverine.Lite.jpg";
 const image = {
   url: gate.src,
   position: "25%",
-  alt: 'Amity all smiles on Golden Gate in Yosemite, CA'
-}
+  alt: "Amity all smiles on Golden Gate in Yosemite, CA",
+};
 
 const images = [
-  frontier.src, 
+  frontier.src,
   fuel.src,
   gate.src,
   turkey.src,
@@ -50,43 +50,87 @@ const images = [
   book.src,
   struggleA.src,
   nino.src,
-  wolverine.src
-]
+  wolverine.src,
+];
 const { frontmatter } = Astro.props;
 
 const pageInfo = {
   title: frontmatter.title,
-  description: ''
-}
+  description: frontmatter.description || "A blog post by Amity Warme",
+};
 ---
+
 <BaseLayout page={pageInfo} img={image}>
   <div class="blog-wrapper">
     <div class="blog-container">
       <h1 class="blog-title">{frontmatter.title}</h1>
       <div class="intro-block">
-        <p class="blog-intro">{frontmatter.pubDate.slice(5,10)}-{frontmatter.pubDate.slice(0,4)}</p>
+        <p class="blog-intro">
+          {frontmatter.pubDate.slice(5, 10)}-{frontmatter.pubDate.slice(0, 4)}
+        </p>
         <p class="blog-intro"><em>{frontmatter.description}</em></p>
-        { frontmatter.author ? <p class="blog-intro"> {frontmatter.author}</p> : null }
+        {
+          frontmatter.author ? (
+            <p class="blog-intro"> {frontmatter.author}</p>
+          ) : null
+        }
       </div>
-      <img class="blog-main-image" src={images[frontmatter.image.index] || null} alt={frontmatter.image.alt} />
-      { frontmatter.image.caption ? <figcaption>{frontmatter.image.caption}</figcaption> : null }
-      { frontmatter.image.cred ? <figcaption class="cap-credit">Credit: {frontmatter.image.cred}</figcaption> : null }
-      { frontmatter.origin ? <p class="origin">Originally posted by <a href={frontmatter.origin.url} target="_blank" rel="noreferrer">{frontmatter.origin.name}</a></p> : null }
-      { frontmatter.intel ? <p class="intel">Visit <a href={frontmatter.intel.url} target="_blank" rel="noreferrer">{frontmatter.intel.name}</a> or your podcast platform to listen!</p> : null }
+      <img
+        class="blog-main-image"
+        src={images[frontmatter.image.index] || null}
+        alt={frontmatter.image.alt}
+      />
+      {
+        frontmatter.image.caption ? (
+          <figcaption>{frontmatter.image.caption}</figcaption>
+        ) : null
+      }
+      {
+        frontmatter.image.cred ? (
+          <figcaption class="cap-credit">
+            Credit: {frontmatter.image.cred}
+          </figcaption>
+        ) : null
+      }
+      {
+        frontmatter.origin ? (
+          <p class="origin">
+            Originally posted by{" "}
+            <a href={frontmatter.origin.url} target="_blank" rel="noreferrer">
+              {frontmatter.origin.name}
+            </a>
+          </p>
+        ) : null
+      }
+      {
+        frontmatter.intel ? (
+          <p class="intel">
+            Visit{" "}
+            <a href={frontmatter.intel.url} target="_blank" rel="noreferrer">
+              {frontmatter.intel.name}
+            </a>{" "}
+            or your podcast platform to listen!
+          </p>
+        ) : null
+      }
       <div class="blog-slot">
         <slot />
       </div>
       <div class="tag-index-container">
-        {frontmatter.tags.map((tag) => (
-          <a class="tag-item" href={`/tags/${tag}`}>{tag}</a>
-        ))}
+        {
+          frontmatter.tags.map((tag) => (
+            <a class="tag-item" href={`/tags/${tag}`}>
+              {tag}
+            </a>
+          ))
+        }
       </div>
     </div>
   </div>
 </BaseLayout>
 <style>
   .blog-wrapper {
-    margin: 50vh 0; 
+    margin: 50vh 0;
   }
   .blog-container {
     background-color: rgb(245, 245, 245);
@@ -95,7 +139,7 @@ const pageInfo = {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 7.5vw; 
+    padding: 0 7.5vw;
     box-shadow: 0 0 3px rgb(64, 64, 64);
   }
   .blog-title {
